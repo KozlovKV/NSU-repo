@@ -1,0 +1,978 @@
+- [Websites](#websites)
+- [Книги](#книги)
+- [Слова](#слова)
+- [Причастие](#причастие)
+- [Как сказать слово по-английски?](#как-сказать-слово-по-английски)
+- [to be ](#to-be-)
+- [Суффиксы и части речи](#суффиксы-и-части-речи)
+  - [Noun](#noun)
+  - [Verb](#verb)
+  - [Abjective](#abjective)
+- [В субъектных вопросах используются вспомогательные глаголы do, does, did](#в-субъектных-вопросах-используются-вспомогательные-глаголы-do-does-did)
+- [Когда используется present simple](#когда-используется-present-simple)
+  - [Слова-маркеры](#слова-маркеры)
+  - [Глаголы состояния](#глаголы-состояния)
+- [Когда используется present continious](#когда-используется-present-continious)
+  - [Нетипичное состояние](#нетипичное-состояние)
+  - [Слова-маркеры](#слова-маркеры-1)
+- [Modifiers of adjectives](#modifiers-of-adjectives)
+- [Наречия rarely, seldom, never носят отрицающее значение, поэтому с ними не используется отрицательная форма глагола](#наречия-rarely-seldom-never-носят-отрицающее-значение-поэтому-с-ними-не-используется-отрицательная-форма-глагола)
+- [Narrative tenses](#narrative-tenses)
+- [Complex](#complex)
+- [Типы вопросов](#типы-вопросов)
+- [Глагол to be в Present Simple СМЫСЛОВОЙ! Но его можно ставить на место do](#глагол-to-be-в-present-simple-смысловой-но-его-можно-ставить-на-место-do)
+- [so or such](#so-or-such)
+- [Have or have got](#have-or-have-got)
+- [Писать резуме, отправлять резюме и прочие действия для письма подразуемваются в данный момент, поэтому используется present continious](#писать-резуме-отправлять-резюме-и-прочие-действия-для-письма-подразуемваются-в-данный-момент-поэтому-используется-present-continious)
+- [Past simple](#past-simple)
+  - [When to use](#when-to-use)
+  - [Key words](#key-words)
+- [Past continious](#past-continious)
+- [Past perfect](#past-perfect)
+- [Типы высказываний](#типы-высказываний)
+- [Murphey 51 - Auxillary verbs in questions and narratives](#murphey-51---auxillary-verbs-in-questions-and-narratives)
+- [in/at begin/and](#inat-beginand)
+- [Murphey 50 - (Do you know where ...? / He asked me where ...?)](#murphey-50---do-you-know-where---he-asked-me-where-)
+- [Murphey 52 - question tags (do you?, isn't it?)](#murphey-52---question-tags-do-you-isnt-it)
+- [In phrasal verbs particle must go after pronoun if phrasal verbs are used with it](#in-phrasal-verbs-particle-must-go-after-pronoun-if-phrasal-verbs-are-used-with-it)
+- [Nouns from phrasal verbs](#nouns-from-phrasal-verbs)
+
+# Websites
+
+
+# Книги
+- English grammar in use (blue)
+- Grammarway 3
+- English vocabulary in use blue
+- English collocation in use yellow
+
+# Слова
+- spell - Диктовать по буквам
+- pronounce - произнести
+- noun - существительное
+- Term - термин / условия
+- definition - определение
+- word combination / collocation - словосочетание
+- phrasal verb - фразовый глагол
+- fixed(set) expression - устойчивое выражение
+- prepositional phrase - фраза с "частицей" 
+- amuse - веселить
+- amase - поражать
+- apologice - извиниться
+- emperor - император
+- adverb - наречие
+- poetry - поэзия
+- meaningful - осмысленный
+- meaningless - бессмысленный
+- refugees - беженцы
+- demand - требовать / требование
+- time consumer - трата времени
+- obtain / recieve / acuire - получать
+- attent classes - посещать классы
+- to have in common - в общем
+- whereas / while - в то время как
+- used to - было правдой, теперь нет
+- complain - жаловаться
+- encourage someone - поддерживать
+- persuade someone - убеждать / агитировать
+- insist on - настаивать
+- fence - забор
+- broke up - расстались
+- main one - главный из чего-то
+- Sequence - последовательность
+- observe - наблюдать, обозреать всё вокруг
+- sailing - ходить под парусом
+- fortune teller - гадалка
+- glossy - глянцевый
+- compose - составлять / сочинять
+- hiking - поход в горы
+- snitch - списывать
+- a plant - завод
+- to plant - сажать
+- oil rig - нефтяная скважина
+- construction sight - стройка
+- to hold one's tangue - держать язык за зубами
+- one's cup of tea - чьё-то хобби
+- They say - говорят, что ... (не "они говорят")
+- Make one's bed - заправлять кровать
+- Dishes - посуда
+- Do dishes - мыть посуду
+- it's a settled / it's a deal - договорились
+- vary - разнообразить
+- deforestation - вырубка леса
+- has been driven away - вытеснять
+- wool - шерсть как материал
+- furcoat - шуба
+- furtree - ёлка
+- cone - шишка
+- scales - чешуя
+- outlive - пережить
+- cubs - детёныши животных
+- carnivore - плотоядность
+- herbivore - травоядность
+- omnivore - всеядность
+- omniscient - всезнающий
+- omnipotent - всемогущий
+- gather - собирать
+- extinct - вымереть
+- kindergarten - детский сад
+- childish - "детский сад"
+- outraged - возмущён
+- borrow - одолжить
+- fall in love - влюбиться
+- spare moment - свободная минутка
+- enormous - огромный
+- conversation - разговор
+- corner - угол
+- exhausted - измученный
+- filthy - мерзкий
+- awful - ужасный
+- fabulous - выразительный
+- gorgeous - роскошный
+- find out - выяснить
+- persuassion - убеждение
+- irritate - раздражать
+- arrange - организовать
+- caterpillars - гусеницы
+- auxillary - вспомогательный
+- do one's best - стараться из всех сил
+- make off with - убежать с награбленным
+- bother - беспокоить
+- make mess - разводить беспорядок
+- contraction - сокращение
+- do without something - обойтись без чего-либо
+- make up - составлять
+- make a fortune - сколотить состояние
+- do well - хорошо справляться
+- make an appointment - назначать встречу
+- do a favour - оказать услугу
+- make any excuses - придумывать оправдания
+- funeral - похороны
+- mind the gaps - думай о пробелах
+- mind doing something
+- to confess - признавать
+- to admit - признать
+- to behave - вести себя
+- to pretend - притворяться
+- high stake - высокие ставки
+- embarrass - смущать
+- awkward - неловко
+- involve - вовлекать
+- comprehend - постигать / понимать
+- narrative - повествовательный
+- to narrate - повествовать
+- narration - повествование
+- emphasise - усилить
+- hesitate - сомневаться
+- rather then - а не
+- a venue - место встречи
+- unaware of - не в курсе
+- to make most of something - извлекать максимум пользы
+- completely agree - полностью согласен 
+- further - дальнейший
+- to benefit from - извлекать выгоду из
+- hardly ever - крайне редко
+- dress - одеваться
+- stand for - обозначать, значить
+- cause - вызывать, становиться причиной
+- trait - черта
+- get on - справляться / войти
+  - abstract - don't like sb
+- admire - восхищаться
+- although - хотя
+- tough - жёсткий
+- immediately - немедленно
+- thus - таким образом
+- to be hearing/seeings things - что-то мерещится
+- possess - обладать
+- recall - вспомнить
+- pleasure - удовольствие
+- rubber - резинка
+- smooth - гладкий
+- rough - грубый
+- drill - тренироваться
+- cram - зубрить
+- on the spot - сразу
+- chasing - преследовать
+- consist of - состоять из
+- polish - полировать
+- plush - плюшевый
+- mess - беспорядок
+- untidy - неопрятный
+- table's lay - сервировка стола
+- flour - мука
+- raw - сырой, rough
+- leaf - green piece of tree
+- butcher - мясник, meat shop
+- butch - наглец, мужественный
+- nail - ногти
+- clawth - sharpen nail (когти)
+- look up - find sth in list
+- look for - find sth thing (e.g. glasses)
+- leave for - уезжать куда-то
+- to bake - печь
+- can't stand - не могу терпеть
+- do you mind if ... - ты не против, если
+- I (don't) mind doing something - я (не) против чего-то 
+- bilingual - двуязычный
+- make fun of sb/sth - недобро пошутить над кем-то / чем-то
+- accommodation - place where sb lives or stays
+- knee - колено
+- comb - расчёска
+- emphesise - show that sth is especially important
+- apropriate - подходящий
+- hang in - сдать работы учителю
+- hang out - получить работы от учителя
+- comemorate - почтить память
+- rememberance - память
+- poppy - мак
+- apply - подать
+- CV (curriculum vitae) / resume (возобновиться) - резюме
+- covering letter - сопроводительное письмо
+- simultaneously - одноврменно
+- thumb - большой палец
+- numb - немой
+- climb - взобраться
+- plumber - сантехник
+- peculiar - своеборазный / особенный
+- peculiarities - особенности
+- in particular / particularly - в частности / в особенности
+- generous - щедрый
+  - mean - наоборот
+- (dis)honest - (не) честный
+- come out - стать известным общественности, вернуться откуда-то
+- shake hands - пожать руки
+- put on - раздражаться
+- make for sth - двигаться в направлении чего-то
+- get away - "сваливать", "сливаться"
+- rest - оставшиеся
+  - the rest of sth - оставшаяся часть чего-то
+- stuff like that / all that stuff - и всё такое прочее
+- so far so good - пока что неплохо
+- pole of cold - полюс холода
+- spelling counts - грамматика учитывается
+- to be addicted to sth
+- diner - забегаловка
+- polite - вежливый
+- politness - вежливость
+- if you catch my drift / if you see what I mean - если вы понимаете, о чём я 
+- do you dig? - Ты шаришь?
+- affectionate - привязчивая
+- stroke - гладить / удар
+- sofa - диван
+- lorry / trucks - грузовик
+- slippery - скользкий
+- doing sth by hand - делать что-то своими руками (**БЕЗ s НА КОНЦЕ**)
+- alterations - преобразования
+- sinister - зловещий
+- murder - убить
+- murderer - убийца
+- to look back - оглядываться (сожалеть)
+- expensive
+- ingredients
+- for all the costs - любой ценой
+- whatever it takes - чего бы это не стоило
+- cattle - крупный рогатый скот
+- chair - стул
+- advice - совет
+- syllable - слог
+  - stressed syllable
+- marvellous - изумительный
+- particle - частица
+- go through - пройти насквозь (максимально подробно и аккуратно изучить)
+- make out - понять / разобрать
+- eat out - поесть снаружи (в ресторане). Без уточнения того, что поесть
+- bring back sth / bring sth back - напомнить о чём-то
+- ask out sb / ask sb out - позвать кого-нибудь куда-то (без уточнения, что-то типа кино или ресторана)
+- look after sb/sth - приглядывать за кем-то или чем-то
+- ring sb back - перезвонить кому-то
+- drop off sb/sth / drop sb/sth off - оставить / доставить
+- altogether - в целом
+- send off - отправить письмо
+- note down - записать что-то, чтобы не забыть
+- play up
+  - for child - child behaves badly
+  - for machine - doesn't work properly
+- upset - unhappy or worried because something unpleasant has happened
+- break down
+  - for machine - stop working
+  - for person - become very upset and start crying
+  - for conversation - conversation fails because there is a problem or disagreement
+- sort sth out / deal with sth - разобраться с чем-то
+- mess about/around - тратить время, делая что-то неважное / тратить время, играя, без какой-либо цели
+- put sth off - отложить что-то на потом
+- postpone - откладывать
+- call sth off - что-то не случится / что-то прекратится
+- look down on sb - смотреть на кого-то свысока
+- do away with sth/sb - избавиться от чего-то / убить кого-то
+- come up against sth/sb - иметь дело с проблемой по поводу чего-то или кого-то
+- come up with sth - думать о плане решения чего-то
+- put sb up - разрешить кому-то остаться у себя ненадолго
+- put up with sb/sth - смириться с неприятной ситуацией или человеком
+- because / 'cause - потому что
+- as well as - наряду с
+- nervous - нервный
+- frighten - пугать
+  - frightened - напуганы
+- weekdays - рабочие дни
+- magnificent - великолепный
+- landscape - пейзаж
+- vast - обширные (территории)
+- determined - целеустремлённый
+- persist - упорствовать
+- despite all odds - не смотря ни на что
+- give in 
+  - concrete meaning - hang in work to the teacher
+  - abstract meaning - agreed to sth that was refused before
+- come round
+  - concrete - visit someone at their house
+  - abstract - change decision to the opposite
+- conscious - способный думать, замечать
+  - be conscious of/that - быть уверенным, что что-то присутствует или случится
+  - a conscious decision/choice/effort - намеренное решение
+- effort - attempt
+- take off
+  - for aircraft - begin fly
+  - suddenly become successful
+  - suddenly stop talking and leave
+  - suddenly leave
+- turn up - arrive
+- shoes - туфли, башмаки
+- get over sth - begin to feel better after unhappy or sick
+  - can't/couldn't get over sth - to be very surprised or shocked about sth / deal with smth
+- keep on - продолжать раздражающе говорить о чём-то
+  - keep on doing sth - continue to do sth or do sth again and again 
+- pass sth up - don't use the opportunity to do sth intersting
+- opportunity - возможность
+- pick up - imporving in business or social situation / wind becomes stronger
+  - pick up sth - увеличение чего
+  - pick sb/sth up - to lift sth/sb by using hands / collect sb who is waiting for you / collect sth that you have left
+- lift - поднять
+- turn/put the clock back - repeat situation
+- cut sb off - to stop someone speaking
+- cut sb/sth off
+  - about place - separate sth/sb from other people, prevent people from reaching/leaving place
+  - stop supply - остановить поставку чего-либо (электричества, питания)
+- call sth off
+  - decide that sth planned won't happen
+  - decide to stop an activity
+- go against sb - don't get needed result by decision or voting
+- go against sth - что-то идёт вразрез с вашими убеждениями
+- obey - подчинятья
+- cut out - suddenly stop working
+- suddenly - внезапно
+- dress up
+  - надеть формальную одежду для особого случая
+  - надеть специальную одежду для вечеринки или чего-то подобного
+- go through
+  - concrete - go through...
+  - abstract - law or plan accepted or approved
+- ill at ease - чувство тревоги
+- brush up on sth - improve your skills in sth
+- leave sth for/to sb - возложить на кого-то ответсвенность за что-то
+- chase sb up - напомнить кому-то о том, что он не сделал то, что обещал (synonym - remind)
+- leave sb/sth out - exclude sb/sth, omit
+- leave aside - оставить одну тему разговора в стороне для обсуждения другой
+- fall for
+  - sb - suddenly fall in love
+  - sth - to be tricked by believing in lie
+- fall out
+  - about tooth/hair - выпадать
+  - argue with sb and stop being friendly
+- make out sth/sb - see, hear or understand sth/sb with difficulty
+- brush sth/sb aside - refuse to consider sth/sb seriously (syn. ignore)
+- put out
+  - turn off by clicking on the button 
+  - make sth stop burning
+  - agree to have a sex
+- put sb out - to cause sb extra work or troubles
+- put yourself out - попытаться кому-то помочь, даже если это не очень удобно
+- put sth out
+  - move part of body
+  - сломать какую-то часть тела (syn. injure)
+  - produce public information, produce a large counts of items to be sold
+  - make wrong (e.g. in math calc)
+  - give work
+- go down / decline - снижаться
+- ensure - гарантировать / способствовать
+- to grant - предоставить
+- tie - галстук
+- drinking habits - алкоголизм
+- sth is right up sb's street - что-то по части кого-то (его любимое дело или то, в чём он разбирается)
+- forensic - судебный
+- forensics - суд.-мед. эскпертиза
+- right behind sb - give sb complete support
+- landlady - домовладелица
+- homeowner - домовладелец
+- housekeeper - домработник
+- wait up - don't go to bed cause you are expecting someone to arrive ("ждать, не смыкая глаз")
+- bloody thing - чёртова штука
+- cuppa - чашка чаю
+- bit of trouble - небольшая неприятность
+- decent - приличие
+- out of sb's depth - не обладать достаточными навыками или знаниями, чтобы справиться с ситуацией
+  - out of one's league - the same
+- shot in the dark - ткнул пальцем в небо, выстрел вслепую
+- piss off - отвали! (грубая форма)
+- divorce - развод
+- imply - подразумевать
+- assume - предполагать / допускать
+- wear - надеть
+- put on - надеть
+- adultery - измена (в замужестве)
+- adulterer - изменник
+- pass out - потерять сознание
+- unconscious - не ощущающий окружающего мира, не понимающий происходящего
+- pass sth out - дать что-то каждому из группы людей
+- get off! - stop touching sth
+- get off sth - leave bus/aircraft or boat / leave sth place
+- get off on sth - feel very excited by doing sth
+- get off with sb - begin sexual relationship with sb
+- get on sb's nerves - действовать кому-то на нервы
+  - drive sb crazy - the same
+  - to be one's pain in neck
+- any point in sth - есть ли смысл в чём-то (e.g. *any point I'm asking*)
+- none at all - absolutly no (вообще нет / никакого)
+- get moving - to hurry
+- hurry - поторопиться
+- descreet - осторожность
+- barely - едва
+- capable - способный
+- arch-enemy - заклятый враг
+- to be above all that - быть выше (всего) этого
+- fire sb up - make sb excited or angry
+- sustain
+  - to support emotionally
+  - to suffer expirience of damage of loss
+  - to keep alive
+  - let sth to continue
+- shout - орать
+- fill in - выполнять чужую работу
+- fill sb in - give sb extra or missing info
+- fill sb's shoes - do sb's job or accept sb's responsibilities
+- dull - boring
+- withhol - утаивать что-то
+- break sb in - ввести в курс дела
+- break sth in - разнашивать какую-то вещь
+- break in - перебивать
+- break-in - незаконное проникновение
+- forehead - лоб
+- lips - губы
+- cheek - щёки
+- neck - шея
+- chest - грудная клетка / туловище
+- waist - талия / поясница
+- elbow - локоть
+- hip - бедро
+- knee - колено
+- ankle - лодыжка
+- chim - подбородок
+- breast - грудь (женская?) / грудная клетка
+- wrist - запястье
+- thumb - большой палец
+- heel - пятка
+- toe - палец ноги
+- finger - палец
+- foot - стопа
+- leg - нога
+- arm - рука
+- nod head - кивать головой
+- shake head - мотать головой
+- yawn - зевать
+- wave to sb - махать кому-то рукой
+- consider - рассматривать
+- consideration - рассмотрение
+  - to put under consideration - отправить а рассмотрение
+- wealth - богатство
+  - wealthy - богатые
+- to last - длиться
+- capital punishment - смертная казнь
+- imaginary - воображаемый
+- fair - справедливый
+  - fairly - справедливо
+  - unfairly - несправедливо
+- vanity fair - ярмарка тщеславия
+- turn out - стать полезным
+- appearence - внешность
+- attractive, good-looking - about women (good)
+- pretty - about girl or boy
+- beautiful, gorgeous - about women (very good)
+- attractive, good-looking, but also handsome - about men (good)
+- gorgeous, good-looking - about men (very good)
+- ugly - not beautiful
+- ordinary - polite ver. of ugly (and more soft by meaning)
+- fat => overweight
+- weigh - весить
+- tall - высокий
+- Цвет волос:
+  - blond(e)
+  - fair - светлые
+  - brown - русые
+  - red
+  - dark
+  - black
+  - straight - прямые (не только о волосах можно говорить)
+  - wavy
+  - curly - кудрявые
+- narrow - узкий
+- broad - широкий
+- smart - (about appearance) clean, tidy and stylish
+- approximately - примерно, приблизительно
+- athletic - здоровый, спортивный
+- Character describing:
+  - (un)reliable - (не)надёжный
+  - confident - уверенный в себе
+    - shy - opposite, especially about communication
+  - hard-working
+  - lazy
+  - sense of humo(u)r
+  - serious
+  - (im)patient - (не)терпеливый
+  - clever / intelligent - смышлённый
+    - stupid - opposite
+  - calm - спокойный
+  - nervous / anxious - нервный / обеспокоенный
+    - anxiety - noun
+  - sensible - практичный, рациональный
+    - silly - opposite
+- typist - машинистка
+- cold comfort - слабое утешение
+- gaint the upper hand - одержать верх
+- tin opener - консервный нож
+- jealous - завидовать / ревновать
+  - jealousy - noun
+- mood - настроение
+- bestiss / bestbuddies / mates - good friends
+- come about - произойти
+- get by -  выживать
+  - cope with - same
+- obviously - очевидно
+  - clearly - same
+  - apparently - same
+- go without sth - жить без чего-либо
+- give sb a hand - оказать помощь кому-то
+- pump - насос
+- or vice versa - или наоборот
+- latch - зацепка
+- pitfalls - подводные камни
+- invite / ask
+  - sb out - позвать наружу
+  - sb in - позвать внутрь
+  - sb over - позвать к себе домой / на своё место
+  - sb round - позвать к себе перекусить
+  - sb up - позвать подняться по лестнице
+  - sb along - позвать с собой
+  - sb back - предложить вернуться в квартиру вместе
+- thoroughness - тщательность
+- thoroughly - тщательно
+- rip-off - high cost
+- drop out - прекраитть что-то делать, не дойдя до конца
+- dropout - студент или школьник, бросивший учёбу / человек, не желающий работать
+- goings-on - unusual events or activities
+- hyphen - дефис
+- check in - go to registration at airport or hotel
+  - check-in - place for registration
+- check out - pay for sth and leave
+  - checkout - place for payment (in the shop or on the website)
+- crack down - начать более жёстко бороться с плохим поведением
+  - crackdown - the same noun
+- lookout - person who watches for danger and warns other people
+- hangout - милостыня / копия документов для всех собравшихся
+- change over - stop using one thing and start using other one
+- changeover - changing of the situation
+- leftover - остатки еды
+- lie in - stay in bed in the morning later then usual
+  - lie-in - state noun of action above
+- put sb down
+  - make sb feel stupid or unimportant by criticazing them
+  - вписать чьё-то имя в список, чаще всего, чтобы они что-то сделали
+- put a damper on sth - помешать чему-то быть приятным
+- onlooker - зеваки
+- Feelings / emotions:
+  - disappoint - разочаровывать
+  - curious - лыбопытстный
+    - curiosity - noun
+  - miserable - unhappy
+  - affect - влиять
+  - cheerful - relaxed and happy
+- care for - look after sb, especially sb young
+- aunt - тётя
+- Family and friends:
+  - elder - older
+  - twins - близнецы
+  - close family - very friendly family
+  - get on well with sb - to be in a good relationship with sb
+  - nephew - племянник
+    - nieces - plural
+  - step(father / mother / sister / brother) - сводные отец, мать, сестра, брат
+  - (father / mother / sister / brother)-in-law - тесть, тёща, невестка, шурин
+  - ex-(housbend / wife / boy(girl)friend, etc.) - housbend, wife etc. in the past
+  - get to know each other - познакомились друг с другом
+
+# Причастие
+- participle - причастие
+  - Present participle / active quality (P1 V4 "-ing") - действительное причастие настоящего времени
+  - Past participle / passive condition (P2 V3 "-ed") - страдательное причастие прошедшего времени
+
+# Как сказать слово по-английски?
+- How to say this in english?
+- What is the english for _?
+- How should I translate this _?
+- Can you translate/spell/pronounce?
+- What is the meaning of _?
+
+# to be <expression>
+- Where are you from? (to be from)
+
+# Суффиксы и части речи
+## Noun
+- sion / tion - result of some action
+  - complementation - дополнение 
+  - commemoration - поминование, празднование
+  - satisfaction - удовлетворение
+- dom - notion (понятие)
+  - wisdom - мудрость
+  - rebeldom - повстанческая территория
+  - heathendom - язычество
+- ness - concept
+  - homelessness
+  - restlessness
+- is - term
+  - synopsis - краткий обзор
+  - pyrosis - изжога
+  - photosynthesis
+- age - result of action / contents
+  - merriage
+  - percentage
+- th / t - notion
+  - wraith - дух
+  - ironsmith - кузнец
+  - tolbooth - тюрьма
+- st - profession
+  - scientists
+- or / er - profession
+  - housemaster - домоуправитель
+  - nonbeliever - тот, кто не верит
+  - investigator - сыщик
+- ry / y - abstract
+  - voluntary - доброволец
+  - refectory - столовая
+- ment - result of action
+  - replacement - перестановка
+  - arbitrament - арбитражное разбирательство / решение суда
+  - settlement - соглашение
+- al - result
+  - arrival
+  - proposal - предложение
+- ity - notion
+  - entity - сущность
+  - rationality - рациональность / разумность
+  - exteriority - внешняя сторона
+- ship - relashion
+  - professorship - профессорство
+  - sonship - сыновство
+  - kinship - крепкое родство (по природе / характеру)
+- hood - some groups
+  - personhood - индивидуальность
+  - nationhood - государственность
+  - likelihood - что-то вероятное
+- ance / ence - process
+  - surveillance - надзор, наблюдение
+  - concurrence - согласованность, конкуренция
+  - subsidence - угасание
+- ing - name of process
+  - unbundling - рздельное ценообразование
+  - mainspring - главная движущая сила
+  - thickening - сгущение
+- ture / sure - result of action
+  - treasure
+  - creature
+  - adventure
+- ism - ideas
+  - marxism
+  - terrorism
+- man - professor
+  - barman
+- yee
+  - employee
+
+## Verb
+- ate - abstract
+  - accelerate
+  - calculate
+- ear
+  - disappear
+- ise / ize - practic process
+  - revise - пересматривать
+  - strutinize - тщательно исследовать
+  - realize - представлять
+- en - give quality
+  - deaden - заглушить
+  - redden - краснеть
+  - sodden - промокнуть
+- ify / efy - process
+  - petrify - остолбенеть
+  - rectify - исправлять
+  - diversify - разнообразить
+- ish - some process
+  - publish
+  - wanish
+  - establish - устанавливать, выставлять на обозрение
+- ly - abstract meaning
+  - misapply - злоупотреблять
+  - rely - полагаться
+  
+## Abjective
+- ish - like "quite"
+  - stylish
+  - longish
+- some
+  - awesome
+- ite
+  - favorite
+  - appropriate - уместный
+- ary
+  - documentary
+- i - language
+  - iraqi
+- ive - quality
+  - addictive
+- ous
+  - dangerous
+  - fameous
+  - malicious - зловещий
+- ful - maximal quality
+  - harmful
+  - wonderful
+  - helpful
+  - haedful - головокружительный
+- able / ible - availability
+  - viable - жизнеспособный
+  - tolerable - терпимый
+  - movable - движимый
+- less - absenence
+  - homeless
+  - limitless - безграничный
+  - soulless - бездушный
+  - brainless
+- y - characteristic
+  - rainy
+  - fully
+- ly
+  - friendly
+- ish - language / quality
+  - Irish
+  - wolfish - волчий
+  - longish - длинноватый
+- ian / an - nationality
+  - russian
+  - indian
+  - sicilian
+- ese
+  - obese - страдающий ожирением
+  - viennese - венский
+- ic - related to sth
+  - scientific
+  - pathetic
+  - archaic
+  - epic
+- al - relation to sth
+  - musical
+- ant / ent - state
+  - independent
+  - redundant - избыточный
+- like
+  - humanlike
+  - godlike
+- ern
+  - southern
+  - northern
+ 
+# В субъектных вопросах используются вспомогательные глаголы do, does, did
+
+# Когда используется present simple
+- Если мы говорим о каких-то постоянных вещах, что обычно правда
+- Если говорим о привычках и постоянных делах
+- Список действий (например, в инструкции)
+- Если используем [глаголы](#глаголы-состояния) выражения мыслей (think, feel, want)
+- Если речь о событиях по расписанию (The plane to London takes off at 6:50 a.m.)
+- В спортивных комментариях, обзор, при рассказе истории
+
+## Слова-маркеры
+В вопросе ставятся после to be, но пред смысловым глаголом
+- always, usually
+- every day/week/month/year
+- on Mondays / Tuesdays
+- In morning / afternoon / evening
+- at night
+- the weekend
+- etc.
+
+## Глаголы состояния
+Stative verb describes states, conditions, features, traits rather than actions (passive condition)
+
+Глаголы состояния отражают состояние в данный момент, поэтому чаще всего используются в present simple.
+- Express / Preferences (Отношение): like, dislike, love, hate, enjoy, etc.
+- Mental activity (Мысли): believe, know, recognize, seem, think (if means "believe" or "have opinion"), etc.
+- Feelings (Чувства): see, hear, **feel**, taste, **look**, smell, sound, etc. Often use with can/could when we refer to what we see. **Bolded verbs can be in continious when we talk about somebody (He's looking great today!)**
+- Others: be, contain, fit, include, matter, need, belong, cost, owe, mean, own, appear, want, have
+
+---
+# Когда используется present continious
+- Речь о событиях в момент речи
+- Действие началось до момента речи и продлится после
+- Длительное изменение ситуации (e.g. Young people are spending more and more time playing on the computer)
+- Если говорим о часто повторяющихся событиях и хотим подчеркнуть своё недовольство по их поводу
+- Когда речь об уже запланированных событиях в ближайшем будущем
+- Limit - есть какое-то ограничение (today, thiw week)
+
+## Нетипичное состояние
+Если кто-то находится в данный момент в нетипичном состоянии, иногда можно употребить сочетание **am/is/are being [V]ing** (I can't understand why he's being so selfish. He isn't usually like that)
+
+## Слова-маркеры
+- now
+- at the moment
+- these days
+- at present
+- tonight
+- nowadays
+- still
+- etc.
+
+# Modifiers of adjectives
+1. A little bit
+2. pretty / quite
+3. really / very
+4. extremelly
+
+# Наречия rarely, seldom, never носят отрицающее значение, поэтому с ними не используется отрицательная форма глагола
+
+# Narrative tenses
+1. Core
+   1. Past simple
+   2. Past continious
+   3. Past perfect
+   4. Past perfect continious
+2. Addition
+   1. Present simple
+   2. Present continious
+
+# Complex
+Комплексные глаголы формируются по типу `<verb> <who> <what>` (I want you to close the window). 
+
+# Типы вопросов
+1. General - Answer: Yes/No (*Are ypu eating now?*)
+2. Special - Questions with what, where, who, why, etc. (*Why do you like horrors?*, *Who are you looking at?*). For answer with limited choise we use *which*, for unlimited - *what*
+3. Subject - Answer is a subject that maked sth (*Who said this?*, *Who is looking at you?*). Subject in question transforms into the question word
+4. Alternative - Answer: choice between sth (*Will you order a pizza or a pasta?*)
+5. Tag - "Не так ли?", using for expressing, confirmation. (*The weather is cool, isn't it?*, *I can't cook well, can I?*)
+6. Negative - Aux. verbs use in negative form. Using for emphasising. 
+   1. *Don't you want to go?*
+      1. *Yes* = *Yes, I want to go*
+      2. *No* = *No, I don't want to go*
+7. Indirect / embedded - Introduction (if question - indirect word order) + equestion with **direct** word order
+
+# Глагол to be в Present Simple СМЫСЛОВОЙ! Но его можно ставить на место do
+
+# so or such
+Если используется только прилагательное или наречие, то перед ним стоит **so**. В другом случае - **such**.
+
+# Have or have got
+Когда речь идёт о владении чем-то, допустимы обе формы. **Главное не having!**. В прошедшем времени используется только had (без got).
+
+Со словами, представленными ниже, можно исользовать have или having, а при отрицании или вопросе всегда используются don't, doesn't или didn't
+- breakfast, dinner, a cup of coffee, something to eat etc.
+- a bath, a shower, a swim, a break, a rest, a party, a holiday, an accident, an expirience, a dream
+- a look (at something)
+- a chat, a conversation, a discussion
+- trouble, difficulty, fun, a good time
+- a baby (= give birth to a baby)
+
+# Писать резуме, отправлять резюме и прочие действия для письма подразуемваются в данный момент, поэтому используется present continious
+
+# Past simple
+All verbs on one timeline
+
+`V2 = V[ed] | [second irregular form]`
+
+
+
+## When to use
+1. Short event in the past
+2. General true in the past
+3. Natural laws or events in the past
+4. Obvious past
+5. Instructions in the past (all actions from instructions are finished)
+6. Habbits, routines and routines (e.g. *used to*)
+
+## Key words
+- ago
+- last week/day/month/year
+
+# Past continious
+1. Длительное событие в прошлом
+
+# Past perfect
+Когда событие произошло до определённого события. (*Had you washed the car before he arrived*)
+
+1. Когда важен результат
+2. Получен жизненный опыт
+
+# Типы высказываний
+1. Positive
+2. Negative
+3. Interragative
+
+# Murphey 51 - Auxillary verbs in questions and narratives
+*Have / can't / to be / do etc* in snaswers used for shorting: *Have you locked the door? Yes, I have.*
+
+Also auxillary verbs can help to deny what sb says: *You're sitting at my place. No, i'm not.* / *You didn't lock the door before you left. Yes, I did.*
+
+We use *have [subj]? / to be not [subj]? / do [subj]?* to show intrest in what sb has said: *Lisa isn't very well today. Oh isn't she? What is wrong with her?*
+
+Если мы хотм подтвердить аналогичную ситуацию или опровергнуть, мы можем использовать `so` или `neither` (`nor` или `not _ either`) (Для утвердительного предложения согласие тоже утвердительное - и наоборот). Причём будет такой порядок слов - `so/neither [aux. verb] [subj]`:
+- *I'm tired. So am I.*
+- *I never read newspapers. Nor do I.*
+
+С некоторыми глаголвами (`think, hope, expect, soppose`) `so` используется для позитивного или негативного ответа без повторения предложения. Порядок слов уже классический:
+- *Are those people Korean? I think so.*
+- *Do you think it will rain? I hope not.* (с `hope` исключение. Если брать `think`, то будет *I don't think so.*)
+
+# in/at begin/and
+`in` Используется, если мы говорим о фундаментальном начале или конце, тогда как `at` используется, если мы говорим о части плана (работы, например)
+
+# Murphey 50 - (Do you know where ...? / He asked me where ...?)
+If we have question like *Do you know where* we need use narrative word oredring (*Do you know where Tom has gone?* - not *has Tom gone?*)
+
+We can use *if* and *whether* if there is no other question words:
+- *Did anybody see you?*
+  - *Do you know if anybody saw you?*
+  - *Do you know whether anybody saw you?*
+
+In reported questions we don't use ? => direct word order. Besides, verbs usually change to the past
+
+# Murphey 52 - question tags (do you?, isn't it?)
+In sentences with question tags we use direct word order in main part and aux. verb with pronoun.
+
+Positive answer have the same aux. verb form like aux. verb in main part. Negative answer - opposite form.
+
+- *You haven't seen Lisa today, have you?* - *No, I haven't* (approve)
+- *It was good film, wasn't it?* - *Yes, it was* (agree)
+- *You didn't close the door, did you?* - *No, I didn't* (**approving with negative sentence must be negative too!!!**)
+  - *Yes, I did* = *I closed the door*
+- *You couldn't do me a favour, could you?* - *Yes, I couldn't* (agree)
+
+Several specific question tags:
+- *Let's ...* => *..., shall we?*
+- *Don't ...* => *..., will you?*
+- *I'm ...* =>(negative) *..., aren't I?*
+
+# In phrasal verbs particle must go after pronoun if phrasal verbs are used with it
+
+# Nouns from phrasal verbs
+Sometimes we can compose a noun from verb and particle:
+- *break in* => *break-in*
+- *drop out* => *dropout*
+- *rip off* => *rip-off*
+
+Nouns with *-out* and *-over* are usual written without hyohen ()
