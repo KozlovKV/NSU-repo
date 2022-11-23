@@ -611,12 +611,44 @@
   - step(father / mother / sister / brother) - сводные отец, мать, сестра, брат
   - (father / mother / sister / brother)-in-law - тесть, тёща, невестка, шурин
   - ex-(housbend / wife / boy(girl)friend, etc.) - housbend, wife etc. in the past
-  - get to know each other - познакомились друг с другом
+  - get to know sb - познокмиться с кем-то
+    - get to know each other - познакомились друг с другом
 - shut - закрыть
 - hire - арендовать
 - truce - перемирие
 - explain sth to sb - объяснить что-то кому-то
-- 
+- Word about growing up:
+  - toddler - ползунок (1-3 years old)
+  - childhood - 3-12 years
+  - teenager - 13-18 years approximately
+  - adult - 18+ years
+  - middle-age(d) - 40+ years
+  - retirement - 60-65 years
+    - retire - выйти на пенсию (в отставку)
+  - elderly - 80+ years
+  - N-year-old man - man who is N years old (**NOT N-years-old!**)
+  - bring up - растить кого-то до совершеннолетнего возраста
+- stay out late - допоздна не возвращаться домой
+- managed sth - do sth with that was difficult
+- Words about romance, marriage and divorce
+  - date - свидание
+  - go out with sb - to have a romantic relationship with sb
+  - get engaged - обручиться
+    - engagement - noun
+  - get married - жениться / выйти замуж
+    - get married to (**NOT "with"**)
+  - bride - невеста
+  - bride (groom) - жених
+  - ceremony - important public event
+  - wedding - церемония бракосочетания
+  - reception - wedding party
+  - honeymoon - медовый месяц
+  - get pregnant - забеременеть
+    - pregnancy - noun
+    - pregnant - adjective
+  - anniversary - годовщина
+- a couple of - несколько
+- on her own - alone
 
 # Причастие
 - participle - причастие
