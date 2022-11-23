@@ -28,6 +28,8 @@
   - [When to use](#when-to-use)
   - [Key words](#key-words)
 - [Past continious](#past-continious)
+  - [When to use](#when-to-use-1)
+- [Past simple vs. Past continious](#past-simple-vs-past-continious)
 - [Past perfect](#past-perfect)
 - [Типы высказываний](#типы-высказываний)
 - [Murphey 51 - Auxillary verbs in questions and narratives](#murphey-51---auxillary-verbs-in-questions-and-narratives)
@@ -36,6 +38,7 @@
 - [Murphey 52 - question tags (do you?, isn't it?)](#murphey-52---question-tags-do-you-isnt-it)
 - [In phrasal verbs particle must go after pronoun if phrasal verbs are used with it](#in-phrasal-verbs-particle-must-go-after-pronoun-if-phrasal-verbs-are-used-with-it)
 - [Nouns from phrasal verbs](#nouns-from-phrasal-verbs)
+- [If we use "what about sth" we need use Ving](#if-we-use-what-about-sth-we-need-use-ving)
 
 # Websites
 
@@ -240,6 +243,7 @@
 - generous - щедрый
   - mean - наоборот
 - (dis)honest - (не) честный
+  - (dis)honesty - noun
 - come out - стать известным общественности, вернуться откуда-то
 - shake hands - пожать руки
 - put on - раздражаться
@@ -608,11 +612,16 @@
   - (father / mother / sister / brother)-in-law - тесть, тёща, невестка, шурин
   - ex-(housbend / wife / boy(girl)friend, etc.) - housbend, wife etc. in the past
   - get to know each other - познакомились друг с другом
+- shut - закрыть
+- hire - арендовать
+- truce - перемирие
+- explain sth to sb - объяснить что-то кому-то
+- 
 
 # Причастие
 - participle - причастие
-  - Present participle / active quality (P1 V4 "-ing") - действительное причастие настоящего времени
-  - Past participle / passive condition (P2 V3 "-ed") - страдательное причастие прошедшего времени
+  - Present participle / active quality (`P1 V4 "-ing"`) - действительное причастие настоящего времени
+  - Past participle / passive condition (`P2 V3 "-ed"`) - страдательное причастие прошедшего времени
 
 # Как сказать слово по-английски?
 - How to say this in english?
@@ -895,22 +904,31 @@ All verbs on one timeline
 
 `V2 = V[ed] | [second irregular form]`
 
-
-
 ## When to use
 1. Short event in the past
 2. General true in the past
 3. Natural laws or events in the past
 4. Obvious past
 5. Instructions in the past (all actions from instructions are finished)
-6. Habbits, routines and routines (e.g. *used to*)
+6. Habbits, routines and routines (e.g. *used to* - only if action haven't exectly count, *would* - regulary in some situation - **NOT WITH STATIVE VERBS**)
 
 ## Key words
 - ago
 - last week/day/month/year
 
 # Past continious
-1. Длительное событие в прошлом
+`<subj> was/were P1`
+
+## When to use
+1. Process(period) in the past
+2. Unfinished action
+
+# Past simple vs. Past continious
+1. Chain of events => Past simple
+2. Some process => Past continious
+3. Parallel processes => Past continious (*While I was playing the computer, my cat was bringing the havoc.*)
+4. One action (short) interruots another action (long) => long - Past continious, short - Past simple (*We were having dinner when the bell ran*)
+5. Descriptions of background => Past continious 
 
 # Past perfect
 Когда событие произошло до определённого события. (*Had you washed the car before he arrived*)
@@ -936,7 +954,7 @@ We use *have [subj]? / to be not [subj]? / do [subj]?* to show intrest in what s
 
 С некоторыми глаголвами (`think, hope, expect, soppose`) `so` используется для позитивного или негативного ответа без повторения предложения. Порядок слов уже классический:
 - *Are those people Korean? I think so.*
-- *Do you think it will rain? I hope not.* (с `hope` исключение. Если брать `think`, то будет *I don't think so.*)
+- *Do you think it will rain? I hope not.* (с `hope`, `afraid`, `guess` исключение. Если брать `think`, то будет *I don't think so.*)
 
 # in/at begin/and
 `in` Используется, если мы говорим о фундаментальном начале или конце, тогда как `at` используется, если мы говорим о части плана (работы, например)
@@ -976,3 +994,6 @@ Sometimes we can compose a noun from verb and particle:
 - *rip off* => *rip-off*
 
 Nouns with *-out* and *-over* are usual written without hyohen ()
+
+# If we use "what about sth" we need use Ving
+*What about going to the cafe?*
