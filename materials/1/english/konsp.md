@@ -29,6 +29,7 @@
   - [Key words](#key-words)
 - [Past continious](#past-continious)
   - [When to use](#when-to-use-1)
+  - [Key words](#key-words-1)
 - [Past simple vs. Past continious](#past-simple-vs-past-continious)
 - [Past perfect](#past-perfect)
 - [Типы высказываний](#типы-высказываний)
@@ -39,6 +40,7 @@
 - [In phrasal verbs particle must go after pronoun if phrasal verbs are used with it](#in-phrasal-verbs-particle-must-go-after-pronoun-if-phrasal-verbs-are-used-with-it)
 - [Nouns from phrasal verbs](#nouns-from-phrasal-verbs)
 - [If we use "what about sth" we need use Ving](#if-we-use-what-about-sth-we-need-use-ving)
+- [Murphey 18. "Used to"](#murphey-18-used-to)
 
 # Websites
 
@@ -942,7 +944,7 @@ All verbs on one timeline
 3. Natural laws or events in the past
 4. Obvious past
 5. Instructions in the past (all actions from instructions are finished)
-6. Habbits, routines and routines (e.g. *used to* - only if action haven't exectly count, *would* - regulary in some situation - **NOT WITH STATIVE VERBS**)
+6. Habbits, routines and routines (e.g. [see "Used to"](#murphey-18-used-to))
 
 ## Key words
 - ago
@@ -954,6 +956,10 @@ All verbs on one timeline
 ## When to use
 1. Process(period) in the past
 2. Unfinished action
+
+## Key words
+- while
+- for
 
 # Past simple vs. Past continious
 1. Chain of events => Past simple
@@ -1029,3 +1035,17 @@ Nouns with *-out* and *-over* are usual written without hyohen ()
 
 # If we use "what about sth" we need use Ving
 *What about going to the cafe?*
+
+# Murphey 18. "Used to"
+*used to `<verb>`* - means that subject do sth in the past but they doesn't or sth was true in the past and false now. 
+
+**NEVER IN PRESENT**
+
+**only if action haven't exectly count**
+
+- *I used to play tennis a lot, but I don't play very much now.*
+- *Now this building is the shop, but it used to be cinema.*
+
+Question and negative from is just past simple
+
+*would to `<verb>`* - regulary in some situation - **NOT WITH STATIVE VERBS**
