@@ -651,6 +651,10 @@
   - anniversary - годовщина
 - a couple of - несколько
 - on her own - alone
+- intention - намерение
+  - intend - намереваться
+- don't make (any) sense / make no sense - не иметь смысла
+- count on - rely
 
 # Причастие
 - participle - причастие
