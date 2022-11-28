@@ -40,6 +40,9 @@
 		- [Interrupts](#interrupts)
 - [22.11.21](#221121)
 	- [Coccone architecture](#coccone-architecture)
+- [22.11.28](#221128)
+	- [Signals](#signals)
+		- [Transistors](#transistors)
 
 # Annotation
 Лектор - Назаров Александр Дмитриевич
@@ -427,3 +430,42 @@ When interrupt occurs, program stop main part, save `PC`, `PS` and `SP` and goes
 - CPU CdM-8
 - Omni banks memory subsystem
 - Memory Manage Block (MMU)
+
+# 22.11.28
+## Signals
+Signal - any physical value, that changes during a time. Thanks to it, the signal give us some information.
+
+In computers we usually use electronic or light signals.
+
+Analog signals can change gradually.
+
+Digital signal - signal that can take value values from limited lists (usually two values). Practically, value can have sime epsolon (zero value = [0, 0.5] V; one value = [2.5, 5] V).
+
+We have below defintions:
+- Positive signal
+- Negative signal
+- Passive neg./pos. signal - beginning signal
+- Active neg./pos. signal - new signal
+- Forward/backward pos./neg. front - 
+  - Forward - change from passive to active signal (pos. - positive, neg. - negative)
+  - Backward - opposite
+
+Clock signal - (strobe) - control signal, that defines time moment of execution.
+
+The tire (шина) - signals group that are grouped by some traits.
+
+### Transistors
+Transistors can switch between two states: pass signal or block it.
+
+```
+       drain
+        /|
+gate >-||-
+        \|
+       source
+```
+
+N-transistor: gate val 1 => pass from source to drain
+P-transistor: gate val 1 => block from source to drain
+
+Transistors can save their states, work quickly
