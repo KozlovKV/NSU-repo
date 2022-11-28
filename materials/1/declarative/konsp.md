@@ -70,8 +70,10 @@
 - [22.11.11 - лекция](#221111---лекция)
 - [22.11.18 - лекция](#221118---лекция)
 - [22.11.21 - семинар](#221121---семинар)
+  - [Функция guard](#функция-guard)
 - [22.11.25 - лекция](#221125---лекция)
   - [Функторы (теория)](#функторы-теория)
+- [22.11.28 - семинар](#221128---семинар)
 
 
 # Контакты преподов
@@ -745,6 +747,24 @@ expr = do
   return (a + b) * c
 ```
 
+## Функция guard
+Функция `guard` позволяет нам вернуть нейтральный элемент, если условие даёт `false`, иначе - продолжить вычисления
+```haskell
+import Control.Monad (guard)
+
+fsafe :: Double -> Maybe Double
+fsafe x = do
+  cos2 <- return $ 2 * cos x
+  squarePolinom <- return $ x**2 + 2*x - 10 
+  guard (x > 0)
+  ln <- return $ (log x)**(exp 1)
+  cosLn <- return $ cos ln
+  oLitte <- return 0.000000001
+  guard (abs cos2 > oLitte && abs squarePolinom > oLitte && abs cosLn > oLitte)
+  sum <- return $ (tan ln) + 1 / cos2
+  return $ sum / squarePolinom
+```
+
 # 22.11.25 - лекция
 Так как Haskell часто работает с бесконечными математическими объектами, компилятор может проверить далеко не всё, поэтому часть ответственности за корректность написанных классов и сущностей ложится на пользователя
 
@@ -756,3 +776,22 @@ expr = do
 Функтор обрабатывает значение внутри функции и добавляет результату новый контекст.
 
 [Реализация на Haskell](#функтор)
+
+# 22.11.28 - семинар
+Вместо [функции guard](#функция-guard) можно использовать сопоставление шаблону. Будет работать аналогично
+
+```haskell
+fsafe :: Double -> Maybe Double
+fsafe x = do
+  cos2 <- return $ 2 * cos x
+  squarePolinom <- return $ x**2 + 2*x - 10 
+  True <- (x > 0)
+  ln <- return $ (log x)**(exp 1)
+  cosLn <- return $ cos ln
+  oLitte <- return 0.000000001
+  True <- (abs cos2 > oLitte && abs squarePolinom > oLitte && abs cosLn > oLitte)
+  sum <- return $ (tan ln) + 1 / cos2
+  return $ sum / squarePolinom
+```
+
+**Разумеется, кроме `True` можно задавать и более сложные шаблоны. Например, сравнивать значения в строке**
