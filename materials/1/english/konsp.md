@@ -655,6 +655,36 @@
   - intend - намереваться
 - don't make (any) sense / make no sense - не иметь смысла
 - count on - rely
+- Megamind:
+  - lot worse - намного хуже
+  - move on - двигаться дальше
+  - set out - start journey / start doing something when you have already decided what you want to achive
+  - turn out - одноврменно начать что-то делать или достигнуть одинакового результата
+  - rivalry - соперничество
+  - no big deal - ничего страшного / ну и ладно
+  - had life handed to him on a silver platter - идиома - получать всё на блюде с голубой коёмочкой / на всём готовеньком
+  - knack - талант
+  - screw (sth) up - совершить ошибку или что-то испортить
+  - screw sb up - нанести кому-то вре или расстроить
+  - screw-up - noun 
+  - The die had been cast - жребий брошен
+  - would it kill you to do sth - неужели ты не могу сделать что-то
+  - nosey - пронырливый / любоптный (from nose, lol)
+  - sb behind bars - кто-то за решёткой
+  - rampant - угрожающий / свирепствующий
+  - stand up to sb/sth - сопротивляться кому-то или чему-то
+  - welfare - благоденствие
+  - yell - кричать
+  - figure out - выяснить / постигнуть что-либо
+  - such a pill - такой зануда
+  - dove - голубь
+  - gosh - боже!
+  - I am running late - я опаздываю
+  - get out of town - idiom - да ну нафиг
+  - boggle - умпопомрачительный
+    - boggles - adverb
+  - get to the bottom - докопаться до сути
+  - squander - расточительствовать
 
 # Причастие
 - participle - причастие
