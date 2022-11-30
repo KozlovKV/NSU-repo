@@ -708,6 +708,23 @@
     - apartment - usually in a large buildings
     - flat - part of a large house or like an apartment
   - heat - нагревать
+- didn't have any chance / had no chances / coudn't stand against - most strongest is 2nd
+- to stand for - mean
+  - *What does sth stand for?*
+- to portray - изображать
+- mend - fix - reapair
+- oven - духовка
+- stove - плита
+- dugout - землянка
+- hut - хижина
+- cabin - хижина / каюта
+- I have no slightest idea - вообще нет идей
+- slight - лёгкий
+- desperately - отчаянно
+  - *I'm desperately in need* / *I desperately want your advice on* - мне отчаянно нужно / мне отчаянно нужен твой совет
+- sew / seded / sewn - шить, 3 формы
+- beat / beat / beaten - бить, 3 формы
+- dig / dug / dug - коупать, 3 формы
 
 # Причастие
 - participle - причастие
