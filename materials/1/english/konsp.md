@@ -288,6 +288,7 @@
 - go through - пройти насквозь (максимально подробно и аккуратно изучить)
 - make out - понять / разобрать
 - eat out - поесть снаружи (в ресторане). Без уточнения того, что поесть
+  - eat in - opposite
 - bring back sth / bring sth back - напомнить о чём-то
 - ask out sb / ask sb out - позвать кого-нибудь куда-то (без уточнения, что-то типа кино или ресторана)
 - look after sb/sth - приглядывать за кем-то или чем-то
@@ -685,6 +686,28 @@
     - boggles - adverb
   - get to the bottom - докопаться до сути
   - squander - расточительствовать
+- Daily routines (VIU: Unit 16)
+  - wake up - проснуться
+    - wake sb up - make sb waked up
+  - get up - get out from the bed
+  - staright away - immediately
+  - have a late/early night - go to sleep late/early
+  - cereal - каша
+  - don't bother to do sth - don't do sth because there is no reason or because it is too much work
+  - takeaway - еда на дом (на выноск)
+  - do washing - стираться
+  - ironing - глажка
+  - to iron / do ironing - гладить
+  - leisure - досуг
+  - go shopping - leisure activity when we buy clothes, tech, books and etc.
+  - do **the** shopping - закупаться продуктами
+  - stay in - idiom - отдыхать (ничего не делать) дома
+- The place where you live (VIU: Unit 17)
+  - outskirts - окраина
+  - flat / apartment - British / American *But now both words are becoming more common*
+    - apartment - usually in a large buildings
+    - flat - part of a large house or like an apartment
+  - heat - нагревать
 
 # Причастие
 - participle - причастие
@@ -1071,7 +1094,7 @@ Nouns with *-out* and *-over* are usual written without hyohen ()
 *What about going to the cafe?*
 
 # Murphey 18. "Used to"
-*used to `<verb>`* - means that subject do sth in the past but they doesn't or sth was true in the past and false now. 
+*used to `<verb>`* - means that subject did sth in the past but they don't do it now; or sth was true in the past and false now. 
 
 **NEVER IN PRESENT**
 
