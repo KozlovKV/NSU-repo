@@ -41,6 +41,7 @@
 - [Nouns from phrasal verbs](#nouns-from-phrasal-verbs)
 - [If we use "what about sth" we need use Ving](#if-we-use-what-about-sth-we-need-use-ving)
 - [Murphey 18. "Used to"](#murphey-18-used-to)
+- [Murphey 61. "Be/get used to sth (I'm used to ...)"](#murphey-61-beget-used-to-sth-im-used-to-)
 
 # Websites
 
@@ -378,7 +379,7 @@
 - brush up on sth - improve your skills in sth
 - leave sth for/to sb - возложить на кого-то ответсвенность за что-то
 - chase sb up - напомнить кому-то о том, что он не сделал то, что обещал (synonym - remind)
-- leave sb/sth out - exclude sb/sth, omit
+- miss/leave sb/sth out - exclude sb/sth, omit
 - leave aside - оставить одну тему разговора в стороне для обсуждения другой
 - fall for
   - sb - suddenly fall in love
@@ -608,7 +609,8 @@
   - elder - older
   - twins - близнецы
   - close family - very friendly family
-  - get on well with sb - to be in a good relationship with sb
+  - get on well - хорошо ладить
+    - with sb - to be in a good relationship with sb
   - nephew - племянник
     - nieces - plural
   - step(father / mother / sister / brother) - сводные отец, мать, сестра, брат
@@ -725,6 +727,11 @@
 - sew / seded / sewn - шить, 3 формы
 - beat / beat / beaten - бить, 3 формы
 - dig / dug / dug - коупать, 3 формы
+- blow up
+  - надувать
+  - взрывать (сносить здание)
+  - sb blows up - suddenly becomes angry
+- slip up - make mistake
 
 # Причастие
 - participle - причастие
@@ -1123,3 +1130,12 @@ Nouns with *-out* and *-over* are usual written without hyohen ()
 Question and negative from is just past simple
 
 *would to `<verb>`* - regulary in some situation - **NOT WITH STATIVE VERBS**
+
+# Murphey 61. "Be/get used to sth (I'm used to ...)"
+`Sb be/get used to sth` = sth is not new or strange
+- *I'm used to creating websites.*
+- *I'm not used to doing the math.* (Obviously, negative `be` = negative meaning)
+
+**As `sth` in this collocation we can't use infinitive verb!**
+
+**Don't confuse with [`used to`](#murphey-18-used-to)**
