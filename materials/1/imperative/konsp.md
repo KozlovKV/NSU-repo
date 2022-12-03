@@ -1,6 +1,8 @@
 - [Примечание](#примечание)
 - [Личная коллекция алгоритмов](#личная-коллекция-алгоритмов)
+  - [Ссылки на алгоритмы, реализованные на лекциях и семинарах](#ссылки-на-алгоритмы-реализованные-на-лекциях-и-семинарах)
   - [Топологическая сортировка](#топологическая-сортировка)
+  - [Битовый массив (с простыми операциями)](#битовый-массив-с-простыми-операциями)
 - [22.09.03 - лекция](#220903---лекция)
 - [22.09.10 - лекция](#220910---лекция)
 - [22.09.14 - семинар](#220914---семинар)
@@ -52,6 +54,9 @@
     - [Некоторые хэш-функции](#некоторые-хэш-функции)
   - [Адреса функций](#адреса-функций)
     - [ДОПОЛНИТЕЛЬНО](#дополнительно)
+- [22.12.03 - лекция](#221203---лекция)
+  - [Графы](#графы)
+  - [Обход (поиск) в глубину (DFS)](#обход-поиск-в-глубину-dfs)
 
 # Примечание
 Лектор - Стененко Александр Александрович
@@ -60,6 +65,7 @@
 
 
 # Личная коллекция алгоритмов
+## Ссылки на алгоритмы, реализованные на лекциях и семинарах
 - [Бинарный поиск](#бинарный-поиск)
 - [Сортировка слиянием](#сортировка-слиянием)
 - [Быстрая сортировка](#быстрая-сортировка)
@@ -69,7 +75,7 @@
 ## Топологическая сортировка
 **Суть:** находим первую вершину, которая не зависит ни от какой-другой, вынимаем её из графа (зануляяем ряд в матрице и умньшаем на 1 количество вхождений для всех вершин, зависящих от данной), затем идём снова от начала массива с количеством входящих дуг (это позволит из всех возможных вершин первой выводить наименьшую).
 
-- `int **matrix` - бинарная матрица, где `matrix[i][j] == 1` говорит о том, что из вершины графа `i` есть путь в вершину `j`
+- `int **matrix` - бинарная матрица (*матрица смежности, если говорить по правильному*), где `matrix[i][j] == 1` говорит о том, что из вершины графа `i` есть путь в вершину `j`
 - `int *inWays` - массив, где значение в ячейке `i` говорит, сколько есть входящих путей в вершину графа `i`
 
 **ВАЖНО!** Алгоритм предполагает, что в графе нет идентичных путей (дважды не задаётся дуга `x -> y`), поэтому для корректной работы от них необходимо избавиться на этапе ввода графа.
@@ -115,6 +121,107 @@ void topologicSort(int **matrix, int *inWays, int n) {
     free(inAnswer);
 }
 ```
+
+## Битовый массив (с простыми операциями)
+```c
+#include <stdio.h>
+#include "string.h"
+#include "malloc.h"
+#include "math.h"
+
+typedef unsigned long long ULL;
+typedef struct BitWord BitWord;
+#define WORD_BIT_SIZE (sizeof(ULL) * 8)
+struct BitWord {
+    ULL byte;
+};
+
+#define BIT_SET_SIZE (20000001 / WORD_BIT_SIZE + 1)
+BitWord bitSetArr[BIT_SET_SIZE];
+
+// O(n)
+void bitsetZero(BitWord *bitSet, int num) {
+    ULL length = (int)ceil(1.0 * num / WORD_BIT_SIZE);
+    for (int i = 0; i < length; ++i)
+        bitSet[i].byte = 0;
+}
+
+// O(WORD_BIT_SIZE) = O(1)
+int bitsetGet(BitWord *bitSet, int idx) {
+    ULL byteId = idx / WORD_BIT_SIZE, bitId = idx % WORD_BIT_SIZE,
+            byte = bitSet[byteId].byte;
+    return (byte >> bitId) % 2;
+}
+
+// O(WORD_BIT_SIZE) = O(1)
+void bitsetSet(BitWord *bitSet, int idx, int newVal) {
+    ULL byteId = idx / WORD_BIT_SIZE, bitId = idx % WORD_BIT_SIZE,
+            byte = bitSet[byteId].byte, i, mask = 1;
+    byte >>= bitId;
+    mask <<= bitId;
+    if (byte % 2 != newVal) {
+        if (newVal)
+            bitSet[byteId].byte |= mask;
+        else
+            bitSet[byteId].byte &= ~mask;
+    }
+}
+
+// O(WORD_BIT_SIZE + n) = O(n)
+int bitsetAny(const BitWord *bitSet, int left, int right) {
+    // Как по мне, инпут, где left == right очень нечестен. Даже в условии не указано, что такое возможно
+    if (right <= left)
+        return 0;
+    ULL leftByteId = left / WORD_BIT_SIZE, leftBitId = left % WORD_BIT_SIZE,
+            rightByteId = (right - 1) / WORD_BIT_SIZE, rightBitId = (right - 1) % WORD_BIT_SIZE,
+            byte, bit, i;
+    for (i = leftByteId + 1; i < rightByteId; ++i)
+        if (bitSet[i].byte > 0)
+            return 1;
+    byte = bitSet[leftByteId].byte;
+    byte >>= leftBitId;
+    for (i = leftBitId; byte && i < WORD_BIT_SIZE; ++i) {
+        if (leftByteId == rightByteId && i > rightBitId)
+            return 0;
+        if (byte % 2 == 1)
+            return 1;
+        byte >>= 1;
+    }
+    if (leftByteId != rightByteId) {
+        byte = bitSet[rightByteId].byte;
+        for (i = 0; byte && i <= rightBitId; ++i) {
+            if (byte % 2 == 1)
+                return 1;
+            byte >>= 1;
+        }
+    }
+    return 0;
+}
+
+int main() {
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+    int n, cmd, idx, val;
+    scanf("%d", &n);
+    for (int i = 0; i < n; ++i) {
+        scanf("%d %d", &cmd, &idx);
+        if (cmd == 0)
+            bitsetZero(bitSetArr, idx);
+        else if (cmd == 1)
+            printf("%d\n", bitsetGet(bitSetArr, idx));
+        else {
+            scanf("%d", &val);
+            if (cmd == 2)
+                bitsetSet(bitSetArr, idx, val);
+            else
+                printf(bitsetAny(bitSetArr, idx, val) ? "some\n" : "none\n");
+        }
+    }
+    return 0;
+}
+
+```
+
 
 # 22.09.03 - лекция
 Для перевода двоичного числа по битам, необходимо инвертировать биты и прибавить 1
@@ -792,3 +899,25 @@ qsort(arr, n, sizeof(int), cmp); // Последний аргумент - ука
 
 ### ДОПОЛНИТЕЛЬНО
 У указателей функции можно менять тип возвращаемого значения (*хз, зачем сюда перенёс именно этот пункт, но да ладно*)
+
+# 22.12.03 - лекция
+## Графы
+*Что такое граф итак ясно*
+
+Хранить граф можно в виде: 
+- массива, где индекс - номер вершины, а сами значения - пути (*если их несколько, можно считать элементы динамическими массивами или списками*)
+- матрицы смежности - двмерный массив `n*n`, в которой единица в `matrix[i][j]` обозначает существование пути `i -> j`
+- списка смежностей - массив со списками в качестве элементов (*описал в скобка в первом пункте*)
+
+## Обход (поиск) в глубину (DFS)
+**Суть:** позволяет из определённой вершины графа обойти все доступные вершины. Реализуется через рекурсию с помощью отмечания посещённых вершин.
+
+```c
+void dfs(int v) {
+  visited[v] = 1;
+  // Далее идёт псевдоцикл, в котором мы обхдмс все вершины, в которые можно попасть из v. Код зависит от метода хранения графа
+  for (u in ways[v])
+    if (!visited[v])
+      dfs(u);
+}
+```
