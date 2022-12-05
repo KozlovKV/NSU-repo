@@ -43,6 +43,9 @@
 - [22.11.28](#221128)
 	- [Signals](#signals)
 		- [Transistors](#transistors)
+- [22.12.05](#221205)
+	- [Logical elems from transistors...](#logical-elems-from-transistors)
+	- [Floating signals](#floating-signals)
 
 # Annotation
 Лектор - Назаров Александр Дмитриевич
@@ -465,7 +468,15 @@ gate >-||-
        source
 ```
 
-N-transistor: gate val 1 => pass from source to drain
-P-transistor: gate val 1 => block from source to drain
+N-transistor: gate val 1 => block from source to drain
+P-transistor: gate val 1 => pass from source to drain
 
 Transistors can save their states, work quickly
+
+# 22.12.05
+## Logical elems from transistors...
+
+## Floating signals
+floating
+
+Pull resistor - transform floating value to 0 and PWR signal to 1
