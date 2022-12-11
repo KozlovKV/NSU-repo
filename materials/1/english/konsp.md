@@ -668,7 +668,8 @@
   - had life handed to him on a silver platter - идиома - получать всё на блюде с голубой коёмочкой / на всём готовеньком
   - knack - талант
   - screw (sth) up - совершить ошибку или что-то испортить
-  - screw sb up - нанести кому-то вре или расстроить
+  - screw sb up - нанести кому-то вред или расстроить
+  - screw up - make mistake
   - screw-up - noun 
   - The die had been cast - жребий брошен
   - would it kill you to do sth - неужели ты не могу сделать что-то
@@ -714,7 +715,7 @@
 - to stand for - mean
   - *What does sth stand for?*
 - to portray - изображать
-- mend - fix - reapair
+- to mend - fix - reapair
 - oven - духовка
 - stove - плита
 - dugout - землянка
@@ -724,14 +725,38 @@
 - slight - лёгкий
 - desperately - отчаянно
   - *I'm desperately in need* / *I desperately want your advice on* - мне отчаянно нужно / мне отчаянно нужен твой совет
-- sew / seded / sewn - шить, 3 формы
-- beat / beat / beaten - бить, 3 формы
-- dig / dug / dug - коупать, 3 формы
-- blow up
+- to sew / seded / sewn - шить, 3 формы
+- to beat / beat / beaten - бить, 3 формы
+- to dig / dug / dug - коупать, 3 формы
+- to blow up
   - надувать
   - взрывать (сносить здание)
   - sb blows up - suddenly becomes angry
-- slip up - make mistake
+- to slip up - make mistake
+- to catch sb's breath - отдышаться
+- Arkane 1st episode
+  - bash - удар
+  - envy - зависть
+  - to bash in - врезать кому-то
+  - to get a pass - idiom - don't get punishment for a mistake
+  - jinx - сглаз
+  - to peek - заглянуть
+    - peek in (to sth) - мельком глянуть на что-то
+    - peek out (from sth) - быстро выглянуть откуда-то
+  - folk - народ
+  - to negotiate - вести переговоры
+    - negotiations - переговоры
+  - to owe - быть должным
+  - vile - подлый, мерзкий, гадкий
+  - to flee - fled - бежать
+  - to show up - появляться
+  - to tie - связывать
+  - to brag - хвастаться
+  - a culprit - преступник
+  - to cool off - остыть (успокоиться)
+  - to pipe down - успокоиться
+  - to(a) grasp - понимать(понимание)
+  - to interfere - вмешиваться (классно сочетается с интерферренцией)
 
 # Причастие
 - participle - причастие
