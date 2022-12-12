@@ -3,6 +3,8 @@
   - [Ссылки на алгоритмы, реализованные на лекциях и семинарах](#ссылки-на-алгоритмы-реализованные-на-лекциях-и-семинарах)
   - [Топологическая сортировка](#топологическая-сортировка)
   - [Битовый массив (с простыми операциями)](#битовый-массив-с-простыми-операциями)
+  - [Двусвязный список](#двусвязный-список)
+  - [Двусвязный список с двухуровневыми указателями](#двусвязный-список-с-двухуровневыми-указателями)
 - [22.09.03 - лекция](#220903---лекция)
 - [22.09.10 - лекция](#220910---лекция)
 - [22.09.14 - семинар](#220914---семинар)
@@ -76,6 +78,8 @@
 - [Быстрая сортировка](#быстрая-сортировка)
 - [Поразрядная сортировка](#поразрядная-сортировка)
 - [Стэк](#стэк)
+- [Хэш-таблица](#hash-таблицы)
+- [Бинарная куча](#бинарная-куча)
 
 ## Топологическая сортировка
 **Суть:** находим первую вершину, которая не зависит ни от какой-другой, вынимаем её из графа (зануляяем ряд в матрице и умньшаем на 1 количество вхождений для всех вершин, зависящих от данной), затем идём снова от начала массива с количеством входящих дуг (это позволит из всех возможных вершин первой выводить наименьшую).
@@ -225,6 +229,246 @@ int main() {
     return 0;
 }
 
+```
+
+## Двусвязный список
+```c
+typedef struct ListElem_s {
+    struct ListElem_s *prev, *next;
+    int value;
+} ListE;
+
+typedef struct ListStruct {
+    int length;
+    ListE *head, *last;
+} List;
+
+List* initList() {
+    List *list = (List*) calloc(1, sizeof(List));
+    list->head = (ListE*) calloc(1, sizeof(ListE));
+    list->last = (ListE*) calloc(1, sizeof(ListE));
+    list->head->prev = list->head;
+    list->head->next = list->last;
+    list->last->next = list->last;
+    list->last->prev = list->head;
+    list->length = 0;
+    return list;
+}
+
+ListE* insertBetween(List *list, ListE *prevElem, ListE *newElem, ListE *nextElem) {
+    newElem->prev = prevElem;
+    newElem->next = nextElem;
+    prevElem->next = newElem;
+    nextElem->prev = newElem;
+    list->length++;
+    return newElem;
+}
+
+ListE* addAfter(List *list, ListE *prevElem, int value) {
+    ListE *newElem = (ListE*)calloc(1, sizeof(ListE)),
+            *nextElem = prevElem->next;
+    newElem->value = value;
+    return insertBetween(list, prevElem, newElem, nextElem);
+}
+
+ListE* addBefore(List *list, ListE *nextElem, int value) {
+    ListE *newElem = (ListE*)calloc(1, sizeof(ListE)),
+            *prevElem = nextElem->prev;
+    newElem->value = value;
+    return insertBetween(list, prevElem, newElem, nextElem);
+}
+
+int erase(List *list, ListE *elem) {
+    ListE *nextElem = elem->next, *prevElem = elem->prev;
+    int value = elem->value;
+    prevElem->next = nextElem;
+    nextElem->prev = prevElem;
+    list->length--;
+    free(elem);
+    return value;
+}
+
+int isInList(List *list, int value) {
+    ListE *elem = list->head->next;
+    while (elem != list->last) {
+        if (elem->value == value)
+            return 1;
+        elem = elem->next;
+    }
+    return 0;
+}
+
+void freeList(List *list) {
+    ListE *elementForDeleting;
+    ListE *elem = list->head->next;
+    while (elem != list->last) {
+        elementForDeleting = elem;
+        elem = elem->next;
+        free(elementForDeleting);
+    }
+    free(list->head);
+    free(list->last);
+    free(list);
+}
+```
+
+## Двусвязный список с двухуровневыми указателями
+```c
+typedef struct ListElem_s {
+    struct ListElem_s *prev, *next;
+    int value;
+
+    // Поля для "длинного" элемента
+    int isLong;
+    struct ListElem_s *longPrev, *longNext;
+    int elemsBetweenLong;
+} ListE;
+
+typedef struct ListStruct {
+    int length;
+    int longMaxDistance;
+    ListE *head, *last;
+} List;
+
+List* initList(int maxPossibleElemsCount) {
+    List *list = (List*) calloc(1, sizeof(List));
+    list->head = (ListE*) calloc(1, sizeof(ListE));
+    list->last = (ListE*) calloc(1, sizeof(ListE));
+    list->head->prev = list->head;
+    list->head->next = list->last;
+    list->last->next = list->last;
+    list->last->prev = list->head;
+    list->head->isLong = 1;
+    list->head->elemsBetweenLong = 0;
+    list->head->longPrev = list->head;
+    list->head->longNext = list->last;
+    list->last->isLong = 1;
+    list->last->elemsBetweenLong = -1;
+    list->last->longPrev = list->head;
+    list->last->longNext = list->last;
+    list->length = 0;
+    list->longMaxDistance = (int)ceil(sqrt(maxPossibleElemsCount));
+    return list;
+}
+
+void splitLongSegment(ListE *longPrev) {
+    ListE *longNext = longPrev->longNext, *newLong = longPrev->next;
+    int i = 1;
+    while (i <= longPrev->elemsBetweenLong / 2) {
+        newLong = newLong->next;
+        i++;
+    }
+    newLong->isLong = 1;
+    newLong->elemsBetweenLong = longPrev->elemsBetweenLong - i;
+    newLong->longPrev = longPrev;
+    newLong->longNext = longNext;
+    longNext->longPrev = newLong;
+    longPrev->longNext = newLong;
+    longPrev->elemsBetweenLong = i - 1;
+}
+
+ListE* insertBetween(List *list, ListE *prevElem, ListE *newElem, ListE *nextElem) {
+    newElem->prev = prevElem;
+    newElem->next = nextElem;
+    prevElem->next = newElem;
+    nextElem->prev = newElem;
+    list->length++;
+    ListE *longElem = prevElem;
+    while (!longElem->isLong) {
+        longElem = longElem->prev;
+    }
+    longElem->elemsBetweenLong++;
+    if (longElem->elemsBetweenLong > list->longMaxDistance)
+        splitLongSegment(longElem);
+    return newElem;
+}
+
+ListE* addAfter(List *list, ListE *prevElem, int value) {
+    ListE *newElem = (ListE*)calloc(1, sizeof(ListE)),
+            *nextElem = prevElem->next;
+    newElem->value = value;
+    return insertBetween(list, prevElem, newElem, nextElem);
+}
+
+ListE* addBefore(List *list, ListE *nextElem, int value) {
+    ListE *newElem = (ListE*)calloc(1, sizeof(ListE)),
+            *prevElem = nextElem->prev;
+    newElem->value = value;
+    return insertBetween(list, prevElem, newElem, nextElem);
+}
+
+int erase(List *list, ListE *elem) {
+    ListE *nextElem = elem->next, *prevElem = elem->prev;
+    int value = elem->value;
+    prevElem->next = nextElem;
+    nextElem->prev = prevElem;
+    list->length--;
+    free(elem);
+    return value;
+}
+
+ListE* searchFromHead(List *list, int index) {
+    int i = 0;
+    ListE *elem = list->head;
+    while (i != index + 1) {
+        if (elem->isLong && i + elem->elemsBetweenLong < index + 1) {
+            i += elem->elemsBetweenLong;
+            elem = elem->longNext;
+        }
+        else
+            elem = elem->next;
+        i++;
+    }
+    return elem;
+}
+
+ListE* searchFromLast(List *list, int index) {
+    int i = list->length+1;
+    ListE *elem = list->last;
+    while (i != index + 1) {
+        if (elem->isLong && i - elem->longPrev->elemsBetweenLong > index + 1) {
+            i -= elem->longPrev->elemsBetweenLong;
+            elem = elem->longPrev;
+        }
+        else
+            elem = elem->prev;
+        i--;
+    }
+    return elem;
+}
+
+ListE* getElemByIndex(List *list, int index) {
+    if (list->length == index)
+        return list->last;
+    if (index <= list->length / 2)
+        return searchFromHead(list, index);
+    return searchFromLast(list, index);
+}
+
+int getElemValue(List *list, int index) {
+    return getElemByIndex(list, index)->value;
+}
+
+int isInList(List *list, int value) {
+    ListE *elem = list->head->next;
+    while (elem != list->last)
+        if (elem->value == value)
+            return 1;
+    return 0;
+}
+
+void freeList(List *list) {
+    ListE *elementForDeleting;
+    ListE *elem = list->head->next;
+    while (elem != list->last) {
+        elementForDeleting = elem;
+        elem = elem->next;
+        free(elementForDeleting);
+    }
+    free(list->head);
+    free(list->last);
+    free(list);
+}
 ```
 
 
@@ -843,7 +1087,7 @@ int hash(int val) {
   // Тут происходит магия хэширования
 }
 
-int *hashTable[HASH_MAX+1];
+Elem *hashTable[HASH_MAX+1];
 
 typedef struct {
   int key;
@@ -851,7 +1095,7 @@ typedef struct {
 } Elem;
 
 void add(Elem *elem) {
-  hashTable[hash(elem.key)] = elem.value;
+  hashTable[hash(elem.key)] = elem;
 }
 
 Elem* find(int key) {
