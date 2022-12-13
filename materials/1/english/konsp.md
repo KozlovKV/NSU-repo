@@ -34,7 +34,7 @@
 - [Past perfect](#past-perfect)
 - [Типы высказываний](#типы-высказываний)
 - [Murphey 51 - Auxillary verbs in questions and narratives](#murphey-51---auxillary-verbs-in-questions-and-narratives)
-- [in/at begin/and](#inat-beginand)
+- [in/at begin/end](#inat-beginend)
 - [Murphey 50 - (Do you know where ...? / He asked me where ...?)](#murphey-50---do-you-know-where---he-asked-me-where-)
 - [Murphey 52 - question tags (do you?, isn't it?)](#murphey-52---question-tags-do-you-isnt-it)
 - [In phrasal verbs particle must go after pronoun if phrasal verbs are used with it](#in-phrasal-verbs-particle-must-go-after-pronoun-if-phrasal-verbs-are-used-with-it)
@@ -757,6 +757,36 @@
   - to pipe down - успокоиться
   - to(a) grasp - понимать(понимание)
   - to interfere - вмешиваться (классно сочетается с интерферренцией)
+- disaster - катастрофа
+- rescuer - спасатель
+- destructive - разрушительный
+- earthquake - землетрясение
+- flood - наводнение
+- volcanic eruption - вулканическое извержение
+- underestimate - недооценивать
+- Around the home (VIU: Unit 18)
+  - en suite / en-suite bathroom - bathroom that connected to badroom
+  - dishwasher - machine that do dishes
+  - Раковина
+    - sink - in the kitchen
+    - wash / basin - in the bathroom
+  - cupboard - кухонный шкаф
+  - wardrobe - шкаф
+  - freezer - холодильник
+  - fridge - морозилка
+  - oven - духовка
+  - cooker - плита
+  - cushion - подушечка / диванная подушка
+  - armchair - кресло
+  - firm - твёрдое
+  - rug - коврик
+  - carpet - ковёр
+  - curtains - шторы
+  - blinds - жалюзи
+  - duvet - пуховое одеяло
+  - sheet - простыня / лист
+  - blanket - чехол / одеяло / покрывало / плед
+  - pillow - подушка (нормальная)
 
 # Причастие
 - participle - причастие
@@ -1100,7 +1130,7 @@ We use *have [subj]? / to be not [subj]? / do [subj]?* to show intrest in what s
 - *Are those people Korean? I think so.*
 - *Do you think it will rain? I hope not.* (с `hope`, `afraid`, `guess` исключение. Если брать `think`, то будет *I don't think so.*)
 
-# in/at begin/and
+# in/at begin/end
 `in` Используется, если мы говорим о фундаментальном начале или конце, тогда как `at` используется, если мы говорим о части плана (работы, например)
 
 # Murphey 50 - (Do you know where ...? / He asked me where ...?)
@@ -1152,7 +1182,7 @@ Nouns with *-out* and *-over* are usual written without hyohen ()
 - *I used to play tennis a lot, but I don't play very much now.*
 - *Now this building is the shop, but it used to be cinema.*
 
-Question and negative from is just past simple
+Question and negative form is just past simple
 
 *would to `<verb>`* - regulary in some situation - **NOT WITH STATIVE VERBS**
 
