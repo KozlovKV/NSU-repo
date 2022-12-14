@@ -5,6 +5,7 @@
   - [Битовый массив (с простыми операциями)](#битовый-массив-с-простыми-операциями)
   - [Двусвязный список](#двусвязный-список)
   - [Двусвязный список с двухуровневыми указателями](#двусвязный-список-с-двухуровневыми-указателями)
+  - [Хэш-таблица с обработкой коллизий при помощи списка](#хэш-таблица-с-обработкой-коллизий-при-помощи-списка)
 - [22.09.03 - лекция](#220903---лекция)
 - [22.09.10 - лекция](#220910---лекция)
 - [22.09.14 - семинар](#220914---семинар)
@@ -47,9 +48,11 @@
   - [Стэк](#стэк)
     - [Реализация на массиве](#реализация-на-массиве)
     - [Реализация на списке](#реализация-на-списке)
+  - [Вычисление математических выражений через стэк и польский метод записи](#вычисление-математических-выражений-через-стэк-и-польский-метод-записи)
   - [Очередь](#очередь)
     - [Реализация на массиве](#реализация-на-массиве-1)
   - [Дэк](#дэк)
+  - [Персистентные структуры данных](#персистентные-структуры-данных)
   - [Стандратная библиотека (CRT)](#стандратная-библиотека-crt)
 - [22.11.26 - лекция](#221126---лекция)
   - [Hash-таблицы](#hash-таблицы)
@@ -78,6 +81,7 @@
 - [Быстрая сортировка](#быстрая-сортировка)
 - [Поразрядная сортировка](#поразрядная-сортировка)
 - [Стэк](#стэк)
+- [Хэш-функция Дженкинса и Кнута](#некоторые-хэш-функции)
 - [Хэш-таблица](#hash-таблицы)
 - [Бинарная куча](#бинарная-куча)
 
@@ -313,6 +317,7 @@ void freeList(List *list) {
 ```
 
 ## Двусвязный список с двухуровневыми указателями
+**Функция `erase(...)` не дописана, так как не переделывает длинные указатели**
 ```c
 typedef struct ListElem_s {
     struct ListElem_s *prev, *next;
@@ -468,6 +473,157 @@ void freeList(List *list) {
     free(list->head);
     free(list->last);
     free(list);
+}
+```
+
+## Хэш-таблица с обработкой коллизий при помощи списка
+```c
+#include <stdio.h>
+#include "stdlib.h"
+#include "math.h"
+#include "inttypes.h"
+
+typedef struct ListElem_s {
+    struct ListElem_s *prev, *next;
+    int value;
+} ListE;
+
+typedef struct ListStruct {
+    int length;
+    ListE *head, *last;
+} List;
+
+List* initList() {
+    List *list = (List*) calloc(1, sizeof(List));
+    list->head = (ListE*) calloc(1, sizeof(ListE));
+    list->last = (ListE*) calloc(1, sizeof(ListE));
+    list->head->prev = list->head;
+    list->head->next = list->last;
+    list->last->next = list->last;
+    list->last->prev = list->head;
+    list->length = 0;
+    return list;
+}
+
+ListE* insertBetween(List *list, ListE *prevElem, ListE *newElem, ListE *nextElem) {
+    newElem->prev = prevElem;
+    newElem->next = nextElem;
+    prevElem->next = newElem;
+    nextElem->prev = newElem;
+    list->length++;
+    return newElem;
+}
+
+ListE* addAfter(List *list, ListE *prevElem, int value) {
+    ListE *newElem = (ListE*)calloc(1, sizeof(ListE)),
+            *nextElem = prevElem->next;
+    newElem->value = value;
+    return insertBetween(list, prevElem, newElem, nextElem);
+}
+
+ListE* addBefore(List *list, ListE *nextElem, int value) {
+    ListE *newElem = (ListE*)calloc(1, sizeof(ListE)),
+            *prevElem = nextElem->prev;
+    newElem->value = value;
+    return insertBetween(list, prevElem, newElem, nextElem);
+}
+
+int erase(List* list, ListE *elem) {
+    ListE *nextElem = elem->next, *prevElem = elem->prev;
+    int value = elem->value;
+    prevElem->next = nextElem;
+    nextElem->prev = prevElem;
+    free(elem);
+    list->length--;
+    return value;
+}
+
+int isListEmpty(List *list) {
+    return list->length == 0;
+}
+
+int isInList(List *list, int value) {
+    ListE *elem = list->head->next;
+    while (elem != list->last) {
+        if (elem->value == value)
+            return 1;
+        elem = elem->next;
+    }
+    return 0;
+}
+
+void freeList(List *list) {
+    ListE *elementForDeleting;
+    ListE *elem = list->head->next;
+    while (elem != list->last) {
+        elementForDeleting = elem;
+        elem = elem->next;
+        free(elementForDeleting);
+    }
+    free(list->head);
+    free(list->last);
+    free(list);
+}
+
+uint32_t jenkins(const uint8_t* key, size_t len) {
+    uint32_t hash = 0;
+    for (size_t i = 0; i < len; i++) {
+        hash += key[i];
+        hash += hash << 10;
+        hash ^= hash >> 6;
+    }
+    hash += hash << 3;
+    hash ^= hash >> 11;
+    hash += hash << 15;
+    return hash;
+}
+
+unsigned getHash(int val) {
+    char *bytes = (char*)&val;
+    return (unsigned )jenkins(bytes, 4);
+}
+
+#define HASH_RANGE 1000001
+
+typedef List* HashTableElem;
+typedef HashTableElem* HashTable;
+
+HashTable initHashTable() {
+    HashTable hashTable = calloc(sizeof(HashTableElem), HASH_RANGE);
+    return hashTable;
+}
+
+void hashValue(HashTable hashTable, int value) {
+    unsigned hash;
+    hash = getHash(value) % HASH_RANGE;
+    if (!hashTable[hash])
+        hashTable[hash] = initList();
+    if (!isInList(hashTable[hash], value))
+        addBefore(hashTable[hash], hashTable[hash]->last, value);
+}
+
+void extractFromHash(HashTable hashTable, int value, int *dstPtr, int *wasExtracted) {
+    unsigned hash;
+    *wasExtracted = 0;
+    hash = getHash(value) % HASH_RANGE;
+    if (hashTable[hash]) {
+        if (hashTable[hash]->head->next->value == value && !isListEmpty(hashTable[hash])) {
+            *dstPtr = erase(hashTable[hash], hashTable[hash]->head->next);
+            *wasExtracted = 1;
+        }
+        if (isListEmpty(hashTable[hash])) {
+            freeList(hashTable[hash]);
+            hashTable[hash] = NULL;
+        }
+    }
+}
+
+void freeHashTable(HashTable hashTable) {
+    for (int i = 0; i < HASH_RANGE; ++i) {
+        if (hashTable[i])
+            freeList(hashTable[i]);
+    }
+    free(hashTable);
 }
 ```
 
@@ -1048,6 +1204,13 @@ void push(ArrStack *stack, int val) {
 }
 ```
 
+## Вычисление математических выражений через стэк и польский метод записи
+Производится с использованием польской обратной записи (постфиксной) и двух стэков.
+- Задаём таблицу приоритетов
+- Закидываем значения в стэк значений
+- Закидываем знаки в стэк знаков, вынимая из него перед этим все операции, приоритет которых >= приоритету новой операции
+- Вынимаем для нужных операций значения из стэка значений, а результат записываем обратно в этот стэк
+
 ## Очередь
 **Суть:** добавление элемента в конец, а обращение к началу (*FIFO: first in, first out*)
 
@@ -1056,6 +1219,9 @@ void push(ArrStack *stack, int val) {
 
 ## Дэк
 **Суть:** Можно добавлять и удалять элементы как из конца, так и из начала
+
+## Персистентные структуры данных
+Это структуры, хранящие все свои прошлые состояния (прообраз СКВ)
 
 ## Стандратная библиотека (CRT)
 CRT (C Runtime Library) - основная библиотека для общения C с OS.
@@ -1109,16 +1275,39 @@ void delete(int key) {
 ```
 
 Для разрешения коллизий есть 2 варианта:
-1. В каждой ячейке хранится список - не самая быстрая структура, зато удобно и функции `find` и `delete` надо модифицировать лишь немного.
-2. Если ячейка занята, то двигаемся вправо до первой свободной - способ, экономящий память, но обладающий рядом особенностей и неудобств:
+1. Цепочки (открытое / внешнее хэширование). В каждой ячейке хранится список - не самая быстрая структура, зато удобно и функции `find` и `delete` надо модифицировать лишь немного.
+2. Открытая адресация (закрытое хэширование). Если ячейка занята, то двигаемся вправо до первой свободной - способ, экономящий память, но обладающий рядом особенностей и неудобств:
    1. Навигация по массиву циклическая
    2. После удаления значения из ячейки она не становится свободной, а блокируется для использования, из-за этого в какой-то момент может возникнуть необходимость в реаллокации.
 
-Использовать хэш-таблицу можно для быстрого удаления дубликатов или одноврменного удаления / добавления и поиска элементов.
+Использовать хэш-таблицу можно для быстрого удаления дубликатов или одноврменного удаления / добавления и поиска элементов. Также очень удобно хэширование для поиска подстроки в строке (**С использованием полиномиального хэширования**).
+
+[Реализация хэш-таблицы со списками](#хэш-таблица-с-обработкой-коллизий-при-помощи-списка)
 
 ### Некоторые хэш-функции
 - Функция Дженкинса
+```c
+uint32_t jenkins(const uint8_t* key, size_t len) {
+    uint32_t hash = 0;
+    for (size_t i = 0; i < len; i++) {
+      hash += key[i];
+      hash += hash << 10;
+      hash ^= hash >> 6;
+    }
+    hash += hash << 3;
+    hash ^= hash >> 11;
+    hash += hash << 15;
+    return hash;
+}
+```
 - Функция Кнута
+```c
+uint32_t KnuthHash(uint32_t k) {
+    const uint32_t A = 2654435769U;     //округлённое до целого phi * 2^32
+    uint32_t x = (A * k);               //умножаем по модулю 2^32 (за счёт переполнения)
+    return x >> (32 - s);               //берём старшие s битов --- получаем номер ячейки
+}
+```
 - Полиномиальный хэш
 
 ## Адреса функций
