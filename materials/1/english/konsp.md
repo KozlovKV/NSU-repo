@@ -787,6 +787,22 @@
   - sheet - простыня / лист
   - blanket - чехол / одеяло / покрывало / плед
   - pillow - подушка (нормальная)
+- to offend - обижать
+  - offendence - noun
+- Money (VIU: Unit 19)
+  - currency - валюта
+  - loan - кредит
+  - fee - доля / процент / оплата
+  - amount - сумма
+  - to save up - копить деньги
+  - to afford - позволять (тут в значении позволить себе что-то)
+  - deposit - депозит / залог
+  - good value for money - хорошо за свою цену
+  - to charge - требовать / обвинять / заряжать
+    - a charge - заряд / требование / плата
+  - арендовать
+    - rent - for long period
+    - hire - for short period
 
 # Причастие
 - participle - причастие
