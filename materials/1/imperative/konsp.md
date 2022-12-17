@@ -57,6 +57,9 @@
 - [22.11.26 - лекция](#221126---лекция)
   - [Hash-таблицы](#hash-таблицы)
     - [Некоторые хэш-функции](#некоторые-хэш-функции)
+      - [Функция Дженкинса](#функция-дженкинса)
+      - [Функция Кнута](#функция-кнута)
+      - [Полиномиальный хэш](#полиномиальный-хэш)
   - [Адреса функций](#адреса-функций)
     - [ДОПОЛНИТЕЛЬНО](#дополнительно)
 - [22.12.03 - лекция](#221203---лекция)
@@ -1290,7 +1293,7 @@ void delete(int key) {
 [Реализация хэш-таблицы со списками](#хэш-таблица-с-обработкой-коллизий-при-помощи-списка)
 
 ### Некоторые хэш-функции
-- Функция Дженкинса
+#### Функция Дженкинса
 ```c
 uint32_t jenkins(const uint8_t* key, size_t len) {
     uint32_t hash = 0;
@@ -1305,7 +1308,8 @@ uint32_t jenkins(const uint8_t* key, size_t len) {
     return hash;
 }
 ```
-- Функция Кнута
+
+#### Функция Кнута
 ```c
 uint32_t KnuthHash(uint32_t k) {
     const uint32_t A = 2654435769U;     //округлённое до целого phi * 2^32
@@ -1313,7 +1317,35 @@ uint32_t KnuthHash(uint32_t k) {
     return x >> (32 - s);               //берём старшие s битов --- получаем номер ячейки
 }
 ```
-- Полиномиальный хэш
+
+#### Полиномиальный хэш
+Чаще всего используется для строк, так как можно двигаться по строке, пересчитывая хэш по ходу за `O(1)`
+```c
+#define FIRST_LETTER ('a'-1)
+#define K 26 // >= длине алфавита
+#define P 1000000007
+
+void countKPowers(uint64_t *kPowers, int len) {
+    kPowers[0] = 1;
+    for (int i = 1; i < len; ++i)
+        kPowers[i] = kPowers[i-1] * K;
+}
+
+uint64_t polyHash(const char *str, int len, const uint64_t *kPowers) {
+    uint64_t hash = 0;
+    for (int i = 0; i < len; ++i)
+        hash += kPowers[len - 1 - i] * (uint64_t)(str[i] - FIRST_LETTER);
+    return hash % P; // В задаче на поиск подстроки остаток от деления не берётся
+}
+
+// Мы гарантируем, что текущая подстрока - не первая в главной строке
+uint64_t nextHash(uint64_t currentHash, const uint64_t *kPowers, const char* substr, int len) {
+    currentHash -= (kPowers[len - 1] * (uint64_t)(substr[-1] - FIRST_LETTER));
+    currentHash *= K;
+    currentHash += (uint64_t)(substr[len - 1] - FIRST_LETTER);
+    return currentHash;
+}
+```
 
 ## Адреса функций
 У функций тоже есть адреса (ОЧЕВИДНО), которые можно получить (а вот это уже не столь очевидно)
