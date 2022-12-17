@@ -769,10 +769,11 @@ expr =
 Добавим синтаксического сахара
 ```haskell
 expr :: Maybe Int
-expr = do
+expr x = do
   a <- return 10
-  b <- return 20
-  c <- return 30
+  b <- return $ 20 / x --считаем, что деление безопасно
+  let c = 30
+
   return (a + b) * c
 ```
 
@@ -858,7 +859,8 @@ fsafe x = do
   cosLn <- return $ cos ln
   oLitte <- return 0.000000001
   True <- (abs cos2 > oLitte && abs squarePolinom > oLitte && abs cosLn > oLitte)
-  sum <- return $ (tan ln) + 1 / cos2
+  div <- safeDiv 1 cos2
+  sum <- return $ (tan ln) + div
   return $ sum / squarePolinom
 ```
 
