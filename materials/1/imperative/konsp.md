@@ -3,9 +3,9 @@
   - [Ссылки на алгоритмы, реализованные на лекциях и семинарах](#ссылки-на-алгоритмы-реализованные-на-лекциях-и-семинарах)
   - [Топологическая сортировка](#топологическая-сортировка)
   - [Битовый массив (с простыми операциями)](#битовый-массив-с-простыми-операциями)
-  - [Двусвязный список](#двусвязный-список)
+  - [Двусвязный универсальный список](#двусвязный-универсальный-список)
   - [Двусвязный список с двухуровневыми указателями](#двусвязный-список-с-двухуровневыми-указателями)
-  - [Хэш-таблица с обработкой коллизий при помощи списка](#хэш-таблица-с-обработкой-коллизий-при-помощи-списка)
+  - [Универсальная хэш-таблица с обработкой коллизий при помощи списка](#универсальная-хэш-таблица-с-обработкой-коллизий-при-помощи-списка)
 - [22.09.03 - лекция](#220903---лекция)
 - [22.09.10 - лекция](#220910---лекция)
 - [22.09.14 - семинар](#220914---семинар)
@@ -243,11 +243,11 @@ int main() {
 
 ```
 
-## Двусвязный список
+## Двусвязный универсальный список
 ```c
 typedef struct ListElem_s {
     struct ListElem_s *prev, *next;
-    int value;
+    void* value;
 } ListE;
 
 typedef struct ListStruct {
@@ -276,23 +276,32 @@ ListE* insertBetween(List *list, ListE *prevElem, ListE *newElem, ListE *nextEle
     return newElem;
 }
 
-ListE* addAfter(List *list, ListE *prevElem, int value) {
-    ListE *newElem = (ListE*)calloc(1, sizeof(ListE)),
-            *nextElem = prevElem->next;
-    newElem->value = value;
-    return insertBetween(list, prevElem, newElem, nextElem);
-}
 
-ListE* addBefore(List *list, ListE *nextElem, int value) {
+typedef ListE*(AddFunc)(List*, ListE*, void*);
+
+ListE* addBefore(List *list, ListE *nextElem, void* value) {
     ListE *newElem = (ListE*)calloc(1, sizeof(ListE)),
             *prevElem = nextElem->prev;
     newElem->value = value;
     return insertBetween(list, prevElem, newElem, nextElem);
 }
 
-int erase(List *list, ListE *elem) {
+ListE* addAfter(List *list, ListE *prevElem, void* value) {
+    ListE *newElem = (ListE*)calloc(1, sizeof(ListE)),
+            *nextElem = prevElem->next;
+    newElem->value = value;
+    return insertBetween(list, prevElem, newElem, nextElem);
+}
+
+ListE* copyDataAndAddToList(void *data, size_t size, AddFunc add, List* list, ListE* relatedElem) {
+    void *copiedData = malloc(size);
+    memcpy(copiedData, data, size);
+    return add(list, relatedElem, copiedData);
+}
+
+void* erase(List *list, ListE *elem) {
     ListE *nextElem = elem->next, *prevElem = elem->prev;
-    int value = elem->value;
+    void* value = elem->value;
     prevElem->next = nextElem;
     nextElem->prev = prevElem;
     list->length--;
@@ -300,14 +309,19 @@ int erase(List *list, ListE *elem) {
     return value;
 }
 
-int isInList(List *list, int value) {
+int isListEmpty(List *list) {
+    return list->length == 0;
+}
+
+typedef int(*IsEqualFunc)(void *a, void *b);
+ListE* isInList(List *list, ValueData * value, IsEqualFunc isEqual) {
     ListE *elem = list->head->next;
     while (elem != list->last) {
-        if (elem->value == value)
-            return 1;
+        if (isEqual(value, elem->value))
+            return elem;
         elem = elem->next;
     }
-    return 0;
+    return NULL;
 }
 
 void freeList(List *list) {
@@ -316,6 +330,7 @@ void freeList(List *list) {
     while (elem != list->last) {
         elementForDeleting = elem;
         elem = elem->next;
+        free(elementForDeleting->value);
         free(elementForDeleting);
     }
     free(list->head);
@@ -484,98 +499,27 @@ void freeList(List *list) {
 }
 ```
 
-## Хэш-таблица с обработкой коллизий при помощи списка
+## Универсальная хэш-таблица с обработкой коллизий при помощи списка
+Референсы:
+- [Список](#двусвязный-универсальный-список)
+- [Хэш-функции](#некоторые-хэш-функции)
 ```c
 #include <stdio.h>
 #include "stdlib.h"
 #include "math.h"
 #include "inttypes.h"
 
-typedef struct ListElem_s {
-    struct ListElem_s *prev, *next;
-    int value;
-} ListE;
+/*
+    ...
+    Код списков
+    ...
+*/
 
-typedef struct ListStruct {
-    int length;
-    ListE *head, *last;
-} List;
 
-List* initList() {
-    List *list = (List*) calloc(1, sizeof(List));
-    list->head = (ListE*) calloc(1, sizeof(ListE));
-    list->last = (ListE*) calloc(1, sizeof(ListE));
-    list->head->prev = list->head;
-    list->head->next = list->last;
-    list->last->next = list->last;
-    list->last->prev = list->head;
-    list->length = 0;
-    return list;
-}
-
-ListE* insertBetween(List *list, ListE *prevElem, ListE *newElem, ListE *nextElem) {
-    newElem->prev = prevElem;
-    newElem->next = nextElem;
-    prevElem->next = newElem;
-    nextElem->prev = newElem;
-    list->length++;
-    return newElem;
-}
-
-ListE* addAfter(List *list, ListE *prevElem, int value) {
-    ListE *newElem = (ListE*)calloc(1, sizeof(ListE)),
-            *nextElem = prevElem->next;
-    newElem->value = value;
-    return insertBetween(list, prevElem, newElem, nextElem);
-}
-
-ListE* addBefore(List *list, ListE *nextElem, int value) {
-    ListE *newElem = (ListE*)calloc(1, sizeof(ListE)),
-            *prevElem = nextElem->prev;
-    newElem->value = value;
-    return insertBetween(list, prevElem, newElem, nextElem);
-}
-
-int erase(List* list, ListE *elem) {
-    ListE *nextElem = elem->next, *prevElem = elem->prev;
-    int value = elem->value;
-    prevElem->next = nextElem;
-    nextElem->prev = prevElem;
-    free(elem);
-    list->length--;
-    return value;
-}
-
-int isListEmpty(List *list) {
-    return list->length == 0;
-}
-
-int isInList(List *list, int value) {
-    ListE *elem = list->head->next;
-    while (elem != list->last) {
-        if (elem->value == value)
-            return 1;
-        elem = elem->next;
-    }
-    return 0;
-}
-
-void freeList(List *list) {
-    ListE *elementForDeleting;
-    ListE *elem = list->head->next;
-    while (elem != list->last) {
-        elementForDeleting = elem;
-        elem = elem->next;
-        free(elementForDeleting);
-    }
-    free(list->head);
-    free(list->last);
-    free(list);
-}
-
-uint32_t jenkins(const uint8_t* key, size_t len) {
-    uint32_t hash = 0;
-    for (size_t i = 0; i < len; i++) {
+// При необходимости можно взять другую хэш-функцию
+uint64_t jenkins(const uint8_t* key, size_t size) {
+    uint64_t hash = 0;
+    for (size_t i = 0; i < size; i++) {
         hash += key[i];
         hash += hash << 10;
         hash ^= hash >> 6;
@@ -586,50 +530,97 @@ uint32_t jenkins(const uint8_t* key, size_t len) {
     return hash;
 }
 
-unsigned getHash(int val) {
-    char *bytes = (char*)&val;
-    return (unsigned )jenkins(bytes, 4);
-}
-
 #define HASH_RANGE 1000001
 
-typedef List* HashTableElem;
-typedef HashTableElem* HashTable;
+typedef uint64_t(*HashFunc)(const uint8_t* key, size_t len); 
+/* 
+    ВАЖНО! Эта хэш-функция должна возвращать нам хэш в чистом виде. Взятие остатка будет производиться уже в функциях добавления / изъятия.
+    Кроме того, стоит учитывать, что иогда не все переданные данные должны хэшироваться, а лишь их значимая часть.
+    То есть зачастую над той же функцией Дженкинса будет необходима написать ещё одну обёртку, которая будет обрабатывать лишь нужную информацию. Ниже пример
+*/
 
-HashTable initHashTable() {
-    HashTable hashTable = calloc(sizeof(HashTableElem), HASH_RANGE);
+typedef struct {
+    int index;
+    char* str;
+    int strLen;
+} Data;
+
+uint64_t hashWrapper(const uint8_t* data, size_t size) {
+    Data *realData = (Data*)data;
+    return jenkins(realData->str, realData->strLen);
+}
+/*
+    Можно заметить, что параметр size тут не используется, что не очень хорошо, можно это пофиксить, но большого смысла не вижу
+*/
+
+typedef List* HashTableElem;
+typedef struct {
+    HashTableElem* table;
+    HashFunc hashFunc;
+    int range;
+} HashTable;
+
+HashTable* initHashTable(int range, HashFunc hashFunc) { // В данном случае range равен тому, что указан в HASH_RANGE
+    HashTable* hashTable = (HashTable*)calloc(1, sizeof(HashTable));
+    hashTable->table = (HashTableElem*) calloc(range, sizeof(HashTableElem));
+    hashTable->range = range;
+    hashTable->hashFunc = hashFunc;
     return hashTable;
 }
 
-void hashValue(HashTable hashTable, int value) {
-    unsigned hash;
-    hash = getHash(value) % HASH_RANGE;
-    if (!hashTable[hash])
-        hashTable[hash] = initList();
-    if (!isInList(hashTable[hash], value))
-        addBefore(hashTable[hash], hashTable[hash]->last, value);
-}
-
-void extractFromHash(HashTable hashTable, int value, int *dstPtr, int *wasExtracted) {
-    unsigned hash;
-    *wasExtracted = 0;
-    hash = getHash(value) % HASH_RANGE;
-    if (hashTable[hash]) {
-        if (hashTable[hash]->head->next->value == value && !isListEmpty(hashTable[hash])) {
-            *dstPtr = erase(hashTable[hash], hashTable[hash]->head->next);
-            *wasExtracted = 1;
-        }
-        if (isListEmpty(hashTable[hash])) {
-            freeList(hashTable[hash]);
-            hashTable[hash] = NULL;
-        }
+void* saveHashedData(HashTable* hashTable, uint64_t hash, void* data, size_t size, IsEqualFunc isEqual) {
+    hash %= hashTable->range;
+    if (!hashTable->table[hash])
+        hashTable->table[hash] = initList();
+    ListE *duplicateElem = isInList(hashTable->table[hash], data, isEqual);
+    if (!duplicateElem) {
+        copyDataAndAddToList(
+            data, size, addBefore,
+            hashTable->table[hash],
+            hashTable->table[hash]->last
+        );
     }
+    else {
+        return duplicateElem->value;
+    }
+    return NULL;
 }
 
-void freeHashTable(HashTable hashTable) {
-    for (int i = 0; i < HASH_RANGE; ++i) {
-        if (hashTable[i])
-            freeList(hashTable[i]);
+uint64_t getRawHash(HashTable* hashTable, void* data, size_t size) {
+    return hashTable->hashFunc((uint8_t*)data, size);
+}
+
+uint64_t getShortHash(HashTable* hashTable, void* data, size_t size) {
+    return getRawHash(hashTable, data, size) % hashTable->range;
+}
+
+void* hashData(HashTable* hashTable, void* data, size_t size, IsEqualFunc isEqual) {
+    uint64_t hash;
+    hash = getRawHash(hashTable, data, size); // Отсечение чести для добавления идёт дальше
+    return saveHashedData(hashTable, hash, data, size, isEqual);
+}
+
+void* extractFromHash(HashTable* hashTable, void* data, size_t size, IsEqualFunc isEqual, HashTable hashTable, int value, int *dstPtr, int *wasExtracted) {
+    uint64_t hash = getShortHash(hashTable, data, size);
+    if (hashTable->table[hash]) {
+        ListE *foundElem = isInList(hashTable->table[hash], data, isEqual);
+        if (foundElem) {
+            void *returnData = erase(hashTable->table[hash], foundElem);
+            if (isListEmpty(hashTable->table[hash])) {
+                freeList(hashTable->table[hash]);
+                hashTable->table[hash] = NULL;
+            }
+            return returnData;
+        }
+        
+    }
+    return NULL;
+}
+
+void freeHashTable(HashTable* hashTable) {
+    for (int i = 0; i < hashTable->range; ++i) {
+        if (hashTable->table[i])
+            freeList(hashTable->table[i]);
     }
     free(hashTable);
 }
