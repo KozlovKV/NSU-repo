@@ -803,6 +803,28 @@
   - арендовать
     - rent - for long period
     - hire - for short period
+- Health (VIU: Unit 20)
+  - matter - дело (*What's the matter? - В чём дело? / Что случилось?*)
+  - sore - больное место / больное
+  - bandage - повязка (*и не только XD*)
+  - chemist - аптека
+  - stomach - желудок
+  - -ache - this part (or word) describes pain that isn't always strong but continues
+    - headache
+    - backache
+    - stomach ache
+    - to ache - причинять боль (*My head is aching for 3 hours!*)
+  - pain - for other parts of body
+  - to hurt - when pain is more stronger
+  - lungs - лёгкие
+  - liver - печень
+  - disease - serious medical problem that often affects part of body (*heart disease*)
+  - illness - used to talk about serious and minor medical problemns, also affecting the mind
+    - **for period of medical problem we should use ONLY illness**
+  - attack - for illness - situation when some disease cause suddenly hurting
+    - heart attack
+    - asthma attack
+  - 
 
 # Причастие
 - participle - причастие

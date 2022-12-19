@@ -44,8 +44,22 @@
 	- [Signals](#signals)
 		- [Transistors](#transistors)
 - [22.12.05](#221205)
-	- [Logical elems from transistors...](#logical-elems-from-transistors)
+	- [Logical elems from transistors](#logical-elems-from-transistors)
+		- [In logisim](#in-logisim)
 	- [Floating signals](#floating-signals)
+- [22.12.12](#221212)
+- [22.12.19](#221219)
+	- [Combinational units](#combinational-units)
+		- [Schemes composing](#schemes-composing)
+	- [Allow-signal](#allow-signal)
+	- [Sequqntial units](#sequqntial-units)
+		- [Edge Detector](#edge-detector)
+		- [Filp-flop (RS-trigger)](#filp-flop-rs-trigger)
+		- [D-trigger (latch)](#d-trigger-latch)
+		- [Master-slave latch (trigger)](#master-slave-latch-trigger)
+		- [T-trigger](#t-trigger)
+		- [JK-trigger](#jk-trigger)
+	- [Multiported register](#multiported-register)
 
 # Annotation
 Лектор - Назаров Александр Дмитриевич
@@ -474,9 +488,70 @@ P-transistor: gate val 1 => pass from source to drain
 Transistors can save their states, work quickly
 
 # 22.12.05
-## Logical elems from transistors...
+## Logical elems from transistors
+### In logisim
+- `AND` - like helmet
+- `OR` - like wide arrow
+- `NOT` - like sharpen arrow
 
 ## Floating signals
 floating
 
 Pull resistor - transform floating value to 0 and PWR signal to 1
+
+# 22.12.12
+
+
+# 22.12.19
+## Combinational units
+Pure functions
+
+### Schemes composing
+If we have bool-table we can compose DNF with OR-gate on the output
+
+Or we can reduce logical expression
+
+## Allow-signal
+Allow-signals (often connected to bottom) signalize when elem can work. When they are off, elems save their state.
+
+## Sequqntial units
+Have internal state (not pure functions)
+
+### Edge Detector
+Short output signal when input signal was changed. (Compose from `NOT`, `OR`)
+
+### Filp-flop (RS-trigger)
+Set-Reset trigger save changeed value of one from two inputs
+R | S | Q | !Q | _
+--|---|---|----|-----
+0 | 0 |   |    | saves previous value
+0 | 1 | 0 |  1 |
+1 | 0 | 1 |  0 |
+1 | 1 |   |    | forbidden inputs
+
+### D-trigger (latch)
+Save input `D` when `clock` is high
+D | Clock |  Q  | !Q | _
+--|-------|-----|----|-----
+0 | 0     |  0  |    | 
+0 | 1     |  0  |    | saves D
+1 | 0     | 1/0 |    | if clock changes to low when D stays high,  output will save D while clock is low
+1 | 1     |  1  |    | saves D
+
+### Master-slave latch (trigger)
+Two `D`-triggers with `RS`-trigger. First `D`-trigger (`master`) depends on `D` & `clock`, second - on `master` & `!clock`
+
+*add picture*
+
+D | Clock | master | !Clock |  Q  | !Q | _
+--|-------|--------|--------|-----|----|-----
+0 | 0     |  0     |  1     |  0  |    | 
+0 | 1     |  0     |  0     |  0  |    | 
+1 | 0     |  1/0   |  1     | 1/0 |    | 
+1 | 1     |  1     |  0     | 1/0 |    | 
+
+### T-trigger
+
+### JK-trigger
+
+## Multiported register
