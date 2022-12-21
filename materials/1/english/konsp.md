@@ -824,7 +824,15 @@
   - attack - for illness - situation when some disease cause suddenly hurting
     - heart attack
     - asthma attack
-  - 
+- Clothes (VIU: Unit 21)
+  - well-dressed / look stylish - wearing nice clothes and looking attractive
+  - smartly dressed - clean and tidy clothes, usually for formal situations
+  - casual - comfortable clothes, usually for informal situations
+  - earring - серьга
+  - bracelet - браслет
+  - necklace - ожерелье
+  - skirt - юбка
+  - tights - колготки
 
 # Причастие
 - participle - причастие
