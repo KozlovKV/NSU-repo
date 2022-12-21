@@ -42,6 +42,8 @@
 - [If we use "what about sth" we need use Ving](#if-we-use-what-about-sth-we-need-use-ving)
 - [Murphey 18. "Used to"](#murphey-18-used-to)
 - [Murphey 61. "Be/get used to sth (I'm used to ...)"](#murphey-61-beget-used-to-sth-im-used-to-)
+- [Tences for embeded speach](#tences-for-embeded-speach)
+- [Вопросы-пожелания](#вопросы-пожелания)
 
 # Websites
 
@@ -249,6 +251,7 @@
   - (dis)honesty - noun
 - come out - стать известным общественности, вернуться откуда-то
 - shake hands - пожать руки
+- nod head - покачать головой
 - put on - раздражаться
 - make for sth - двигаться в направлении чего-то
 - get away - "сваливать", "сливаться"
@@ -833,6 +836,34 @@
   - necklace - ожерелье
   - skirt - юбка
   - tights - колготки
+  - sleeve - рукав
+  - collar - воротник
+  - shirt - рубашка
+  - trousers - брюки
+  - t-shirt - футболка
+  - **rucksack** - рюкзак
+  - briefcase - портфель
+  - jacket - куртка
+  - **trainers / sneakers**
+  - jumper / sweater
+  - to get dressed - одеться
+  - to wear - носить
+  - take off sth - снять
+    - put sth on - opp.
+      - put sb's shirts on sth - idiom - рискнуть всем, что у тебя есть
+  - undo sth - расстегнуть что-то
+    - do sth up - idiom - застегнуть что-то
+  - to suit - подходить
+    - a suit - костюм
+  - **элемент одежды**
+  - change into sth (for clothes) - change sth piece of clothes
+- intention - намерение
+- pavement - тротуар
+- come across / run into - пересечься
+- to deny - отклонить
+  - a denial
+- to refuse / put down - отказывать
+  - a refusal
 
 # Причастие
 - participle - причастие
@@ -1240,3 +1271,9 @@ Question and negative form is just past simple
 **As `sth` in this collocation we can't use infinitive verb!**
 
 **Don't confuse with [`used to`](#murphey-18-used-to)**
+
+# Tences for embeded speach
+In the embeded speach with step tence back (*present simple => past simple*, etc.)
+
+# Вопросы-пожелания
+`Will <subj> <verb>?`
