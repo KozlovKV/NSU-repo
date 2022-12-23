@@ -988,3 +988,15 @@ data Either a b = Left a | Right b
 *Лектор болел и пока что даже не выложил презентацию*
 
 # 22.12.19 - семинар
+$$
+Ax + By + Cz + D = 0
+\newline
+Ax + By + Cz = -D
+\newline
+y=0,z=0 => x = -D/A
+\newline
+x=0,z=0 => y = -D/B
+\newline
+x=0,y=0 => z = -D/C
+
+$$

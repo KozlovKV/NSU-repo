@@ -841,10 +841,10 @@
   - shirt - рубашка
   - trousers - брюки
   - t-shirt - футболка
-  - **rucksack** - рюкзак
+  - rucksack - рюкзак
   - briefcase - портфель
   - jacket - куртка
-  - **trainers / sneakers**
+  - trainers / sneakers
   - jumper / sweater
   - to get dressed - одеться
   - to wear - носить
@@ -855,7 +855,7 @@
     - do sth up - idiom - застегнуть что-то
   - to suit - подходить
     - a suit - костюм
-  - **элемент одежды**
+  - item of clothing (clothes) - элемент одежды
   - change into sth (for clothes) - change sth piece of clothes
 - intention - намерение
 - pavement - тротуар
