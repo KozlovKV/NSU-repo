@@ -883,6 +883,56 @@
   - I'll leave it - я ухожу
   - I'll take it/them - я беру это
   - changing room - примерочная
+- Shopping (VIU: Unit 23)
+  - a basket - корзина
+  - a trolley - тележка
+  - a checkout - касса
+  - a shelve - стеллаж / прилавок / шельф
+  - to shelve - откладывать
+  - under one roof - буквально - "Под одной крышей" - в одном месте
+  - convenient - удобно
+  - a stall - прилавок, небольшая комната
+  - to stall - suddenly stop working / stop making progress / задержать кого-то в процессе чего-то
+  - to haggle - торговаться
+    - a haggling
+- Food (VIU: Unit 24)
+  - peach - персик
+  - pear - груша
+  - melon - дыня
+  - lemon
+  - cocnut
+  - strawberry
+  - pineapple
+  - olives
+  - grape
+  - bunch - кучка / гроздь
+  - peas - горох
+  - garlic - чеснок
+  - onion - лук
+  - carrot - морковь
+  - mushrooms - грибы
+  - spinach - шпинат
+  - cabbage - капуста
+  - pepper
+  - broccoli
+  - courgette - кабачок
+  - aubergine
+  - lettuce - лист салата
+  - tomato
+  - cucumber
+  - vinegar - уксус
+  - beef - говядина
+  - calf - телёнок
+    - veal - телятина
+  - lamb - детёныш овцы / его мясо
+  - pork - свинина
+  - chicken / hen - курица
+    - chicken - курятина
+  - vegeterian
+  - salmon - лосось
+  - prawns - креветки
+  - mussels - моллюски
+  - crab
 
 # Причастие
 - participle - причастие
