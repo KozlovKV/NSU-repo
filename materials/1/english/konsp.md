@@ -864,6 +864,25 @@
   - a denial
 - to refuse / put down - отказывать
   - a refusal
+- Fashion and buying clothes (VIU: Unit 22)
+  - to try on - примерять одежду 
+  - to go with - look good together
+  - a cupboard - буфет
+  - a wardrobe - гардероб (как место)
+  - even / though - хотя
+  - even though - не смотря на что-то
+  - to dress in - одеваться по определённому стилю
+  - to match - совпадать / быть походими
+  - coat - пальто
+  - to fit - подходить по размеру
+  - to suit - хорошо смотреться
+  - to serve - обслуживать
+  - tight - узкий
+  - loose - широкий
+  - that's a shame / that's a pity - это меня не устраивает / это ужас
+  - I'll leave it - я ухожу
+  - I'll take it/them - я беру это
+  - changing room - примерочная
 
 # Причастие
 - participle - причастие
@@ -905,7 +924,7 @@
   - ironsmith - кузнец
   - tolbooth - тюрьма
 - st - profession
-  - scientists
+  - scientist
 - or / er - profession
   - housemaster - домоуправитель
   - nonbeliever - тот, кто не верит
@@ -1001,7 +1020,7 @@
   - harmful
   - wonderful
   - helpful
-  - haedful - головокружительный
+  - headful - головокружительный
 - able / ible - availability
   - viable - жизнеспособный
   - tolerable - терпимый
@@ -1019,7 +1038,6 @@
 - ish - language / quality
   - Irish
   - wolfish - волчий
-  - longish - длинноватый
 - ian / an - nationality
   - russian
   - indian
@@ -1051,7 +1069,7 @@
 - Если говорим о привычках и постоянных делах
 - Список действий (например, в инструкции)
 - Если используем [глаголы](#глаголы-состояния) выражения мыслей (think, feel, want)
-- Если речь о событиях по расписанию (The plane to London takes off at 6:50 a.m.)
+- Если речь о событиях по расписанию (*The plane to London takes off at 6:50 a.m.*)
 - В спортивных комментариях, обзор, при рассказе истории
 
 ## Слова-маркеры
@@ -1069,7 +1087,7 @@ Stative verb describes states, conditions, features, traits rather than actions 
 
 Глаголы состояния отражают состояние в данный момент, поэтому чаще всего используются в present simple.
 - Express / Preferences (Отношение): like, dislike, love, hate, enjoy, etc.
-- Mental activity (Мысли): believe, know, recognize, seem, think (if means "believe" or "have opinion"), etc.
+- Mental activity (Мысли): believe, know, recognize, seem, think (**if means "believe" or "have opinion"**), etc.
 - Feelings (Чувства): see, hear, **feel**, taste, **look**, smell, sound, etc. Often use with can/could when we refer to what we see. **Bolded verbs can be in continious when we talk about somebody (He's looking great today!)**
 - Others: be, contain, fit, include, matter, need, belong, cost, owe, mean, own, appear, want, have
 
@@ -1077,13 +1095,13 @@ Stative verb describes states, conditions, features, traits rather than actions 
 # Когда используется present continious
 - Речь о событиях в момент речи
 - Действие началось до момента речи и продлится после
-- Длительное изменение ситуации (e.g. Young people are spending more and more time playing on the computer)
+- Длительное изменение ситуации (e.g. *Young people are spending more and more time playing on the computer*)
 - Если говорим о часто повторяющихся событиях и хотим подчеркнуть своё недовольство по их поводу
 - Когда речь об уже запланированных событиях в ближайшем будущем
 - Limit - есть какое-то ограничение (today, thiw week)
 
 ## Нетипичное состояние
-Если кто-то находится в данный момент в нетипичном состоянии, иногда можно употребить сочетание **am/is/are being [V]ing** (I can't understand why he's being so selfish. He isn't usually like that)
+Если кто-то находится в данный момент в нетипичном состоянии, иногда можно употребить сочетание **am/is/are being [V]ing** (*I can't understand why he's being so selfish. He isn't usually like that*)
 
 ## Слова-маркеры
 - now
@@ -1114,7 +1132,7 @@ Stative verb describes states, conditions, features, traits rather than actions 
    2. Present continious
 
 # Complex
-Комплексные глаголы формируются по типу `<verb> <who> <what>` (I want you to close the window). 
+Комплексные глаголы формируются по типу `<verb> <who> <what>` (*I want you to close the window*).
 
 # Типы вопросов
 1. General - Answer: Yes/No (*Are ypu eating now?*)
@@ -1134,7 +1152,7 @@ Stative verb describes states, conditions, features, traits rather than actions 
 Если используется только прилагательное или наречие, то перед ним стоит **so**. В другом случае - **such**.
 
 # Have or have got
-Когда речь идёт о владении чем-то, допустимы обе формы. **Главное не having!**. В прошедшем времени используется только had (без got).
+Когда речь идёт о владении чем-то, допустимы обе формы. **Главное не having!**. В прошедшем времени используется только had (**без got**).
 
 Со словами, представленными ниже, можно исользовать have или having, а при отрицании или вопросе всегда используются don't, doesn't или didn't
 - breakfast, dinner, a cup of coffee, something to eat etc.
@@ -1197,7 +1215,7 @@ All verbs on one timeline
 
 Also auxillary verbs can help to deny what sb says: *You're sitting at my place. No, i'm not.* / *You didn't lock the door before you left. Yes, I did.*
 
-We use *have [subj]? / to be not [subj]? / do [subj]?* to show intrest in what sb has said: *Lisa isn't very well today. Oh isn't she? What is wrong with her?*
+We use *have [obj]? / to be not [obj]? / do [obj]?* to show intrest in what sb has said: *Lisa isn't very well today. Oh isn't she? What is wrong with her?*
 
 Если мы хотм подтвердить аналогичную ситуацию или опровергнуть, мы можем использовать `so` или `neither` (`nor` или `not _ either`) (Для утвердительного предложения согласие тоже утвердительное - и наоборот). Причём будет такой порядок слов - `so/neither [aux. verb] [subj]`:
 - *I'm tired. So am I.*
@@ -1252,7 +1270,7 @@ Nouns with *-out* and *-over* are usual written without hyohen ()
 # Murphey 18. "Used to"
 *used to `<verb>`* - means that subject did sth in the past but they don't do it now; or sth was true in the past and false now. 
 
-**NEVER IN PRESENT**
+**ALWAYS `USED`! NEVER IN PRESENT**
 
 **only if action haven't exectly count**
 
