@@ -946,6 +946,26 @@
   - look forward to - wait with such big hype
   - make up - compose
     - make up for - make sth for compensation
+- City life (VIU: Unit 26)
+  - rush hour - час-пик
+  - to be in a hurry - do sth or go somewhere quickly
+  - get stuck - застрять
+  - traffic jam - пробка (машин)
+  - car park / parking space (**NOT parking** if we say paritculary about place where we can leave a car)
+  - adventages
+    - disadventages - opp.
+  - crowded
+    - quiet
+  - nightlife
+- Life in the country (VIU: Unit 27)
+  - be surrounded by sth
+  - scenery - пейзаж
+  - bank of river - берег
+  - countryside - сельская местность
+  - crop - урожай
+  - barley - ячмень
+  - wheat - пшеница
+  - footpath - тропинка
 
 # Причастие
 - participle - причастие
