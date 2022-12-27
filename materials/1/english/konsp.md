@@ -46,7 +46,8 @@
 - [Вопросы-пожелания](#вопросы-пожелания)
 
 # Websites
-
+- [Cambridge Learner's dictionary](https://dictionary.cambridge.org/dictionary/learner-english)
+- [English practice](https://www.english-practice.at/)
 
 # Книги
 - English grammar in use (blue)
@@ -454,7 +455,7 @@
 - fire sb up - make sb excited or angry
 - sustain
   - to support emotionally
-  - to suffer expirience of damage of loss
+  - to suffer expirience of damage or loss
   - to keep alive
   - let sth to continue
 - shout - орать
@@ -462,7 +463,7 @@
 - fill sb in - give sb extra or missing info
 - fill sb's shoes - do sb's job or accept sb's responsibilities
 - dull - boring
-- withhol - утаивать что-то
+- withhold - утаивать что-то
 - break sb in - ввести в курс дела
 - break sth in - разнашивать какую-то вещь
 - break in - перебивать
@@ -548,7 +549,7 @@
     - silly - opposite
 - typist - машинистка
 - cold comfort - слабое утешение
-- gaint the upper hand - одержать верх
+- gain the upper hand - одержать верх
 - tin opener - консервный нож
 - jealous - завидовать / ревновать
   - jealousy - noun
@@ -618,14 +619,14 @@
     - nieces - plural
   - step(father / mother / sister / brother) - сводные отец, мать, сестра, брат
   - (father / mother / sister / brother)-in-law - тесть, тёща, невестка, шурин
-  - ex-(housbend / wife / boy(girl)friend, etc.) - housbend, wife etc. in the past
+  - ex-(husbend / wife / boy(girl)friend, etc.) - husbend, wife etc. in the past
   - get to know sb - познокмиться с кем-то
     - get to know each other - познакомились друг с другом
 - shut - закрыть
 - hire - арендовать
 - truce - перемирие
 - explain sth to sb - объяснить что-то кому-то
-- Word about growing up:
+- Words about growing up:
   - toddler - ползунок (1-3 years old)
   - childhood - 3-12 years
   - teenager - 13-18 years approximately
@@ -642,7 +643,7 @@
   - date - свидание
   - go out with sb - to have a romantic relationship with sb
   - get engaged - обручиться
-    - engagement - noun
+    - engagement - помолвка
   - get married - жениться / выйти замуж
     - get married to (**NOT "with"**)
   - bride - невеста
@@ -656,7 +657,7 @@
     - pregnant - adjective
   - anniversary - годовщина
 - a couple of - несколько
-- on her own - alone
+- on sb's own - act alone
 - intention - намерение
   - intend - намереваться
 - don't make (any) sense / make no sense - не иметь смысла
@@ -668,15 +669,15 @@
   - turn out - одноврменно начать что-то делать или достигнуть одинакового результата
   - rivalry - соперничество
   - no big deal - ничего страшного / ну и ладно
-  - had life handed to him on a silver platter - идиома - получать всё на блюде с голубой коёмочкой / на всём готовеньком
+  - have life handed to sb on a silver platter - идиома - получать всё на блюде с голубой коёмочкой / на всём готовеньком
   - knack - талант
   - screw (sth) up - совершить ошибку или что-то испортить
   - screw sb up - нанести кому-то вред или расстроить
   - screw up - make mistake
   - screw-up - noun 
   - The die had been cast - жребий брошен
-  - would it kill you to do sth - неужели ты не могу сделать что-то
-  - nosey - пронырливый / любоптный (from nose, lol)
+  - would it kill you to do sth - неужели ты не мог сделать что-то
+  - nosey - пронырливый / любоптный (*from nose, lol*)
   - sb behind bars - кто-то за решёткой
   - rampant - угрожающий / свирепствующий
   - stand up to sb/sth - сопротивляться кому-то или чему-то
@@ -696,7 +697,7 @@
   - wake up - проснуться
     - wake sb up - make sb waked up
   - get up - get out from the bed
-  - staright away - immediately
+  - straight away - immediately
   - have a late/early night - go to sleep late/early
   - cereal - каша
   - don't bother to do sth - don't do sth because there is no reason or because it is too much work
@@ -730,7 +731,7 @@
   - *I'm desperately in need* / *I desperately want your advice on* - мне отчаянно нужно / мне отчаянно нужен твой совет
 - to sew / seded / sewn - шить, 3 формы
 - to beat / beat / beaten - бить, 3 формы
-- to dig / dug / dug - коупать, 3 формы
+- to dig / dug / dug - копать, 3 формы
 - to blow up
   - надувать
   - взрывать (сносить здание)
@@ -758,8 +759,8 @@
   - a culprit - преступник
   - to cool off - остыть (успокоиться)
   - to pipe down - успокоиться
-  - to(a) grasp - понимать(понимание)
-  - to interfere - вмешиваться (классно сочетается с интерферренцией)
+  - to (a) grasp - понимать(понимание)
+  - to interfere - вмешиваться (*классно сочетается с интерферренцией*)
 - disaster - катастрофа
 - rescuer - спасатель
 - destructive - разрушительный
@@ -812,12 +813,12 @@
   - bandage - повязка (*и не только XD*)
   - chemist - аптека
   - stomach - желудок
-  - -ache - this part (or word) describes pain that isn't always strong but continues
+  - -ache - this part (or word) describes pain that isn't always strong but continues a long time
     - headache
     - backache
     - stomach ache
     - to ache - причинять боль (*My head is aching for 3 hours!*)
-  - pain - for other parts of body
+  - pain - like above, but for other parts of body
   - to hurt - when pain is more stronger
   - lungs - лёгкие
   - liver - печень
@@ -841,7 +842,7 @@
   - shirt - рубашка
   - trousers - брюки
   - t-shirt - футболка
-  - rucksack - рюкзак
+  - rucksack / backpack - рюкзак
   - briefcase - портфель
   - jacket - куртка
   - trainers / sneakers
@@ -867,18 +868,16 @@
 - Fashion and buying clothes (VIU: Unit 22)
   - to try on - примерять одежду 
   - to go with - look good together
-  - a cupboard - буфет
-  - a wardrobe - гардероб (как место)
   - even / though - хотя
   - even though - не смотря на что-то
   - to dress in - одеваться по определённому стилю
-  - to match - совпадать / быть походими
+  - to match - совпадать / быть похожими
   - coat - пальто
   - to fit - подходить по размеру
   - to suit - хорошо смотреться
   - to serve - обслуживать
   - tight - узкий
-  - loose - широкий
+  - loose - широкий / свободный
   - that's a shame / that's a pity - это меня не устраивает / это ужас
   - I'll leave it - я ухожу
   - I'll take it/them - я беру это
@@ -900,12 +899,13 @@
   - pear - груша
   - melon - дыня
   - lemon
-  - cocnut
+  - coconut
   - strawberry
   - pineapple
   - olives
   - grape
   - bunch - кучка / гроздь
+  - beans - бобы / семена
   - peas - горох
   - garlic - чеснок
   - onion - лук
@@ -916,7 +916,7 @@
   - pepper
   - broccoli
   - courgette - кабачок
-  - aubergine
+  - aubergine - баклажан
   - lettuce - лист салата
   - tomato
   - cucumber
