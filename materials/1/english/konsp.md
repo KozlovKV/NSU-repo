@@ -933,6 +933,19 @@
   - prawns - креветки
   - mussels - моллюски
   - crab
+- Some useful phrasal verbs
+  - come up - подойти чтобы заговорить / возникнуть
+  - cut sb/sth off
+    - about place - separate sth/sb from other people, prevent people from reaching/leaving place
+    - stop supply - остановить поставку чего-либо (электричества, питания)
+  - get along - get on (*where you are alone?*) / get on well
+    - get along on a shoestring - get on having quite little money amount
+  - go on - happen / continue
+  - go off - explode / leave
+  - keep on - continue
+  - look forward to - wait with such big hype
+  - make up - compose
+    - make up for - make sth for compensation
 
 # Причастие
 - participle - причастие
