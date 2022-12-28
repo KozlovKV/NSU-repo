@@ -86,7 +86,7 @@
 - persuade someone - убеждать / агитировать
 - insist on - настаивать
 - fence - забор
-- broke up - расстались
+- brake up - расстаться
 - main one - главный из чего-то
 - Sequence - последовательность
 - observe - наблюдать, обозреать всё вокруг
@@ -437,7 +437,7 @@
 - unconscious - не ощущающий окружающего мира, не понимающий происходящего
 - pass sth out - дать что-то каждому из группы людей
 - get off! - stop touching sth
-- get off sth - leave bus/aircraft or boat / leave sth place
+- get off sth - leave bus/aircraft/boat / leave sth place
 - get off on sth - feel very excited by doing sth
 - get off with sb - begin sexual relationship with sb
 - get on sb's nerves - действовать кому-то на нервы
@@ -494,7 +494,7 @@
 - wave to sb - махать кому-то рукой
 - consider - рассматривать
 - consideration - рассмотрение
-  - to put under consideration - отправить а рассмотрение
+  - to put under consideration - отправить на рассмотрение
 - wealth - богатство
   - wealthy - богатые
 - to last - длиться
@@ -557,10 +557,10 @@
 - bestiss / bestbuddies / mates - good friends
 - come about - произойти
 - get by -  выживать
-  - cope with - same
+  - cope with - syn.
 - obviously - очевидно
-  - clearly - same
-  - apparently - same
+  - clearly - syn.
+  - apparently - syn.
 - go without sth - жить без чего-либо
 - give sb a hand - оказать помощь кому-то
 - pump - насос
@@ -638,7 +638,7 @@
   - N-year-old man - man who is N years old (**NOT N-years-old!**)
   - bring up - растить кого-то до совершеннолетнего возраста
 - stay out late - допоздна не возвращаться домой
-- managed sth - do sth with that was difficult
+- manage sth - do sth with that's difficult
 - Words about romance, marriage and divorce
   - date - свидание
   - go out with sb - to have a romantic relationship with sb
@@ -701,6 +701,7 @@
   - have a late/early night - go to sleep late/early
   - cereal - каша
   - don't bother to do sth - don't do sth because there is no reason or because it is too much work
+  - bother - беспокоиться
   - takeaway - еда на дом (на выноск)
   - do washing - стираться
   - ironing - глажка
@@ -854,8 +855,9 @@
       - put sb's shirts on sth - idiom - рискнуть всем, что у тебя есть
   - undo sth - расстегнуть что-то
     - do sth up - idiom - застегнуть что-то
-  - to suit - подходить
+  - to suit - хорошо смотреться
     - a suit - костюм
+  - to fit - подходить по размеру
   - item of clothing (clothes) - элемент одежды
   - change into sth (for clothes) - change sth piece of clothes
 - intention - намерение
@@ -1345,7 +1347,7 @@ Sometimes we can compose a noun from verb and particle:
 - *drop out* => *dropout*
 - *rip off* => *rip-off*
 
-Nouns with *-out* and *-over* are usual written without hyohen ()
+Nouns with *-out* and *-over* are usual written without hyohen
 
 # If we use "what about sth" we need use Ving
 *What about going to the cafe?*
