@@ -948,6 +948,23 @@
   - look forward to - wait with such big hype
   - make up - compose
     - make up for - make sth for compensation
+  - burst out - shout / begin laugh
+  - back away - go back being frightened / stop encourage some plan
+  - catch up - догнать
+  - get around - travel / spread
+    - spread - распространиться
+  - hang around - don't do anything
+  - hold up - continue to be strong
+  - point out - отметить
+  - pull on - надевать
+  - move on - change accomodation / continue to live
+  - set down - write down / set sb to your place
+  - set off - отправиться в путь / вызывать действие
+  - stand by - prepare / wait / encourage
+  - stand out - выделяться
+  - watch out - be careful
+  - work out - go through sth
+  - 
 - City life (VIU: Unit 26)
   - rush hour - час-пик
   - to be in a hurry - do sth or go somewhere quickly
