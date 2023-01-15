@@ -3,7 +3,7 @@
 - [Слова](#слова)
 - [Причастие](#причастие)
 - [Как сказать слово по-английски?](#как-сказать-слово-по-английски)
-- [to be ](#to-be-)
+- [to be `<expression>`](#to-be-expression)
 - [Суффиксы и части речи](#суффиксы-и-части-речи)
   - [Noun](#noun)
   - [Verb](#verb)
@@ -998,7 +998,7 @@
 - Can you translate/spell/pronounce?
 - What is the meaning of _?
 
-# to be <expression>
+# to be `<expression>`
 - Where are you from? (to be from)
 
 # Суффиксы и части речи
