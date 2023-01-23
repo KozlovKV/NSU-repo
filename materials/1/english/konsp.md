@@ -985,6 +985,62 @@
   - barley - ячмень
   - wheat - пшеница
   - footpath - тропинка
+- Transport (VIU: Unit 28)
+  - lorry / track - грузовик
+  - van - газель
+  - bus
+  - coach - trainer / tourist bus
+  - bicycle
+  - motorbike
+  - fare - плата за проезд
+  - Ездить
+    - train / bus / coach - get / catch / go by
+    - plane - fly 
+    - taxi - get / take
+    - bicycle - go by / ride a
+  - Сесть на / выйти
+    - bus / coach / train / plane / bicycle - get on / get off
+    - taxi - get in / get out
+  - taxi rank - стоянка такси
+- On the road (VIU: Unit 29)
+  - traffic lights
+  - bend - поворот
+  - junction - соединение (пересечение) дорог / перекрёсток
+  - pedestrian - пешеход
+  - pedestrian crossing - пешеходный переход
+  - motorway - шоссе
+    - inside / slow lane - обочина
+    - outside / fast lane - внутренние полосы
+  - bridge
+  - road sign - дорожный знак
+  - to overtake - обогнать (concrete and abstract)
+  - get lost - потеряться
+  - on sb's way to - по пути
+  - via - through
+  - end up - оказаться там, где не ожидал
+  - pavement - тротуар
+  - step off - сойти с
+  - to approach - приближаться
+  - a brake - тормоз
+  - to brake - затормозить
+  - to swerve - suddenly change direction
+  - to / a damage - for things
+  - to injure / an injury - for persons
+- Notices and warnings (VIU: Unit 30)
+  - out of order
+    - for machine - stop working
+    - for person - behaves unacceptable
+  - no vacancies - concrete / no places in hotel, parking etc.
+  - sold out
+  - admission - вход
+  - fragile - хрупкий (concrete and abstract)
+  - parcel - посылка
+- Classroom language (VIU: Unit 31)
+  - sharpener - точилка
+  - ruler - линейка
+  - socket - розетка / разъём / гнездо
+  - plug - штекер / пробка / затычка
+  - lend - одолжить (совсем ненадолго, даже короче, чем hire)
 
 # Причастие
 - participle - причастие

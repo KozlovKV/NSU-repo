@@ -482,8 +482,8 @@ gate >-||-
        source
 ```
 
-N-transistor: gate val 1 => block from source to drain
-P-transistor: gate val 1 => pass from source to drain
+N-transistor: gate val 1 => pass from source to drain
+P-transistor: gate val 1 => block from source to drain
 
 Transistors can save their states, work quickly
 
