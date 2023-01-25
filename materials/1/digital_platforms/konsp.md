@@ -42,11 +42,20 @@
 	- [Coccone architecture](#coccone-architecture)
 - [22.11.28](#221128)
 	- [Signals](#signals)
-		- [Transistors](#transistors)
+	- [Transistors](#transistors)
+	- [Logical elems, composed from transistors](#logical-elems-composed-from-transistors)
+		- [NOT](#not)
+		- [OR](#or)
+		- [AND](#and)
+		- [NOR](#nor)
+		- [NAND](#nand)
+		- [XOR](#xor)
 - [22.12.05](#221205)
 	- [Logical elems from transistors](#logical-elems-from-transistors)
 		- [In logisim](#in-logisim)
-	- [Floating signals](#floating-signals)
+	- [Pass transistor logic (PTL)](#pass-transistor-logic-ptl)
+	- [Floating signals and pull resistors](#floating-signals-and-pull-resistors)
+	- [Controlled buffer](#controlled-buffer)
 - [22.12.12](#221212)
 - [22.12.19](#221219)
 	- [Combinational units](#combinational-units)
@@ -471,7 +480,7 @@ Clock signal - (strobe) - control signal, that defines time moment of execution.
 
 The tire (шина) - signals group that are grouped by some traits.
 
-### Transistors
+## Transistors
 Transistors can switch between two states: pass signal or block it.
 
 ```
@@ -485,7 +494,27 @@ gate >-||-
 N-transistor: gate val 1 => pass from source to drain
 P-transistor: gate val 1 => block from source to drain
 
-Transistors can save their states, work quickly
+## Logical elems, composed from transistors
+### NOT
+![NOT](./materials/transistors/T2L1_NOT.png)
+
+### OR
+![OR](./materials/transistors/T2L1_OR.png)
+
+### AND
+![OR](./materials/transistors/T2L1_AND.png)
+
+### NOR
+![NOR](./materials/transistors/T2L1_NOR.png)
+
+### NAND
+![NAND](./materials/transistors/T2L1_NAND.png)
+
+### XOR
+![XOR](./materials/transistors/T2L2_XOR.png)
+
+More reliable version in [PTL topic](#pass-transistor-logic-ptl).
+
 
 # 22.12.05
 ## Logical elems from transistors
@@ -494,10 +523,33 @@ Transistors can save their states, work quickly
 - `OR` - like wide arrow
 - `NOT` - like sharpen arrow
 
-## Floating signals
-floating
+![Logisim gates](./materials/transistors/T2L1_logisim-gates.png)
 
-Pull resistor - transform floating value to 0 and PWR signal to 1
+## Pass transistor logic (PTL)
+Main idea of this pattern is direct pins' signals to transistors' source. This makes a lot of schemes more cheaper, pretty and easy for understanding.
+
+Example with XOR:
+
+![XOR with PTL pattern](./materials/transistors/T2L2_PTL-XOR.png)
+
+## Floating signals and pull resistors
+When transistor blocks src, it gives us the floating signal (blue in Logisim, Z or X in tables). We'll get error if direct this signal to transisor's gate.
+
+Pull resistor - transform floating signal to 1 or 0.
+
+Pull resistor makes more easier a lot of schemes.
+
+<img width="48%" src="./materials/transistors/T2L2_PULL-NOT.png">
+<img width="48%" src="./materials/transistors/T2L2_PULL-NAND.png">
+
+**Pull resistors aren't universal decision cause they work slow and consume power.**
+
+## Controlled buffer
+CTR pint true => pass singal. *Why do we need it?!*
+
+Actual buffers are bidirectional (*Ok... Maybe it can be useful*), but logisim simulates them as unidirectional.
+
+![Controlled buffer: realization and value table](./materials/transistors/T2L2_controlled-buffer.png)
 
 # 22.12.12
 
