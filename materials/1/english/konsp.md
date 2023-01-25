@@ -1041,6 +1041,18 @@
   - socket - розетка / разъём / гнездо
   - plug - штекер / пробка / затычка
   - lend - одолжить (совсем ненадолго, даже короче, чем hire)
+- School education (VIU: Unit 32)
+  - nursery - питомник
+  - nursery school - детский сад
+  - prinary school
+  - secondary school
+  - take/do exams
+  - vocational training - квалификационные курсы (в колледже)
+  - go on to university
+  - math (american) / maths (british)
+  - lipstick - помада
+  - stay behind - оставаться после уроков (в более общем смысле - оставаться где-то, когда все уходят)
+  - 
 
 # Причастие
 - participle - причастие
