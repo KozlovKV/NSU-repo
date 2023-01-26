@@ -359,6 +359,7 @@
 - pick up - imporving in business or social situation / wind becomes stronger
   - pick up sth - увеличение чего
   - pick sb/sth up - to lift sth/sb by using hands / collect sb who is waiting for you / collect sth that you have left
+  - "схватывать на лету"
 - lift - поднять
 - turn/put the clock back - repeat situation
 - cut sb off - to stop someone speaking
@@ -1052,7 +1053,48 @@
   - math (american) / maths (british)
   - lipstick - помада
   - stay behind - оставаться после уроков (в более общем смысле - оставаться где-то, когда все уходят)
-  - 
+- Studying English and taking exams (VIU: Unit 33)
+  - wide vocabulary
+  - accurately
+  - fluent speaking
+  - vowel - гласная
+  - consonants - согласные
+  - willing - готовый
+  - take / do exam
+  - retake exam
+  - revise - check sth and improve it / study sth and for taking test
+    - revise for exam
+- University education (VIU: Unit 34)
+  - qualification - concrete meaning / sth that you get passing the exam
+  - degree - учёная степень
+    - study for degree / do a degree
+  - lecturer
+  - undergraduates - обучающиеся на бакалавра
+  - graduates - получившие учёную степень бакалавра
+  - postgraduate degrees - более высокие учёные степени (Master, PhD, etc.)
+- probably - возможно
+- Jobs (VIU: Unit 35)
+  - builder
+  - carpenter - makes things using wood
+  - pipe - труба
+  - plumber - installs and repairs water pipes
+  - electrician
+  - mechainc - repairs cars
+  - fix / repair
+  - fix / repair / mend - for small equipment
+  - mend - for clothes
+  - accountant - бухгалтер
+  - architect
+  - lawyer
+  - engineer
+  - to treat - лечить
+  - GP - терапевт
+  - dentist
+  - vet
+  - nurse - медсестра
+  - sailor - моряк
+  - navy - флот
+  - fireman / firefighter - works in fire brigade
 
 # Причастие
 - participle - причастие
