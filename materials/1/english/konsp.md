@@ -406,69 +406,70 @@
   - produce public information, produce a large counts of items to be sold
   - make wrong (e.g. in math calc)
   - give work
-- go down / decline - снижаться
-- ensure - гарантировать / способствовать
-- to grant - предоставить
-- tie - галстук
-- drinking habits - алкоголизм
-- sth is right up sb's street - что-то по части кого-то (его любимое дело или то, в чём он разбирается)
-- forensic - судебный
-- forensics - суд.-мед. эскпертиза
-- right behind sb - give sb complete support
-- landlady - домовладелица
-- homeowner - домовладелец
-- housekeeper - домработник
-- wait up - don't go to bed cause you are expecting someone to arrive ("ждать, не смыкая глаз")
-- bloody thing - чёртова штука
-- cuppa - чашка чаю
-- bit of trouble - небольшая неприятность
-- decent - приличие
-- out of sb's depth - не обладать достаточными навыками или знаниями, чтобы справиться с ситуацией
-  - out of one's league - the same
-- shot in the dark - ткнул пальцем в небо, выстрел вслепую
-- piss off - отвали! (грубая форма)
-- divorce - развод
-- imply - подразумевать
-- assume - предполагать / допускать
-- wear - надеть
-- put on - надеть
-- adultery - измена (в замужестве)
-- adulterer - изменник
-- pass out - потерять сознание
-- unconscious - не ощущающий окружающего мира, не понимающий происходящего
-- pass sth out - дать что-то каждому из группы людей
-- get off! - stop touching sth
-- get off sth - leave bus/aircraft/boat / leave sth place
-- get off on sth - feel very excited by doing sth
-- get off with sb - begin sexual relationship with sb
-- get on sb's nerves - действовать кому-то на нервы
-  - drive sb crazy - the same
-  - to be one's pain in neck
-- any point in sth - есть ли смысл в чём-то (e.g. *any point I'm asking*)
-- none at all - absolutly no (вообще нет / никакого)
-- get moving - to hurry
-- hurry - поторопиться
-- descreet - осторожность
-- barely - едва
-- capable - способный
-- arch-enemy - заклятый враг
-- to be above all that - быть выше (всего) этого
-- fire sb up - make sb excited or angry
-- sustain
-  - to support emotionally
-  - to suffer expirience of damage or loss
-  - to keep alive
-  - let sth to continue
-- shout - орать
-- fill in - выполнять чужую работу
-- fill sb in - give sb extra or missing info
-- fill sb's shoes - do sb's job or accept sb's responsibilities
-- dull - boring
-- withhold - утаивать что-то
-- break sb in - ввести в курс дела
-- break sth in - разнашивать какую-то вещь
-- break in - перебивать
-- break-in - незаконное проникновение
+- Sherlock (S1E1):
+  - go down / decline - снижаться
+  - ensure - гарантировать / способствовать
+  - to grant - предоставить
+  - tie - галстук
+  - drinking habits - алкоголизм
+  - sth is right up sb's street - что-то по части кого-то (его любимое дело или то, в чём он разбирается)
+  - forensic - судебный
+  - forensics - суд.-мед. эскпертиза
+  - right behind sb - give sb complete support
+  - landlady - домовладелица
+  - homeowner - домовладелец
+  - housekeeper - домработник
+  - wait up - don't go to bed cause you are expecting someone to arrive ("ждать, не смыкая глаз")
+  - bloody thing - чёртова штука
+  - cuppa - чашка чаю
+  - bit of trouble - небольшая неприятность
+  - decent - приличие
+  - out of sb's depth - не обладать достаточными навыками или знаниями, чтобы справиться с ситуацией
+    - out of one's league - the same
+  - shot in the dark - ткнул пальцем в небо, выстрел вслепую
+  - piss off - отвали! (грубая форма)
+  - divorce - развод
+  - imply - подразумевать
+  - assume - предполагать / допускать
+  - wear - надеть
+  - put on - надеть
+  - adultery - измена (в замужестве)
+  - adulterer - изменник
+  - pass out - потерять сознание
+  - unconscious - не ощущающий окружающего мира, не понимающий происходящего
+  - pass sth out - дать что-то каждому из группы людей
+  - get off! - stop touching sth
+  - get off sth - leave bus/aircraft/boat / leave sth place
+  - get off on sth - feel very excited by doing sth
+  - get off with sb - begin sexual relationship with sb
+  - get on sb's nerves - действовать кому-то на нервы
+    - drive sb crazy - the same
+    - to be one's pain in neck
+  - any point in sth - есть ли смысл в чём-то (e.g. *any point I'm asking*)
+  - none at all - absolutly no (вообще нет / никакого)
+  - get moving - to hurry
+  - hurry - поторопиться
+  - descreet - осторожность
+  - barely - едва
+  - capable - способный
+  - arch-enemy - заклятый враг
+  - to be above all that - быть выше (всего) этого
+  - fire sb up - make sb excited or angry
+  - sustain
+    - to support emotionally
+    - to suffer expirience of damage or loss
+    - to keep alive
+    - let sth to continue
+  - shout - орать
+  - fill in - выполнять чужую работу
+  - fill sb in - give sb extra or missing info
+  - fill sb's shoes - do sb's job or accept sb's responsibilities
+  - dull - boring
+  - withhold - утаивать что-то
+  - break sb in - ввести в курс дела
+  - break sth in - разнашивать какую-то вещь
+  - break in - перебивать
+  - break-in - незаконное проникновение
 - forehead - лоб
 - lips - губы
 - cheek - щёки
@@ -511,7 +512,7 @@
 - pretty - about girl or boy
 - beautiful, gorgeous - about women (very good)
 - attractive, good-looking, but also handsome - about men (good)
-- gorgeous, good-looking - about men (very good)
+- gorgeous - about men (very good)
 - ugly - not beautiful
 - ordinary - polite ver. of ugly (and more soft by meaning)
 - fat => overweight
@@ -547,11 +548,11 @@
   - nervous / anxious - нервный / обеспокоенный
     - anxiety - noun
   - sensible - практичный, рациональный
-    - silly - opposite
+    - silly - opp.
 - typist - машинистка
 - cold comfort - слабое утешение
 - gain the upper hand - одержать верх
-- tin opener - консервный нож
+- can/tin opener - консервный нож
 - jealous - завидовать / ревновать
   - jealousy - noun
 - mood - настроение
@@ -608,6 +609,7 @@
   - miserable - unhappy
   - affect - влиять
   - cheerful - relaxed and happy
+  - mood
 - care for - look after sb, especially sb young
 - aunt - тётя
 - Family and friends:
@@ -771,7 +773,7 @@
 - volcanic eruption - вулканическое извержение
 - underestimate - недооценивать
 - Around the home (VIU: Unit 18)
-  - en suite / en-suite bathroom - bathroom that connected to badroom
+  - en suite / en-suite bathroom - bathroom that connected to bedroom
   - dishwasher - machine that do dishes
   - Раковина
     - sink - in the kitchen
@@ -965,7 +967,6 @@
   - stand out - выделяться
   - watch out - be careful
   - work out - go through sth
-  - 
 - City life (VIU: Unit 26)
   - rush hour - час-пик
   - to be in a hurry - do sth or go somewhere quickly
@@ -1045,7 +1046,7 @@
 - School education (VIU: Unit 32)
   - nursery - питомник
   - nursery school - детский сад
-  - prinary school
+  - primary school
   - secondary school
   - take/do exams
   - vocational training - квалификационные курсы (в колледже)
@@ -1057,10 +1058,9 @@
   - wide vocabulary
   - accurately
   - fluent speaking
-  - vowel - гласная
-  - consonants - согласные
+  - vowel - гласная буква
+  - consonant - согласная буква
   - willing - готовый
-  - take / do exam
   - retake exam
   - revise - check sth and improve it / study sth and for taking test
     - revise for exam
