@@ -1,20 +1,21 @@
 - [Websites](#websites)
-- [Books](#books)
-- [Words](#words)
-- [Причастие](#причастие)
+- [Words, phrasal verbs and collocations](#words-phrasal-verbs-and-collocations)
+- [Participle](#participle)
 - [Как сказать слово по-английски?](#как-сказать-слово-по-английски)
 - [to be `<expression>`](#to-be-expression)
-- [Суффиксы и части речи](#суффиксы-и-части-речи)
+- [Suffixes](#suffixes)
   - [Noun](#noun)
   - [Verb](#verb)
   - [Abjective](#abjective)
 - [В субъектных вопросах используются вспомогательные глаголы do, does, did](#в-субъектных-вопросах-используются-вспомогательные-глаголы-do-does-did)
-- [Когда используется present simple](#когда-используется-present-simple)
-  - [Слова-маркеры](#слова-маркеры)
-  - [Глаголы состояния](#глаголы-состояния)
-- [Когда используется present continious](#когда-используется-present-continious)
-  - [Нетипичное состояние](#нетипичное-состояние)
-  - [Слова-маркеры](#слова-маркеры-1)
+- [Present simple](#present-simple)
+  - [When to use](#when-to-use)
+  - [Words-markers](#words-markers)
+  - [Stative verbs](#stative-verbs)
+- [Present continious](#present-continious)
+  - [When to use](#when-to-use-1)
+  - [Untypical states](#untypical-states)
+  - [Words-markers](#words-markers-1)
 - [Modifiers of adjectives](#modifiers-of-adjectives)
 - [Наречия rarely, seldom, never носят отрицающее значение, поэтому с ними не используется отрицательная форма глагола](#наречия-rarely-seldom-never-носят-отрицающее-значение-поэтому-с-ними-не-используется-отрицательная-форма-глагола)
 - [Narrative tenses](#narrative-tenses)
@@ -25,10 +26,10 @@
 - [Have or have got](#have-or-have-got)
 - [Писать резуме, отправлять резюме и прочие действия для письма подразуемваются в данный момент, поэтому используется present continious](#писать-резуме-отправлять-резюме-и-прочие-действия-для-письма-подразуемваются-в-данный-момент-поэтому-используется-present-continious)
 - [Past simple](#past-simple)
-  - [When to use](#when-to-use)
+  - [When to use](#when-to-use-2)
   - [Key words](#key-words)
 - [Past continious](#past-continious)
-  - [When to use](#when-to-use-1)
+  - [When to use](#when-to-use-3)
   - [Key words](#key-words-1)
 - [Past simple vs. Past continious](#past-simple-vs-past-continious)
 - [Past perfect](#past-perfect)
@@ -46,7 +47,7 @@
 - [Вопросы-пожелания](#вопросы-пожелания)
 - [Coherent's elements](#coherents-elements)
 - [Present perfect](#present-perfect)
-  - [When to use](#when-to-use-2)
+  - [When to use](#when-to-use-4)
   - [Key moments](#key-moments)
   - [Key words](#key-words-2)
   - [gone / been](#gone--been)
@@ -55,16 +56,10 @@
 - [Cambridge Learner's dictionary](https://dictionary.cambridge.org/dictionary/learner-english)
 - [English practice](https://www.english-practice.at/)
 
-# Books
-- English grammar in use (blue)
-- Grammarway 3
-- English vocabulary in use blue
-- English collocation in use yellow
+# Words, phrasal verbs and collocations
+See [this files](./my_vocabulary.md)
 
-# Words
-See [this files](./vocabulary_notes/words.md)
-
-# Причастие
+# Participle
 - participle - причастие
   - Present participle / active quality (`P1 V4 "-ing"`) - действительное причастие настоящего времени
   - Past participle / passive condition (`P2 V3 "-ed"`) - страдательное причастие прошедшего времени
@@ -79,7 +74,7 @@ See [this files](./vocabulary_notes/words.md)
 # to be `<expression>`
 - Where are you from? (to be from)
 
-# Суффиксы и части речи
+# Suffixes
 ## Noun
 - sion / tion - result of some action
   - complementation - дополнение 
@@ -244,7 +239,8 @@ See [this files](./vocabulary_notes/words.md)
  
 # В субъектных вопросах используются вспомогательные глаголы do, does, did
 
-# Когда используется present simple
+# Present simple
+## When to use
 - Если мы говорим о каких-то постоянных вещах, что обычно правда
 - Если говорим о привычках и постоянных делах
 - Список действий (например, в инструкции)
@@ -252,8 +248,8 @@ See [this files](./vocabulary_notes/words.md)
 - Если речь о событиях по расписанию (*The plane to London takes off at 6:50 a.m.*)
 - В спортивных комментариях, обзор, при рассказе истории
 
-## Слова-маркеры
-В вопросе ставятся после to be, но пред смысловым глаголом
+## Words-markers
+In question goes after `to be` but before meaningful verb
 - always, usually
 - every day/week/month/year
 - on Mondays / Tuesdays
@@ -262,7 +258,7 @@ See [this files](./vocabulary_notes/words.md)
 - the weekend
 - etc.
 
-## Глаголы состояния
+## Stative verbs
 Stative verb describes states, conditions, features, traits rather than actions (passive condition)
 
 Глаголы состояния отражают состояние в данный момент, поэтому чаще всего используются в present simple.
@@ -272,7 +268,8 @@ Stative verb describes states, conditions, features, traits rather than actions 
 - Others: be, contain, fit, include, matter, need, belong, cost, owe, mean, own, appear, want, have
 
 ---
-# Когда используется present continious
+# Present continious
+## When to use
 - Речь о событиях в момент речи
 - Действие началось до момента речи и продлится после
 - Длительное изменение ситуации (e.g. *Young people are spending more and more time playing on the computer*)
@@ -280,10 +277,10 @@ Stative verb describes states, conditions, features, traits rather than actions 
 - Когда речь об уже запланированных событиях в ближайшем будущем
 - Limit - есть какое-то ограничение (today, thiw week)
 
-## Нетипичное состояние
+## Untypical states
 Если кто-то находится в данный момент в нетипичном состоянии, иногда можно употребить сочетание **am/is/are being [V]ing** (*I can't understand why he's being so selfish. He isn't usually like that*)
 
-## Слова-маркеры
+## Words-markers
 - now
 - at the moment
 - these days

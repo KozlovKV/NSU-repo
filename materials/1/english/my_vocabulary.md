@@ -1060,3 +1060,40 @@ Just words that I have learned
 - controversial - спорный 
 - insult - оскорблять
 - go up - подняться
+- Books and films (VIU: Unit 43)
+  - What is on - то, что сейчас в прокате
+  - film director - режиссёр
+- Phoning and texting (VIU: Unit 53)
+  - phrases to ask who is speaking with you by phone
+    - Is that sb - informal
+    - Who's calling - formal
+  - answer to this question
+    - It's sb - informal
+    - Calling - formal ("у аппарата")
+  - put sb through - connect sb with sb else
+  - get through - connect
+  - to be on the phone to sb - говорить с кем-то
+  - dial - make call to particular number
+  - left a message
+  - answerphone - автоответчик
+  - to ring / to give sb's a ring - позвонить
+  - line engaged - линия занята
+  - Texting abbreviations:
+    - ASAP - as soon as possible
+    - BF / GF - boyfriend / girlfriend
+    - B4 - before
+    - 2DAY - today
+    - 2MORO - tomorrow
+    - Y - why?
+    - PLS - please
+    - CU - see you
+    - IMO - in my opinion
+    - FYI - for your information
+    - U - you
+    - THX - thanks
+    - LOL - laughing out loud
+    - X - kiss
+- Computers (VIU: Unit 54)
+  - back up / make a backup
+  - print out / get hard copy / get a printout
+  - FAQ - frequently asked questions
