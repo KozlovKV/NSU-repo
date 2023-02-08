@@ -1,6 +1,7 @@
 - [Websites](#websites)
-- [Книги](#книги)
-- [Слова](#слова)
+- [Books](#books)
+- [Words](#words)
+- [Collocations](#collocations)
 - [Причастие](#причастие)
 - [Как сказать слово по-английски?](#как-сказать-слово-по-английски)
 - [to be `<expression>`](#to-be-expression)
@@ -44,18 +45,24 @@
 - [Murphey 61. "Be/get used to sth (I'm used to ...)"](#murphey-61-beget-used-to-sth-im-used-to-)
 - [Tences for embeded speach](#tences-for-embeded-speach)
 - [Вопросы-пожелания](#вопросы-пожелания)
+- [Coherent's elements](#coherents-elements)
+- [Present perfect](#present-perfect)
+  - [When to use](#when-to-use-2)
+  - [Key moments](#key-moments)
+  - [Key words](#key-words-2)
+  - [gone / been](#gone--been)
 
 # Websites
 - [Cambridge Learner's dictionary](https://dictionary.cambridge.org/dictionary/learner-english)
 - [English practice](https://www.english-practice.at/)
 
-# Книги
+# Books
 - English grammar in use (blue)
 - Grammarway 3
 - English vocabulary in use blue
 - English collocation in use yellow
 
-# Слова
+# Words
 - spell - Диктовать по буквам
 - pronounce - произнести
 - noun - существительное
@@ -1095,6 +1102,30 @@
   - sailor - моряк
   - navy - флот
   - fireman / firefighter - works in fire brigade
+- coherent - связность
+  - linkers - связки
+  - linking words
+  - conjunctions - союзы
+- overcome - преодолеть
+  - overcome some obstacles - преодолеть все препятствия
+- utterly - полностью
+- bitterly - горько
+- appall - пугать
+  - appalled - потрясённый
+- convinced - убеждённый
+- devaste - опустошать
+- resent - негодовать
+- ashamed - опозоренный
+- concern - беспокойство / озадаченность
+- commit - посвещать
+- regret - жалеть
+- condemn - осуждать
+- controversial - спорный 
+- insult - оскорблять
+- go up - подняться
+
+# Collocations
+
 
 # Причастие
 - participle - причастие
@@ -1507,3 +1538,37 @@ In the embeded speach with step tence back (*present simple => past simple*, etc
 
 # Вопросы-пожелания
 `Will <subj> <verb>?`
+
+# Coherent's elements
+- Conjunctions: and, but, because, although, even though
+- Linking words / constructions: 
+  - It seems to me that
+  - I think that
+  - It goes without saying
+- Linkers:
+  - despite the fact that
+
+# Present perfect
+Use when we don't talk about specific past.
+
+`[subj] has/have V3`
+
+## When to use
+- Action in the past with Result / Expirience now
+- News, anouncment
+- 
+
+## Key moments
+1. Result or expirience is important
+2. Started in the past
+3. Connection with now
+
+## Key words
+- since
+- just - только что
+- already
+- yet
+
+## gone / been
+Have / has gone to - it steel be true (я сейчас там)
+Have / has been to - it was true but now bemace change (я уже там был)
