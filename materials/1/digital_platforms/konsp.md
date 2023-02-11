@@ -57,6 +57,17 @@
 	- [Floating signals and pull resistors](#floating-signals-and-pull-resistors)
 	- [Controlled buffer](#controlled-buffer)
 - [22.12.12](#221212)
+	- [Plexers in logisim](#plexers-in-logisim)
+		- [Decoder](#decoder)
+		- [Multiplexer](#multiplexer)
+		- [Priority encoder](#priority-encoder)
+		- [Selector](#selector)
+		- [Adder](#adder)
+			- [Two bits half adder](#two-bits-half-adder)
+		- [The full adder](#the-full-adder)
+		- [Ripple carry adder](#ripple-carry-adder)
+		- [Carry-save adder](#carry-save-adder)
+		- [Carry-lookahead](#carry-lookahead)
 - [22.12.19](#221219)
 	- [Combinational units](#combinational-units)
 		- [Schemes composing](#schemes-composing)
@@ -496,22 +507,22 @@ P-transistor: gate val 1 => block from source to drain
 
 ## Logical elems, composed from transistors
 ### NOT
-![NOT](./materials/transistors/T2L1_NOT.png)
+![NOT](./materials/transistors/screenshots/T2L1_NOT.png)
 
 ### OR
-![OR](./materials/transistors/T2L1_OR.png)
+![OR](./materials/transistors/screenshots/T2L1_OR.png)
 
 ### AND
-![OR](./materials/transistors/T2L1_AND.png)
+![OR](./materials/transistors/screenshots/T2L1_AND.png)
 
 ### NOR
-![NOR](./materials/transistors/T2L1_NOR.png)
+![NOR](./materials/transistors/screenshots/T2L1_NOR.png)
 
 ### NAND
-![NAND](./materials/transistors/T2L1_NAND.png)
+![NAND](./materials/transistors/screenshots/T2L1_NAND.png)
 
 ### XOR
-![XOR](./materials/transistors/T2L2_XOR.png)
+![XOR](./materials/transistors/screenshots/T2L2_XOR.png)
 
 More reliable version in [PTL topic](#pass-transistor-logic-ptl).
 
@@ -523,14 +534,14 @@ More reliable version in [PTL topic](#pass-transistor-logic-ptl).
 - `OR` - like wide arrow
 - `NOT` - like sharpen arrow
 
-![Logisim gates](./materials/transistors/T2L1_logisim-gates.png)
+![Logisim gates](./materials/transistors/screenshots/T2L1_logisim-gates.png)
 
 ## Pass transistor logic (PTL)
 Main idea of this pattern is direct pins' signals to transistors' source. This makes a lot of schemes more cheaper, pretty and easy for understanding.
 
 Example with XOR:
 
-![XOR with PTL pattern](./materials/transistors/T2L2_PTL-XOR.png)
+![XOR with PTL pattern](./materials/transistors/screenshots/T2L2_PTL-XOR.png)
 
 ## Floating signals and pull resistors
 When transistor blocks src, it gives us the floating signal (blue in Logisim, Z or X in tables). We'll get error if direct this signal to transisor's gate.
@@ -539,8 +550,8 @@ Pull resistor - transform floating signal to 1 or 0.
 
 Pull resistor makes more easier a lot of schemes.
 
-<img width="48%" src="./materials/transistors/T2L2_PULL-NOT.png">
-<img width="48%" src="./materials/transistors/T2L2_PULL-NAND.png">
+<img width="48%" src="./materials/transistors/screenshots/T2L2_PULL-NOT.png">
+<img width="48%" src="./materials/transistors/screenshots/T2L2_PULL-NAND.png">
 
 **Pull resistors aren't universal decision cause they work slow and consume power.**
 
@@ -549,10 +560,125 @@ CTR pint true => pass singal. *Why do we need it?!*
 
 Actual buffers are bidirectional (*Ok... Maybe it can be useful*), but logisim simulates them as unidirectional.
 
-![Controlled buffer: realization and value table](./materials/transistors/T2L2_controlled-buffer.png)
+![Controlled buffer: realization and value table](./materials/transistors/screenshots/T2L2_controlled-buffer.png)
 
 # 22.12.12
+Sequentioal units have internal state:
+- Output depends not only ont the inputs
+- Input can have side effect changing the internal state
+- *We'll learn them later*
 
+Combinational units is pure functions. Logic elems are the combinational units.
+
+Additional types of combinational units:
+- (De)multiplexer
+- Comporator
+- (De)coder
+- Adder
+- ...
+- and other ALU operators
+
+## Plexers in logisim
+Most of them have additional enable input `E`. When `E` is 0 their output always stays 0.
+
+### Decoder
+Decoder have `k` inputs and `2^k` outputs. It interprets inputs as `k`-bit number `n` and set `n`-th output to `1` and `0` on others outputs.
+
+<img width="48%" src="./materials/transistors/screenshots/T2L3_decoder_circuit.png">
+<img width="48%" src="./materials/transistors/screenshots/T2L3_decoder_logisim.png">
+
+Coder is the opposite element (get `1` on one of `n` inputs and give `ceil(log2(n))`-bit number)
+
+---
+
+### Multiplexer
+- Inputs:
+  - `k`-bit selector that interprets as number `n`
+  - `2^k` inputs
+- Output is a value from the `n`-th input
+
+<img width="48%" src="./materials/transistors/screenshots/T2L3_multiplexer_circuit.png">
+<img width="48%" src="./materials/transistors/screenshots/T2L3_multiplexer_logisim.png">
+
+Demultiplexer is opposite. We have 1 input and `k`-bit selector choosing what output from `2^k` will get input value.
+
+---
+
+### Priority encoder
+- Inputs:
+  - Enable
+  - `n` - data-inputs
+- Outputs:
+  - `isAllFalse` - 1 bit 
+  - `isAnyTrue` - 1 bit
+  - `highestTrueBit` - `ceil(log2(n))`
+
+Logic of working on screenshots:
+
+![Priority encoder](./materials/transistors/screenshots/T2L3_priority_encoder_1.png)
+![Priority encoder](./materials/transistors/screenshots/T2L3_priority_encoder_2.png)
+![Priority encoder](./materials/transistors/screenshots/T2L3_priority_encoder_3.png)
+
+---
+
+### Selector
+- Inputs:
+  - `k`-bits input for selection
+  - `2^k` inputs (one wire)
+- Ouput - 1 bit that equvalent to value from selected bit
+
+<img width="40%" src="./materials/transistors/screenshots/T2L3_selector.png">
+
+---
+
+### Adder
+#### Two bits half adder
+
+<img width="48%" src="./materials/transistors/screenshots/T2L3_2bit_half_adder_1.png">
+<img width="48%" src="./materials/transistors/screenshots/T2L3_2bit_half_adder_2.png">
+
+Denoted as rectangle with label `"+/2"`
+
+### The full adder
+Combination of 2 `+/2` and `OR` gives us full adder.
+
+![Full adder](./materials/transistors/screenshots/T2L3_full_adder.png)
+
+### Ripple carry adder
+Sequential connection of full adders lets us to make the adder of any-bits number
+
+![Adder](./materials/transistors/screenshots/T2L3_ripple_carry_adder_1.png)
+![Adder](./materials/transistors/screenshots/T2L3_ripple_carry_adder_2.png)
+
+On this scheme full adders inputs/outputs set (from left to right):
+- Inputs:
+  1. Carry-bit
+  2. A-bit
+  3. B-bit
+- Outputs:
+  1. Result bit (`(a + b) % 2`)
+  2. Carry-bit out
+
+In Logisim we also can make cycled circuit with splitters:
+
+![Cycled adder](./materials/transistors/screenshots/T2L3_cycled_ripple_carry_adder.png)
+
+In this architecture we have delay in `O(N)` that produced by cycle carry counting.
+
+### Carry-save adder
+First variant for solving carry propagation problem is don't count carry before the last adding step. Used in multiplication, cryptography, etc.
+
+### Carry-lookahead
+Instead of `Cout` full adder provides 2 signals: P (propagate) and G (generate):
+- `P(a, b) = a v b`
+- `G(a, b) = a ^ b)`
+- `Cin_i+1 = G_i v (P_i ^ C_i)` (`Cin_0` is input)
+
+Actually, we have a recursive formula and constant delay for counting.
+
+![Carry-lookahead](./materials/transistors/screenshots/T2L3_carry_lookahead.png)
+
+---
 
 # 22.12.19
 ## Combinational units
