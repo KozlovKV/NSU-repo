@@ -1,4 +1,4 @@
-Just words that I have learned
+Words, phrasal verbs and collocations that I have learned.
 
 - spell - Диктовать по буквам
 - pronounce - произнести
@@ -1097,3 +1097,39 @@ Just words that I have learned
   - back up / make a backup
   - print out / get hard copy / get a printout
   - FAQ - frequently asked questions
+- caviar - икра
+- Numeral
+- Business and finance (VIU: Unit 40)
+  - gradually - постепенно
+  - sharply - резко
+  - stay the same - не меняться
+  - interest rate - процентная ставка
+  - figure - фигура / число / цифра / изображение / иллюстрация
+- Politics (VIU: Unit 57)
+  - ballot - бюллютень
+  - vote for - elect
+  - constituency - избирательный округ
+  - policies - курс политической партии / программа
+  - belief - вера
+- Time (VIU: Unit 60)
+  - in time - вовремя (либо раньше)
+  - on time - вовремя
+  - It's time for/to sth
+  - have time for sth - have enough time to do sth
+  - the lost/next time - в прошлый/следующий раз (*дальше обычно описываются условия следующего раза*)
+  - at the same time - одновременно
+  - until/by [time] - не раньше/позже [времени]
+  - for [period of time] - в течение
+  - since [time moment in the past] - с [момента времени]
+  - during [event in the past] - в течение / пока что происходило (*I've worked on the farm during the summer*)
+  - in [period]'s time / in time of [period] - через какой-то период времени
+  - for ages - for a long time
+  - recently / lately - недавно (несколько месяцев)
+  - a long time ago / ages ago
+  - the other day (for past) - совсем недавно (чаще всего пару дней, возможно неделю назад)
+  - these days nowadays
+  - for the time being - в ближайщем будущем
+  - one day - однажды
+  - fortnight - 2 weeks (Fun fact: root of word - **fourteen nights** - in a lot of countries payday goes one time per 2 weeks. It is called *fortnightly basis*)
+  - sth take [sb's] [time period] - что-то займёт [период времени]
+  - last [time period] - длиться [период времени]

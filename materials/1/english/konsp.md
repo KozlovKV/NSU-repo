@@ -51,6 +51,7 @@
   - [Key moments](#key-moments)
   - [Key words](#key-words-2)
   - [gone / been](#gone--been)
+  - [This is the (first) time](#this-is-the-first-time)
 
 # Websites
 - [Cambridge Learner's dictionary](https://dictionary.cambridge.org/dictionary/learner-english)
@@ -502,7 +503,13 @@ Use when we don't talk about specific past.
 - just - только что
 - already
 - yet
+- recently
+- in the last few days
+- so far
 
 ## gone / been
 Have / has gone to - it steel be true (я сейчас там)
-Have / has been to - it was true but now bemace change (я уже там был)
+Have / has been to - it was true but now became change (я уже там был)
+
+## This is the (first) time
+In sentence with construct `This is (it is) the [first] time sth` we also use past perfect (*This is the first time I've slept good*). We can use other numeral instead of `first` or don't use any of them.
