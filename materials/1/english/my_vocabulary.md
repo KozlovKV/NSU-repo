@@ -1128,8 +1128,17 @@ Words, phrasal verbs and collocations that I have learned.
   - a long time ago / ages ago
   - the other day (for past) - совсем недавно (чаще всего пару дней, возможно неделю назад)
   - these days nowadays
-  - for the time being - в ближайщем будущем
+  - for the time being - в ближайшем будущем
   - one day - однажды
   - fortnight - 2 weeks (Fun fact: root of word - **fourteen nights** - in a lot of countries payday goes one time per 2 weeks. It is called *fortnightly basis*)
   - sth take [sb's] [time period] - что-то займёт [период времени]
   - last [time period] - длиться [период времени]
+- Email and Internet (VIU: Unit 55)
+  - essential - important / necessary
+  - junk mail - spam
+  - @ - at
+  - on the Internet - **NOT in the**
+  - ISP - Internet service provider
+  - go online - use the Internet (быть в сети)
+  - search the Internet - do an Internet search
+  - instant - моментальный
