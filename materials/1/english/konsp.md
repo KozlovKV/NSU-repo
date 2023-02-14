@@ -12,7 +12,7 @@
   - [When to use](#when-to-use)
   - [Words-markers](#words-markers)
   - [Stative verbs](#stative-verbs)
-- [Present continious](#present-continious)
+- [Present continuos](#present-continuos)
   - [When to use](#when-to-use-1)
   - [Untypical states](#untypical-states)
   - [Words-markers](#words-markers-1)
@@ -265,11 +265,11 @@ Stative verb describes states, conditions, features, traits rather than actions 
 Глаголы состояния отражают состояние в данный момент, поэтому чаще всего используются в present simple.
 - Express / Preferences (Отношение): like, dislike, love, hate, enjoy, etc.
 - Mental activity (Мысли): believe, know, recognize, seem, think (**if means "believe" or "have opinion"**), etc.
-- Feelings (Чувства): see, hear, **feel**, taste, **look**, smell, sound, etc. Often use with can/could when we refer to what we see. **Bolded verbs can be in continious when we talk about somebody (He's looking great today!)**
+- Feelings (Чувства): see, hear, **feel**, taste, **look**, smell, sound, etc. Often use with can/could when we refer to what we see. **Bolded verbs can be in continuos when we talk about somebody (He's looking great today!)**
 - Others: be, contain, fit, include, matter, need, belong, cost, owe, mean, own, appear, want, have
 
 ---
-# Present continious
+# Present continuos
 ## When to use
 - Речь о событиях в момент речи
 - Действие началось до момента речи и продлится после
@@ -489,23 +489,29 @@ Use when we don't talk about specific past.
 `[subj] has/have V3`
 
 ## When to use
-- Action in the past with Result / Expirience now
-- News, anouncment
+- Action in the past with Result / Experience now
+- News, announcment
 - 
 
 ## Key moments
-1. Result or expirience is important
+1. Result or experience is important
 2. Started in the past
 3. Connection with now
+   1. evidence
 
 ## Key words
-- since
+- since [the start of period]
+- for [period]
+  - in positive sentences we can leave out `for`, but not in questions or neg.
+  - we can't use `for` with `all`
+  - in neg. sentences we can use `in` instead of `for`
 - just - только что
 - already
 - yet
 - recently
 - in the last few days
 - so far
+- how long (in questions)
 
 ## gone / been
 Have / has gone to - it steel be true (я сейчас там)

@@ -11,7 +11,7 @@ Words, phrasal verbs and collocations that I have learned.
 - prepositional phrase - фраза с "частицей" 
 - amuse - веселить
 - amase - поражать
-- apologice - извиниться
+- apologize - извиниться
 - emperor - император
 - adverb - наречие
 - poetry - поэзия
@@ -20,8 +20,8 @@ Words, phrasal verbs and collocations that I have learned.
 - refugees - беженцы
 - demand - требовать / требование
 - time consumer - трата времени
-- obtain / recieve / acuire - получать
-- attent classes - посещать классы
+- obtain / receive / acquire - получать
+- attend classes - посещать классы
 - to have in common - в общем
 - whereas / while - в то время как
 - used to - было правдой, теперь нет
@@ -663,11 +663,11 @@ Words, phrasal verbs and collocations that I have learned.
     - apartment - usually in a large buildings
     - flat - part of a large house or like an apartment
   - heat - нагревать
-- didn't have any chance / had no chances / coudn't stand against - most strongest is 2nd
+- didn't have any chance / had no chances / couldn't stand against - most strongest is 2nd
 - to stand for - mean
   - *What does sth stand for?*
 - to portray - изображать
-- to mend - fix - reapair
+- to mend - fix - repair
 - oven - духовка
 - stove - плита
 - dugout - землянка
@@ -1142,3 +1142,14 @@ Words, phrasal verbs and collocations that I have learned.
   - go online - use the Internet (быть в сети)
   - search the Internet - do an Internet search
   - instant - моментальный
+- give a hug - to hug
+- towel - полотенце
+- scenery - пейзаж
+- terrific - ужасно изумительный
+- beyond - снаружи
+- beneath - под
+- emergency
+- briefly - вкратце
+- afterwords - далее, затем
+- therefore - вследствие
+- anchor - якорь
