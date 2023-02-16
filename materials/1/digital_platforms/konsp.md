@@ -80,6 +80,7 @@
 		- [T-trigger](#t-trigger)
 		- [JK-trigger](#jk-trigger)
 	- [Multiported register](#multiported-register)
+- [23.02.14](#230214)
 
 # Annotation
 Лектор - Назаров Александр Дмитриевич
@@ -733,3 +734,19 @@ D | Clock | master | !Clock |  Q  | !Q | _
 ### JK-trigger
 
 ## Multiported register
+
+# 23.02.14
+Work by heart
+
+- Data bus - bidirectional
+- Addr. bus - defines addr. (device number) that processor wants to be connected
+
+Types of trading by bus:
+- synchronic
+- asynchronic
+
+Information can be in value or jump between values.
+
+Architectures:
+- Von Neuman - common storage
+- Harward - separated storages for commands and data

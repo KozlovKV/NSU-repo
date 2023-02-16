@@ -52,6 +52,7 @@
   - [Key words](#key-words-2)
   - [gone / been](#gone--been)
   - [This is the (first) time](#this-is-the-first-time)
+- [Present perfect continuous](#present-perfect-continuous)
 
 # Websites
 - [Cambridge Learner's dictionary](https://dictionary.cambridge.org/dictionary/learner-english)
@@ -353,7 +354,7 @@ All verbs on one timeline
 3. Natural laws or events in the past
 4. Obvious past
 5. Instructions in the past (all actions from instructions are finished)
-6. Habbits, routines and routines (e.g. [see "Used to"](#murphey-18-used-to))
+6. Habits, routines and routines (e.g. [see "Used to"](#murphey-18-used-to))
 
 ## Key words
 - ago
@@ -519,3 +520,6 @@ Have / has been to - it was true but now became change (я уже там был)
 
 ## This is the (first) time
 In sentence with construct `This is (it is) the [first] time sth` we also use past perfect (*This is the first time I've slept good*). We can use other numeral instead of `first` or don't use any of them.
+
+# Present perfect continuous
+`have/has been V4(P1)`

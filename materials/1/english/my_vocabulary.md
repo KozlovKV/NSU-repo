@@ -1153,3 +1153,14 @@ Words, phrasal verbs and collocations that I have learned.
 - afterwords - далее, затем
 - therefore - вследствие
 - anchor - якорь
+- on the contrary - с другой стороны
+- chase / pursuit - run after
+- bark - лаять
+- bun - булочка
+- spare - свободный / лишний
+- spacious - просторный
+- somewhere nearby - где-то неподалёку
+- sunbath
+- to be just about to [] - почти сделать что-то
+- representative - представляющий
+- cinnamon - корица
