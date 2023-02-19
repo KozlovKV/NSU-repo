@@ -43,7 +43,7 @@
 - [If we use "what about sth" we need use Ving](#if-we-use-what-about-sth-we-need-use-ving)
 - [Murphey 18. "Used to"](#murphey-18-used-to)
 - [Murphey 61. "Be/get used to sth (I'm used to ...)"](#murphey-61-beget-used-to-sth-im-used-to-)
-- [Tences for embeded speach](#tences-for-embeded-speach)
+- [Tenses for embedded speech](#tenses-for-embedded-speech)
 - [Вопросы-пожелания](#вопросы-пожелания)
 - [Coherent's elements](#coherents-elements)
 - [Present perfect](#present-perfect)
@@ -52,7 +52,11 @@
   - [Key words](#key-words-2)
   - [gone / been](#gone--been)
   - [This is the (first) time](#this-is-the-first-time)
+  - [Present perfect and past simple](#present-perfect-and-past-simple)
 - [Present perfect continuous](#present-perfect-continuous)
+  - [When to use](#when-to-use-5)
+  - [perfect continuous and continuous](#perfect-continuous-and-continuous)
+  - [perfect continuous and perfect](#perfect-continuous-and-perfect)
 
 # Websites
 - [Cambridge Learner's dictionary](https://dictionary.cambridge.org/dictionary/learner-english)
@@ -323,7 +327,7 @@ Stative verb describes states, conditions, features, traits rather than actions 
    1. *Don't you want to go?*
       1. *Yes* = *Yes, I want to go*
       2. *No* = *No, I don't want to go*
-7. Indirect / embedded - Introduction (if question - indirect word order) + equestion with **direct** word order
+7. Indirect / embedded - Introduction (if question - indirect word order) + question with **direct** word order
 
 # Глагол to be в Present Simple СМЫСЛОВОЙ! Но его можно ставить на место do
 
@@ -333,9 +337,9 @@ Stative verb describes states, conditions, features, traits rather than actions 
 # Have or have got
 Когда речь идёт о владении чем-то, допустимы обе формы. **Главное не having!**. В прошедшем времени используется только had (**без got**).
 
-Со словами, представленными ниже, можно исользовать have или having, а при отрицании или вопросе всегда используются don't, doesn't или didn't
+Со словами, представленными ниже, можно использовать have или having, а при отрицании или вопросе всегда используются don't, doesn't или didn't
 - breakfast, dinner, a cup of coffee, something to eat etc.
-- a bath, a shower, a swim, a break, a rest, a party, a holiday, an accident, an expirience, a dream
+- a bath, a shower, a swim, a break, a rest, a party, a holiday, an accident, an experience, a dream
 - a look (at something)
 - a chat, a conversation, a discussion
 - trouble, difficulty, fun, a good time
@@ -375,7 +379,7 @@ All verbs on one timeline
 1. Chain of events => Past simple
 2. Some process => Past continious
 3. Parallel processes => Past continious (*While I was playing the computer, my cat was bringing the havoc.*)
-4. One action (short) interruots another action (long) => long - Past continious, short - Past simple (*We were having dinner when the bell ran*)
+4. One action (short) interrupts another action (long) => long - Past continious, short - Past simple (*We were having dinner when the bell ran*)
 5. Descriptions of background => Past continious 
 
 # Past perfect
@@ -396,11 +400,11 @@ Also auxillary verbs can help to deny what sb says: *You're sitting at my place.
 
 We use *have [obj]? / to be not [obj]? / do [obj]?* to show intrest in what sb has said: *Lisa isn't very well today. Oh isn't she? What is wrong with her?*
 
-Если мы хотм подтвердить аналогичную ситуацию или опровергнуть, мы можем использовать `so` или `neither` (`nor` или `not _ either`) (Для утвердительного предложения согласие тоже утвердительное - и наоборот). Причём будет такой порядок слов - `so/neither [aux. verb] [subj]`:
+Если мы хотим подтвердить аналогичную ситуацию или опровергнуть, мы можем использовать `so` или `neither` (`nor` или `not _ either`) (Для утвердительного предложения согласие тоже утвердительное - и наоборот). Причём будет такой порядок слов - `so/neither [aux. verb] [subj]`:
 - *I'm tired. So am I.*
 - *I never read newspapers. Nor do I.*
 
-С некоторыми глаголвами (`think, hope, expect, soppose`) `so` используется для позитивного или негативного ответа без повторения предложения. Порядок слов уже классический:
+С некоторыми глаголами (`think, hope, expect, suppose`) `so` используется для позитивного или негативного ответа без повторения предложения. Порядок слов уже классический:
 - *Are those people Korean? I think so.*
 - *Do you think it will rain? I hope not.* (с `hope`, `afraid`, `guess` исключение. Если брать `think`, то будет *I don't think so.*)
 
@@ -451,7 +455,7 @@ Nouns with *-out* and *-over* are usual written without hyohen
 
 **ALWAYS `USED`! NEVER IN PRESENT**
 
-**only if action haven't exectly count**
+**only if action haven't exactly count**
 
 - *I used to play tennis a lot, but I don't play very much now.*
 - *Now this building is the shop, but it used to be cinema.*
@@ -469,8 +473,8 @@ Question and negative form is just past simple
 
 **Don't confuse with [`used to`](#murphey-18-used-to)**
 
-# Tences for embeded speach
-In the embeded speach with step tence back (*present simple => past simple*, etc.)
+# Tenses for embedded speech
+In the embedded speech with step tense back (*present simple => past simple*, etc.)
 
 # Вопросы-пожелания
 `Will <subj> <verb>?`
@@ -491,7 +495,7 @@ Use when we don't talk about specific past.
 
 ## When to use
 - Action in the past with Result / Experience now
-- News, announcment
+- News, announcement
 - 
 
 ## Key moments
@@ -519,7 +523,31 @@ Have / has gone to - it steel be true (я сейчас там)
 Have / has been to - it was true but now became change (я уже там был)
 
 ## This is the (first) time
-In sentence with construct `This is (it is) the [first] time sth` we also use past perfect (*This is the first time I've slept good*). We can use other numeral instead of `first` or don't use any of them.
+In sentence with construct `This is (it is) the [first] time sth` we also use present perfect (*This is the first time I've slept good*). We can use other numeral instead of `first` or don't use any of them.
+
+## Present perfect and past simple
+In answers to questions with *when* we use **past simple**. For questions with *how long* - **Present perfect**:
+- *When did it start raining?* => *It started raining an hour ago*
+- *How long has it been raining?* => *It's been raining for an hour*
 
 # Present perfect continuous
 `have/has been V4(P1)`
+
+## When to use
+- Activity was recently or just stopped, but now we have activity's result (*You're out of breath. Have you been running?* (You're out of breath **now**))
+- Activity is still happening (*How long have you been learning English?*)
+- Activity repeats for a period of time (*Every morning they meet in the same cafe. They have been going there for years*)
+
+## perfect continuous and continuous
+If we activity continues and we don't want describe how long time it went we use **Present continuous**. If we define period or activity stopped recently we use **Present perfect continuous**:
+- *Don't disturb me now. I'm working.*
+- *I've been working hard. Now I'm going to have a break*
+- *I've been working for 3 hours*
+
+## perfect continuous and perfect
+- If main idea is result fo action we use **Present perfect**. If we're thinking of the activity (doesn't matter it has been finished or not) we use **Present perfect continuous**. 
+- How much / how many times => **Present perfect**
+- How long => **Present perfect continuous**
+- Stative verbs => **Present perfect** (exclude special verbs - see [this topic](#stative-verbs) + *want* and *mean*)
+- *live* and *work* => **Both** (But with *always* only **Present perfect**)
+

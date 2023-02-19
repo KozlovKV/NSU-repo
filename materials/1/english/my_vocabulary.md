@@ -1023,7 +1023,7 @@ Words, phrasal verbs and collocations that I have learned.
   - pipe - труба
   - plumber - installs and repairs water pipes
   - electrician
-  - mechainc - repairs cars
+  - mechanic - repairs cars
   - fix / repair
   - fix / repair / mend - for small equipment
   - mend - for clothes
@@ -1106,7 +1106,7 @@ Words, phrasal verbs and collocations that I have learned.
   - interest rate - процентная ставка
   - figure - фигура / число / цифра / изображение / иллюстрация
 - Politics (VIU: Unit 57)
-  - ballot - бюллютень
+  - ballot - бюллетень
   - vote for - elect
   - constituency - избирательный округ
   - policies - курс политической партии / программа
