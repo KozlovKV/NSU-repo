@@ -69,10 +69,8 @@
 		- [Carry-save adder](#carry-save-adder)
 		- [Carry-lookahead](#carry-lookahead)
 - [22.12.19](#221219)
-	- [Combinational units](#combinational-units)
 		- [Schemes composing](#schemes-composing)
 	- [Allow-signal](#allow-signal)
-	- [Sequqntial units](#sequqntial-units)
 		- [Edge Detector](#edge-detector)
 		- [Filp-flop (RS-trigger)](#filp-flop-rs-trigger)
 		- [D-trigger (latch)](#d-trigger-latch)
@@ -567,7 +565,7 @@ Actual buffers are bidirectional (*Ok... Maybe it can be useful*), but logisim s
 Sequentioal units have internal state:
 - Output depends not only ont the inputs
 - Input can have side effect changing the internal state
-- *We'll learn them later*
+- *We'll learn them [later](#22.12.19)*
 
 Combinational units is pure functions. Logic elems are the combinational units.
 
@@ -682,8 +680,6 @@ Actually, we have a recursive formula and constant delay for counting.
 ---
 
 # 22.12.19
-## Combinational units
-Pure functions
 
 ### Schemes composing
 If we have bool-table we can compose DNF with OR-gate on the output
@@ -693,14 +689,15 @@ Or we can reduce logical expression
 ## Allow-signal
 Allow-signals (often connected to bottom) signalize when elem can work. When they are off, elems save their state.
 
-## Sequqntial units
-Have internal state (not pure functions)
-
 ### Edge Detector
-Short output signal when input signal was changed. (Compose from `NOT`, `OR`)
+Short output signal when input signal was changed. (Compose from `NOT`, `NOR`)
+
+![Edge detector](./materials/transistors/screenshots/T2L4_edge_detector.png)
+
+---
 
 ### Filp-flop (RS-trigger)
-Set-Reset trigger save changeed value of one from two inputs
+Set-Reset trigger save changed value of one from two inputs
 R | S | Q | !Q | _
 --|---|---|----|-----
 0 | 0 |   |    | saves previous value
@@ -708,8 +705,14 @@ R | S | Q | !Q | _
 1 | 0 | 1 |  0 |
 1 | 1 |   |    | forbidden inputs
 
+<img width="30%" src="./materials/transistors/screenshots/T2L4_RS_trigger_1.png">
+<img width="30%" src="./materials/transistors/screenshots/T2L4_RS_trigger_2.png">
+<img width="30%" src="./materials/transistors/screenshots/T2L4_RS_trigger_3.png">
+
+---
+
 ### D-trigger (latch)
-Save input `D` when `clock` is high
+Save input `D` when `clock` is high (RS-trigger with modified inputs)
 D | Clock |  Q  | !Q | _
 --|-------|-----|----|-----
 0 | 0     |  0  |    | 
@@ -717,10 +720,15 @@ D | Clock |  Q  | !Q | _
 1 | 0     | 1/0 |    | if clock changes to low when D stays high,  output will save D while clock is low
 1 | 1     |  1  |    | saves D
 
-### Master-slave latch (trigger)
-Two `D`-triggers with `RS`-trigger. First `D`-trigger (`master`) depends on `D` & `clock`, second - on `master` & `!clock`
+<img width="48%" src="./materials/transistors/screenshots/T2L4_D_trigger_1.png">
+<img width="48%" src="./materials/transistors/screenshots/T2L4_D_trigger_2.png">
+<img width="48%" src="./materials/transistors/screenshots/T2L4_D_trigger_3.png">
+<img width="48%" src="./materials/transistors/screenshots/T2L4_D_trigger_4.png">
 
-*add picture*
+---
+
+### Master-slave latch (trigger)
+Two `D`-triggers with `RS`-trigger. First `D`-trigger (`master`) depends on `D` & `clock`, second - on `master` & `!clock`. This circuit let us to save D-value stable
 
 D | Clock | master | !Clock |  Q  | !Q | _
 --|-------|--------|--------|-----|----|-----
@@ -729,11 +737,20 @@ D | Clock | master | !Clock |  Q  | !Q | _
 1 | 0     |  1/0   |  1     | 1/0 |    | 
 1 | 1     |  1     |  0     | 1/0 |    | 
 
+![Master-slave](./materials/transistors/screenshots/T2L4_REAL_master-slave.jpg)
+
+---
+
 ### T-trigger
+*SKIP*
 
 ### JK-trigger
+Like [RS-trigger](#filp-flop-rs-trigger) but 2 inputs as True isn't forbidden input. This sates inverts Q and !Q
 
 ## Multiported register
+Master-slave trigger with multibit input D chosen by multiplexer ans some additional control inputs (*see screenshot*)
+
+![Multiported register](./materials/transistors/screenshots/T2L4_multiported_register.png)
 
 # 23.02.14
 Work by heart
