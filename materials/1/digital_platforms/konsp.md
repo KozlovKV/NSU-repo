@@ -79,6 +79,9 @@
 		- [JK-trigger](#jk-trigger)
 	- [Multiported register](#multiported-register)
 - [23.02.14](#230214)
+- [23.02.20](#230220)
+	- [CdM8 as a chip](#cdm8-as-a-chip)
+	- [RAM](#ram)
 
 # Annotation
 Лектор - Назаров Александр Дмитриевич
@@ -114,6 +117,7 @@
 - `addsp <offset>` - move `SP` by `offset`
 - `ldsp <rn>` - loads val from stack to `rn` **without moving `SP`**
 - `stsp <rn>` - set val from `rn` to stack **without moving `SP`**
+- `ldc <rn> <rm>` - works with ROM (only for Harward) 
 
 ## Math
 - `add <rn>, <rm>` - saves to `rm` sum of `rn` and `rm`
@@ -767,3 +771,34 @@ Information can be in value or jump between values.
 Architectures:
 - Von Neuman - common storage
 - Harward - separated storages for commands and data
+
+# 23.02.20
+## CdM8 as a chip
+Pins:
+- North (all 8 bits):
+  - `r0-r3`
+  - `PC`
+  - `SP`
+  - `PS`
+- South (all 1 bit):
+  - `clock`
+  - `reset`
+- West (for interrupting):
+  - `IRQ`
+  - `vector`
+  - `IAck`
+- East:
+  - `in` - 8 bits
+  - `out` - 8 bits
+  - `addr` - address of read/written memory cell
+  - `page` - not need
+  - `rd/wr'` - 1 bit
+  - `mem` - 1 bit
+  - `dat/ins'` - 1 bit
+
+We use last 3 outputs for connecting to **outside world**
+
+## RAM
+Inputs:
+- `sel` - enables work with RAM
+- `ld` - if 1 => loads value to output
