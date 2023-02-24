@@ -1164,3 +1164,4 @@ Words, phrasal verbs and collocations that I have learned.
 - to be just about to [] - почти сделать что-то
 - representative - представляющий
 - cinnamon - корица
+- few - чуть-чуть / немного

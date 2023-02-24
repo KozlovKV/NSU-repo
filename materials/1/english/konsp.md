@@ -40,7 +40,7 @@
 - [Murphey 52 - question tags (do you?, isn't it?)](#murphey-52---question-tags-do-you-isnt-it)
 - [In phrasal verbs particle must go after pronoun if phrasal verbs are used with it](#in-phrasal-verbs-particle-must-go-after-pronoun-if-phrasal-verbs-are-used-with-it)
 - [Nouns from phrasal verbs](#nouns-from-phrasal-verbs)
-- [If we use "what about sth" we need use Ving](#if-we-use-what-about-sth-we-need-use-ving)
+- [If we use "what about sth" we need use V4](#if-we-use-what-about-sth-we-need-use-v4)
 - [Murphey 18. "Used to"](#murphey-18-used-to)
 - [Murphey 61. "Be/get used to sth (I'm used to ...)"](#murphey-61-beget-used-to-sth-im-used-to-)
 - [Tenses for embedded speech](#tenses-for-embedded-speech)
@@ -55,6 +55,7 @@
   - [Present perfect and past simple](#present-perfect-and-past-simple)
 - [Present perfect continuous](#present-perfect-continuous)
   - [When to use](#when-to-use-5)
+  - [key words](#key-words-3)
   - [perfect continuous and continuous](#perfect-continuous-and-continuous)
   - [perfect continuous and perfect](#perfect-continuous-and-perfect)
 
@@ -158,9 +159,9 @@ See [this files](./my_vocabulary.md)
   - calculate
 - ear
   - disappear
-- ise / ize - practic process
+- ise / ize - practical process
   - revise - пересматривать
-  - strutinize - тщательно исследовать
+  - scrutinize - тщательно исследовать
   - realize - представлять
 - en - give quality
   - deaden - заглушить
@@ -320,7 +321,7 @@ Stative verb describes states, conditions, features, traits rather than actions 
 # Типы вопросов
 1. General - Answer: Yes/No (*Are ypu eating now?*)
 2. Special - Questions with what, where, who, why, etc. (*Why do you like horrors?*, *Who are you looking at?*). For answer with limited choise we use *which*, for unlimited - *what*
-3. Subject - Answer is a subject that maked sth (*Who said this?*, *Who is looking at you?*). Subject in question transforms into the question word
+3. Subject - Answer is a subject making sth (*Who said this?*, *Who is looking at you?*). Subject in question transforms into the question word
 4. Alternative - Answer: choice between sth (*Will you order a pizza or a pasta?*)
 5. Tag - "Не так ли?", using for expressing, confirmation. (*The weather is cool, isn't it?*, *I can't cook well, can I?*)
 6. Negative - Aux. verbs use in negative form. Using for emphasising. 
@@ -445,9 +446,9 @@ Sometimes we can compose a noun from verb and particle:
 - *drop out* => *dropout*
 - *rip off* => *rip-off*
 
-Nouns with *-out* and *-over* are usual written without hyohen
+Nouns with *-out* and *-over* are usual written without hyphen
 
-# If we use "what about sth" we need use Ving
+# If we use "what about sth" we need use V4
 *What about going to the cafe?*
 
 # Murphey 18. "Used to"
@@ -517,6 +518,7 @@ Use when we don't talk about specific past.
 - in the last few days
 - so far
 - how long (in questions)
+- never / ever
 
 ## gone / been
 Have / has gone to - it steel be true (я сейчас там)
@@ -528,7 +530,22 @@ In sentence with construct `This is (it is) the [first] time sth` we also use pr
 ## Present perfect and past simple
 In answers to questions with *when* we use **past simple**. For questions with *how long* - **Present perfect**:
 - *When did it start raining?* => *It started raining an hour ago*
-- *How long has it been raining?* => *It's been raining for an hour*
+- *How long has it been raining?* => *It has been raining for an hour*
+
+Also we use **past simple** when we talk about events that haven't influence now nad **present perfect** otherwise:
+- *Tom has lost his key* (**he hasn't it now**)
+- *Tom has found his key* (**he has it now**)
+- *Tom lose his key* (**We don't know Tom has his key now**)
+
+For new or recent events we can use both tenses (*I have repaired my car / I repaired my car. It's OK now.*)
+
+For not recent or new events we **NEED** to use **present simple** (obviously past) (*Mozart was a composer*)
+
+If we talk about new event we usually use **Present perfect** in the first sentence, but next we use **past simple**
+
+- If we talk about unfinished period => **Present perfect**
+- Period ended => **Past simple**
+
 
 # Present perfect continuous
 `have/has been V4(P1)`
@@ -538,16 +555,24 @@ In answers to questions with *when* we use **past simple**. For questions with *
 - Activity is still happening (*How long have you been learning English?*)
 - Activity repeats for a period of time (*Every morning they meet in the same cafe. They have been going there for years*)
 
+## key words
+- how long
+- for
+- since
+- lately / recently
+
+See more info about this words [here](#key-words-2)
+
 ## perfect continuous and continuous
-If we activity continues and we don't want describe how long time it went we use **Present continuous**. If we define period or activity stopped recently we use **Present perfect continuous**:
+If activity continues and we don't want to describe how long time it went we use **Present continuous**. If we define period or activity stopped recently we use **Present perfect continuous**:
 - *Don't disturb me now. I'm working.*
 - *I've been working hard. Now I'm going to have a break*
 - *I've been working for 3 hours*
 
 ## perfect continuous and perfect
-- If main idea is result fo action we use **Present perfect**. If we're thinking of the activity (doesn't matter it has been finished or not) we use **Present perfect continuous**. 
+- If main idea is result of action we use **Present perfect**. If we're thinking of the activity (doesn't matter it has been finished or not) we use **Present perfect continuous**. 
 - How much / how many times => **Present perfect**
 - How long => **Present perfect continuous**
 - Stative verbs => **Present perfect** (exclude special verbs - see [this topic](#stative-verbs) + *want* and *mean*)
-- *live* and *work* => **Both** (But with *always* only **Present perfect**)
-
+- *live*, *feel*, *teach*, *work* => **Both** (But with *always* only **Present perfect**)
+- We use **perfect continuous** to express irritation by ended action
