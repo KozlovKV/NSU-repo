@@ -1,5 +1,41 @@
 Words, phrasal verbs and collocations that I have learned.
 
+# CIU: Unit 7 - Everyday verbs 1
+- make - in collocations means *produce sth*
+  - make arrangements for sb - организовывать мероприятия / жильё для кого-то
+  - make a change / changes
+  - make a choice
+  - make a comment / comments
+  - make a contribution to - сделать вклад во что-то (способствовать чему-то)
+  - make a decision
+  - make an effort - сделать усилие (попытаться)
+  - make an excuse - придумать оправдание
+  - make friends
+  - make an improvement
+  - make a mistake
+  - make a phone call
+  - make progress
+- perform - выполнять
+- do - in collocations means *perform action*
+  - do your best - стараться из всех сил
+  - do damage
+  - do an experiment
+  - do exercises - делать упражнения
+  - do someone a good turn / do someone a favour - оказать услугу
+  - do harm - принести вред
+  - do sb's hair - расчёсывать
+  - do sb's homework
+  - do the washing / ironing / shopping
+  - do some work
+
+# CIU: Unit 8 - Everyday verbs 2
+What verbs can we use instead of *get* in some cases:
+- *go* - used for changes on people's personality, appearance and physical abilities. Often for sudden, usually for negative sentences, but also can be used for slowly changes (go *red / dark / mad / angry / blind / etc.*)
+- *turn* - used for colors
+- *become* and *get* can be used both in the most cases, but become is more formal and have some unique collocations: (*extinct, (un)popular, homeless, famous*)
+- in some cases we can use *fell* instead of *get* for some "falling" changes (*fell ill*, *fell silent*) and *grow* for "rising" changes (*grow older*, *grow louder*)
+
+# Common words
 - spell - Диктовать по буквам
 - pronounce - произнести
 - noun - существительное
@@ -10,7 +46,7 @@ Words, phrasal verbs and collocations that I have learned.
 - fixed(set) expression - устойчивое выражение
 - prepositional phrase - фраза с "частицей" 
 - amuse - веселить
-- amase - поражать
+- amase / amaze - поражать
 - apologize - извиниться
 - emperor - император
 - adverb - наречие
@@ -33,7 +69,7 @@ Words, phrasal verbs and collocations that I have learned.
 - brake up - расстаться
 - main one - главный из чего-то
 - Sequence - последовательность
-- observe - наблюдать, обозреать всё вокруг
+- observe - наблюдать, обозревать всё вокруг
 - sailing - ходить под парусом
 - fortune teller - гадалка
 - glossy - глянцевый
@@ -44,7 +80,7 @@ Words, phrasal verbs and collocations that I have learned.
 - to plant - сажать
 - oil rig - нефтяная скважина
 - construction sight - стройка
-- to hold one's tangue - держать язык за зубами
+- to hold one's tongue - держать язык за зубами
 - one's cup of tea - чьё-то хобби
 - They say - говорят, что ... (не "они говорят")
 - Make one's bed - заправлять кровать
@@ -83,7 +119,7 @@ Words, phrasal verbs and collocations that I have learned.
 - fabulous - выразительный
 - gorgeous - роскошный
 - find out - выяснить
-- persuassion - убеждение
+- persuasion - убеждение
 - irritate - раздражать
 - arrange - организовать
 - caterpillars - гусеницы
@@ -115,7 +151,7 @@ Words, phrasal verbs and collocations that I have learned.
 - narrative - повествовательный
 - to narrate - повествовать
 - narration - повествование
-- emphasise - усилить
+- emphasize - усилить
 - hesitate - сомневаться
 - rather then - а не
 - a venue - место встречи
@@ -159,7 +195,7 @@ Words, phrasal verbs and collocations that I have learned.
 - butcher - мясник, meat shop
 - butch - наглец, мужественный
 - nail - ногти
-- clawth - sharpen nail (когти)
+- claws - sharpen nail (когти)
 - look up - find sth in list
 - look for - find sth thing (e.g. glasses)
 - leave for - уезжать куда-то
@@ -172,22 +208,22 @@ Words, phrasal verbs and collocations that I have learned.
 - accommodation - place where sb lives or stays
 - knee - колено
 - comb - расчёска
-- emphesise - show that sth is especially important
-- apropriate - подходящий
+- emphasize - show that sth is especially important
+- appropriate - подходящий
 - hang in - сдать работы учителю
 - hang out - получить работы от учителя
-- comemorate - почтить память
-- rememberance - память
+- commemorate - почтить память
+- remembrance - память
 - poppy - мак
 - apply - подать
 - CV (curriculum vitae) / resume (возобновиться) - резюме
 - covering letter - сопроводительное письмо
-- simultaneously - одноврменно
+- simultaneously - одновременно
 - thumb - большой палец
 - numb - немой
 - climb - взобраться
 - plumber - сантехник
-- peculiar - своеборазный / особенный
+- peculiar - своеобразный / особенный
 - peculiarities - особенности
 - in particular / particularly - в частности / в особенности
 - generous - щедрый
@@ -209,7 +245,7 @@ Words, phrasal verbs and collocations that I have learned.
 - to be addicted to sth
 - diner - забегаловка
 - polite - вежливый
-- politness - вежливость
+- politeness - вежливость
 - if you catch my drift / if you see what I mean - если вы понимаете, о чём я 
 - do you dig? - Ты шаришь?
 - affectionate - привязчивая
@@ -232,7 +268,7 @@ Words, phrasal verbs and collocations that I have learned.
 - advice - совет
 - syllable - слог
   - stressed syllable
-- marvellous - изумительный
+- marvelous - изумительный
 - particle - частица
 - go through - пройти насквозь (максимально подробно и аккуратно изучить)
 - make out - понять / разобрать
@@ -295,12 +331,12 @@ Words, phrasal verbs and collocations that I have learned.
 - turn up - arrive
 - shoes - туфли, башмаки
 - get over sth - begin to feel better after unhappy or sick
-  - can't/couldn't get over sth - to be very surprised or shocked about sth / deal with smth
+  - can't/couldn't get over sth - to be very surprised or shocked about sth / deal with sth
 - keep on - продолжать раздражающе говорить о чём-то
   - keep on doing sth - continue to do sth or do sth again and again 
-- pass sth up - don't use the opportunity to do sth intersting
+- pass sth up - don't use the opportunity to do sth interesting
 - opportunity - возможность
-- pick up - imporving in business or social situation / wind becomes stronger
+- pick up - improving in business or social situation / wind becomes stronger
   - pick up sth - увеличение чего
   - pick sb/sth up - to lift sth/sb by using hands / collect sb who is waiting for you / collect sth that you have left
   - "схватывать на лету"
@@ -326,7 +362,7 @@ Words, phrasal verbs and collocations that I have learned.
   - abstract - law or plan accepted or approved
 - ill at ease - чувство тревоги
 - brush up on sth - improve your skills in sth
-- leave sth for/to sb - возложить на кого-то ответсвенность за что-то
+- leave sth for/to sb - возложить на кого-то ответственность за что-то
 - chase sb up - напомнить кому-то о том, что он не сделал то, что обещал (synonym - remind)
 - miss/leave sb/sth out - exclude sb/sth, omit
 - leave aside - оставить одну тему разговора в стороне для обсуждения другой
@@ -358,7 +394,7 @@ Words, phrasal verbs and collocations that I have learned.
   - drinking habits - алкоголизм
   - sth is right up sb's street - что-то по части кого-то (его любимое дело или то, в чём он разбирается)
   - forensic - судебный
-  - forensics - суд.-мед. эскпертиза
+  - forensics - суд.-мед. экспертиза
   - right behind sb - give sb complete support
   - landlady - домовладелица
   - homeowner - домовладелец
@@ -390,10 +426,10 @@ Words, phrasal verbs and collocations that I have learned.
     - drive sb crazy - the same
     - to be one's pain in neck
   - any point in sth - есть ли смысл в чём-то (e.g. *any point I'm asking*)
-  - none at all - absolutly no (вообще нет / никакого)
+  - none at all - absolutely no (вообще нет / никакого)
   - get moving - to hurry
   - hurry - поторопиться
-  - descreet - осторожность
+  - discreet - осторожность
   - barely - едва
   - capable - способный
   - arch-enemy - заклятый враг
@@ -401,7 +437,7 @@ Words, phrasal verbs and collocations that I have learned.
   - fire sb up - make sb excited or angry
   - sustain
     - to support emotionally
-    - to suffer expirience of damage or loss
+    - to suffer experience of damage or loss
     - to keep alive
     - let sth to continue
   - shout - орать
@@ -424,7 +460,7 @@ Words, phrasal verbs and collocations that I have learned.
 - hip - бедро
 - knee - колено
 - ankle - лодыжка
-- chim - подбородок
+- chimb - подбородок
 - breast - грудь (женская?) / грудная клетка
 - wrist - запястье
 - thumb - большой палец
@@ -451,7 +487,7 @@ Words, phrasal verbs and collocations that I have learned.
   - unfairly - несправедливо
 - vanity fair - ярмарка тщеславия
 - turn out - стать полезным
-- appearence - внешность
+- appearance - внешность
 - attractive, good-looking - about women (good)
 - pretty - about girl or boy
 - beautiful, gorgeous - about women (very good)
@@ -486,7 +522,7 @@ Words, phrasal verbs and collocations that I have learned.
   - sense of humo(u)r
   - serious
   - (im)patient - (не)терпеливый
-  - clever / intelligent - смышлённый
+  - clever / intelligent - смышлёный
     - stupid - opposite
   - calm - спокойный
   - nervous / anxious - нервный / обеспокоенный
@@ -524,7 +560,7 @@ Words, phrasal verbs and collocations that I have learned.
 - thoroughness - тщательность
 - thoroughly - тщательно
 - rip-off - high cost
-- drop out - прекраитть что-то делать, не дойдя до конца
+- drop out - прекратить что-то делать, не дойдя до конца
 - dropout - студент или школьник, бросивший учёбу / человек, не желающий работать
 - goings-on - unusual events or activities
 - hyphen - дефис
@@ -548,7 +584,7 @@ Words, phrasal verbs and collocations that I have learned.
 - onlooker - зеваки
 - Feelings / emotions:
   - disappoint - разочаровывать
-  - curious - лыбопытстный
+  - curious - любопытный
     - curiosity - noun
   - miserable - unhappy
   - affect - влиять
@@ -566,8 +602,8 @@ Words, phrasal verbs and collocations that I have learned.
     - nieces - plural
   - step(father / mother / sister / brother) - сводные отец, мать, сестра, брат
   - (father / mother / sister / brother)-in-law - тесть, тёща, невестка, шурин
-  - ex-(husbend / wife / boy(girl)friend, etc.) - husbend, wife etc. in the past
-  - get to know sb - познокмиться с кем-то
+  - ex-(husband / wife / boy(girl)friend, etc.) - husband, wife etc. in the past
+  - get to know sb - познакомиться с кем-то
     - get to know each other - познакомились друг с другом
 - shut - закрыть
 - hire - арендовать
@@ -612,11 +648,11 @@ Words, phrasal verbs and collocations that I have learned.
 - Megamind:
   - lot worse - намного хуже
   - move on - двигаться дальше
-  - set out - start journey / start doing something when you have already decided what you want to achive
-  - turn out - одноврменно начать что-то делать или достигнуть одинакового результата
+  - set out - start journey / start doing something when you have already decided what you want to achieve
+  - turn out - одновременно начать что-то делать или достигнуть одинакового результата
   - rivalry - соперничество
   - no big deal - ничего страшного / ну и ладно
-  - have life handed to sb on a silver platter - идиома - получать всё на блюде с голубой коёмочкой / на всём готовеньком
+  - have life handed to sb on a silver platter - идиома - получать всё на блюде с голубой каёмочкой / на всём готовеньком
   - knack - талант
   - screw (sth) up - совершить ошибку или что-то испортить
   - screw sb up - нанести кому-то вред или расстроить
@@ -624,7 +660,7 @@ Words, phrasal verbs and collocations that I have learned.
   - screw-up - noun 
   - The die had been cast - жребий брошен
   - would it kill you to do sth - неужели ты не мог сделать что-то
-  - nosey - пронырливый / любоптный (*from nose, lol*)
+  - nosey - пронырливый / любопытный (*from nose, lol*)
   - sb behind bars - кто-то за решёткой
   - rampant - угрожающий / свирепствующий
   - stand up to sb/sth - сопротивляться кому-то или чему-то
@@ -636,7 +672,7 @@ Words, phrasal verbs and collocations that I have learned.
   - gosh - боже!
   - I am running late - я опаздываю
   - get out of town - idiom - да ну нафиг
-  - boggle - умпопомрачительный
+  - boggle - умопомрачительный
     - boggles - adverb
   - get to the bottom - докопаться до сути
   - squander - расточительствовать
@@ -649,7 +685,7 @@ Words, phrasal verbs and collocations that I have learned.
   - cereal - каша
   - don't bother to do sth - don't do sth because there is no reason or because it is too much work
   - bother - беспокоиться
-  - takeaway - еда на дом (на выноск)
+  - takeaway - еда на дом (на вынос)
   - do washing - стираться
   - ironing - глажка
   - to iron / do ironing - гладить
@@ -708,7 +744,7 @@ Words, phrasal verbs and collocations that I have learned.
   - to cool off - остыть (успокоиться)
   - to pipe down - успокоиться
   - to (a) grasp - понимать(понимание)
-  - to interfere - вмешиваться (*классно сочетается с интерферренцией*)
+  - to interfere - вмешиваться (*классно сочетается с интерференцией*)
 - disaster - катастрофа
 - rescuer - спасатель
 - destructive - разрушительный
@@ -771,7 +807,7 @@ Words, phrasal verbs and collocations that I have learned.
   - lungs - лёгкие
   - liver - печень
   - disease - serious medical problem that often affects part of body (*heart disease*)
-  - illness - used to talk about serious and minor medical problemns, also affecting the mind
+  - illness - used to talk about serious and minor medical problems, also affecting the mind
     - **for period of medical problem we should use ONLY illness**
   - attack - for illness - situation when some disease cause suddenly hurting
     - heart attack
@@ -877,7 +913,7 @@ Words, phrasal verbs and collocations that I have learned.
   - pork - свинина
   - chicken / hen - курица
     - chicken - курятина
-  - vegeterian
+  - vegetarian
   - salmon - лосось
   - prawns - креветки
   - mussels - моллюски
@@ -904,7 +940,7 @@ Words, phrasal verbs and collocations that I have learned.
   - hold up - continue to be strong
   - point out - отметить
   - pull on - надевать
-  - move on - change accomodation / continue to live
+  - move on - change accommodation / continue to live
   - set down - write down / set sb to your place
   - set off - отправиться в путь / вызывать действие
   - stand by - prepare / wait / encourage
@@ -916,9 +952,9 @@ Words, phrasal verbs and collocations that I have learned.
   - to be in a hurry - do sth or go somewhere quickly
   - get stuck - застрять
   - traffic jam - пробка (машин)
-  - car park / parking space (**NOT parking** if we say paritculary about place where we can leave a car)
-  - adventages
-    - disadventages - opp.
+  - car park / parking space (**NOT parking** if we say particularly about place where we can leave a car)
+  - advantages
+    - disadvantages - opp.
   - crowded
     - quiet
   - nightlife
@@ -1050,11 +1086,11 @@ Words, phrasal verbs and collocations that I have learned.
 - appall - пугать
   - appalled - потрясённый
 - convinced - убеждённый
-- devaste - опустошать
+- devastate - опустошать
 - resent - негодовать
 - ashamed - опозоренный
 - concern - беспокойство / озадаченность
-- commit - посвещать
+- commit - посвящать
 - regret - жалеть
 - condemn - осуждать
 - controversial - спорный 
@@ -1165,3 +1201,9 @@ Words, phrasal verbs and collocations that I have learned.
 - representative - представляющий
 - cinnamon - корица
 - few - чуть-чуть / немного
+- suck up - подлизываться
+  - suck-up - noun
+- cobble - булыжник
+- cobbled - мощённая
+- resilience - упругость
+- dagger - кинжал
