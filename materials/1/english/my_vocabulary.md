@@ -1207,3 +1207,24 @@ What verbs can we use instead of *get* in some cases:
 - cobbled - мощённая
 - resilience - упругость
 - dagger - кинжал
+- trunk - хобот
+- cottage cheese / curd - творог
+- pond - пруд
+- go off - портиться
+- leather - кожа (материал)
+- countryside - сельская местность
+- in brief - вкратце
+- shine with pride - сиять от гордости
+- not convinced - не убеждён
+- deeply concerned - глубокого озадачен
+- regarding - относительно, касательно
+- that is - другими словами
+- stroll - прогулка
+- dial - набирать номер
+- scenery - пейзаж
+- cliff - утёс
+- inevitable - неизбежный
+- inevitably - неизбежно
+- whilst - formal while
+- withdraw - вывести
+- predictably - предсказуемо

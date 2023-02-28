@@ -532,7 +532,7 @@ In answers to questions with *when* we use **past simple**. For questions with *
 - *When did it start raining?* => *It started raining an hour ago*
 - *How long has it been raining?* => *It has been raining for an hour*
 
-Also we use **past simple** when we talk about events that haven't influence now nad **present perfect** otherwise:
+Also we use **past simple** when we talk about events that haven't influence now and **present perfect** otherwise:
 - *Tom has lost his key* (**he hasn't it now**)
 - *Tom has found his key* (**he has it now**)
 - *Tom lose his key* (**We don't know Tom has his key now**)
