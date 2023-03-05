@@ -1,13 +1,62 @@
 Words, phrasal verbs and collocations that I have learned.
 
-# CIU: Unit 7 - Everyday verbs 1
+- [Vocabulary in use](#vocabulary-in-use)
+  - [VIU: Unit 81 - Make, do and take: uses and phrases](#viu-unit-81---make-do-and-take-uses-and-phrases)
+  - [VIU: Unit 83 - Get: uses, phrases and phrasal verbs](#viu-unit-83---get-uses-phrases-and-phrasal-verbs)
+- [Collocations in use](#collocations-in-use)
+  - [CIU: Unit 7 - Everyday verbs 1](#ciu-unit-7---everyday-verbs-1)
+  - [CIU: Unit 8 - Everyday verbs 2](#ciu-unit-8---everyday-verbs-2)
+  - [CIU: Unit 9 - Everyday verbs 3](#ciu-unit-9---everyday-verbs-3)
+- [Common words](#common-words)
+
+
+# Vocabulary in use
+## VIU: Unit 81 - Make, do and take: uses and phrases
+- take a photo
+- take/have a shower
+- take/have a look
+- make a noise
+- do/take course
+- make [angry, upset, etc.]
+- make me/us/... `V` - заставить кого-то что-то сделать
+- make up sb's mind to `V` - решить что-то
+- take
+  - remove sth [without permission]
+  - accept sth
+  - write sth
+  - wear particular size in clothes (*I take size 43 shoes*)
+- take it/things easy - делать что-то расслабленно
+- take a break
+## VIU: Unit 83 - Get: uses, phrases and phrasal verbs
+Often *get* is informal verb in a lot of cases:
+- obtain / receive
+- buy
+- arrive
+- become
+- fetch
+- answer (door/phone)
+
+- get `P2` - do sth or arrange sb to do sth
+- get in touch - быть на связи
+- get to sleep
+- get together - meet and spend time together
+- get to know - meet and become friends
+- get sth wrong - make mistake with sth
+- get worse/better - become worse/better
+- get rid of sth - избавиться от чего-либо (выкинуть/продать)
+- get in - come in (especially when it's difficult) / arrive
+
+---
+
+# Collocations in use
+## CIU: Unit 7 - Everyday verbs 1
 - make - in collocations means *produce sth*
   - make arrangements for sb - организовывать мероприятия / жильё для кого-то
   - make a change / changes
   - make a choice
   - make a comment / comments
   - make a contribution to - сделать вклад во что-то (способствовать чему-то)
-  - make a decision
+  - make/take a decision
   - make an effort - сделать усилие (попытаться)
   - make an excuse - придумать оправдание
   - make friends
@@ -20,7 +69,7 @@ Words, phrasal verbs and collocations that I have learned.
   - do your best - стараться из всех сил
   - do damage
   - do an experiment
-  - do exercises - делать упражнения
+  - do/take exercises - делать упражнения
   - do someone a good turn / do someone a favour - оказать услугу
   - do harm - принести вред
   - do sb's hair - расчёсывать
@@ -28,12 +77,45 @@ Words, phrasal verbs and collocations that I have learned.
   - do the washing / ironing / shopping
   - do some work
 
-# CIU: Unit 8 - Everyday verbs 2
+## CIU: Unit 8 - Everyday verbs 2
 What verbs can we use instead of *get* in some cases:
 - *go* - used for changes on people's personality, appearance and physical abilities. Often for sudden, usually for negative sentences, but also can be used for slowly changes (go *red / dark / mad / angry / blind / etc.*)
 - *turn* - used for colors
 - *become* and *get* can be used both in the most cases, but become is more formal and have some unique collocations: (*extinct, (un)popular, homeless, famous*)
 - in some cases we can use *fell* instead of *get* for some "falling" changes (*fell ill*, *fell silent*) and *grow* for "rising" changes (*grow older*, *grow louder*)
+
+## CIU: Unit 9 - Everyday verbs 3
+Words below collocate with *have* rather then other verbs:
+- have an accident
+- have an argument / a row - спорить
+- have a break
+- have a chat/conversation
+- have difficulty
+- have a dream/nightmare
+- have an experience
+- have a feeling
+- have fun / a good time
+- have a look
+- have a party
+- have a problem / problems
+- have a try/go - попытаться
+
+Take:
+- take `transport`
+- take a holiday
+- take a risk
+- take an interest in sth/sb - заинтересоваться чем-то/кем-то
+- take a chance
+- take a dislike to sth/sb - испытывать неприязнь
+- take advantage of sth/sb - извлекать выгоду из чего-то/кого-то
+
+Pay:
+- pay attention
+- pay a compliment
+- pay sb's (last) respect - отдать (последнюю) честь
+- pay tribute - оценить вклад / воздать должное
+
+---
 
 # Common words
 - spell - Диктовать по буквам
@@ -1228,3 +1310,16 @@ What verbs can we use instead of *get* in some cases:
 - whilst - formal while
 - withdraw - вывести
 - predictably - предсказуемо
+- drawer - выдвижной ящик
+- inevitable - неизбежный
+  - inevitably - adverb
+- evitable - вызываемый
+- cash point - банкомат
+- whilst - formal version of *while*
+- withdraw - снимать, возвращать (*в первую очередь относительно денег*)
+- predictable - предсказуемый
+  - predictably - adverb
+- doubt - сомнение
+  - (un)doubtable - adjective
+  - (un)doubtedly - adverb
+- impractical - непрактичный

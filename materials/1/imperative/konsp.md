@@ -979,9 +979,6 @@ int_arr arrInt;
 double_arr doubleArr;
 ```
 
-[!NOTE]
-Test
-
 ## Условный define
 ```c
 #define DEBUG // Если будет эта строчка, то код внутри #ifdef ... #endif скомпилируется
