@@ -7,6 +7,8 @@
   - [Двусвязный универсальный список](#двусвязный-универсальный-список)
   - [Двусвязный список с двухуровневыми указателями](#двусвязный-список-с-двухуровневыми-указателями)
   - [Универсальная хэш-таблица с обработкой коллизий при помощи списка](#универсальная-хэш-таблица-с-обработкой-коллизий-при-помощи-списка)
+  - [Разложение числа на простые](#разложение-числа-на-простые)
+  - [Решето Эратосфена](#решето-эратосфена)
 - [22.09.03 - лекция](#220903---лекция)
 - [22.09.10 - лекция](#220910---лекция)
 - [22.09.14 - семинар](#220914---семинар)
@@ -22,7 +24,7 @@
   - [Мемоизация](#мемоизация)
 - [22.10.05 - семинар](#221005---семинар)
   - [define-"функция"](#define-функция)
-  - [Решето эратосфена](#решето-эратосфена)
+  - [Решето эратосфена](#решето-эратосфена-1)
 - [22.10.08 - лекция](#221008---лекция)
   - [Динамическая память](#динамическая-память)
     - [Пример просто объявления динамического массива интов](#пример-просто-объявления-динамического-массива-интов)
@@ -671,6 +673,131 @@ void freeHashTable(HashTable* hashTable) {
             freeList(hashTable->table[i]);
     }
     free(hashTable);
+}
+```
+
+## Разложение числа на простые
+$O(\sqrt(N)\log(N))$: для каждого числа берём все натуральные числа от двух до $\sqrt(N)$. Если делится нацело, делим пока возможно. Для эффективной скорости отдельно проверяем делители `2` и `3`, а затем берём все числа $\{6i-1, 6i+1 | 1 \le i \le \sqrt(N)\}$
+
+```c
+typedef struct Factors {
+    int k;
+    int primes[32];
+    int powers[32];
+} Factors;
+
+static int fullNDivision(int divider, int X, Factors* res) {
+    if (X % divider == 0) {
+        res->primes[res->k] = divider;
+        res->powers[res->k] = 0;
+        while (X % divider == 0) {
+            X /= divider;
+            res->powers[res->k]++;
+        }
+        res->k++;
+    }
+    return X;
+}
+
+void Factorize(int X, Factors* res) {
+    X = fullNDivision(2, X, res);
+    X = fullNDivision(3, X, res);
+    for (int i = 1; (i+1)*(i+1) <= X; ++i) {
+        X = fullNDivision(6*i - 1, X, res);
+        X = fullNDivision(6*i + 1, X, res);
+    }
+    if (X != 1) {
+        res->primes[res->k] = X;
+        res->powers[res->k++] = 1;
+    }
+}
+```
+
+## Решето Эратосфена
+Небольшой модуль для поиска и другой работы с простыми числами.
+
+`primes.h`:
+```c
+# ifndef PRIMES_9183746069462
+# define PRIMES_9183746069462
+//returns: 1 if x is prime number, 0 otherwise
+int isPrime ( int x );
+//returns minimal prime number p such that p >= x
+int findNextPrime (int x );
+//returns the number of primes x such that l <= x < r
+int getPrimesCount ( int l , int r );
+# endif
+```
+
+`primes.c`:
+```c
+#include "primes.h"
+
+#define SZ 10000020
+
+static int nums[SZ] = {0};
+static int counts[SZ] = {0};
+static int isFirstRequest = 1;
+
+static void eratosphen() {
+    isFirstRequest = 0;
+    nums[0] = 0;
+    nums[1] = 0;
+    nums[2] = 1;
+    for (int i = 3; i < SZ; i += 2)
+        nums[i] = i;
+    for (int i = 3; i*i < SZ; i += 2) {
+        if (nums[i]) {
+            for (int j = i*i; j < SZ; j += i)
+                nums[j] = 0;
+        }
+    }
+    int p;
+    for (int i = SZ - 1; i >= 0; --i)
+        if (nums[i]) {
+            nums[i] = i;
+            p = i;
+            while (nums[--i] == 0) {
+                if (i < 0)
+                    break;
+                nums[i] = p;
+            }
+            if (i < 0)
+                break;
+            ++i;
+        }
+    counts[0] = 0;
+    for (int i = 1; i < SZ; ++i) {
+        if (isPrime(i))
+            counts[i] = counts[i-1] + 1;
+        else
+            counts[i] = counts[i-1];
+    }
+}
+
+//returns: 1 if x is prime number, 0 otherwise
+int isPrime(int x) {
+    if (isFirstRequest)
+        eratosphen();
+    return nums[x] == x;
+}
+
+//returns minimal prime number p such that p >= x
+int findNextPrime(int x) {
+    if (isFirstRequest)
+        eratosphen();
+    return nums[x];
+}
+
+//returns the number of primes x such that l <= x < r
+int getPrimesCount(int l, int r) {
+    if (isFirstRequest)
+        eratosphen();
+    if (r == 0)
+        return 0;
+    if (l == 0)
+        return counts[r-1];
+    return counts[r-1] - counts[l-1];
 }
 ```
 
