@@ -274,6 +274,8 @@ Stative verb describes states, conditions, features, traits rather than actions 
 - Feelings (Чувства): see, hear, **feel**, taste, **look**, smell, sound, etc. Often use with can/could when we refer to what we see. **Bolded verbs can be in continuos when we talk about somebody (He's looking great today!)**
 - Others: be, contain, fit, include, matter, need, belong, cost, owe, mean, own, appear, want, have
 
+Если мы говорим о еде, которая пахнет, ощущается и т.д., то это будет **stative verbs**, но если мы нюхаем, пробуем и т.д., мы должны использовать **continuous**
+
 ---
 # Present continuos
 ## When to use
