@@ -7,6 +7,8 @@ Words, phrasal verbs and collocations that I have learned.
   - [CIU: Unit 7 - Everyday verbs 1](#ciu-unit-7---everyday-verbs-1)
   - [CIU: Unit 8 - Everyday verbs 2](#ciu-unit-8---everyday-verbs-2)
   - [CIU: Unit 9 - Everyday verbs 3](#ciu-unit-9---everyday-verbs-3)
+  - [CIU: Unit 10 - Synonyms and confusable words 1](#ciu-unit-10---synonyms-and-confusable-words-1)
+  - [CIU: Unit 11 - Synonyms and confusable words 2](#ciu-unit-11---synonyms-and-confusable-words-2)
 - [Common words](#common-words)
 
 
@@ -114,6 +116,50 @@ Pay:
 - pay a compliment
 - pay sb's (last) respect - отдать (последнюю) честь
 - pay tribute - оценить вклад / воздать должное
+
+---
+
+## CIU: Unit 10 - Synonyms and confusable words 1
+- close / shut
+  - close meeting / discussion / conference
+  - shut up / your mouth - **impolite**
+- start / begin
+  - start - for engines or vehicles
+  - begin - more formal and abstract context
+- big / large
+  - large size
+  - big decision
+  - big problem
+- end / finish
+  - end - complete or interrupt (*film ends*, *to end relationship*)
+  - finish - only complete
+- old
+  - old *friend / building*
+  - ancient *history / times*
+  - antique (**valuable**) *furniture / jewellery*
+  - elderly (**more polite**) *person*
+- with no one / nothing else / with nothing similar
+  - single *parent*
+  - *desperately* lonely *place / spot*
+  - *live / travelling* alone
+  - solitary *figure*
+  - sole *survivor*
+  - an only *child*
+  - unique *occasion*
+- charge / load
+  - charge *phone* - batteries and other electronic
+  - load *lorry* - for lorries, ships, etc. and weapons
+- injure / damage
+  - injure - for people
+  - damage - for things
+- grow / raise
+  - grow - for crops
+  - raise - for cattle or children
+
+---
+
+## CIU: Unit 11 - Synonyms and confusable words 2
+*to be continued*
 
 ---
 
@@ -1323,3 +1369,5 @@ Pay:
   - (un)doubtable - adjective
   - (un)doubtedly - adverb
 - impractical - непрактичный
+- chairperson - председатель
+- 
