@@ -159,7 +159,30 @@ Pay:
 ---
 
 ## CIU: Unit 11 - Synonyms and confusable words 2
-*to be continued*
+Gain:
+- *power / control / access* - abstract political nouns
+- *reputation / recognition (признание) / advantage (преимущество) / publicity* - abstract nouns about benefits
+
+Win:
+- *award / prize / medal / match* - nouns associated with competition
+- *battle / war / election* - nouns about fighting
+
+Earn *money / salary / [value]* - income by working
+
+Make *profit / money* - income not only by working
+
+Achieve *success / your aims / your goals* - clear abstract nouns
+
+Beat / defeat *a team / an opponent* - when we won, we defeated sb
+
+Take / carry / wear
+- take *clothes*
+- carry *phone / bag*
+- wear *hat / dress*
+
+Spent / pass
+- **spent** is used when we talk about *money* or *time*
+- *otherwise* - **pass**
 
 ---
 
@@ -1370,4 +1393,4 @@ Pay:
   - (un)doubtedly - adverb
 - impractical - непрактичный
 - chairperson - председатель
-- 
+- glacier - ледник
