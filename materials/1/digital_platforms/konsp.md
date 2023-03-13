@@ -82,6 +82,9 @@
 - [23.02.20](#230220)
 	- [CdM8 as a chip](#cdm8-as-a-chip)
 	- [RAM](#ram)
+- [23.03.13 - lecture](#230313---lecture)
+	- [Interrupts](#interrupts-1)
+	- [Interrupting devices in CdM-8](#interrupting-devices-in-cdm-8)
 
 # Annotation
 Лектор - Назаров Александр Дмитриевич
@@ -105,6 +108,7 @@
   - `<sLabel>>` - was written with `>` instead of `:`
 - `rti` - return from interrupt subroutine
 - `ldc` - read instruction from separate area for instructions in Harward architecture
+- `set` - disable / enable interrupting
 
 ## Save/load/move data
 - `ldi <rn>, <const>` - writes `const` to register `rn`
@@ -784,9 +788,9 @@ Pins:
   - `clock`
   - `reset`
 - West (for interrupting):
-  - `IRQ`
-  - `vector`
-  - `IAck`
+  - `IRQ` - input - tells that some device want to interrupt CPU
+  - `vector` - input - 
+  - `IAck` - output - CPU is ready to be interrupted
 - East:
   - `in` - 8 bits
   - `out` - 8 bits
@@ -802,3 +806,28 @@ We use last 3 outputs for connecting to **outside world**
 Inputs:
 - `sel` - enables work with RAM
 - `ld` - if 1 => loads value to output
+
+# 23.03.13 - lecture
+## Interrupts
+We should save PC, CVZN and simple registers in interrupting moment.
+
+Interrupts classification:
+1. 1-level interrupting: fixed addr for interrupting function that processor choose when interrupt flag goes 1
+2. Vector - a lot of instruction for interrupting. Every input device has its own values in vector
+3. Priority interrupting
+4. Wrapped interrupting
+
+## Interrupting devices in CdM-8
+Interrupt Master - make decision should interrupt occurs or not and give us interrupt vector
+
+Interruptable sequencer - fixes command of virtual interrupting (VII) instead of simple choosing using PC
+
+Extension of the secondary decoder - *...*
+
+Extension of the instruction set - for returning from interrupting function we use `rti`
+
+Interrupt arbiters is the main out-CPU component for interrupting. It handles `IRQ` and send it to CPU, handles `IAck` from CPU and send it to conntected device. After it Arbiter send vector - value from 0 to 7 that show CPU what interrupt subroutine should be executed. Interrupting data saves in ZVZN register: 5-7th bits - vector; 8th bit - interrupts enabled.
+
+By default, we use the last memory string for saving addresses of interrupt subroutines (`P` is index of subroutine from vector):
+- `PC` in cell `0xf0 + 2P`
+- `PS` in cell `0xf1 + 2P`
