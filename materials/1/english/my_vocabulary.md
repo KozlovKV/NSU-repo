@@ -9,6 +9,7 @@ Words, phrasal verbs and collocations that I have learned.
   - [CIU: Unit 9 - Everyday verbs 3](#ciu-unit-9---everyday-verbs-3)
   - [CIU: Unit 10 - Synonyms and confusable words 1](#ciu-unit-10---synonyms-and-confusable-words-1)
   - [CIU: Unit 11 - Synonyms and confusable words 2](#ciu-unit-11---synonyms-and-confusable-words-2)
+  - [CIU: Unit 12 - Metaphor](#ciu-unit-12---metaphor)
 - [Common words](#common-words)
 
 
@@ -183,6 +184,32 @@ Take / carry / wear
 Spent / pass
 - **spent** is used when we talk about *money* or *time*
 - *otherwise* - **pass**
+
+---
+
+## CIU: Unit 12 - Metaphor
+*Light* and its forms are used for expressing happiness and positive:
+- face lights up (shines) / eyes light up (shine)
+- atmosphere / mood lightens 
+
+*Dark* and its forms are associated with negative feelings and unhappy:
+- dark thoughts / days / times
+- face darkens / eyes darken / expression darkens
+
+Different words are associated with *water*:
+- ideas flow / conversation flows - things progress easily, without efforts
+- flood(s) of tears / tears are streaming down sb's face
+- people pour / stream - поток людей двигается медленно
+- people trickle - небольшая группа ("ручеёк") людей двигается медленно
+- a stream of visitors / traffic - непрерывный поток посетителей / машин
+
+*Fire* and *heat* are often associated with anger:
+- heated debate / discussion / conversation
+- fiery temper - взрывной характер
+- tempers flare - обстановка накаляется
+- violence flares up / troubles flare up - ушедшие в прошлое проблемы снова стали серьёзными (разгорелись)
+- cheeks burn with embarrassment - щёки покраснели от стыда
+- blaze of glory / publicity - лучи славы / известности
 
 ---
 
@@ -1394,3 +1421,19 @@ Spent / pass
 - impractical - непрактичный
 - chairperson - председатель
 - glacier - ледник
+- blame - винить (пристрастно)
+- accuse - обвинять (более объективно)
+- accuse of sth - обвинять в чём-то
+- bear - медведь / выносить / нести
+- delight - восторг
+- spectacular - впечатляющий
+- criminalize - криминализировать
+- witness - свидетель
+- evidence - свидетельство
+- absence - отсутствие
+- clarify - прояснить
+  - clarification - noun
+- abuse - злоупотребление
+- blameless - отсутствие вины
+- it takes two tango
+- MTMTE - more than meet the eyes / more than meets the eye
