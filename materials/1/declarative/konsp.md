@@ -107,6 +107,10 @@
 - [23.02.28 - семинар](#230228---семинар)
   - [Reader](#reader)
   - [Writer](#writer-1)
+- [23.03.07 - семинар](#230307---семинар)
+  - [Монада State](#монада-state)
+- [23.03.14 - семинар](#230314---семинар)
+  - [Монада в монаде](#монада-в-монаде)
 
 
 # Контакты преподов
@@ -1057,7 +1061,8 @@ data Reader r a = Reader { runReader :: r -> a }
 - `a` - возвращаемый тип данных
 
 Основные функции для работы:
-- `ask` - возвращает `r`
+- `ask` - возвращает `r` внутри моанды
+- `local :: (\env -> Reader env) -> Reader PrevEnv -> Reader newEnv` - изменяет значение окружения, извлкая его из монады и упаковывая после преобразования
 - `runReader f r` - запускает функцию `f`, передавая `r` как окружение для `Reader`
 
 ## Writer
@@ -1069,7 +1074,72 @@ data Writer w a = Writer { runWriter :: (a, w) }
 - `w` - накапливаемый лог
 - `a` - возвращаемое значение
 
-`tell` - записывает что-то в лог
-`return` - работает с основными значениями
-`listen` - *спросить*
-`pass` - *спросить*
+- `tell` - записывает что-то в лог
+- `return` - работает с основными значениями
+- `runWriter` - принимает монаду `Writer` и возвращает кортеж `(a, w)`
+- `listen` - работает как `runWriter`, но внутри `Writer`, то есть её имеет смысл использовать в `do`-нотации
+- `pass` - изменяет значение лога механизмом, похожим на `local`
+
+# 23.03.07 - семинар
+## Монада State
+```haskell
+newtype State s a = State { runState :: s -> (a, s) }
+```
+- `s` - состояние
+- `a` - значение
+
+- `get` - возвращает состояние внутри моанды
+- `put newState` - устанавливает новое состояние внутри монады
+- `modify (\state -> newState)` - изменяет состояние без do-нотации
+
+*Если станет насущным, разобрать `runState`, `evalState` и `execState`*
+
+# 23.03.14 - семинар
+## Монада в монаде
+Мы можем обернуть одну монаду в другую, создав над ними обёртку:
+```haskell
+newtype MaybeIO a = MaybeIO { runMaybeIO :: IO (Maybe a) }
+
+instance Monad MaybeIO where
+  return x = MaybeIO (return (Just x))
+  MaybeIO wrappedIOMaybe >>= f = MaybeIO $ do
+    maybeValue <- wrappedIOMaybe
+    case maybeValue of
+      Nothing -> return Nothing
+      Just x -> runMaybeIO (f x)
+    -- Несложно заметить, что в do-нотации return работает с монадой IO. С Maybe мы работаем вручную, в конце мы считаем, что f уже возвращает нам монаду (как и должно быть в операторе bind - ваш кэп)
+```
+
+Если с приведённой выше двойной монадой мы захотим использовать, скажем, `putStrLn`, то нам нужно будет преобразовать возвращаемую этой функцией монаду из `IO ()` в `MaybeIO ()`. Для этого можно написать функцию-адаптер:
+```haskell
+liftIO2MaybeIO :: IO a -> MaybeIO a
+liftIO2MaybeIO ioValue = MaybeIO $ do
+  ioResult <- ioValue
+  return $ Just ioResult
+```
+
+При небольшой модификации можем сделать из `MaybeIO` универсальную монаду `MaybeT`, которая будет хранить внутри произвольной монады монаду `Maybe`:
+```haskell
+newtype MaybeT m a = MaybeT { runMaybeT :: m (Maybe a) }
+
+instance Monad m => Monad (MaybeT m) where
+  return x = MaybeT (return (Just x))
+  MaybeT wrappedMaybe >>= f = MaybeT $ do
+    maybeValue <- wrappedMaybe
+    case maybeValue of
+      Nothing -> return Nothing
+      Just x -> runMaybeT (f x)
+
+-- Тогда обобщённый адаптер будет выглядеть так
+lift2MaybeT = MaybeT . fmap Just -- Распаковали значение из любой монады, упаковали в Myabe, а потом обратно в произвольную монаду, сказали, что теперь это MaybeT
+```
+
+Реализация упаковки обеспечивается классотипом `MonadTrans`:
+```haskell
+class MonadTrans t where
+  lift :: Monad m => m a -> t m a
+```
+- `lift . return == return`
+- `lift (m >>= f) == (lift m) >>= (lift . f)`
+
+В Haskell есть 2 основных модуля для работы с адаптерами: `transformers` и `mtl` - первый отвечает за трансформеры `MaybeT`, `EitherT`, `WriterT` и `StateT`, а второй за - за неявный лифтинг в do-нотациях, благодаря которому нам не нужно постоянно распаковывать и запаковывать значение вновь.
