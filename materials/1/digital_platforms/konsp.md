@@ -82,6 +82,9 @@
 - [23.02.20](#230220)
 	- [CdM8 as a chip](#cdm8-as-a-chip)
 	- [RAM](#ram)
+	- [ROM](#rom)
+	- [Von Neuman (Manchester) example](#von-neuman-manchester-example)
+	- [Harvard example](#harvard-example)
 - [23.03.13 - lecture](#230313---lecture)
 	- [Interrupts](#interrupts-1)
 	- [Interrupting devices in CdM-8](#interrupting-devices-in-cdm-8)
@@ -107,7 +110,6 @@
 - `rsect <sLabel>` - indicates about execution of separated part of program
   - `<sLabel>>` - was written with `>` instead of `:`
 - `rti` - return from interrupt subroutine
-- `ldc` - read instruction from separate area for instructions in Harward architecture
 - `set` - disable / enable interrupting
 
 ## Save/load/move data
@@ -779,15 +781,15 @@ Architectures:
 # 23.02.20
 ## CdM8 as a chip
 Pins:
-- North (all 8 bits):
+- North (*all 8 bits, for checking, not for work*):
   - `r0-r3`
   - `PC`
   - `SP`
   - `PS`
-- South (all 1 bit):
+- South (all 1 bit and inputs):
   - `clock`
   - `reset`
-- West (for interrupting):
+- West (for interrupting, inputs):
   - `IRQ` - input - tells that some device want to interrupt CPU
   - `vector` - input - 
   - `IAck` - output - CPU is ready to be interrupted
@@ -795,17 +797,29 @@ Pins:
   - `in` - 8 bits
   - `out` - 8 bits
   - `addr` - address of read/written memory cell
-  - `page` - not need
-  - `rd/wr'` - 1 bit
+  - `page` - not need (*for memory banks?*)
+  - `rd/wr'` - 1 bit, 1 => read, 0 => write, used for for `ld` input in [`RAM` block](#ram) and for controlled buffers on `in`/`out`
   - `mem` - 1 bit
-  - `dat/ins'` - 1 bit
+  - `dat/ins'` - 1 bit, 1 => work with data bank (often we use this output with decoder is enabled by `mem` output)
 
 We use last 3 outputs for connecting to **outside world**
 
 ## RAM
 Inputs:
+- `A` - address of memory cell
 - `sel` - enables work with RAM
-- `ld` - if 1 => loads value to output
+- `ld` - if 1 => loads value to `D`, 0 => sets value from `D`
+- `clock`
+- `D` 
+
+## ROM
+The same as RAM, but without `ld` and `clock` thus `D` is always output of cells `A` when `sel` is 1
+
+## Von Neuman (Manchester) example
+![Von Neuman with CdM-8](./materials/transistors/screenshots/Manchester.png)
+
+## Harvard example
+![Harvard in CdM-8](./materials/transistors/screenshots/Harvard.png)
 
 # 23.03.13 - lecture
 ## Interrupts
