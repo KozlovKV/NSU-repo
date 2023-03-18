@@ -1391,6 +1391,148 @@ void push(ArrStack *stack, int val) {
 - Закидываем знаки в стэк знаков, вынимая из него перед этим все операции, приоритет которых >= приоритету новой операции
 - Вынимаем для нужных операций значения из стэка значений, а результат записываем обратно в этот стэк
 
+Пример реализации для ввода строки с операциями `+ - * /` (минус обычный и унарный):
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAX_STACK_SZ 250001
+
+#define BEGIN_CHAR '_'
+
+#define NUMBER_PLACEHOLDER 'n'
+#define NUMBER_PRIORITY (-1)
+
+#define PRIORITIES_COUNT 2
+#define MLT_DIV 1
+#define SUM_SUB 0
+
+#define NULL_PAIR (UniversalTriad){0, -1, -1}
+
+typedef struct UniversalTriad {
+    double num;
+    char sign;
+    int priority;
+} UniversalTriad;
+
+typedef struct ArrStack_s {
+    UniversalTriad *arr;
+    int size;
+    int freeIndex;
+} ArrStack;
+
+ArrStack *create(int n) {
+    ArrStack *newStack = (ArrStack *) malloc(sizeof(ArrStack));
+    newStack->arr = (UniversalTriad *) calloc(n, sizeof(UniversalTriad));
+    newStack->size = n;
+    newStack->freeIndex = 0;
+    return newStack;
+}
+
+int isEmpty(const ArrStack *stack) {
+    return stack->freeIndex == 0 ? 1 : 0;
+}
+
+UniversalTriad top(const ArrStack *stack) {
+    if (isEmpty(stack))
+        return NULL_PAIR;
+    return stack->arr[stack->freeIndex-1];
+}
+
+UniversalTriad pop(ArrStack *stack) {
+    if (isEmpty(stack))
+        return NULL_PAIR;
+    return stack->arr[--stack->freeIndex];
+}
+
+void push(ArrStack *stack, UniversalTriad val) {
+    stack->arr[stack->freeIndex++] = val;
+}
+
+void freeStack(ArrStack *stack) {
+    free(stack->arr);
+    free(stack);
+}
+
+int isDigit(char c) {
+    return c >= '0' && c <= '9';
+}
+
+UniversalTriad parseSign(char c) {
+    if (c == '+' || c == '-')
+        return (UniversalTriad){0.0,c, SUM_SUB};
+    else if (c == '*' || c == '/')
+        return (UniversalTriad){0.0,c, MLT_DIV};
+}
+
+UniversalTriad parseNumOrSign(char c) {
+    if (!isDigit(c))
+        return parseSign(c);
+    char buffer[5] = "";
+    int i = 0, scanfReturn;
+    do {
+        buffer[i++] = c;
+        scanfReturn = scanf("%c", &c);
+    } while (scanfReturn != -1 && isDigit(c));
+    if (scanfReturn != -1)
+        fseek(stdin, -1, SEEK_CUR);
+    UniversalTriad tmp = {.sign = NUMBER_PLACEHOLDER, .priority = NUMBER_PRIORITY};
+    sscanf(buffer, "%lf", &tmp.num);
+    return tmp;
+}
+
+void countStep(ArrStack *numsStack, ArrStack *signsStack) {
+    double b = pop(numsStack).num, a = pop(numsStack).num;
+    UniversalTriad newNumTriad = {.sign = NUMBER_PLACEHOLDER, .priority = NUMBER_PRIORITY},
+        signTriad = pop(signsStack);
+    switch (signTriad.sign) {
+        case '+': newNumTriad.num = a + b; break;
+        case '-': newNumTriad.num = a - b; break;
+        case '*': newNumTriad.num = a * b; break;
+        case '/': newNumTriad.num = a / b; break;
+    }
+    push(numsStack, newNumTriad);
+}
+
+int main() {
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+    char c, prevC = BEGIN_CHAR;
+    int bracketsOpened = 0;
+    UniversalTriad tmp;
+    ArrStack *numsStack = create(MAX_STACK_SZ), *signsStack = create(MAX_STACK_SZ);
+    while (scanf("%c", &c) != -1) {
+        if (c == ' ' || c == '\n')
+            continue;
+        if (c == '(')
+            bracketsOpened++;
+        else if (c == ')')
+            bracketsOpened--;
+        else {
+            tmp = parseNumOrSign(c);
+            if (tmp.sign == NUMBER_PLACEHOLDER)
+                push(numsStack, tmp);
+            else {
+                tmp.priority += (PRIORITIES_COUNT * bracketsOpened);
+                while (top(signsStack).priority >= tmp.priority)
+                    countStep(numsStack, signsStack);
+                if (tmp.sign == '-' && (prevC == BEGIN_CHAR || !(isDigit(prevC) || prevC == ')')))
+                    push(numsStack, (UniversalTriad){0, NUMBER_PLACEHOLDER, NUMBER_PRIORITY});
+                push(signsStack, tmp);
+            }
+        }
+        prevC = c;
+    }
+    while (numsStack->freeIndex > 1)
+        countStep(numsStack, signsStack);
+    printf("%.20lf\n", top(numsStack).num);
+
+    freeStack(numsStack);
+    freeStack(signsStack);
+    return 0;
+}
+```
+
 ## Очередь
 **Суть:** добавление элемента в конец, а обращение к началу (*FIFO: first in, first out*)
 
@@ -2013,7 +2155,7 @@ int parsePolynom();
 
 Дерево синтаксического разбора (abstract syntax tree - AST) - лексемы, соединяющие другие лексемы, будут внутренними вершинами дерева. Листья - лексемы, которые дальше нельзя разобрать. Иногда парсер может вовзращать не значение, а дерево, по которому также можно лёгко провести вычисление через рекурсивный обход. (*В данном случае выглядит как совершенно бесполезный вариант*). Также можно делать дерево, у которого к вершине крепятся все лексемы, необходимые для данной синтаксиечкой единицы. Удобно, когда мы хотим лишь на финальном этапе придавать найденным знакам конкретный смысл (например, можем воспринимать `+` как сложение чисел или конкатенацию строк).
 
-**Вторым подходом к парсингу является алгоритм сортировочной станции**
+Вторым подходом к парсингу является алгоритм сортировочной станции. Для примера с арифмитическими выражениями он будет реализовываться [вот так](#вычисление-математических-выражений-через-стэк-и-польский-метод-записи)
 
 # 23.03.17 - лекция
 ## DLL
@@ -2053,10 +2195,12 @@ cl lib.c /LD
 В собранно исполняемом файле на Windows DLL сразу ищутся в текущей директории. На Линукс базово библиотеки ищутся в `RPATH`, чтобы искались в текущей директории, при сборке надо добавить флаг `-Wl,-rpath=.`
 
 ## Статический импорт для динамических библиотек
-1. Выбрать функции для экспорта
-2. Собрать библиотеку и хэдэры
-3. Пишем код, используя хэдэры будто бы мы работаем с простым файлом библиотекуи
-4. Собираем исходный код с особыми флагами
-5. **PROFIT**
+1. Прописать хэдэры
+2. Выбрать функции для экспорта
+   1. Самый простой способ - `static`, но также можно использовать `__attribiute__((visibility(hidden)))`
+3. Собрать библиотеку
+4. Пишем код, используя хэдэры будто бы мы работаем с простым файлом библиотекуи
+5. Собираем исходный код с особыми флагами
+6. **PROFIT**
 
 С GCC это делается элементарно - при сборке включаем в список файлов все динамические библиотеки: `gcc main.c lib.so` (В `main.c` должен инклюдиться `lib.h`)
