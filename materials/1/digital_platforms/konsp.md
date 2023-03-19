@@ -85,6 +85,8 @@
 	- [ROM](#rom)
 	- [Von Neuman (Manchester) example](#von-neuman-manchester-example)
 	- [Harvard example](#harvard-example)
+	- [I/O as a memory cell](#io-as-a-memory-cell)
+		- [Example with sum of 2 nums](#example-with-sum-of-2-nums)
 - [23.03.13 - lecture](#230313---lecture)
 	- [Interrupts](#interrupts-1)
 	- [Interrupting devices in CdM-8](#interrupting-devices-in-cdm-8)
@@ -123,7 +125,7 @@
 - `addsp <offset>` - move `SP` by `offset`
 - `ldsp <rn>` - loads val from stack to `rn` **without moving `SP`**
 - `stsp <rn>` - set val from `rn` to stack **without moving `SP`**
-- `ldc <rn> <rm>` - works with ROM (only for Harward) 
+- `ldc <rn>, <rm>` - works with ROM (only for Harward) 
 
 ## Math
 - `add <rn>, <rm>` - saves to `rm` sum of `rn` and `rm`
@@ -763,8 +765,6 @@ Master-slave trigger with multibit input D chosen by multiplexer ans some additi
 ![Multiported register](./materials/transistors/screenshots/T2L4_multiported_register.png)
 
 # 23.02.14
-Work by heart
-
 - Data bus - bidirectional
 - Addr. bus - defines addr. (device number) that processor wants to be connected
 
@@ -777,6 +777,8 @@ Information can be in value or jump between values.
 Architectures:
 - Von Neuman - common storage
 - Harward - separated storages for commands and data
+  - ROM - for commands
+  - RAM - for data. (*In CocoIDE this mode automatically will work with separated mem. spaces for commands `st`, `push`, `pop` etc.*)
 
 # 23.02.20
 ## CdM8 as a chip
@@ -820,6 +822,50 @@ The same as RAM, but without `ld` and `clock` thus `D` is always output of cells
 
 ## Harvard example
 ![Harvard in CdM-8](./materials/transistors/screenshots/Harvard.png)
+
+## I/O as a memory cell
+We write input/output data directly in memory cell. Thus we need catch all CPU outputs affecting on memory. After it we can write value in memory. In asm-code we need to make infinite reading cycle for handling of changes in IO cells.
+
+### Example with sum of 2 nums
+
+Example code:
+```
+asect 0xf0
+IOA: 
+asect 0xf1 
+IOB: 
+
+asect 0x00
+start:
+
+	addsp -16
+	
+    ldi r0, IOA
+    ldi r1, IOB
+	
+	while
+		tst r2
+	stays z
+		ld r0, r2
+	wend
+	
+	while
+		tst r3
+	stays z
+		ld r1, r3
+	wend
+	
+	add r2, r3
+	ldi r0, 0
+	st r0, r3
+	
+	halt
+
+end
+```
+
+Example schema:
+![Circuit for schema of IO system with Harvard architecture](./materials/transistors/screenshots/IO_Harvard.png)
 
 # 23.03.13 - lecture
 ## Interrupts
