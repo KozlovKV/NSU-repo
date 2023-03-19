@@ -58,6 +58,9 @@
   - [key words](#key-words-3)
   - [perfect continuous and continuous](#perfect-continuous-and-continuous)
   - [perfect continuous and perfect](#perfect-continuous-and-perfect)
+- [Present perfect and perfect continuous from Grammarway](#present-perfect-and-perfect-continuous-from-grammarway)
+  - [Use cases](#use-cases)
+  - [Time expressive key words](#time-expressive-key-words)
 
 # Websites
 - [Cambridge Learner's dictionary](https://dictionary.cambridge.org/dictionary/learner-english)
@@ -578,3 +581,33 @@ If activity continues and we don't want to describe how long time it went we use
 - Stative verbs => **Present perfect** (exclude special verbs - see [this topic](#stative-verbs) + *want* and *mean*)
 - *live*, *feel*, *teach*, *work* => **Both** (But with *always* only **Present perfect**)
 - We use **perfect continuous** to express irritation by ended action
+
+# Present perfect and perfect continuous from Grammarway
+## Use cases
+Present perfect:
+- Action started in the past and still going. Especially with stative verbs
+- Action from the past continues in the present
+- When exact time isn't mentioned. We want to emphasize only action and its result
+- If we talk about unfinished time period (*She has received 3 faxes this morning* - morning isn't over and she can receive more faxes)
+
+Present perfect continuous:
+- Action from past which continues with emphasizing on the duration
+- Started and finished process action with evidence
+- For expressing anger, annoyance or irritation
+
+## Time expressive key words
+For both tenses: 
+- how long
+- for
+- since
+- lately
+- recently
+
+For Present perfect:
+- already
+- yet
+- just
+- always
+- ever
+- never
+- so far

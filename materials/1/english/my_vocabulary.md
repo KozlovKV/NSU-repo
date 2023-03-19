@@ -10,6 +10,7 @@ Words, phrasal verbs and collocations that I have learned.
   - [CIU: Unit 10 - Synonyms and confusable words 1](#ciu-unit-10---synonyms-and-confusable-words-1)
   - [CIU: Unit 11 - Synonyms and confusable words 2](#ciu-unit-11---synonyms-and-confusable-words-2)
   - [CIU: Unit 12 - Metaphor](#ciu-unit-12---metaphor)
+  - [CIU: Unit 13 - Weather](#ciu-unit-13---weather)
 - [Common words](#common-words)
 
 
@@ -210,6 +211,39 @@ Different words are associated with *water*:
 - violence flares up / troubles flare up - ушедшие в прошлое проблемы снова стали серьёзными (разгорелись)
 - cheeks burn with embarrassment - щёки покраснели от стыда
 - blaze of glory / publicity - лучи славы / известности
+
+---
+
+## CIU: Unit 13 - Weather
+- unbroken sunshine - clear sunny sky
+- scorching hot - extremely hot
+- soak up - enjoy
+- soak up the sunshine - enjoying the sunshine
+- torrential rain - heavy rain
+- pouring with rain - лить как из ведра *?*
+- get soaked - промёрзнуть / промокнуть *?*
+- in vain - *?*
+- a break in the clouds
+- thick - *?*
+- looks like rain - похоже на дождь / дождь собирается
+- weather deteriorates - formal version for *weather is getting worse*
+- mist - *?*
+- fog/mist comes down
+  - opp. - lift
+- thick/dense fog patches of fog/mist
+- a blanket of fog
+- strong / weak sun
+- heavy (*NOT STRONG*) / driving rain
+- hard / light frost
+- the wind picks up / dies down
+- the wind blows / whistles - ветер порывается, свистит
+- high / strong / light wind
+- biting wind - пробирающий ветер
+- freak - неожиданный, необычный
+- freak weather conditions hit - *?*
+- Gale-force wind - extremely strong wind
+- torn off - снести *?*
+- river burst its banks - река вышла из берегов
 
 ---
 
