@@ -1471,3 +1471,16 @@ Different words are associated with *water*:
 - blameless - отсутствие вины
 - it takes two tango
 - MTMTE - more than meet the eyes / more than meets the eye
+- full-fledged - полное / полноценное
+- [couldn't recall / didn't remember] anything
+- avoid - избегать
+- succeed - преуспеть
+- hesitate - колебаться
+  - hesitation - noun
+- (un)deliberate - намеренный
+- time lasting - растягивание времени
+- dignity - достоинство (*Да-да, из Древнего Рима*)
+- attentive - внимательный
+- (to) mention - упоминать / упоминание
+- instant - мгновенный
+- merit - заслуга / достоинство

@@ -61,6 +61,12 @@
 - [Present perfect and perfect continuous from Grammarway](#present-perfect-and-perfect-continuous-from-grammarway)
   - [Use cases](#use-cases)
   - [Time expressive key words](#time-expressive-key-words)
+- [`V + adj + Vinf`](#v--adj--vinf)
+- [`point in Ving`](#point-in-ving)
+- [`would rather Vinf0`](#would-rather-vinf0)
+- [`Feel like Ving sth`](#feel-like-ving-sth)
+- [Phrases for emphasizing of verbs](#phrases-for-emphasizing-of-verbs)
+- [Sth is worth](#sth-is-worth)
 
 # Websites
 - [Cambridge Learner's dictionary](https://dictionary.cambridge.org/dictionary/learner-english)
@@ -338,7 +344,7 @@ Stative verb describes states, conditions, features, traits rather than actions 
 # Глагол to be в Present Simple СМЫСЛОВОЙ! Но его можно ставить на место do
 
 # so or such
-Если используется только прилагательное или наречие, то перед ним стоит **so**. В другом случае - **such**.
+Если используется только прилагательное или наречие, то перед ним стоит **so**. В другом случае - **such + [`a` with singular countable nouns]**.
 
 # Have or have got
 Когда речь идёт о владении чем-то, допустимы обе формы. **Главное не having!**. В прошедшем времени используется только had (**без got**).
@@ -611,3 +617,28 @@ For Present perfect:
 - ever
 - never
 - so far
+
+# `V + adj + Vinf`
+*The book is difficult to read*
+
+# `point in Ving`
+*There's no point in doing sth*
+
+# `would rather Vinf0`
+Лучше бы
+
+*Joe would rather not go to the ballgame*
+
+# `Feel like Ving sth`
+Не настроен
+
+*Joe doesn't feel like going*
+
+# Phrases for emphasizing of verbs
+- *I wasn't able to `V`*
+- *I didn't manage to `V`*
+- *Couldn't to `V`*
+
+# Sth is worth
+- `to be worth doing sth` - что-то стоит усилий 
+- `sth is worth sth` - что-то стоит чего-то
