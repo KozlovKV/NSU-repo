@@ -865,7 +865,11 @@ end
 ```
 
 Example schema:
-![Circuit for schema of IO system with Harvard architecture](./materials/transistors/screenshots/IO_Harvard.png)
+![Circuit for schema of IO system with Harvard architecture](./materials/transistors/screenshots/IO_Harvard_1.png)
+
+*Ok... It looks terrible. Let's tunnelize*
+
+![Pretty version 1](./materials/transistors/screenshots/IO_Harvard_2.png)
 
 # 23.03.13 - lecture
 ## Interrupts
