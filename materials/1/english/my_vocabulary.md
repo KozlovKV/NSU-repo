@@ -11,6 +11,9 @@ Words, phrasal verbs and collocations that I have learned.
   - [CIU: Unit 11 - Synonyms and confusable words 2](#ciu-unit-11---synonyms-and-confusable-words-2)
   - [CIU: Unit 12 - Metaphor](#ciu-unit-12---metaphor)
   - [CIU: Unit 13 - Weather](#ciu-unit-13---weather)
+  - [CIU: Unit 14 - Travel](#ciu-unit-14---travel)
+- [Phrasal verbs in use](#phrasal-verbs-in-use)
+  - [PVIU: Unit 42 - The classroom and learning](#pviu-unit-42---the-classroom-and-learning)
 - [Common words](#common-words)
 
 
@@ -220,14 +223,14 @@ Different words are associated with *water*:
 - soak up - enjoy
 - soak up the sunshine - enjoying the sunshine
 - torrential rain - heavy rain
-- pouring with rain - лить как из ведра *?*
-- get soaked - промёрзнуть / промокнуть *?*
-- in vain - *?*
+- pouring with rain - лить как из ведра / проливной дождь
+- get soaked - промокнуть насквозь
+- in vain - напрасно
 - a break in the clouds
-- thick - *?*
+- thick - толсто / слякоть
 - looks like rain - похоже на дождь / дождь собирается
 - weather deteriorates - formal version for *weather is getting worse*
-- mist - *?*
+- mist - fog / darkness
 - fog/mist comes down
   - opp. - lift
 - thick/dense fog patches of fog/mist
@@ -240,10 +243,67 @@ Different words are associated with *water*:
 - high / strong / light wind
 - biting wind - пробирающий ветер
 - freak - неожиданный, необычный
-- freak weather conditions hit - *?*
+- freak weather conditions hit - причудливая погода / перепады погоды
 - Gale-force wind - extremely strong wind
-- torn off - снести *?*
+- torn off - сорванный (*torn off roof*)
 - river burst its banks - река вышла из берегов
+
+---
+
+## CIU: Unit 14 - Travel
+- travel arrangement
+- business trip / travel
+- travel agent
+- sightseeing - осмотр достопримечательностей
+- take a trip
+- day trip
+- boat trip
+- safe journey - счастливого пути
+- tire - шина / усталость
+- tiring journey - утомительное путешествие
+- return journey
+  - opp. - outward journey
+- brochure - брошюра
+- travel brochure
+- camping trip
+- overnight journey
+- in-flight magazine / entertainment
+- seatbelt - ремень безопасности
+- fasten - соединить / скрепить
+- board the plane - сесть в самолёт
+- aisle - проход
+- domestic flight - внутренний рейс
+- scheduled flight - запланированный рейс
+  - opp. - charter flight
+- smoothy flight - спокойный (ровный полёт)
+  - opp. - bumpy flight
+- family-run hotel
+- run-down - сокращение
+- run-down hotel - захудалый отель
+- luxury hotel
+- smart hotel
+  - opp. - budget accommodation
+- to book / make a reservation - бронировать
+- fully booked - всё забронировано
+
+---
+
+# Phrasal verbs in use
+## PVIU: Unit 42 - The classroom and learning
+In this PV particle can place either before or after verb:
+- hand / turn in - сдать работы
+- hand / give out - раздать работы
+- clean off / rub out / wipe off - очистить (*clean off board*)
+- work out - отрабатывать / тренироваться
+- cross out - отметить
+- miss out - пропустить / забыть
+- act out - разыграть / выражать действиями, а не словами
+- put away - положить на место
+- fall behind - отставать
+- catch up - догнать / узнать новости
+- inexperience - неопытность
+- mess up - испортить / провалить / побить
+- spread out - расправить / открыть
 
 ---
 
@@ -422,8 +482,8 @@ Different words are associated with *water*:
 - comb - расчёска
 - emphasize - show that sth is especially important
 - appropriate - подходящий
-- hang in - сдать работы учителю
-- hang out - получить работы от учителя
+- hand in - сдать работы учителю
+- hand out - получить работы от учителя
 - commemorate - почтить память
 - remembrance - память
 - poppy - мак
@@ -526,7 +586,7 @@ Different words are associated with *water*:
 - persist - упорствовать
 - despite all odds - не смотря ни на что
 - give in 
-  - concrete meaning - hang in work to the teacher
+  - concrete meaning - hand in work to the teacher
   - abstract meaning - agreed to sth that was refused before
 - come round
   - concrete - visit someone at their house
@@ -783,7 +843,7 @@ Different words are associated with *water*:
 - crack down - начать более жёстко бороться с плохим поведением
   - crackdown - the same noun
 - lookout - person who watches for danger and warns other people
-- hangout - милостыня / копия документов для всех собравшихся
+- handout - милостыня / копия документов для всех собравшихся
 - change over - stop using one thing and start using other one
 - changeover - changing of the situation
 - leftover - остатки еды
