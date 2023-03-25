@@ -67,6 +67,12 @@
 - [`Feel like Ving sth`](#feel-like-ving-sth)
 - [Phrases for emphasizing of verbs](#phrases-for-emphasizing-of-verbs)
 - [Sth is worth](#sth-is-worth)
+- [Murphey: Unit 35 - `Had better` and `it's time`](#murphey-unit-35---had-better-and-its-time)
+  - [`had better`](#had-better)
+  - [Comparing with `should V`](#comparing-with-should-v)
+  - [`it's time`](#its-time)
+- [Murphey 59](#murphey-59)
+- [Murphey 64](#murphey-64)
 
 # Websites
 - [Cambridge Learner's dictionary](https://dictionary.cambridge.org/dictionary/learner-english)
@@ -642,3 +648,31 @@ For Present perfect:
 # Sth is worth
 - `to be worth doing sth` - что-то стоит усилий 
 - `sth is worth sth` - что-то стоит чего-то
+
+# Murphey: Unit 35 - `Had better` and `it's time`
+## `had better`
+`had better V sth` - do sth is advisable. If don't do it there will be a problem or a danger
+
+Negative - `had better not`
+
+This collocation is about present or future although had is past form.
+
+`V` **without** *to*
+
+## Comparing with `should V`
+`should V` can be used instead of `had better V`, but `had better` can be used only for a **specific situation (not for general facts)**:
+- *It's late. We'd better go home. / We should go home.*
+- *You're always at home. You should go out more.* (**Here we can't use `had better`**)
+
+Also `had better` means some problem by ignoring advice whereas `should` means simple advice
+
+## `it's time`
+`it's time [for sb] Vinf` or `it's time [sb] V2` mean that some somebody should have already done sth or started it. Often used to criticize or complain.
+
+`It's **about** time ...` - makes criticizing stronger.
+
+# Murphey 59
+**TODO**
+
+# Murphey 64
+**TODO**
