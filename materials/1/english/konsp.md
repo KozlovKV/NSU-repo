@@ -71,7 +71,11 @@
   - [`had better`](#had-better)
   - [Comparing with `should V`](#comparing-with-should-v)
   - [`it's time`](#its-time)
-- [Murphey 59](#murphey-59)
+- [Murphey: Unit 59 - `Prefer` and `would rather`](#murphey-unit-59---prefer-and-would-rather)
+  - [`Prefer` in general](#prefer-in-general)
+  - [`Prefer` in specific situation](#prefer-in-specific-situation)
+  - [`Would rather`](#would-rather)
+  - [Our wishes for others](#our-wishes-for-others)
 - [Murphey 64](#murphey-64)
 
 # Websites
@@ -671,8 +675,35 @@ Also `had better` means some problem by ignoring advice whereas `should` means s
 
 `It's **about** time ...` - makes criticizing stronger.
 
-# Murphey 59
-**TODO**
+# Murphey: Unit 59 - `Prefer` and `would rather` 
+## `Prefer` in general
+`Prefer to V` or `Prefer Ving` are used to say what we prefer in general.
+
+Forms:
+- *I prefer `sth` to `sth` else*
+- *I prefer doing `sth` to doing `sth` else*
+- *I prefer to do `sth` rather than [do] `sth` else*
+
+## `Prefer` in specific situation
+`Would prefer` (`'d prefer`) is used to say what sb want in a specific situation.
+
+Usually used with `to V`, not with `Ving`
+
+## `Would rather`
+`Would rather Vinf` = `would prefer to V`
+
+- *Shall we go by train?*
+  - *I'd prefer to drive*
+  - *I'd rather drive*
+
+Negative: `would rather not Vinf`
+
+Comparing form: `Would rather do sth than do sth else`
+
+## Our wishes for others
+`'d rather sb V2` (**ONLY** `V2`, although meaning is present)
+
+*Who's going to drive, you or me? I'd rather you drove*
 
 # Murphey 64
 **TODO**

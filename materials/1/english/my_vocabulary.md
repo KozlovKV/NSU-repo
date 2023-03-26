@@ -12,6 +12,7 @@ Words, phrasal verbs and collocations that I have learned.
   - [CIU: Unit 12 - Metaphor](#ciu-unit-12---metaphor)
   - [CIU: Unit 13 - Weather](#ciu-unit-13---weather)
   - [CIU: Unit 14 - Travel](#ciu-unit-14---travel)
+  - [CIU: Unit 15 - Countryside](#ciu-unit-15---countryside)
 - [Phrasal verbs in use](#phrasal-verbs-in-use)
   - [PVIU: Unit 42 - The classroom and learning](#pviu-unit-42---the-classroom-and-learning)
 - [Common words](#common-words)
@@ -285,6 +286,43 @@ Different words are associated with *water*:
   - opp. - budget accommodation
 - to book / make a reservation - бронировать
 - fully booked - всё забронировано
+
+---
+
+## CIU: Unit 15 - Countryside
+- surrounding contryside
+- gentle landscape - спокойный пейзаж
+- open fields
+- bleak - марчный
+  - bleak landscape
+- catch a glimpse of - мельком увидеть
+- catch sight of - заметить
+- kingfisher - зимородок
+- round a bend - повернуть за угол
+- come into view - предстать перед взором
+- fall into ruin
+- well worth seeing / well worth to see - на это стоит посмотреть
+- slope - склон
+  - steep slope - крутой склон
+- fast-following river
+- mountain towers - гора возвышается
+- unspoilt - чистый
+- dense - плотный (thick) / густой
+  - dense forest
+- snow-covered
+- to wind - мотать / изгибаться 
+  - stream winds
+- uninterrupted view - открытый обзор
+- panoramic view - wide view
+- spectacular view - dramatic view
+- to enjoy / admire a view
+- breathtaking scenery
+- to dominate the landscape - виднеться издалека (быть главной частью пейзажа на мили вокруг)
+- beach stretches - пляж раскинулся (тянется)
+- sandy beach
+- secluded beach - немноголюдный пляж
+- golden sands
+- peaceful / tranquil countryside 
 
 ---
 
@@ -1544,3 +1582,4 @@ In this PV particle can place either before or after verb:
 - (to) mention - упоминать / упоминание
 - instant - мгновенный
 - merit - заслуга / достоинство
+- worth - значимость / значить / значимый
