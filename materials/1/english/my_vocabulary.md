@@ -35,6 +35,9 @@ Words, phrasal verbs and collocations that I have learned.
   - wear particular size in clothes (*I take size 43 shoes*)
 - take it/things easy - делать что-то расслабленно
 - take a break
+
+---
+
 ## VIU: Unit 83 - Get: uses, phrases and phrasal verbs
 Often *get* is informal verb in a lot of cases:
 - obtain / receive
@@ -90,7 +93,7 @@ What verbs can we use instead of *get* in some cases:
 - *go* - used for changes on people's personality, appearance and physical abilities. Often for sudden, usually for negative sentences, but also can be used for slowly changes (go *red / dark / mad / angry / blind / etc.*)
 - *turn* - used for colors
 - *become* and *get* can be used both in the most cases, but become is more formal and have some unique collocations: (*extinct, (un)popular, homeless, famous*)
-- in some cases we can use *fell* instead of *get* for some "falling" changes (*fell ill*, *fell silent*) and *grow* for "rising" changes (*grow older*, *grow louder*)
+- in some cases we can use *fall* instead of *get* for some "falling" changes (*fall ill*, *fall silent*) and *grow* for "rising" changes (*grow older*, *grow louder*)
 
 ## CIU: Unit 9 - Everyday verbs 3
 Words below collocate with *have* rather then other verbs:
@@ -139,15 +142,15 @@ Pay:
 - end / finish
   - end - complete or interrupt (*film ends*, *to end relationship*)
   - finish - only complete
-- old
+- old variants:
   - old *friend / building*
   - ancient *history / times*
-  - antique (**valuable**) *furniture / jewellery*
+  - antique (**valuable**) *furniture / jewelry*
   - elderly (**more polite**) *person*
 - with no one / nothing else / with nothing similar
   - single *parent*
   - *desperately* lonely *place / spot*
-  - *live / travelling* alone
+  - *live / traveling* alone
   - solitary *figure*
   - sole *survivor*
   - an only *child*
@@ -222,7 +225,7 @@ Different words are associated with *water*:
 - unbroken sunshine - clear sunny sky
 - scorching hot - extremely hot
 - soak up - enjoy
-- soak up the sunshine - enjoying the sunshine
+- soak up the sunshine
 - torrential rain - heavy rain
 - pouring with rain - лить как из ведра / проливной дождь
 - get soaked - промокнуть насквозь
@@ -234,7 +237,7 @@ Different words are associated with *water*:
 - mist - fog / darkness
 - fog/mist comes down
   - opp. - lift
-- thick/dense fog patches of fog/mist
+- thick/dense fog / patches of fog/mist
 - a blanket of fog
 - strong / weak sun
 - heavy (*NOT STRONG*) / driving rain
@@ -376,7 +379,7 @@ In this PV particle can place either before or after verb:
 - persuade someone - убеждать / агитировать
 - insist on - настаивать
 - fence - забор
-- brake up - расстаться
+- break up - расстаться
 - main one - главный из чего-то
 - Sequence - последовательность
 - observe - наблюдать, обозревать всё вокруг
@@ -1411,8 +1414,8 @@ In this PV particle can place either before or after verb:
   - film director - режиссёр
 - Phoning and texting (VIU: Unit 53)
   - phrases to ask who is speaking with you by phone
-    - Is that sb - informal
-    - Who's calling - formal
+    - Is that sb? - informal
+    - Who's calling? - formal
   - answer to this question
     - It's sb - informal
     - Calling - formal ("у аппарата")
@@ -1473,7 +1476,7 @@ In this PV particle can place either before or after verb:
   - recently / lately - недавно (несколько месяцев)
   - a long time ago / ages ago
   - the other day (for past) - совсем недавно (чаще всего пару дней, возможно неделю назад)
-  - these days nowadays
+  - these days / nowadays
   - for the time being - в ближайшем будущем
   - one day - однажды
   - fortnight - 2 weeks (Fun fact: root of word - **fourteen nights** - in a lot of countries payday goes one time per 2 weeks. It is called *fortnightly basis*)
@@ -1507,7 +1510,7 @@ In this PV particle can place either before or after verb:
 - spacious - просторный
 - somewhere nearby - где-то неподалёку
 - sunbath
-- to be just about to [] - почти сделать что-то
+- to be just about to [sth] - почти сделать что-то
 - representative - представляющий
 - cinnamon - корица
 - few - чуть-чуть / немного
@@ -1533,17 +1536,13 @@ In this PV particle can place either before or after verb:
 - dial - набирать номер
 - scenery - пейзаж
 - cliff - утёс
-- inevitable - неизбежный
-- inevitably - неизбежно
 - whilst - formal while
-- withdraw - вывести
 - predictably - предсказуемо
 - drawer - выдвижной ящик
 - inevitable - неизбежный
   - inevitably - adverb
 - evitable - вызываемый
 - cash point - банкомат
-- whilst - formal version of *while*
 - withdraw - снимать, возвращать (*в первую очередь относительно денег*)
 - predictable - предсказуемый
   - predictably - adverb
