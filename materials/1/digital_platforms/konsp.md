@@ -90,6 +90,7 @@
 - [23.03.13 - lecture](#230313---lecture)
 	- [Interrupts](#interrupts-1)
 	- [Interrupting devices in CdM-8](#interrupting-devices-in-cdm-8)
+- [23.03.28 - lecture](#230328---lecture)
 
 # Annotation
 Лектор - Назаров Александр Дмитриевич
@@ -871,6 +872,10 @@ Example schema:
 
 ![Pretty version 1](./materials/transistors/screenshots/IO_Harvard_2.png)
 
+*Well... But I think it's a bad idea to cut off CPU from clock and block the outputs so rude*
+
+**See [Shefarenko book pg. 252](./tome.pdf)**
+
 # 23.03.13 - lecture
 ## Interrupts
 We should save PC, CVZN and simple registers in interrupting moment.
@@ -895,3 +900,8 @@ Interrupt arbiters is the main out-CPU component for interrupting. It handles `I
 By default, we use the last memory string for saving addresses of interrupt subroutines (`P` is index of subroutine from vector):
 - `PC` in cell `0xf0 + 2P`
 - `PS` in cell `0xf1 + 2P`
+
+# 23.03.28 - lecture
+Meandre:
+
+![](https://upload.wikimedia.org/wikipedia/commons/5/50/Rhodes_meander_hg.jpg)
