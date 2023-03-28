@@ -13,6 +13,7 @@ Words, phrasal verbs and collocations that I have learned.
   - [CIU: Unit 13 - Weather](#ciu-unit-13---weather)
   - [CIU: Unit 14 - Travel](#ciu-unit-14---travel)
   - [CIU: Unit 15 - Countryside](#ciu-unit-15---countryside)
+  - [CIU: Unit 16 - Towns and cities](#ciu-unit-16---towns-and-cities)
 - [Phrasal verbs in use](#phrasal-verbs-in-use)
   - [PVIU: Unit 42 - The classroom and learning](#pviu-unit-42---the-classroom-and-learning)
 - [Common words](#common-words)
@@ -326,6 +327,41 @@ Different words are associated with *water*:
 - secluded beach - немноголюдный пляж
 - golden sands
 - peaceful / tranquil countryside 
+
+---
+
+## CIU: Unit 16 - Towns and cities
+- skyline - пейзаж
+- quaint - необычный (особенно если речь о чём-то старинном)
+- upmarket - престижный
+- pricey - expansive (negative sense)
+- avenue runs
+- is lined with shops - обставлена магазинами
+  - tree-lined venue - обсаженная деревьями дорога
+- lively - оживлённый
+- fashionable club
+- pavement cafe
+- residential area - жилой район
+- high-rise flats - квартиры в многоэтажках
+- inner city - центр города (*в книжке почему-то отмечен, как зачастую неблагополучная часть города с беднейшим населением...*)
+- imposing building - внушительное здание
+- urban wasteland - городская пустошь
+- no-go area - опасный для посещения район
+- run-down building - здание под снос
+- strewn with litter
+  - strew - посыпать
+  - litter - мусор
+- deprive - лишать
+- deprived area - неблагополучный район
+- sprawl - растягиваться
+- sprawling city
+- bumper-to-bumper traffic
+- exhaust fumes - выхлопные газы
+- incessant roar
+  - incessant - непрекращающийся
+  - roar - рёв
+- suburbs
+- shanty towns - трущобы
 
 ---
 
