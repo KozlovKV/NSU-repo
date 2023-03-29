@@ -87,6 +87,7 @@
 	- [Harvard example](#harvard-example)
 	- [I/O as a memory cell](#io-as-a-memory-cell)
 		- [Example with sum of 2 nums](#example-with-sum-of-2-nums)
+	- [Memory-mapped I/O](#memory-mapped-io)
 - [23.03.13 - lecture](#230313---lecture)
 	- [Interrupts](#interrupts-1)
 	- [Interrupting devices in CdM-8](#interrupting-devices-in-cdm-8)
@@ -825,6 +826,8 @@ The same as RAM, but without `ld` and `clock` thus `D` is always output of cells
 ![Harvard in CdM-8](./materials/transistors/screenshots/Harvard.png)
 
 ## I/O as a memory cell
+**Terrible concept! It's too hard to write data in external devices. See REAL [memory-mapped I/O](#memory-mapped-io)**
+
 We write input/output data directly in memory cell. Thus we need catch all CPU outputs affecting on memory. After it we can write value in memory. In asm-code we need to make infinite reading cycle for handling of changes in IO cells.
 
 ### Example with sum of 2 nums
@@ -874,7 +877,21 @@ Example schema:
 
 *Well... But I think it's a bad idea to cut off CPU from clock and block the outputs so rude*
 
+**I was right in my doubts!**
+
+## Memory-mapped I/O
 **See [Shefarenko book pg. 252](./tome.pdf)**
+
+Main idea is redrirrecting CPU data-bus from RAM to external devices' registers that weill be considered as memory cells. This concept let us safe using `ld`, `st` instruction working with I/O devices. Convetionally, for 256-byte RAM we use 16 addresses `0xf0`-`0xff` for external devices.
+
+For using memory-mapped I/O we should create I/O bus which is composed from:
+- `in-out` - copies `rd/wr` CPU output
+- `IOsel` - 1 bit, true signal says that CPU wants to interract with I/O devices
+- `IOaddr` - 4 bit (**for example with 16 addrs**)
+- `IOdata` - bidirectional 8 bit data bus which connected with CPU data-bus
+
+Example from Shefarenko, pg. 254:
+![Memory-mapped I/O](./materials/transistors/screenshots/IO_Harvard_3.png)
 
 # 23.03.13 - lecture
 ## Interrupts
