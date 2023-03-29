@@ -893,6 +893,40 @@ For using memory-mapped I/O we should create I/O bus which is composed from:
 Example from Shefarenko, pg. 254:
 ![Memory-mapped I/O](./materials/transistors/screenshots/IO_Harvard_3.png)
 
+My own example. Make circuit adaptive for other I/O cells count at the end of memory:
+![Own memory-mapped I/O](./materials/transistors/screenshots/IO_Harvard_4.png)
+
+IO bus usage:
+![IO bus](./materials/transistors/screenshots/IO_bus.png)
+
+In this example CPU waits number from cell `0xf0`. After recieving it shifts number left on 1 bit and saves back.
+
+ASM code:
+```asm
+asect 0xf0
+IOA: 
+
+asect 0x00
+start:
+
+	addsp -16
+	
+    ldi r0, IOA
+	
+	while
+		tst r2
+	stays z
+		ld r0, r2
+	wend
+		
+	shl r2
+	st r0, r2
+	
+	halt
+
+end
+```
+
 # 23.03.13 - lecture
 ## Interrupts
 We should save PC, CVZN and simple registers in interrupting moment.
