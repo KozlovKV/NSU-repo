@@ -2188,7 +2188,7 @@ FreeLibrary(module);
 Создание DLL:
 ```sh
 # GCC
-gcc lib.c -shared -fPic -o lib.so
+gcc lib.c -shared -fpic -o lib.so
 # -shared - создаём библиотеку
 # -fPic - задаём относительную адресацию
 
