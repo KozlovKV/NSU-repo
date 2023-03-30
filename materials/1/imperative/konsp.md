@@ -2172,11 +2172,25 @@ int parsePolynom();
 // Linux
 #include "dlfcn.h"
 
-void* dllPtr = dlopen("name.so", RTLD_LAZY); // Загружаем библиотеку и возвращаем указатель на неё
+void* lib = dlopen("lib", RTLD_LAZY); // Загружаем библиотеку и возвращаем указатель на неё
+char* err = dlerror();
+if (!lib)
+    printf("Empty\n");
+if (err)
+    printf("Open error: %s\n", err);
+
 <type> value = (<type>)dlsym(dllPtr, "name_in_dll"); // Загружает значение с заданным именем из библиотеки и возвращат его. К нужному типу нужно приводить явно
+err = dlerror();
+if (err)
+    printf("Sym error: %s\n", err);
+
 dlclose(dllPtr);
+err = dlerror();
+if (err)
+    printf("Close error: %s\n", err);
+```
 
-
+```c
 // Windows (общая суть команд крайне похожа, так что уже без комментов)
 #include "windows.h"
 

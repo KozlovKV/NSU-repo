@@ -14,6 +14,7 @@ Words, phrasal verbs and collocations that I have learned.
   - [CIU: Unit 14 - Travel](#ciu-unit-14---travel)
   - [CIU: Unit 15 - Countryside](#ciu-unit-15---countryside)
   - [CIU: Unit 16 - Towns and cities](#ciu-unit-16---towns-and-cities)
+  - [CIU: Unit 17 - People: character and behaviour](#ciu-unit-17---people-character-and-behaviour)
 - [Phrasal verbs in use](#phrasal-verbs-in-use)
   - [PVIU: Unit 42 - The classroom and learning](#pviu-unit-42---the-classroom-and-learning)
 - [Common words](#common-words)
@@ -362,6 +363,47 @@ Different words are associated with *water*:
   - roar - рёв
 - suburbs
 - shanty towns - трущобы
+
+---
+
+## CIU: Unit 17 - People: character and behaviour
+- sb is good company
+- selfish streak
+  - streak - полоса
+- outgoing personality - общительная личность
+- good/bad sense of humour
+- vivid imagination
+  - vivid - яркий
+- lose temper - терять самообладание
+  - keep your temper - opp.
+- temper - характер
+- highly intelligent
+- razor-sharp mind
+  - razor - бритва
+  - razor-sharp - острый как бритва
+- set high standards
+- fiercely - higher than extremely (свирепо)
+- put others first - ставить других на первое место
+- painfully shy
+- give the impression - создавать впечатление
+- supremely confident
+  - supreme - высший
+- snap decision - quick decision
+- sense of responsibility
+- keep your word - keep your promises
+- bear a grudge [against sb] - затаить обиду
+- make a fool out of you
+- brutally honest - невероятно прямолинейный
+- hurt sb's feelings - задеть кого-то
+- play a joke/trick [on sb] [by sth] - разыграть кого-то чем-то
+- take a joke - принять шутку (не разозлиться)
+- swallow sb's pride - отбросить гордость (**[НИКАКОГО ГЕЙСТВА!!!](http://soundboard.ass-we-can.com/static/music/VanD/Swallow%20my%20cum.mp3)**)
+- throw a tantrum - потерять контроль
+  - tantrum - вспышка гнева
+- lose sb's patience
+- come to terms with sth - смириться с чем-то психологически
+- reveal sb's true character
+  - conceal/hide sb's true character - opp.
 
 ---
 
