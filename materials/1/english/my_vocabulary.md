@@ -15,6 +15,7 @@ Words, phrasal verbs and collocations that I have learned.
   - [CIU: Unit 15 - Countryside](#ciu-unit-15---countryside)
   - [CIU: Unit 16 - Towns and cities](#ciu-unit-16---towns-and-cities)
   - [CIU: Unit 17 - People: character and behaviour](#ciu-unit-17---people-character-and-behaviour)
+  - [CIU: Unit 18 - People: physical appearance](#ciu-unit-18---people-physical-appearance)
 - [Phrasal verbs in use](#phrasal-verbs-in-use)
   - [PVIU: Unit 42 - The classroom and learning](#pviu-unit-42---the-classroom-and-learning)
 - [Common words](#common-words)
@@ -397,13 +398,53 @@ Different words are associated with *water*:
 - hurt sb's feelings - задеть кого-то
 - play a joke/trick [on sb] [by sth] - разыграть кого-то чем-то
 - take a joke - принять шутку (не разозлиться)
-- swallow sb's pride - отбросить гордость (**[НИКАКОГО ГЕЙСТВА!!!](http://soundboard.ass-we-can.com/static/music/VanD/Swallow%20my%20cum.mp3)**)
+- swallow sb's pride - отбросить гордость (**[NO FUCKING GACHI!!!](http://soundboard.ass-we-can.com/static/music/VanD/Swallow%20my%20cum.mp3)**)
 - throw a tantrum - потерять контроль
   - tantrum - вспышка гнева
 - lose sb's patience
 - come to terms with sth - смириться с чем-то психологически
 - reveal sb's true character
   - conceal/hide sb's true character - opp.
+
+---
+
+## CIU: Unit 18 - People: physical appearance
+- droopy moustache
+  - moustache - усы
+  - droopy - обвисший
+- round face / oval face
+- pointed face - заострённое
+- straight nose
+- upturned nose
+- waist - Талия
+- slim / slender - тонкий
+- lovely complexion - прекрасная кожа
+- sleek - гладкий и блестящий
+- shoulder-length hair
+- immaculately groomed
+  - immaculately - безукоризненно
+  - groomed - ухоженный
+- coarse (about hair) - raw and not smooth
+- broad shoulders / hips
+  - hip - бедро
+- well-built
+- bald - лысый
+- youth - молодёжь
+  - youthful
+- eyebrows - брови
+- bushy - very thick
+  - thick - толстый
+- chubby - пухленький
+- jet-black hair - very black
+- ginger hair - red or orange
+- auburn - reddish brown
+- dumpy - short and quite fat (коренастый). **Often used for women, quite negative**
+- portly - fat and round (дородный). **Usually used for middle-aged and older men**
+- lanky - tall and thin (долговязый)
+- dishevelled - very untidy (for hair and clothes)
+- sb bears a striking resemblance to sb else - кто-то на кого-то поразительно похож
+  - resemblance - сходство
+- have striking appearance - обладать поразительной внешностью
 
 ---
 

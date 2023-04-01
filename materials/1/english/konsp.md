@@ -61,9 +61,9 @@
 - [Present perfect and perfect continuous from Grammarway](#present-perfect-and-perfect-continuous-from-grammarway)
   - [Use cases](#use-cases)
   - [Time expressive key words](#time-expressive-key-words)
-- [`V + adj + Vinf`](#v--adj--vinf)
+- [`V + adj + to Vinf`](#v--adj--to-vinf)
 - [`point in Ving`](#point-in-ving)
-- [`would rather Vinf0`](#would-rather-vinf0)
+- [`would rather Vinf`](#would-rather-vinf)
 - [`Feel like Ving sth`](#feel-like-ving-sth)
 - [Phrases for emphasizing of verbs](#phrases-for-emphasizing-of-verbs)
 - [Sth is worth](#sth-is-worth)
@@ -76,7 +76,10 @@
   - [`Prefer` in specific situation](#prefer-in-specific-situation)
   - [`Would rather`](#would-rather)
   - [Our wishes for others](#our-wishes-for-others)
-- [Murphey 64](#murphey-64)
+- [Murphey: Unit 64 - To ..., for ..., so that ...](#murphey-unit-64---to--for--so-that-)
+  - [`to Vinf`](#to-vinf)
+  - [`for <noun>`](#for-noun)
+  - [`so that ...` collocations](#so-that--collocations)
 
 # Websites
 - [Cambridge Learner's dictionary](https://dictionary.cambridge.org/dictionary/learner-english)
@@ -628,13 +631,13 @@ For Present perfect:
 - never
 - so far
 
-# `V + adj + Vinf`
+# `V + adj + to Vinf`
 *The book is difficult to read*
 
 # `point in Ving`
 *There's no point in doing sth*
 
-# `would rather Vinf0`
+# `would rather Vinf`
 Лучше бы
 
 *Joe would rather not go to the ballgame*
@@ -701,9 +704,31 @@ Negative: `would rather not Vinf`
 Comparing form: `Would rather do sth than do sth else`
 
 ## Our wishes for others
-`'d rather sb V2` (**ONLY** `V2`, although meaning is present)
+`would rather sb V2` (**ONLY** `V2`, although meaning is present)
 
 *Who's going to drive, you or me? I'd rather you drove*
 
-# Murphey 64
-**TODO**
+# Murphey: Unit 64 - To ..., for ..., so that ...
+## `to Vinf`
+This collocation means purpose or reason of sth:
+- *We need notebooks to work*
+- *I phoned the restaurant to reserve a table*
+- *I have enough money to buy this shirt*
+
+## `for <noun>`
+This collocation has close meaning as `to Vinf`, but used with `noun`:
+- *We stopped for petrol* / *We stopped to get petrol*
+
+`for Ving` is used for general purpose of sth (also you can use `to Vinf`):
+- *Use this brush for washing the dishes* / *Use this brush to wash the dishes*
+
+Question form - `for` at the end.
+
+## `so that ...` collocations
+`so that ... don't/won't/wouldn't` are used for talking about negative purpose (purpose that we don't want to achieve):
+- *Eat something now so that you don't get hungry later*
+
+`so that ... can/could` means "do sth to have a possibility":
+- *She's learning English so that she can study in Canada*
+
+In this collocations `that` can be excluded.
