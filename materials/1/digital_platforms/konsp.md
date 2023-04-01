@@ -792,7 +792,6 @@ Pins:
   - `PS`
 - South (all 1 bit and inputs):
   - `clock`
-  - `reset`
 - West (for interrupting, inputs):
   - `IRQ` - input - tells that some device want to interrupt CPU
   - `vector` - input - 
@@ -802,9 +801,9 @@ Pins:
   - `out` - 8 bits
   - `addr` - address of read/written memory cell
   - `page` - not need (*for memory banks?*)
-  - `rd/wr'` - 1 bit, 1 => read, 0 => write, used for for `ld` input in [`RAM` block](#ram) and for controlled buffers on `in`/`out`
-  - `mem` - 1 bit, in Harvard - see below, in Manchester set `sel` input of RAM
-  - `dat/ins'` - 1 bit, 1 => work with data bank (often we use this output with decoder is enabled by `mem` output)
+  - `read/write` - 1 bit, 1 => read, 0 => write, used for for `ld` input in [`RAM` block](#ram) and for controlled buffers on `in`/`out`
+  - `memory` - 1 bit, in Harvard - see below, in Manchester set `sel` input of RAM
+  - `data/ins'` - 1 bit, 1 => work with data bank (often we use this output with decoder is enabled by `mem` output)
 
 We use last 3 outputs for connecting to **outside world**
 
