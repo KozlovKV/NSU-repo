@@ -61,7 +61,7 @@
 - [Present perfect and perfect continuous from Grammarway](#present-perfect-and-perfect-continuous-from-grammarway)
   - [Use cases](#use-cases)
   - [Time expressive key words](#time-expressive-key-words)
-- [`V + adj + to Vinf`](#v--adj--to-vinf)
+- [`V ADJ to Vinf`](#v-adj-to-vinf)
 - [`point in Ving`](#point-in-ving)
 - [`would rather Vinf`](#would-rather-vinf)
 - [`Feel like Ving sth`](#feel-like-ving-sth)
@@ -631,7 +631,7 @@ For Present perfect:
 - never
 - so far
 
-# `V + adj + to Vinf`
+# `V ADJ to Vinf`
 *The book is difficult to read*
 
 # `point in Ving`
@@ -643,7 +643,7 @@ For Present perfect:
 *Joe would rather not go to the ballgame*
 
 # `Feel like Ving sth`
-Не настроен
+Настроен
 
 *Joe doesn't feel like going*
 
@@ -674,7 +674,7 @@ This collocation is about present or future although had is past form.
 Also `had better` means some problem by ignoring advice whereas `should` means simple advice
 
 ## `it's time`
-`it's time [for sb] Vinf` or `it's time [sb] V2` mean that some somebody should have already done sth or started it. Often used to criticize or complain.
+`it's time [for sb] Vinf` or `it's time [sb] V2` mean that somebody should have already done sth or started it. Often used to criticize or complain.
 
 `It's **about** time ...` - makes criticizing stronger.
 

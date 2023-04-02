@@ -16,6 +16,7 @@ Words, phrasal verbs and collocations that I have learned.
   - [CIU: Unit 16 - Towns and cities](#ciu-unit-16---towns-and-cities)
   - [CIU: Unit 17 - People: character and behaviour](#ciu-unit-17---people-character-and-behaviour)
   - [CIU: Unit 18 - People: physical appearance](#ciu-unit-18---people-physical-appearance)
+  - [CIU: Unit 19 - Families](#ciu-unit-19---families)
 - [Phrasal verbs in use](#phrasal-verbs-in-use)
   - [PVIU: Unit 42 - The classroom and learning](#pviu-unit-42---the-classroom-and-learning)
 - [Common words](#common-words)
@@ -445,6 +446,39 @@ Different words are associated with *water*:
 - sb bears a striking resemblance to sb else - кто-то на кого-то поразительно похож
   - resemblance - сходство
 - have striking appearance - обладать поразительной внешностью
+
+---
+
+## CIU: Unit 19 - Families
+- nuclear family / extended family
+- close relatives
+- distant relatives / cousins - дальние родственники (начиная от двоюродных)
+- second cousins - children of cousins
+- close / immediate family - nearest blood relatives
+- close-knit - сплочённый
+- loving / respectable / dysfunctional family
+- late husband/wife - умершие муж/жена
+- estranged - отчуждённый
+- trial separation - временное разделение (*этим термином англичане обозначают состояние, когда супружеская пара живёт порознь, но ещё не развелась (и не факт, что разведётся)*)
+- acrimonious - язвительный
+- bitter / acrimonious divorce
+- *для описания семей (особенно со стороны детей в семье) могут быть следующие сочетания*:
+  - broken home - разведённая
+  - stable home
+  - deprived home - бедная / неблагополучная
+- confirmed bachelor - убеждённый холостяк (*да-да, второе слово - это бакалавр*)
+- start a family - завести семью
+- have children - завести детей
+- expect a baby
+- have a baby - родить ребёнка
+- the baby is due - ребёнок ожидается
+- single parent
+- (raise / bring up) (children / a family) - растить детей / строить семью
+- custody - опека
+- apply for custody of sb - запросить опеку над кем-то
+- give / grant custody - дать право опеки
+- provide for sb's family - обеспечивать семью
+- set up home - начать жить отдельно
 
 ---
 
