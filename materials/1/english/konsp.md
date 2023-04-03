@@ -80,6 +80,10 @@
   - [`to Vinf`](#to-vinf)
   - [`for <noun>`](#for-noun)
   - [`so that ...` collocations](#so-that--collocations)
+- [`There is/are` and `It/this/that is`](#there-isare-and-itthisthat-is)
+  - [`There is/are`](#there-isare)
+  - [`It/this/that is`](#itthisthat-is)
+- [Prefect infinitive](#prefect-infinitive)
 
 # Websites
 - [Cambridge Learner's dictionary](https://dictionary.cambridge.org/dictionary/learner-english)
@@ -732,3 +736,23 @@ Question form - `for` at the end.
 - *She's learning English so that she can study in Canada*
 
 In this collocations `that` can be excluded.
+
+# `There is/are` and `It/this/that is`
+*Red Murphey `37`-`38` and Blue Murphey `84`*
+
+## `There is/are`
+This collocations are used when we talk about existence in concrete place
+
+Also `there is` can be used for plural things, but only in **informal** speech. 
+
+We can insert modal verbs between `there` and `is/are`.
+
+`There is/are sure/bound` (`likely to be`) - absolutely form
+
+## `It/this/that is`
+`It is` is used in general cases, states and abstract concepts. If we talk about near objects we use `this`, otherwise - `that`
+
+*I don't like this town. **There is** nothing to do here. **It is** a boring place.*
+
+# Prefect infinitive
+`MV have V3` - `MV` - modal verb. Used for describing strong fact in the past.

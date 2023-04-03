@@ -1735,3 +1735,4 @@ In this PV particle can place either before or after verb:
 - instant - мгновенный
 - merit - заслуга / достоинство
 - worth - значимость / значить / значимый
+- cost of living - стоимость жизни
