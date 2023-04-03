@@ -73,3 +73,4 @@ The same as RAM, but without `ld` and `clock` thus `D` is always output of cells
 Фух! Теперь базы достаточно для решения задач:
 1. [L1 (Фон Нейман)](./L1/about.md)
 2. [L2 (Гарвард)](./L2/about.md)
+2. [L3 (Memory-mapped I/O)](./L3/about.md)
