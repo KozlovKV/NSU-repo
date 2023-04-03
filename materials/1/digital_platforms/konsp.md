@@ -92,6 +92,7 @@
 	- [Interrupts](#interrupts-1)
 	- [Interrupting devices in CdM-8](#interrupting-devices-in-cdm-8)
 - [23.03.28 - lecture](#230328---lecture)
+- [23.04.03 - lecture](#230403---lecture)
 
 # Annotation
 Лектор - Назаров Александр Дмитриевич
@@ -520,22 +521,22 @@ P-transistor: gate val 1 => block from source to drain
 
 ## Logical elems, composed from transistors
 ### NOT
-![NOT](./materials/transistors/screenshots/T2L1_NOT.png)
+![NOT](./materials/system%20engineering//screenshots/T2L1_NOT.png)
 
 ### OR
-![OR](./materials/transistors/screenshots/T2L1_OR.png)
+![OR](./materials/system%20engineering//screenshots/T2L1_OR.png)
 
 ### AND
-![OR](./materials/transistors/screenshots/T2L1_AND.png)
+![OR](./materials/system%20engineering//screenshots/T2L1_AND.png)
 
 ### NOR
-![NOR](./materials/transistors/screenshots/T2L1_NOR.png)
+![NOR](./materials/system%20engineering//screenshots/T2L1_NOR.png)
 
 ### NAND
-![NAND](./materials/transistors/screenshots/T2L1_NAND.png)
+![NAND](./materials/system%20engineering//screenshots/T2L1_NAND.png)
 
 ### XOR
-![XOR](./materials/transistors/screenshots/T2L2_XOR.png)
+![XOR](./materials/system%20engineering//screenshots/T2L2_XOR.png)
 
 More reliable version in [PTL topic](#pass-transistor-logic-ptl).
 
@@ -547,14 +548,14 @@ More reliable version in [PTL topic](#pass-transistor-logic-ptl).
 - `OR` - like wide arrow
 - `NOT` - like sharpen arrow
 
-![Logisim gates](./materials/transistors/screenshots/T2L1_logisim-gates.png)
+![Logisim gates](./materials/system%20engineering//screenshots/T2L1_logisim-gates.png)
 
 ## Pass transistor logic (PTL)
 Main idea of this pattern is direct pins' signals to transistors' source. This makes a lot of schemes more cheaper, pretty and easy for understanding.
 
 Example with XOR:
 
-![XOR with PTL pattern](./materials/transistors/screenshots/T2L2_PTL-XOR.png)
+![XOR with PTL pattern](./materials/system%20engineering//screenshots/T2L2_PTL-XOR.png)
 
 ## Floating signals and pull resistors
 When transistor blocks src, it gives us the floating signal (blue in Logisim, Z or X in tables). We'll get error if direct this signal to transisor's gate.
@@ -563,8 +564,8 @@ Pull resistor - transform floating signal to 1 or 0.
 
 Pull resistor makes more easier a lot of schemes.
 
-<img width="48%" src="./materials/transistors/screenshots/T2L2_PULL-NOT.png">
-<img width="48%" src="./materials/transistors/screenshots/T2L2_PULL-NAND.png">
+<img width="48%" src="./materials/system%20engineering//screenshots/T2L2_PULL-NOT.png">
+<img width="48%" src="./materials/system%20engineering//screenshots/T2L2_PULL-NAND.png">
 
 **Pull resistors aren't universal decision cause they work slow and consume power.**
 
@@ -573,7 +574,7 @@ CTR pint true => pass singal. *Why do we need it?!*
 
 Actual buffers are bidirectional (*Ok... Maybe it can be useful*), but logisim simulates them as unidirectional.
 
-![Controlled buffer: realization and value table](./materials/transistors/screenshots/T2L2_controlled-buffer.png)
+![Controlled buffer: realization and value table](./materials/system%20engineering//screenshots/T2L2_controlled-buffer.png)
 
 # 22.12.12
 Sequentioal units have internal state:
@@ -597,8 +598,8 @@ Most of them have additional enable input `E`. When `E` is 0 their output always
 ### Decoder
 Decoder have `k` inputs and `2^k` outputs. It interprets inputs as `k`-bit number `n` and set `n`-th output to `1` and `0` on others outputs.
 
-<img width="48%" src="./materials/transistors/screenshots/T2L3_decoder_circuit.png">
-<img width="48%" src="./materials/transistors/screenshots/T2L3_decoder_logisim.png">
+<img width="48%" src="./materials/system%20engineering//screenshots/T2L3_decoder_circuit.png">
+<img width="48%" src="./materials/system%20engineering//screenshots/T2L3_decoder_logisim.png">
 
 Coder is the opposite element (get `1` on one of `n` inputs and give `ceil(log2(n))`-bit number)
 
@@ -610,8 +611,8 @@ Coder is the opposite element (get `1` on one of `n` inputs and give `ceil(log2(
   - `2^k` inputs
 - Output is a value from the `n`-th input
 
-<img width="48%" src="./materials/transistors/screenshots/T2L3_multiplexer_circuit.png">
-<img width="48%" src="./materials/transistors/screenshots/T2L3_multiplexer_logisim.png">
+<img width="48%" src="./materials/system%20engineering//screenshots/T2L3_multiplexer_circuit.png">
+<img width="48%" src="./materials/system%20engineering//screenshots/T2L3_multiplexer_logisim.png">
 
 Demultiplexer is opposite. We have 1 input and `k`-bit selector choosing what output from `2^k` will get input value.
 
@@ -628,9 +629,9 @@ Demultiplexer is opposite. We have 1 input and `k`-bit selector choosing what ou
 
 Logic of working on screenshots:
 
-![Priority encoder](./materials/transistors/screenshots/T2L3_priority_encoder_1.png)
-![Priority encoder](./materials/transistors/screenshots/T2L3_priority_encoder_2.png)
-![Priority encoder](./materials/transistors/screenshots/T2L3_priority_encoder_3.png)
+![Priority encoder](./materials/system%20engineering//screenshots/T2L3_priority_encoder_1.png)
+![Priority encoder](./materials/system%20engineering//screenshots/T2L3_priority_encoder_2.png)
+![Priority encoder](./materials/system%20engineering//screenshots/T2L3_priority_encoder_3.png)
 
 ---
 
@@ -640,28 +641,28 @@ Logic of working on screenshots:
   - `2^k` inputs (one wire)
 - Ouput - 1 bit that equvalent to value from selected bit
 
-<img width="40%" src="./materials/transistors/screenshots/T2L3_selector.png">
+<img width="40%" src="./materials/system%20engineering//screenshots/T2L3_selector.png">
 
 ---
 
 ### Adder
 #### Two bits half adder
 
-<img width="48%" src="./materials/transistors/screenshots/T2L3_2bit_half_adder_1.png">
-<img width="48%" src="./materials/transistors/screenshots/T2L3_2bit_half_adder_2.png">
+<img width="48%" src="./materials/system%20engineering//screenshots/T2L3_2bit_half_adder_1.png">
+<img width="48%" src="./materials/system%20engineering//screenshots/T2L3_2bit_half_adder_2.png">
 
 Denoted as rectangle with label `"+/2"`
 
 ### The full adder
 Combination of 2 `+/2` and `OR` gives us full adder.
 
-![Full adder](./materials/transistors/screenshots/T2L3_full_adder.png)
+![Full adder](./materials/system%20engineering//screenshots/T2L3_full_adder.png)
 
 ### Ripple carry adder
 Sequential connection of full adders lets us to make the adder of any-bits number
 
-![Adder](./materials/transistors/screenshots/T2L3_ripple_carry_adder_1.png)
-![Adder](./materials/transistors/screenshots/T2L3_ripple_carry_adder_2.png)
+![Adder](./materials/system%20engineering//screenshots/T2L3_ripple_carry_adder_1.png)
+![Adder](./materials/system%20engineering//screenshots/T2L3_ripple_carry_adder_2.png)
 
 On this scheme full adders inputs/outputs set (from left to right):
 - Inputs:
@@ -674,7 +675,7 @@ On this scheme full adders inputs/outputs set (from left to right):
 
 In Logisim we also can make cycled circuit with splitters:
 
-![Cycled adder](./materials/transistors/screenshots/T2L3_cycled_ripple_carry_adder.png)
+![Cycled adder](./materials/system%20engineering//screenshots/T2L3_cycled_ripple_carry_adder.png)
 
 In this architecture we have delay in `O(N)` that produced by cycle carry counting.
 
@@ -689,7 +690,7 @@ Instead of `Cout` full adder provides 2 signals: P (propagate) and G (generate):
 
 Actually, we have a recursive formula and constant delay for counting.
 
-![Carry-lookahead](./materials/transistors/screenshots/T2L3_carry_lookahead.png)
+![Carry-lookahead](./materials/system%20engineering//screenshots/T2L3_carry_lookahead.png)
 
 ---
 
@@ -706,7 +707,7 @@ Allow-signals (often connected to bottom) signalize when elem can work. When the
 ### Edge Detector
 Short output signal when input signal was changed. (Compose from `NOT`, `NOR`)
 
-![Edge detector](./materials/transistors/screenshots/T2L4_edge_detector.png)
+![Edge detector](./materials/system%20engineering//screenshots/T2L4_edge_detector.png)
 
 ---
 
@@ -719,9 +720,9 @@ R | S | Q | !Q | _
 1 | 0 | 1 |  0 |
 1 | 1 |   |    | forbidden inputs
 
-<img width="30%" src="./materials/transistors/screenshots/T2L4_RS_trigger_1.png">
-<img width="30%" src="./materials/transistors/screenshots/T2L4_RS_trigger_2.png">
-<img width="30%" src="./materials/transistors/screenshots/T2L4_RS_trigger_3.png">
+<img width="30%" src="./materials/system%20engineering//screenshots/T2L4_RS_trigger_1.png">
+<img width="30%" src="./materials/system%20engineering//screenshots/T2L4_RS_trigger_2.png">
+<img width="30%" src="./materials/system%20engineering//screenshots/T2L4_RS_trigger_3.png">
 
 ---
 
@@ -734,10 +735,10 @@ D | Clock |  Q  | !Q | _
 1 | 0     | 1/0 |    | if clock changes to low when D stays high,  output will save D while clock is low
 1 | 1     |  1  |    | saves D
 
-<img width="48%" src="./materials/transistors/screenshots/T2L4_D_trigger_1.png">
-<img width="48%" src="./materials/transistors/screenshots/T2L4_D_trigger_2.png">
-<img width="48%" src="./materials/transistors/screenshots/T2L4_D_trigger_3.png">
-<img width="48%" src="./materials/transistors/screenshots/T2L4_D_trigger_4.png">
+<img width="48%" src="./materials/system%20engineering//screenshots/T2L4_D_trigger_1.png">
+<img width="48%" src="./materials/system%20engineering//screenshots/T2L4_D_trigger_2.png">
+<img width="48%" src="./materials/system%20engineering//screenshots/T2L4_D_trigger_3.png">
+<img width="48%" src="./materials/system%20engineering//screenshots/T2L4_D_trigger_4.png">
 
 ---
 
@@ -751,7 +752,7 @@ D | Clock | master | !Clock |  Q  | !Q | _
 1 | 0     |  1/0   |  1     | 1/0 |    | 
 1 | 1     |  1     |  0     | 1/0 |    | 
 
-![Master-slave](./materials/transistors/screenshots/T2L4_REAL_master-slave.jpg)
+![Master-slave](./materials/system%20engineering//screenshots/T2L4_REAL_master-slave.jpg)
 
 ---
 
@@ -764,7 +765,7 @@ Like [RS-trigger](#filp-flop-rs-trigger) but 2 inputs as True isn't forbidden in
 ## Multiported register
 Master-slave trigger with multibit input D chosen by multiplexer ans some additional control inputs (*see screenshot*)
 
-![Multiported register](./materials/transistors/screenshots/T2L4_multiported_register.png)
+![Multiported register](./materials/system%20engineering//screenshots/T2L4_multiported_register.png)
 
 # 23.02.14
 - Data bus - bidirectional
@@ -819,10 +820,10 @@ Inputs:
 The same as RAM, but without `ld` and `clock` thus `D` is always output of cells `A` when `sel` is 1
 
 ## Von Neuman (Manchester) example
-![Von Neuman with CdM-8](./materials/transistors/screenshots/Manchester.png)
+![Von Neuman with CdM-8](./materials/system%20engineering//screenshots/Manchester.png)
 
 ## Harvard example
-![Harvard in CdM-8](./materials/transistors/screenshots/Harvard.png)
+![Harvard in CdM-8](./materials/system%20engineering//screenshots/Harvard.png)
 
 ## I/O as a memory cell
 **Terrible concept! It's too hard to write data in external devices. See REAL [memory-mapped I/O](#memory-mapped-io)**
@@ -868,11 +869,11 @@ end
 ```
 
 Example schema:
-![Circuit for schema of IO system with Harvard architecture](./materials/transistors/screenshots/IO_Harvard_1.png)
+![Circuit for schema of IO system with Harvard architecture](./materials/system%20engineering//screenshots/IO_Harvard_1.png)
 
 *Ok... It looks terrible. Let's tunnelize*
 
-![Pretty version 1](./materials/transistors/screenshots/IO_Harvard_2.png)
+![Pretty version 1](./materials/system%20engineering//screenshots/IO_Harvard_2.png)
 
 *Well... But I think it's a bad idea to cut off CPU from clock and block the outputs so rude*
 
@@ -881,7 +882,7 @@ Example schema:
 ## Memory-mapped I/O
 **See [Shefarenko book pg. 252](./tome.pdf)**
 
-Main idea is redrirrecting CPU data-bus from RAM to external devices' registers that weill be considered as memory cells. This concept let us safe using `ld`, `st` instruction working with I/O devices. Convetionally, for 256-byte RAM we use 16 addresses `0xf0`-`0xff` for external devices.
+Main idea is redrirrecting CPU data-bus from RAM to external devices' registers that will be considered as memory cells. This concept let us safe using `ld`, `st` instruction working with I/O devices. Convetionally, for 256-byte RAM we use 16 addresses `0xf0`-`0xff` for external devices.
 
 For using memory-mapped I/O we should create I/O bus which is composed from:
 - `in-out` - copies `rd/wr` CPU output
@@ -890,13 +891,13 @@ For using memory-mapped I/O we should create I/O bus which is composed from:
 - `IOdata` - bidirectional 8 bit data bus which connected with CPU data-bus
 
 Example from Shefarenko, pg. 254:
-![Memory-mapped I/O](./materials/transistors/screenshots/IO_Harvard_3.png)
+![Memory-mapped I/O](./materials/system%20engineering//screenshots/IO_Harvard_3.png)
 
 My own example. Make circuit adaptive for other I/O cells count at the end of memory:
-![Own memory-mapped I/O](./materials/transistors/screenshots/IO_Harvard_4.png)
+![Own memory-mapped I/O](./materials/system%20engineering//screenshots/IO_Harvard_4.png)
 
 IO bus usage:
-![IO bus](./materials/transistors/screenshots/IO_bus.png)
+![IO bus](./materials/system%20engineering//screenshots/IO_bus.png)
 
 In this example CPU waits number from cell `0xf0`. After recieving it shifts number left on 1 bit and saves back.
 
@@ -955,3 +956,7 @@ By default, we use the last memory string for saving addresses of interrupt subr
 Meandre:
 
 ![](https://upload.wikimedia.org/wikipedia/commons/5/50/Rhodes_meander_hg.jpg)
+
+# 23.04.03 - lecture
+Common CPU architecture:
+![](./materials/system%20engineering//screenshots/CPU_internal.png)
