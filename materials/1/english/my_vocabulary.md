@@ -550,7 +550,8 @@ In this PV particle can place either before or after verb:
 - obtain / receive / acquire - получать
 - attend classes - посещать классы
 - to have in common - в общем
-- whereas / while - в то время как
+- whereas - в то время как
+- while - в то время пока
 - used to - было правдой, теперь нет
 - complain - жаловаться
 - encourage someone - поддерживать
@@ -1761,3 +1762,10 @@ In this PV particle can place either before or after verb:
 - merit - заслуга / достоинство
 - worth - значимость / значить / значимый
 - cost of living - стоимость жизни
+- rumour - сплетни
+- take credit for - пожинать плоды
+- high up - занимать выгодную позицию
+- to be in sb's good books
+- keep up your mouth
+- to be our - to be excluded
+- to come to light
