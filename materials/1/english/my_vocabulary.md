@@ -17,6 +17,7 @@ Words, phrasal verbs and collocations that I have learned.
   - [CIU: Unit 17 - People: character and behaviour](#ciu-unit-17---people-character-and-behaviour)
   - [CIU: Unit 18 - People: physical appearance](#ciu-unit-18---people-physical-appearance)
   - [CIU: Unit 19 - Families](#ciu-unit-19---families)
+  - [CIU: Unit 20 - Relationships](#ciu-unit-20---relationships)
 - [Phrasal verbs in use](#phrasal-verbs-in-use)
   - [PVIU: Unit 42 - The classroom and learning](#pviu-unit-42---the-classroom-and-learning)
 - [Common words](#common-words)
@@ -479,6 +480,30 @@ Different words are associated with *water*:
 - give / grant custody - дать право опеки
 - provide for sb's family - обеспечивать семью
 - set up home - начать жить отдельно
+
+---
+
+## CIU: Unit 20 - Relationships
+- make friends - завести друзей
+- strike up a friendship - start a friendship
+- sit next - сидеть рядом
+- form / develop a friendship
+- cement a friendship / a friendship grows
+  - spoil - opp.
+- close / special friends
+- mutual friends
+- a casual acquaintance - простые знакомые
+- have a good relationship with sb
+- keep in contact / touch
+  - lost - opp.
+- fall in love / fall madly in love / desperately in love with
+- love at first sight
+- the love of my life
+- love is returned - ответная любовь
+- make a commitment - взять на себя обязательства (*?*)
+- accept sb's proposal - принять предложение
+- love each other unconditionally - любить не смотря ни на что
+- have an affair - *дословно* - иметь дело. В данном контексте речь идёт об измене (*Have an affair with sb else*)
 
 ---
 
