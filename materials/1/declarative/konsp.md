@@ -116,10 +116,18 @@
   - [Формальная грамматика](#формальная-грамматика)
   - [Парсинг](#парсинг)
 - [23.04.04 - семинар](#230404---семинар)
+- [SQL!!! (Просто лэйбл для разделения)](#sql-просто-лэйбл-для-разделения)
+- [23.04.06 - лекция](#230406---лекция)
+  - [SQL "Hello, world!"](#sql-hello-world)
+  - [SELECT query](#select-query)
+  - [Set operations](#set-operations)
+  - [Aggregation](#aggregation)
 
 
 # Контакты преподов
-Лектор - Власов Владимир Николаевич
+Лектор (Haskell) - Власов Владимир Николаевич
+
+Лектор (SQL) - Магинский Денис Сергеевич
 
 Семинарист - Завьялов Антон Алексеевич / https://t.me/arx_dukalis / + 7 (960) 956 61 14
 
@@ -1184,3 +1192,92 @@ data Parser t = Parser { runP :: String -> (t, String) }
 При работе будет использоваться [SQLite Browser](https://sqlitebrowser.org/)
 
 [Хорошая книга по базам данных в целом](https://habr.com/ru/company/piter/blog/309106/)
+
+# SQL!!! (Просто лэйбл для разделения)
+# 23.04.06 - лекция
+*Fucking English?! Well...*
+
+Query language - focuses to query qestions for searching sth in data sets.
+
+SQL - structured query language
+
+## SQL "Hello, world!"
+```SQL
+select CAPITAL  -- What we want to find
+from CONTENT_HANDBOOK  -- where to find
+where COUNTRY='Russia'  -- searching conditions
+  AND 2019 >= PERIOD_START;  -- or other conditions with AND, OR, etc.
+```
+
+Tuple - immutable sequence of elements.
+
+Record - like structure in C (tuple of typed fields with names)
+
+Table - unordered multiset (value can be simillar) of records with the same type (rows, entries)
+
+Column (field, attribute) - mutliset of values on particular position in row
+
+```SQL
+create table COUNTRY_HANDBOOK(
+  COUNTRY text
+  CAPITAL text
+  PERIOD_START integer
+  PERIOD_END integer
+)
+```
+
+## SELECT query
+Parameters:
+- `select` - what to select (show). Also we can use `*` to select all
+  - `distinct` - shows only set (not multiset)
+- `from` - where to find
+- `where`
+- `order by`
+- `limit`
+- `pffset`
+
+Opators for `where`:
+- `+ - * / %`
+- `||` - str concat
+- `between`, `not`, `and`, `or`, `is null`, `is not null`
+- val `in` set
+- `like` - string snertions with wildcard
+- `glob`, `regexp`
+
+`order by`:
+- `desc` - reversted
+- `NAME desc`
+- `NAME1 asc, NAME2 asc`
+
+Paging - for it we can use limits and offsets. Working of these commands is obviously.
+
+## Set operations
+We can make new sets from to sets from SELECT oprations:
+- `s1 interset s2` - пересечение
+- `s1 union s2` - объединение
+  - `s1 union all s2` - `s1` and `s2` are considered as multisets
+- `s1 except s2` - `s1` subtract `s2`
+
+Both sets must be same-type.
+
+To order result place `order by` after description of 2 sets
+
+```SQL
+SELECT COUNTRY
+FROM CONTRY_HANDBOOK
+WHERE CAPITAL LIKE 'N1'
+UNION
+SELECT COUNTRY
+FROM CONTRY_HANDBOOK
+WHERE CAPITAL LIKE 'M1'
+ORDER BY COUNTRY ASC
+```
+
+## Aggregation
+The simplest aggregation function is `COUNT()`:
+
+```sql
+SELECT COUNT(CAPITAL)
+FROM COUNTRY_HANDBOOK
+WHERE COUNTRY LIKE 'A1'
+```
