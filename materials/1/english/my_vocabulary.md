@@ -18,6 +18,7 @@ Words, phrasal verbs and collocations that I have learned.
   - [CIU: Unit 18 - People: physical appearance](#ciu-unit-18---people-physical-appearance)
   - [CIU: Unit 19 - Families](#ciu-unit-19---families)
   - [CIU: Unit 20 - Relationships](#ciu-unit-20---relationships)
+  - [CIU: Unit 21 - Houses, flats and rooms](#ciu-unit-21---houses-flats-and-rooms)
 - [Phrasal verbs in use](#phrasal-verbs-in-use)
   - [PVIU: Unit 42 - The classroom and learning](#pviu-unit-42---the-classroom-and-learning)
 - [Common words](#common-words)
@@ -504,6 +505,38 @@ Different words are associated with *water*:
 - accept sb's proposal - принять предложение
 - love each other unconditionally - любить не смотря ни на что
 - have an affair - *дословно* - иметь дело. В данном контексте речь идёт об измене (*Have an affair with sb else*)
+
+---
+
+## CIU: Unit 21 - Houses, flats and rooms
+- short-let accommodation - accommodation that can be rent for a short period
+- studio flat
+- newly-built
+- spacious - просторный
+- fully-fitted kitchen
+- off-road parking - парковка на бездорожье
+- storey - этаж
+  - four-storey - четырёхэтажный
+- cosy - уютный
+- refurbished - переоборудованный
+- do up - (for house) repair, repaint and decorate
+- (add / built) an extension - расширить квартиру
+- move into a flat / house - переселиться в квартиру дом
+- move out - переселиться из места, где живёшь сейчас
+- dilapidated - полуразрушенный
+- draughty - продуваемый сквозняком
+- chilly - прохладный
+- cramped - тесный
+- shortage - нехватка
+- afford - позволять себе
+  - affordable - доступный
+- mortgage - ипотека
+- house-warming - новоселье
+- to leave home - покинуть родительский дом
+- homesick - тоска по дому
+- welcome sb home - отпраздновать возвращение кого-то
+- (make yourself / feel) at home - быть как дома
+- second home - дом для отдыха, праздников, выходных, отпуска и т.п.
 
 ---
 
