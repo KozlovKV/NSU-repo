@@ -19,8 +19,10 @@ Words, phrasal verbs and collocations that I have learned.
   - [CIU: Unit 19 - Families](#ciu-unit-19---families)
   - [CIU: Unit 20 - Relationships](#ciu-unit-20---relationships)
   - [CIU: Unit 21 - Houses, flats and rooms](#ciu-unit-21---houses-flats-and-rooms)
+  - [CIU: Unit 22 - eating and drinking](#ciu-unit-22---eating-and-drinking)
 - [Phrasal verbs in use](#phrasal-verbs-in-use)
   - [PVIU: Unit 42 - The classroom and learning](#pviu-unit-42---the-classroom-and-learning)
+  - [PVIU: Unit 54 - secrets and conversations](#pviu-unit-54---secrets-and-conversations)
 - [Common words](#common-words)
 
 
@@ -540,6 +542,32 @@ Different words are associated with *water*:
 
 ---
 
+## CIU: Unit 22 - eating and drinking
+- meal - блюда
+- junk food
+- nourishing meal - meal which make you healthy and strong
+- fresh produce - свежие продукты
+- organic food
+- ready meals - блюда быстрого приготовления
+- food additives - пищевые добавки
+- processed food - обработанная пища (не натуральная)
+- GM food - genetically modified food
+- perishable - скоропортящийся
+- substantial - обстоятельный
+- decent / substantial meal - большое блюдо
+- light meal
+- slap-up - пощёчина
+- slap-up meal - большое и необычное блюдо
+- gourmet - гурманское
+- hearty breakfast - сытный завтрак (*при чём тут сердце???*)
+- proper - правильный
+- healthy appetite
+- spoil appetite
+- (Chinese / French / Russian / ...) food / cooking / cuisine - национальная кухня
+- (Chinese / French / Russian / ...) meal - национальное блюдо (конкретное)
+
+---
+
 # Phrasal verbs in use
 ## PVIU: Unit 42 - The classroom and learning
 In this PV particle can place either before or after verb:
@@ -556,6 +584,25 @@ In this PV particle can place either before or after verb:
 - inexperience - неопытность
 - mess up - испортить / провалить / побить
 - spread out - расправить / открыть
+
+---
+
+## PVIU: Unit 54 - secrets and conversations
+- keep sth from sb - хранить что-то втайне
+- sort of - частично / немного
+- open up - открыться
+- pour up - лить (*в контексте этого юнита - излить душу о чём-то наболевшем*)
+  - outpouring - noun
+- go back on - отказаться от / нарушить слово
+- let on [to sb] [about sth] - проговориться
+- own up - признаться
+- talk down to sb - говорить с кем-то свысока
+- play down sth / play sth down - пытаться замять что-то, уменьшить значимость или убедить в нереальности
+- pin down sb / pin sb down on sth - потребовать от кого-то точной информации о чём-то и получить её
+- have it out with sb - **informal** - обсудить проблему
+- wind up sb / wind sb up - **informal** - обманывать кого-то (с целью подшутить или разозлить)
+- mouth off - **informal** - молоть языком
+- shut [sb] up - **informal** - заткнуться / заткнуть кого-то
 
 ---
 
@@ -1800,5 +1847,6 @@ In this PV particle can place either before or after verb:
 - high up - занимать выгодную позицию
 - to be in sb's good books
 - keep up your mouth
-- to be our - to be excluded
+- to be out - to be excluded
 - to come to light
+- authorities - власти
