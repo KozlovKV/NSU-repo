@@ -19,7 +19,8 @@ Words, phrasal verbs and collocations that I have learned.
   - [CIU: Unit 19 - Families](#ciu-unit-19---families)
   - [CIU: Unit 20 - Relationships](#ciu-unit-20---relationships)
   - [CIU: Unit 21 - Houses, flats and rooms](#ciu-unit-21---houses-flats-and-rooms)
-  - [CIU: Unit 22 - eating and drinking](#ciu-unit-22---eating-and-drinking)
+  - [CIU: Unit 22 - Eating and drinking](#ciu-unit-22---eating-and-drinking)
+  - [CIU: Unit 23 - Films and books](#ciu-unit-23---films-and-books)
 - [Phrasal verbs in use](#phrasal-verbs-in-use)
   - [PVIU: Unit 42 - The classroom and learning](#pviu-unit-42---the-classroom-and-learning)
   - [PVIU: Unit 54 - secrets and conversations](#pviu-unit-54---secrets-and-conversations)
@@ -542,7 +543,7 @@ Different words are associated with *water*:
 
 ---
 
-## CIU: Unit 22 - eating and drinking
+## CIU: Unit 22 - Eating and drinking
 - meal - блюда
 - junk food
 - nourishing meal - meal which make you healthy and strong
@@ -565,6 +566,40 @@ Different words are associated with *water*:
 - spoil appetite
 - (Chinese / French / Russian / ...) food / cooking / cuisine - национальная кухня
 - (Chinese / French / Russian / ...) meal - национальное блюдо (конкретное)
+
+---
+
+## CIU: Unit 23 - Films and books
+- (film / book) comes out
+- book reviewer / film critic
+- give a bad / good review
+- (book / film) captures an atmosphere / (book / film) deals with a topic
+- (opening / closing) scenes
+- (opening / closing) chapters
+- (beginning / end) of a (book / film)
+- happy ending
+- highly recommended
+- go on the stage - become actor (дословно - выходить на сцену)
+- on the big screen - in the cinema
+- (fe)male lead - main (fe)male part
+- cameo role
+- give performance
+- box-office hit - кассовый хит
+- full house - аншлаг
+- (shoot / make) a film
+- cast a film - choose actors for a film
+- star in a film - сниматься в фильме
+- engross / absorb - поглощать
+- be (engross / absorb) in a book
+- compulsive reading - навязчивое чтение
+- bedtime reading
+- an easy read - лёгкое чтение
+- flick - щелчок
+- skim - to watch for a short period
+- (flick / skim) through a book - бегло пролистать
+- beautifully written
+
+**watch** TV, but **see** or **watch** a film or programme on TV 
 
 ---
 

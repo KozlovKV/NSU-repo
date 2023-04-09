@@ -503,7 +503,7 @@ Question and negative form is just past simple
 **Don't confuse with [`used to`](#murphey-18-used-to)**
 
 # Tenses for embedded speech
-In the embedded speech with step tense back (*present simple => past simple*, etc.)
+In the embedded speech we step tense back (*present simple => past simple*, etc.)
 
 # Вопросы-пожелания
 `Will <subj> <verb>?`
@@ -549,8 +549,8 @@ Use when we don't talk about specific past.
 - never / ever
 
 ## gone / been
-Have / has gone to - it steel be true (я сейчас там)
-Have / has been to - it was true but now became change (я уже там был)
+`Have / has gone to` - it steel be true (я сейчас там)
+`Have / has been to` - it was true but now became change (я уже там был)
 
 ## This is the (first) time
 In sentence with construct `This is (it is) the [first] time sth` we also use present perfect (*This is the first time I've slept good*). We can use other numeral instead of `first` or don't use any of them.
@@ -720,7 +720,7 @@ This collocation means purpose or reason of sth:
 - *I have enough money to buy this shirt*
 
 ## `for <noun>`
-This collocation has close meaning as `to Vinf`, but used with `noun`:
+This collocation has close meaning as `to Vinf`, but used with nouns:
 - *We stopped for petrol* / *We stopped to get petrol*
 
 `for Ving` is used for general purpose of sth (also you can use `to Vinf`):
