@@ -1230,22 +1230,23 @@ create table COUNTRY_HANDBOOK(
 Parameters:
 - `select` - what to select (show). Also we can use `*` to select all
   - `distinct` - shows only set (not multiset)
+  - `select NAME as LABEL` - show query result with defined label in this column
 - `from` - where to find
 - `where`
 - `order by`
 - `limit`
-- `pffset`
+- `offset`
 
-Opators for `where`:
+Opators:
 - `+ - * / %`
 - `||` - str concat
 - `between`, `not`, `and`, `or`, `is null`, `is not null`
 - val `in` set
-- `like` - string snertions with wildcard
+- `like` - string isnertions (wildcard - `'%'`)
 - `glob`, `regexp`
 
 `order by`:
-- `desc` - reversted
+- `desc` - reversed
 - `NAME desc`
 - `NAME1 asc, NAME2 asc`
 
@@ -1265,16 +1266,21 @@ To order result place `order by` after description of 2 sets
 ```SQL
 SELECT COUNTRY
 FROM CONTRY_HANDBOOK
-WHERE CAPITAL LIKE 'N1'
+WHERE CAPITAL LIKE 'N%'
 UNION
 SELECT COUNTRY
 FROM CONTRY_HANDBOOK
-WHERE CAPITAL LIKE 'M1'
+WHERE CAPITAL LIKE 'M%'
 ORDER BY COUNTRY ASC
 ```
 
 ## Aggregation
-The simplest aggregation function is `COUNT()`:
+- `COUNT()` - counts when arg. **IS NOT NULL**
+- `MIN()`, `MAX()`
+- `SUM()`
+- `AVG()`
+- `GROUP_CONCAT(str)` / `GROUP_CONCAT(str, separator)`
+- `ROUND(val, n)` - round to n numbers after point
 
 ```sql
 SELECT COUNT(CAPITAL)
