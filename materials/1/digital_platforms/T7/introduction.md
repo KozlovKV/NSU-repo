@@ -48,11 +48,12 @@ Pins:
 
 ## RAM
 Inputs:
-- `A` - address of memory cell
+- `A` - 8-bit address of memory cell
 - `sel` - enables work with RAM
 - `ld` - if 1 => loads value to `D`, 0 => sets value from `D`
 - `clock`
-- `D` 
+
+`D` - bidirectional, 8-bit
 
 ## ROM
 The same as RAM, but without `ld` and `clock` thus `D` is always output of cells `A` when `sel` is 1

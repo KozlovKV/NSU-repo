@@ -93,12 +93,12 @@
 <h2 id="ram">RAM</h2>
 <p>Inputs:</p>
 <ul>
-<li><code>A</code> - address of memory cell</li>
+<li><code>A</code> - 8-bit address of memory cell</li>
 <li><code>sel</code> - enables work with RAM</li>
 <li><code>ld</code> - if 1 =&gt; loads value to <code>D</code>, 0 =&gt; sets value from <code>D</code></li>
 <li><code>clock</code></li>
-<li><code>D</code></li>
 </ul>
+<p><code>D</code> - bidirectional, 8-bit</p>
 <h2 id="rom">ROM</h2>
 <p>The same as RAM, but without <code>ld</code> and <code>clock</code> thus <code>D</code> is always output of cells <code>A</code> when <code>sel</code> is 1</p>
 <p><strong>Хранятся в Logisim блоки памяти во вкладке <code>memory</code></strong></p>

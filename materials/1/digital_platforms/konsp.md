@@ -93,9 +93,15 @@
 	- [Interrupting devices in CdM-8](#interrupting-devices-in-cdm-8)
 - [23.03.28 - lecture](#230328---lecture)
 - [23.04.03 - lecture](#230403---lecture)
+- [23.04.10 - lecture](#230410---lecture)
+	- [Memory (Theory)](#memory-theory)
+		- [RAM](#ram-1)
+		- [ROM](#rom-1)
 
 # Annotation
 Лектор - Назаров Александр Дмитриевич
+
+Лектор - Иртегов Дмитрий Валинтинович
 
 # CdM-8's instructions
 *If argument name contains `r` this means that it is the register*
@@ -810,11 +816,12 @@ We use last 3 outputs for connecting to **outside world**
 
 ## RAM
 Inputs:
-- `A` - address of memory cell
+- `A` - 8-bit address of memory cell
 - `sel` - enables work with RAM
 - `ld` - if 1 => loads value to `D`, 0 => sets value from `D`
 - `clock`
-- `D` 
+
+`D` - bidirectional, 8-bit
 
 ## ROM
 The same as RAM, but without `ld` and `clock` thus `D` is always output of cells `A` when `sel` is 1
@@ -960,3 +967,23 @@ Meandre:
 # 23.04.03 - lecture
 Common CPU architecture:
 ![](./materials/system%20engineering//screenshots/CPU_internal.png)
+
+# 23.04.10 - lecture
+## Memory (Theory)
+### RAM
+RAM - Random Access Memory
+
+*Фан-факт - раньше каждый бит хранился при помощи ферритового кольца, которое сохраняло свою намагниченность после подачи на него тока*
+
+Now RAM uses transistors and condensators.
+
+Nowadyas computers work with voltage 3V cause it we assume zero as ~0-0.3V and 1 as ~2.5-3V
+
+### ROM
+ROM - Read Only Memory
+
+Decoder selects memory row and diods send ones, empty wires send zeros to data bus
+
+Основные системы организации флэш-памяти:
+- `NOR` - можно обращаться к каждой ячейке памяти отдельноэ
+- `NAND` - можно работать с блоками
