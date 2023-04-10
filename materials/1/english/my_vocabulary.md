@@ -21,6 +21,7 @@ Words, phrasal verbs and collocations that I have learned.
   - [CIU: Unit 21 - Houses, flats and rooms](#ciu-unit-21---houses-flats-and-rooms)
   - [CIU: Unit 22 - Eating and drinking](#ciu-unit-22---eating-and-drinking)
   - [CIU: Unit 23 - Films and books](#ciu-unit-23---films-and-books)
+  - [CIU: Unit 24 - Music](#ciu-unit-24---music)
 - [Phrasal verbs in use](#phrasal-verbs-in-use)
   - [PVIU: Unit 42 - The classroom and learning](#pviu-unit-42---the-classroom-and-learning)
   - [PVIU: Unit 54 - secrets and conversations](#pviu-unit-54---secrets-and-conversations)
@@ -600,6 +601,26 @@ Different words are associated with *water*:
 - beautifully written
 
 **watch** TV, but **see** or **watch** a film or programme on TV 
+
+---
+
+## CIU: Unit 24 - Music
+- blast out from - разорвать от громкости
+- debut
+- easy listening
+- catchy tunes - запоминающиеся мелодии
+- adore - обожать
+- (massive / big) hit
+- go on tour
+- haunting melodies - навязчивые мелодии
+- occasional virtuoso - невероятно виртуозно
+- conduct the orchestra
+- compose piece - сочинять пьесу
+- go solo
+- up-tempo - высокий темп
+- strum a guitar - бренчать на гитаре
+- take up - принять / заняться
+  - take up the guitar
 
 ---
 
