@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>&CHcy;&tcy;&ocy; &vcy;&ocy;&ocy;&bcy;&shchcy;&iecy; &ecy;&tcy;&ocy;&tcy; &vcy;&acy;&shcy; CdM &vcy; Logisim</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="что-вообще-этот-ваш-cdm-в-logisim">Что вообще этот ваш CdM в Logisim</h1>
+<p>CdM-8 - восьмибитный процессор, исполняющий команды по кодам. В CocoIDE всё было просто: мы писали код и он преобразовывался в коды, показанные в центре (в соответствии командным строкам) и справа (в памяти), но в реальности коды команд хранятся не в самом процессоре, а во внешнем блоке памяти.</p>
+<p>Таким образом, главной задачей при интеграции CdM-8 в Logisim для нас становится соединить наш чип процессора с внешней памятью, в которую будут загружены команды.</p>
+<h1 id="как-выглядит-cdm-8-в-logisim">Как выглядит CdM-8 в Logisim</h1>
+<p>Не хочу повторяться, поэтому вставлю сюда кусок из своего конспекта. Английский там не особо сложный.</p>
+<p>Здесь ещё добавлю только, что мы используем версию <a href="https://drive.google.com/file/d/1LBynIqvYFjqyTnXPhX2tgX70vqPd9x3X/view">CdM-8-mark5</a>, а в лекциях показана mark4. Отличия у них не слишком большие, но выглядеть наш чип будет немного иначе - ничего страшного (<em>обидно разве что, что инпут <code>reset</code> пропал</em>)</p>
+<h2 id="cdm8-as-a-chip">CdM8 as a chip</h2>
+<p>Pins:</p>
+<ul>
+<li>North (<em>all 8 bits, for checking, not for work</em>):
+<ul>
+<li><code>r0-r3</code></li>
+<li><code>PC</code></li>
+<li><code>SP</code></li>
+<li><code>PS</code></li>
+</ul>
+</li>
+<li>South (all 1 bit and inputs):
+<ul>
+<li><code>clock</code></li>
+</ul>
+</li>
+<li>West (for interrupting, inputs):
+<ul>
+<li><code>IRQ</code> - input - tells that some device want to interrupt CPU</li>
+<li><code>vector</code> - input -</li>
+<li><code>IAck</code> - output - CPU is ready to be interrupted</li>
+</ul>
+</li>
+<li>East:
+<ul>
+<li><code>in</code> - 8 bits</li>
+<li><code>out</code> - 8 bits</li>
+<li><code>addr</code> - address of read/written memory cell</li>
+<li><code>page</code> - not need (<em>for memory banks?</em>)</li>
+<li><code>read/write</code> - 1 bit, 1 =&gt; read, 0 =&gt; write, used for for <code>ld</code> input in <a href="#ram"><code>RAM</code> block</a> and for controlled buffers on <code>in</code>/<code>out</code></li>
+<li><code>memory</code> - 1 bit, in Harvard - see below, in Manchester set <code>sel</code> input of RAM</li>
+<li><code>data/ins'</code> - 1 bit, 1 =&gt; work with data bank (often we use this output with decoder is enabled by <code>mem</code> output)</li>
+</ul>
+</li>
+</ul>
+<img width="50%" src="file:///c:\Users\bakug\YandexDisk\NSU\NSU-repo\materials\1\digital_platforms\T7\cdm_chip.png">
+<p>Отдельного внимания заслуживают вход <code>in</code> и выход <code>out</code>, потому что они должны быть объединены в общую двунаправленную шину данных. Делается это при помощи буферов, направленных в разные стороны и сигнала с выхода <code>read/write</code>: <strong>на in-буффер он подаётся прямо, для out-буффера - инвертируется.</strong> Это позволит нам при чтении блокировать сигнал с <code>out</code>, тогда данные будут без проблем направляться на вход <code>in</code>, а при записи в память блокировать сигнал с <code>in</code>, чтобы данные с <code>out</code> направлялись в память.</p>
+<h2 id="как-добавить-cdm-8-в-logisim">Как добавить CdM-8 в Logisim</h2>
+<p>Идём по следующему пути в меню <code>project -&gt; load library -&gt; Logisim library</code>, далее выбираем файл <code>.circ</code> (в нашем случае это <code>CdM-8-mark5-full.circ</code>). После этого в левом меню появится папка со всеми элементами из этой библиотеки. Нас будет интересовать лишь сам чип (в редких случаях можно пользоваться и другими).</p>
+<h2 id="как-хоть-что-то-запустить">Как хоть что-то запустить?</h2>
+<p>Подключив даже один лишь <code>clock</code>, мы можем начать симуляцию тиков, но процессор будет просто увеличиваться счётчик команд, ведь ему не от куда брать коды.</p>
+<p>Коды команд должны будут храниться в одном из двух блоков памяти: ROM или RAM.</p>
+<p>В Фон Неймановской (Манчестерской) архитектуре будет использоваться только RAM, так как мы из этого блока и читаем команды, и читаем/записываем данные.</p>
+<p>В Гарвардской архитектуре команды будут храниться в ROM, а данные - в RAM. Теперь рассмотрим устройство этих блоков памяти.</p>
+<h2 id="ram">RAM</h2>
+<p>Inputs:</p>
+<ul>
+<li><code>A</code> - address of memory cell</li>
+<li><code>sel</code> - enables work with RAM</li>
+<li><code>ld</code> - if 1 =&gt; loads value to <code>D</code>, 0 =&gt; sets value from <code>D</code></li>
+<li><code>clock</code></li>
+<li><code>D</code></li>
+</ul>
+<h2 id="rom">ROM</h2>
+<p>The same as RAM, but without <code>ld</code> and <code>clock</code> thus <code>D</code> is always output of cells <code>A</code> when <code>sel</code> is 1</p>
+<p><strong>Хранятся в Logisim блоки памяти во вкладке <code>memory</code></strong></p>
+<h2 id="как-загрузить-коды-команд-в-память-и-где-их-вообще-взять">Как загрузить коды команд в память и где их вообще взять</h2>
+<p>Тут всё просто)</p>
+<ol>
+<li>Пишем код в CocoIDE</li>
+<li>Выбираем в меню <code>CDM8 -&gt; Save image</code> и сохраняем <code>.img</code> файл</li>
+<li>В Logisim жмём ПКМ на блоке памяти и выбираем <code>Load image...</code></li>
+<li>Выбираем наш <code>.img</code> файл</li>
+<li><strong>SUCCESS</strong></li>
+</ol>
+<hr>
+<p>Фух! Теперь базы достаточно для решения задач:</p>
+<ol>
+<li><a href="./L1/about.html">L1 (Фон Нейман)</a></li>
+<li><a href="./L2/about.html">L2 (Гарвард)</a></li>
+<li><a href="./L3/about.html">L3 (Memory-mapped I/O)</a></li>
+</ol>
+
+        
+        
+    </body>
+    </html>

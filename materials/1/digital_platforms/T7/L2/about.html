@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>&lbrack;&Ncy;&acy; &gcy;&lcy;&acy;&vcy;&ncy;&ucy;&yucy;&rbrack;&lpar;&period;&period;&sol;introduction&period;md&rpar;</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h3 id="на-главную"><a href="../introduction.html">На главную</a></h3>
+<h4 id="предыдущее-задание--следующее-задание"><a href="../L1/about.html">Предыдущее задание</a> | <a href="../L3/about.html">Следующее задание</a></h4>
+<h1 id="гарвардская-архитектура">Гарвардская архитектура</h1>
+<p>Главное отличие уже отмечал выше, тут лишь добавлю, что выбор блока производится при помощи декодера с двумя выходами: нулевой говорит о том, что сейчас выбран блок инструкций (ROM), первый - выбран блок с данными (RAM). Включает декодер выход процессора <code>memory</code>, а селектором служит выход <code>data/ins'</code></p>
+<p><strong>Задача:</strong> реализовать аналогичный L1 алгоритм, но на Гарвардской архитектуре.</p>
+<p>Чтобы переключить архитектуру в CocoIDE в меню нажми на <code>CDM8 -&gt; Arch. = Harvard</code>. После этого надпись сменится на <code>Arch. = Von Neuman</code>, а справа над блоком памяти появятся 2 вкладки: ROM и RAM. Ясное дело, <code>.img</code> файл нужно будет загружать в ROM. Константы лучше всего задавать <code>ldi</code>, а не через псевдоинструкцию <code>dc</code></p>
+<hr>
+<p>Моя реализация:
+<img src="file:///c:\Users\bakug\YandexDisk\NSU\NSU-repo\materials\1\digital_platforms\T7\L2\Harvard.png" alt="Harvard with CdM-8"></p>
+
+        
+        
+    </body>
+    </html>
