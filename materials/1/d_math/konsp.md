@@ -40,6 +40,12 @@
   - [Алгоритм Дейкстры](#алгоритм-дейкстры)
   - [Поиск кратчайшего пути между всеми парами вершин](#поиск-кратчайшего-пути-между-всеми-парами-вершин)
     - [Кратчайшие пути через матричное умножение](#кратчайшие-пути-через-матричное-умножение)
+- [23.04.10 - лекция](#230410---лекция)
+  - [Флойд-Уоршелл (*снова*)](#флойд-уоршелл-снова)
+  - [Флойд-Уоршалл с восстановлением путей на Си](#флойд-уоршалл-с-восстановлением-путей-на-си)
+  - [Алгоритм Джонсона](#алгоритм-джонсона)
+- [23.04.10 - лекция](#230410---лекция-1)
+  - [Обходы Эйлера и Гамильтона](#обходы-эйлера-и-гамильтона)
 
 
 # Лекторы
@@ -432,7 +438,7 @@ return TRUE
 
 # 23.04.03 - лекция
 ## Алгоритм Дейкстры
-Работает гораздо быстрее, но только на графах **без отрицательных** рёбер. Вспомогатльным будет множество `S`, содержащее те вершины графа, для которых уже определён кратчайший путь.
+Работает гораздо быстрее, но только на графах **без отрицательных** рёбер. Вспомогательным будет множество `S`, содержащее те вершины графа, для которых уже определён кратчайший путь.
 
 ```
 init(G, s)
@@ -453,19 +459,167 @@ while Q.notEmpty:
 Эффективность алгоритма - `O(|V|^2)`
 
 ## Поиск кратчайшего пути между всеми парами вершин
+*Запись вида $x^(n)$ будет означать состояние $x$ на $n$-й итерации.*
+
 Матрица предществования `P`:
 - `p_ij = NIL <=> i = j or no path from i to j`
 - `p_ij` -  предок `j` на кратчайшем пути из `i` в `j`
 
-Благодаря этой матрице мы можем построить подграф предешественников для любой из вершин.
+То есть для `P(0)`: `p_ij = i` (если есть ребро)
+
+Благодаря этой матрице мы можем построить подграф предшественников для любой из вершин.
 
 ### Кратчайшие пути через матричное умножение
-`W` - матрица путей (`w_ij` - путь из `i` в `j`)
+`W` - матрица весов (`w_ij` - путь из `i` в `j`)
 
 `L^m` - матрица длины пути из `m` вершин, где `l_ij` - длина кратчайшего пути. Таким образом, ответ будет в матрице `L^(n-1)`
+
+$$
+l^{(m)}_{ij} = min\{l^{(m-1)}_{ik} + w_{kj}\}
+$$
 
 Функция получения матрицы следующей "степени"
 ```
 n = L.rows
 
 ```
+
+# 23.04.10 - лекция
+*Продолжаем про кратчайшие пути между всеми парами*
+## Флойд-Уоршелл (*снова*)
+Последовательно рассматриваем пути для которых вершина `k` не является промежуточной, а все вершины `[1, k-1]` могут быть промежуточными, для каждой вершины из этого множества выполняется то же условие, что и для `k`. Получаем динамический алгоритм расчёта всех путей.
+
+Если действовать руками: для итерации `k` берём `k`-ю строку и `k`-й столбец. Для расчёта `i`-строки берём `k`-ю строку и прибавляем к ней `i`-й элемент `k`-го столбца. В новой матрице путей обновляем в `i`-й строки те ячейки, значения в которых получились меньше, чем на прошлом этапе.
+
+Эффективность `O(|V|^3)`
+
+Матрица с путями длины `n` в таком случае будет обозначаться `D^(n)`.
+
+Если мы заменили `d_ij` на `d_ik + d_kj`, то ячейка матрицы предшествования `p_ij = p_kj`
+
+Для восстановления пути из `i` в `j` мы берём предшественника `v`, равного `p_ij`, добавляем `v` в конце пути и берём `v = p_iv` до тех пор, пока `v != i`
+
+## Флойд-Уоршалл с восстановлением путей на Си
+Восстановление пути здесь происходит рекурсивным методом. В матрице "посредников" сохраняется какая-то вершина на пути из `i` в `j`, если вершины там есть, если между `i` и `j` непосредственно ребро, то в матрице будет `-1`
+```c
+#include "stdlib.h"
+#include <stdio.h>
+#include <string.h>
+
+#define BIG_INT 400000000
+#define STR_BUF_SZ 32768
+
+typedef struct MatrixGraph {
+    int n;
+    int **matrix;
+    int **verticesBetween;
+    char *wayBuffer;
+    char *bufferFreePtr;
+    int wayLen;
+} MatrixGraph;
+
+MatrixGraph* initMatrixGraph(int n) {
+    MatrixGraph *matrixGraph = (MatrixGraph*) calloc(1, sizeof(MatrixGraph));
+    matrixGraph->n = n;
+    matrixGraph->matrix = (int**) calloc(n, sizeof(int*));
+    matrixGraph->verticesBetween = (int**) calloc(n, sizeof(int*));
+    matrixGraph->wayBuffer = (char *) calloc(STR_BUF_SZ, sizeof(char));
+    for (int i = 0; i < n; ++i) {
+        matrixGraph->matrix[i] = (int *) calloc(n, sizeof(int));
+        matrixGraph->verticesBetween[i] = (int *) calloc(n, sizeof(int));
+        for (int j = 0; j < n; ++j) {
+            matrixGraph->matrix[i][j] = i == j ? 0 : BIG_INT;
+            matrixGraph->verticesBetween[i][j] = -1;
+        }
+    }
+    return matrixGraph;
+}
+
+void readEdges(MatrixGraph *matrixGraph, int edgesCnt) {
+    int a, b, time;
+    for (int i = 0; i < edgesCnt; ++i) {
+        scanf("%d %d %d\n", &a, &b, &time);
+        a--;
+        b--;
+        if (matrixGraph->matrix[a][b] > time) {
+            matrixGraph->matrix[a][b] = time;
+        }
+    }
+}
+
+void freeMatrixGraph(MatrixGraph *matrixGraph) {
+    for (int i = 0; i < matrixGraph->n; ++i) {
+        free(matrixGraph->matrix[i]);
+        free(matrixGraph->verticesBetween[i]);
+    }
+    free(matrixGraph->matrix);
+    free(matrixGraph->verticesBetween);
+    free(matrixGraph->wayBuffer);
+    free(matrixGraph);
+}
+
+void floydWarshall(MatrixGraph *matrixGraph) {
+    for (int k = 0; k < matrixGraph->n; ++k)
+        for (int i = 0; i < matrixGraph->n; ++i)
+            for (int j = 0; j < matrixGraph->n; ++j)
+                if (matrixGraph->matrix[i][j] > matrixGraph->matrix[i][k] + matrixGraph->matrix[k][j]) {
+                    matrixGraph->matrix[i][j] = matrixGraph->matrix[i][k] + matrixGraph->matrix[k][j];
+                    matrixGraph->verticesBetween[i][j] = k;
+                }
+}
+
+void printToBuffer(MatrixGraph *matrixGraph, int val) {
+    char tmpStr[6] = "";
+    sprintf(tmpStr, "%d ", val);
+    strcpy(matrixGraph->bufferFreePtr, tmpStr);
+    matrixGraph->bufferFreePtr += strlen(tmpStr);
+}
+
+void printWayToBuffer(MatrixGraph *matrixGraph, int a, int b, int beg, int end) {
+    int w = matrixGraph->verticesBetween[a][b];
+    if (w == -1) {
+        if (a == beg)
+            printToBuffer(matrixGraph, a+1);
+        if (b == end)
+            printToBuffer(matrixGraph, b+1);
+        return;
+    }
+    matrixGraph->wayLen++;
+    printWayToBuffer(matrixGraph, a, w, beg, end);
+    printToBuffer(matrixGraph, w+1);
+    printWayToBuffer(matrixGraph, w, b, beg, end);
+}
+
+void shortestWaysProcessing(MatrixGraph *matrixGraph, int shortestWaysResponses, int* responsesDestinations) {
+    int a = 0, b;
+    for (int i = 0; i < shortestWaysResponses; ++i) {
+        b = responsesDestinations[i] - 1;
+        matrixGraph->wayLen = 2;
+        matrixGraph->bufferFreePtr = matrixGraph->wayBuffer;
+        printWayToBuffer(matrixGraph, a, b, a, b);
+        printf("%d  %d  %s\n", matrixGraph->matrix[a][b], matrixGraph->wayLen, matrixGraph->wayBuffer);
+    }
+}
+```
+
+## Алгоритм Джонсона
+Самый быстрый - `O(V^2 lg V + VE)`
+
+Если в графе нет отрицательных рёбер, мы просто запускаем [алгоритм Дейкстры](#алгоритм-дейкстры) для всех вершин.
+
+Если есть отрицательные рёбра (*но не отрицательные циклы, ясное дело*), то мы пересчитываем все веса по двум следующим правилам:
+- Пути, бывшие кратчайшими, должны таковыми и остаться
+- Новые веса должны быть позитивными (*весёёёлыми!!11!!!1!!!!1!!*)
+
+Для начала отметим, что преобразование `w'(u,v) = w(u, v) + h(u) - h(v)`, то есть все кратчайшие пути останутся кратчайшими.
+
+Далее добавим к графу вершину `s` с рёбрами нулевого веса и запустим от неё [алгоритм Беллмана-Форда](#алгоритм-беллмана-форда).
+
+Определим `h(v) = path[v]`, рассчитанный Беллманом. Теперь мы можем перевзвесить рёбра так, что они все будут `>= 0`
+
+# 23.04.10 - лекция
+## Обходы Эйлера и Гамильтона
+**О.** Эйлеровый цикл графа - простой цикл, содержащий все вершины графа
+
+*Пока что не уверен в верности дифиниции*
+**О.** Гамильтонов цикл или Эйлеров путь - простой путь, содержащий все вершины графа `G`

@@ -9,6 +9,7 @@
   - [Универсальная хэш-таблица с обработкой коллизий при помощи списка](#универсальная-хэш-таблица-с-обработкой-коллизий-при-помощи-списка)
   - [Разложение числа на простые](#разложение-числа-на-простые)
   - [Решето Эратосфена](#решето-эратосфена)
+  - [Флойд-Уоршалл с восстановлением путей](#флойд-уоршалл-с-восстановлением-путей)
 - [22.09.03 - лекция](#220903---лекция)
 - [22.09.10 - лекция](#220910---лекция)
 - [22.09.14 - семинар](#220914---семинар)
@@ -826,6 +827,107 @@ int getPrimesCount(int l, int r) {
 }
 ```
 
+## Флойд-Уоршалл с восстановлением путей
+```c
+#include "stdlib.h"
+#include <stdio.h>
+#include <string.h>
+
+#define BIG_INT 400000000
+#define STR_BUF_SZ 32768
+
+typedef struct MatrixGraph {
+    int n;
+    int **matrix;
+    int **verticesBetween;
+    char *wayBuffer;
+    char *bufferFreePtr;
+    int wayLen;
+} MatrixGraph;
+
+MatrixGraph* initMatrixGraph(int n) {
+    MatrixGraph *matrixGraph = (MatrixGraph*) calloc(1, sizeof(MatrixGraph));
+    matrixGraph->n = n;
+    matrixGraph->matrix = (int**) calloc(n, sizeof(int*));
+    matrixGraph->verticesBetween = (int**) calloc(n, sizeof(int*));
+    matrixGraph->wayBuffer = (char *) calloc(STR_BUF_SZ, sizeof(char));
+    for (int i = 0; i < n; ++i) {
+        matrixGraph->matrix[i] = (int *) calloc(n, sizeof(int));
+        matrixGraph->verticesBetween[i] = (int *) calloc(n, sizeof(int));
+        for (int j = 0; j < n; ++j) {
+            matrixGraph->matrix[i][j] = i == j ? 0 : BIG_INT;
+            matrixGraph->verticesBetween[i][j] = -1;
+        }
+    }
+    return matrixGraph;
+}
+
+void readEdges(MatrixGraph *matrixGraph, int edgesCnt) {
+    int a, b, time;
+    for (int i = 0; i < edgesCnt; ++i) {
+        scanf("%d %d %d\n", &a, &b, &time);
+        a--;
+        b--;
+        if (matrixGraph->matrix[a][b] > time) {
+            matrixGraph->matrix[a][b] = time;
+        }
+    }
+}
+
+void freeMatrixGraph(MatrixGraph *matrixGraph) {
+    for (int i = 0; i < matrixGraph->n; ++i) {
+        free(matrixGraph->matrix[i]);
+        free(matrixGraph->verticesBetween[i]);
+    }
+    free(matrixGraph->matrix);
+    free(matrixGraph->verticesBetween);
+    free(matrixGraph->wayBuffer);
+    free(matrixGraph);
+}
+
+void floydWarshall(MatrixGraph *matrixGraph) {
+    for (int k = 0; k < matrixGraph->n; ++k)
+        for (int i = 0; i < matrixGraph->n; ++i)
+            for (int j = 0; j < matrixGraph->n; ++j)
+                if (matrixGraph->matrix[i][j] > matrixGraph->matrix[i][k] + matrixGraph->matrix[k][j]) {
+                    matrixGraph->matrix[i][j] = matrixGraph->matrix[i][k] + matrixGraph->matrix[k][j];
+                    matrixGraph->verticesBetween[i][j] = k;
+                }
+}
+
+void printToBuffer(MatrixGraph *matrixGraph, int val) {
+    char tmpStr[6] = "";
+    sprintf(tmpStr, "%d ", val);
+    strcpy(matrixGraph->bufferFreePtr, tmpStr);
+    matrixGraph->bufferFreePtr += strlen(tmpStr);
+}
+
+void printWayToBuffer(MatrixGraph *matrixGraph, int a, int b, int beg, int end) {
+    int w = matrixGraph->verticesBetween[a][b];
+    if (w == -1) {
+        if (a == beg)
+            printToBuffer(matrixGraph, a+1);
+        if (b == end)
+            printToBuffer(matrixGraph, b+1);
+        return;
+    }
+    matrixGraph->wayLen++;
+    printWayToBuffer(matrixGraph, a, w, beg, end);
+    printToBuffer(matrixGraph, w+1);
+    printWayToBuffer(matrixGraph, w, b, beg, end);
+}
+
+void shortestWaysProcessing(MatrixGraph *matrixGraph, int shortestWaysResponses, int* responsesDestinations) {
+    int a = 0, b;
+    for (int i = 0; i < shortestWaysResponses; ++i) {
+        b = responsesDestinations[i] - 1;
+        matrixGraph->wayLen = 2;
+        matrixGraph->bufferFreePtr = matrixGraph->wayBuffer;
+        printWayToBuffer(matrixGraph, a, b, a, b);
+        printf("%d  %d  %s\n", matrixGraph->matrix[a][b], matrixGraph->wayLen, matrixGraph->wayBuffer);
+    }
+}
+```
 
 # 22.09.03 - лекция
 Для перевода двоичного числа по битам, необходимо инвертировать биты и прибавить 1
