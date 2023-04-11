@@ -84,6 +84,9 @@
   - [`There is/are`](#there-isare)
   - [`It/this/that is`](#itthisthat-is)
 - [Prefect infinitive](#prefect-infinitive)
+- [`Than that of`](#than-that-of)
+- [Clauses](#clauses)
+  - [Clause of reason (причины)](#clause-of-reason-причины)
 
 # Websites
 - [Cambridge Learner's dictionary](https://dictionary.cambridge.org/dictionary/learner-english)
@@ -756,3 +759,36 @@ We can insert modal verbs between `there` and `is/are`.
 
 # Prefect infinitive
 `MV have V3` - `MV` - modal verb. Used for describing strong fact in the past.
+
+# `Than that of`
+В отличии от 
+
+*Earth has more oxydent atmosphere than that of Venus*
+
+# Clauses
+Complex-Conjunctions (*союзы для сложносочинённых (even - равные)*):
+- for
+- and
+- nor
+- but
+- yes
+- so
+
+**В сложносочинённых предложениях запятая чаще всего ставится.**
+
+Subordinate clauses:
+- if-clause - clause of condition
+
+**Чаще всего без запятой**
+
+## Clause of reason (причины)
+If clause of reason goes behind main clause we should use comma.
+
+Conjunctions:
+- (because of / due to) the fact that `full-fletched clause` - в связи с тем фактом, что
+- the reason for
+- the reason why
+- because `full-fletched clause` (*I love Skyrim because it has dragons*)
+- (because of / due to) `noun` (*I love Skyrim because of dragons*)
+- as / since - потому что / так как / поскольку (*Since Skyrim has dragons, I love it*)
+
