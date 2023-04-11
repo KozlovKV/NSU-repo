@@ -786,8 +786,10 @@ If clause of reason goes behind main clause we should use comma.
 
 Conjunctions:
 - (because of / due to) the fact that `full-fletched clause` - в связи с тем фактом, что
-- the reason for
-- the reason why
+- the reason for + `main clause as (noun / -ing form)` + `sub-clause`
+  - `noun` (*The reason for my love for Skyrim is that it has dragons*)
+  - `-ing form` (*The reason for me/my loving skyrim*)
+- the reason why + `main clause` + `sub-clause`
 - because `full-fletched clause` (*I love Skyrim because it has dragons*)
 - (because of / due to) `noun` (*I love Skyrim because of dragons*)
 - as / since - потому что / так как / поскольку (*Since Skyrim has dragons, I love it*)
