@@ -122,6 +122,13 @@
   - [SELECT query](#select-query)
   - [Set operations](#set-operations)
   - [Aggregation](#aggregation)
+- [23.04.13 - lecture](#230413---lecture)
+  - [Cross-selection](#cross-selection)
+  - [Inner join](#inner-join)
+  - [`left outer join`](#left-outer-join)
+  - [`right outer join`](#right-outer-join)
+  - [`full outer join`](#full-outer-join)
+  - [Alternative syntax](#alternative-syntax)
 
 
 # Контакты преподов
@@ -1231,7 +1238,7 @@ Parameters:
 - `select` - what to select (show). Also we can use `*` to select all
   - `distinct` - shows only set (not multiset)
   - `select NAME as LABEL` - show query result with defined label in this column
-- `from` - where to find
+- `from TABLE_NAME table_label` - where to find
 - `where`
 - `order by`
 - `limit`
@@ -1281,9 +1288,89 @@ ORDER BY COUNTRY ASC
 - `AVG()`
 - `GROUP_CONCAT(str)` / `GROUP_CONCAT(str, separator)`
 - `ROUND(val, n)` - round to n numbers after point
+- `COALESCE(val, nullVal)` - if `val IS NOT NULL` returns it, otherwise returns `nullVal`
 
 ```sql
 SELECT COUNT(CAPITAL)
 FROM COUNTRY_HANDBOOK
 WHERE COUNTRY LIKE 'A1'
 ```
+
+# 23.04.13 - lecture
+## Cross-selection
+`select * from table1, table2` - give us all possible combinations of values from both tables (cortesian pairs)
+
+## Inner join
+To get only pairs with some value we should make query like this:
+```SQL
+SELECT 
+  DISTINCT MATERIAL.WARE AS MATERIAL,
+  PRODUCT.WARE AS PRODUCT
+FROM MATERIAL, PRODUCT
+WHERE MATERIAL.BILL_ID = PRODUCT.BILL_ID
+
+-- or
+
+SELECT 
+  DISTINCT MATERIAL.WARE AS MATERIAL,
+  PRODUCT.WARE AS PRODUCT
+FROM MATERIAL
+INNER JOIN PRODUCT
+ON MATERIAL.BILL_ID = PRODUCT.BILL_ID
+```
+
+Second query uses special type of join. 
+- `INNER` is optional keyword for contrasting with other join types. 
+- `ON` equvalent to `WHERE` and can be used only with `INNER JOIN`. Conventionally after `ON` we write condtitions for combinations with joined table.
+
+```SQL
+SELECT 
+  DISTINCT MATERIAL.WARE AS MATERIAL,
+  PRODUCT.WARE AS PRODUCT
+FROM MATERIAL
+INNER JOIN PRODUCT
+ON MATERIAL.BILL_ID = PRODUCT.BILL_ID
+WHERE MATERIAL.WARE LIKE "M%" -- will
+```
+
+We can join 1 table more than once (i.e. to find unique records that have one quivavalent column and different other column)
+
+Types of join:
+- Equijoin - selection by `=`
+- theta-join - selection by other conditional operaotrs
+- Cross join - both types of join above
+
+**Equijoin is the most effective type**
+
+## `left outer join`
+This type of join let us select records that haven't suited records (= `NULL`) in the joined table.
+
+In this type we **must** write selection conditions after `ON`
+
+```SQL
+SELECT 
+  DISTINCT p.WARE AS product,
+  m.WARE AS material
+FROM PRODUCT p
+LEFT OUTER JOIN MATERIAL m
+ON m.BILL_ID = p.BILL_ID
+
+-- will show p-m pairs and products that doesn't need any material
+```
+
+## `right outer join`
+Joins records that cannot find suited records in the first table (= `NULL`)
+
+## `full outer join`
+Combination of right and left
+
+## Alternative syntax
+Alternative syntax for left outer join:
+```SQL
+SELECT 
+  DISTINCT p.WARE AS product,
+  m.WARE AS material
+FROM PRODUCT p, MATERIAL m
+WHERE p.BILL_ID = m.BILL_ID(+)
+```
+**NOT SUPPORTED BY SQLITE**
