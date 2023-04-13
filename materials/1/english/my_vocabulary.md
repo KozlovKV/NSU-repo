@@ -22,9 +22,11 @@ Words, phrasal verbs and collocations that I have learned.
   - [CIU: Unit 22 - Eating and drinking](#ciu-unit-22---eating-and-drinking)
   - [CIU: Unit 23 - Films and books](#ciu-unit-23---films-and-books)
   - [CIU: Unit 24 - Music](#ciu-unit-24---music)
+  - [CIU: Unit 25 - Sport](#ciu-unit-25---sport)
 - [Phrasal verbs in use](#phrasal-verbs-in-use)
   - [PVIU: Unit 42 - The classroom and learning](#pviu-unit-42---the-classroom-and-learning)
   - [PVIU: Unit 54 - secrets and conversations](#pviu-unit-54---secrets-and-conversations)
+  - [PVIU: Unit 68 - Power and authority](#pviu-unit-68---power-and-authority)
 - [Common words](#common-words)
 
 
@@ -624,6 +626,32 @@ Different words are associated with *water*:
 
 ---
 
+## CIU: Unit 25 - Sport
+- circuit training - круговая (комплексная) тренировка
+- do (gymnastics / athletics / circuit training / aerobics / yoga / wrestling / judo / archery)
+- play (cards / tennis / baseball / golf / *other games*)
+- hang-gliding - планирование на дельтаплане
+- go (swimming / fishing / skiing / cycling / *other sport processes*)
+- deserve - заслуживать
+  - deserve to win
+- narrowly - узко / почти что
+  - narrowly (defeated / bitten)
+- (win / lose) matches
+- go in for sth / enter a competition - принимать участие в чём-то / делать что-то с наслаждением
+- put up a fight - затеять драку / сражаться
+- break the world record
+- set a new world record
+- world record holder
+- fierce - жёстко
+- fail in drugs test - провалить тест на доппинг
+- tackle - столкнуться / сразиться
+- foul your opponent - уронить (*?*) оппонента
+- whistle - свисток
+- substitute - замена
+- bring on a substitute - провести замену
+
+---
+
 # Phrasal verbs in use
 ## PVIU: Unit 42 - The classroom and learning
 In this PV particle can place either before or after verb:
@@ -659,6 +687,24 @@ In this PV particle can place either before or after verb:
 - wind up sb / wind sb up - **informal** - обманывать кого-то (с целью подшутить или разозлить)
 - mouth off - **informal** - молоть языком
 - shut [sb] up - **informal** - заткнуться / заткнуть кого-то
+
+---
+
+## PVIU: Unit 68 - Power and authority
+- stand for `place | position` - complete in an election for an official position
+- firm - твёрдый
+  - firmly - adj.
+- do away with - справиться / разделаться
+- clamp down on - стать строгим с кем-то или чем-то (прижать)
+- stand up for - защищать (вставать за что что-то)
+- stand up to - противостоять кому-то или чему-то
+- go ahead - начать делать что-то
+  - go-ahead - разрешение на проделывание чего-то
+- back up / stand by / stick by - поддержать ("подставить спину")
+- hasty - поспешный
+- entered into - officially agree to do sth
+- carry out - выполнять (обещания)
+- break away - покинуть (партию или любую другую группу)
 
 ---
 
