@@ -87,6 +87,7 @@
 - [`Than that of`](#than-that-of)
 - [Clauses](#clauses)
   - [Clause of reason (причины)](#clause-of-reason-причины)
+  - [Clause of purpose (цели)](#clause-of-purpose-цели)
 
 # Websites
 - [Cambridge Learner's dictionary](https://dictionary.cambridge.org/dictionary/learner-english)
@@ -767,12 +768,13 @@ We can insert modal verbs between `there` and `is/are`.
 
 # Clauses
 Complex-Conjunctions (*союзы для сложносочинённых (even - равные)*):
-- for
-- and
-- nor
-- but
-- yes
-- so
+- **F**or
+- **A**nd
+- **N**or
+- **B**ut
+- **O**r
+- **Y**es
+- **S**o
 
 **В сложносочинённых предложениях запятая чаще всего ставится.**
 
@@ -785,12 +787,24 @@ Subordinate clauses:
 If clause of reason goes behind main clause we should use comma.
 
 Conjunctions:
-- (because of / due to) the fact that `full-fletched clause` - в связи с тем фактом, что
-- the reason for + `main clause as (noun / -ing form)` + `sub-clause`
+- (because of / due to) the fact that `reason-clause` - в связи с тем фактом, что
+- the reason for + `main (noun / -ing form)` + `noun / reason-clause`
   - `noun` (*The reason for my love for Skyrim is that it has dragons*)
   - `-ing form` (*The reason for me/my loving skyrim*)
-- the reason why + `main clause` + `sub-clause`
-- because `full-fletched clause` (*I love Skyrim because it has dragons*)
-- (because of / due to) `noun` (*I love Skyrim because of dragons*)
-- as / since - потому что / так как / поскольку (*Since Skyrim has dragons, I love it*)
+- the reason why + `main` + `noun / reason-clause`
+- because `reason-clause` (*I love Skyrim because it has dragons*)
+- (because of / due to) `reason-noun` (*I love Skyrim because of dragons*)
+- (as / since) `reason-clause` - потому что / так как / поскольку (*Since Skyrim has dragons, I love it*)
 
+## Clause of purpose (цели)
+- to `Vinf` (**DO NOT USE WITH *not***)
+- in order to / so as to (formal) (Negative forms: **in order not to / so as not to**)
+- so that
+  - `can / will` - for present and future references (**we detect reference by verb in main clause**) (*We will add more kitties to TES 6 so that they will be wearing daedric armor*)
+  - `could` / `would` - for past references (*Ivan was wearing a pink hoodie so that he could be mixed with Ruslan*)
+- in case (**NEVER USED WITH *will* or *would* although sentence often in the future**)
+- for
+  - `noun` - when we want to express the purpose of an action (*We went to the bakery for buns*)
+  - `-ing form` - when we want to express the purpose or function of something (*We use a laser pointer for pointing out essential points in our presentation*)
+
+**Follow the rules of the sequence of tenses**

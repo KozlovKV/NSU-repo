@@ -1952,3 +1952,12 @@ In this PV particle can place either before or after verb:
 - to be out - to be excluded
 - to come to light
 - authorities - власти
+- to unveil - раскрывать / торжественно открывать (дословно - снять вуаль)
+- to appeal - взывать
+  - appealing - привлекательный / привлекающий
+- arouse - пробуждать
+- I'd like to talk you through the following [number] points - я хотел бы поговорить с вами о следующих [number] пунктов
+- slept [one]self out - выспаться
+- bakery - пекарня
+- bun - булочка
+- spade - сапёрная лопата
