@@ -1,5 +1,6 @@
 Words, phrasal verbs and collocations that I have learned.
 
+- [Collocations for the presentation](#collocations-for-the-presentation)
 - [Vocabulary in use](#vocabulary-in-use)
   - [VIU: Unit 81 - Make, do and take: uses and phrases](#viu-unit-81---make-do-and-take-uses-and-phrases)
   - [VIU: Unit 83 - Get: uses, phrases and phrasal verbs](#viu-unit-83---get-uses-phrases-and-phrasal-verbs)
@@ -29,6 +30,20 @@ Words, phrasal verbs and collocations that I have learned.
   - [PVIU: Unit 68 - Power and authority](#pviu-unit-68---power-and-authority)
 - [Common words](#common-words)
 
+
+# Collocations for the presentation
+- (some enumerations) and things like that
+- to unveil - раскрывать / торжественно открывать (дословно - снять вуаль)
+- to appeal - взывать
+  - appealing - привлекательный / привлекающий
+- arouse - пробуждать
+- I'd like to talk you through the following [number] points - я хотел бы поговорить с вами о следующих [number] пунктов
+- as you can see
+- you'll notice
+- that means
+- I'd now like to tell you about / I'm going to talk you
+- run out of time - выйти за сроки
+- feel free / you're welcome
 
 # Vocabulary in use
 ## VIU: Unit 81 - Make, do and take: uses and phrases
@@ -1952,11 +1967,6 @@ In this PV particle can place either before or after verb:
 - to be out - to be excluded
 - to come to light
 - authorities - власти
-- to unveil - раскрывать / торжественно открывать (дословно - снять вуаль)
-- to appeal - взывать
-  - appealing - привлекательный / привлекающий
-- arouse - пробуждать
-- I'd like to talk you through the following [number] points - я хотел бы поговорить с вами о следующих [number] пунктов
 - slept [one]self out - выспаться
 - bakery - пекарня
 - bun - булочка
