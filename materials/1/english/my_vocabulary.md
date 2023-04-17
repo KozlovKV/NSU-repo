@@ -1175,7 +1175,7 @@ In this PV particle can place either before or after verb:
   - fairly - справедливо
   - unfairly - несправедливо
 - vanity fair - ярмарка тщеславия
-- turn out - стать полезным
+- turn out - оказаться
 - appearance - внешность
 - attractive, good-looking - about women (good)
 - pretty - about girl or boy
@@ -1971,3 +1971,8 @@ In this PV particle can place either before or after verb:
 - bakery - пекарня
 - bun - булочка
 - spade - сапёрная лопата
+- definite - определённый
+- governor - губернатор
+- government - правительство
+- indeed - в самом деле
+- grocery - бакалея
