@@ -24,7 +24,9 @@ Words, phrasal verbs and collocations that I have learned.
   - [CIU: Unit 23 - Films and books](#ciu-unit-23---films-and-books)
   - [CIU: Unit 24 - Music](#ciu-unit-24---music)
   - [CIU: Unit 25 - Sport](#ciu-unit-25---sport)
+  - [CIU: Unit 26 - Health and illness](#ciu-unit-26---health-and-illness)
 - [Phrasal verbs in use](#phrasal-verbs-in-use)
+  - [PVIU: Unit 27 - Success and failure](#pviu-unit-27---success-and-failure)
   - [PVIU: Unit 42 - The classroom and learning](#pviu-unit-42---the-classroom-and-learning)
   - [PVIU: Unit 54 - secrets and conversations](#pviu-unit-54---secrets-and-conversations)
   - [PVIU: Unit 68 - Power and authority](#pviu-unit-68---power-and-authority)
@@ -667,7 +669,56 @@ Different words are associated with *water*:
 
 ---
 
+## CIU: Unit 26 - Health and illness
+In most everyday cases we can use *get* or *have* with illnesses but also we can use these collocations:
+- catch (cold / flu / chill *?* / pneumonia)
+- contract (disease / malaria / typhoid) - formal
+- develop (cancer / AIDS (СПИД) / diabetes / arthritis / Alzheimer's disease)
+- suffer from (asthma / hay fever (аллергия) / backache)
+- have an attack of sth - приступ
+- be diagnosed with sth - получить диагноз
+- (suffer / sustain) injuries - получить травму
+- vigorous - энергичный
+- balanced diet
+- healthy eating
+- fitness programme
+- stick to sth - придерживаться чего-то
+- keep fit - поддерживать форму
+- terminally ill - смертельно болен
+- incurable illness
+- (excruciating / unbearable) pain - невыносимая боль
+- ailment - недуг
+- life-threating
+- (acutely / intensely) painful - отсрая боль
+  - dull ache - opp.
+- prescribe medicines - прописать лекарства
+- relieve - освободить
+- alleviate - смягчить
+- splitting headache - strong headache (будто голова раскалывается)
+- heavy cold
+  - slight cold - opp.
+
+---
+
 # Phrasal verbs in use
+## PVIU: Unit 27 - Success and failure
+- bring [sth] off - заставить что-то осуществиться / провести сделку 
+- catch sth on sth - зацепиться / укрепиться
+- take over - взять верх / занять место
+- take off - в данном контексте: взлететь в популярности
+- downfall - падение
+  - riseup - opp. *?*
+- fall through - провалиться (*чем отличается от fail?*)
+- pull off - сдвинуться
+- build on - строить нечто новое (в т.ч. переносно), опираясь на что-то уже имеющееся
+- walk into - очень легко (прогулочным шагом)
+- to content - довольствоваться / ограничиваться
+- muddle through - succeed in sth although you have difficulties because you haven't needed knowledge (идти напролом)
+- commitment / dedication - самоотверженность
+- pay off - платить / принести плоды
+- keep up - держать уровень
+- stay ahead - оставаться впереди
+
 ## PVIU: Unit 42 - The classroom and learning
 In this PV particle can place either before or after verb:
 - hand / turn in - сдать работы
