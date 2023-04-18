@@ -2027,3 +2027,8 @@ In this PV particle can place either before or after verb:
 - government - правительство
 - indeed - в самом деле
 - grocery - бакалея
+- over there - вон там
+- (soft / strong) drinks
+- maul - мять
+  - mauled - помятый
+- black eye - синяк под глазом
