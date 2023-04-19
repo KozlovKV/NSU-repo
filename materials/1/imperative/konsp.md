@@ -9,6 +9,8 @@
   - [Универсальная хэш-таблица с обработкой коллизий при помощи списка](#универсальная-хэш-таблица-с-обработкой-коллизий-при-помощи-списка)
   - [Разложение числа на простые](#разложение-числа-на-простые)
   - [Решето Эратосфена](#решето-эратосфена)
+  - [Беллман-Форд с массивом рёбер](#беллман-форд-с-массивом-рёбер)
+  - [Дийкстра на куче](#дийкстра-на-куче)
   - [Флойд-Уоршалл с восстановлением путей](#флойд-уоршалл-с-восстановлением-путей)
 - [22.09.03 - лекция](#220903---лекция)
 - [22.09.10 - лекция](#220910---лекция)
@@ -154,6 +156,7 @@
 - [Бинарная куча](#бинарная-куча)
 - [Алгоритм Евклида](#алгоритм-евклида)
 - [Расширенный алгоритм Евклида](#расширенный-алгоритм-евклида)
+- [Поиск точек и мостов сочленения](#код-для-поиска-точек-сочленения)
 
 ## Быстрый способ возведения в степень
 Если нам надо возвести `x` в степень `p`, мы можем сделать это следующим образом:
@@ -828,6 +831,357 @@ int getPrimesCount(int l, int r) {
     if (l == 0)
         return counts[r-1];
     return counts[r-1] - counts[l-1];
+}
+```
+
+## Беллман-Форд с массивом рёбер
+```c
+#include "stdlib.h"
+#include <stdio.h>
+
+#define BIG_INT 400000000
+
+typedef struct {
+    int u, v, w;
+} Edge;
+
+typedef struct {
+    int verticesCnt, edgesCnt;
+    Edge *edges;
+    int *parents;
+    int *wayWeights;
+    int *wayLens;
+} GraphData;
+
+GraphData *initGraphData(int verticesCnt, int edgesCnt) {
+    GraphData *graphData = (GraphData*) calloc(1, sizeof(GraphData));
+    graphData->verticesCnt = verticesCnt;
+    graphData->edgesCnt = edgesCnt;
+    graphData->edges = (Edge*) calloc(edgesCnt, sizeof(Edge));
+    graphData->parents = (int*) calloc(verticesCnt, sizeof(int));
+    graphData->wayWeights = (int*) calloc(verticesCnt, sizeof(int));
+    graphData->wayLens = (int*) calloc(verticesCnt, sizeof(int));
+    for (int i = 0; i < verticesCnt; ++i) {
+        graphData->parents[i] = -1;
+        graphData->wayWeights[i] = BIG_INT;
+    }
+    return graphData;
+}
+
+void readEdges(GraphData* graphData, int edgesCnt) {
+    int a, b, w;
+    for (int i = 0; i < edgesCnt; ++i) {
+        scanf("%d %d %d\n", &a, &b, &w);
+        graphData->edges[i] = (Edge){.u = a-1, .v = b - 1, .w = w};
+    }
+}
+
+void freeGraphData(GraphData* graphData) {
+    free(graphData->edges);
+    free(graphData->parents);
+    free(graphData->wayWeights);
+    free(graphData->wayLens);
+    free(graphData);
+}
+
+void relax(GraphData *graphData, Edge edge) {
+    if (graphData->wayWeights[edge.v] > graphData->wayWeights[edge.u] + edge.w) {
+        graphData->wayWeights[edge.v] = graphData->wayWeights[edge.u] + edge.w;
+        graphData->parents[edge.v] = edge.u;
+        graphData->wayLens[edge.v] = graphData->wayLens[edge.u] + 1;
+    }
+}
+
+void bellmanFord(GraphData *graphData, int startVertex) {
+    startVertex--;
+    graphData->wayWeights[startVertex] = 0;
+    graphData->wayLens[startVertex] = 1;
+    for (int i = 0; i < graphData->verticesCnt; ++i)
+        for (int j = 0; j < graphData->edgesCnt; ++j)
+            relax(graphData, graphData->edges[j]);
+}
+
+void printWayData(GraphData *graphData, int dst) {
+    dst--;
+    int v = dst, wayLen = graphData->wayLens[dst], wayBackIndex = wayLen - 1;
+    int *way = (int*) calloc(wayLen, sizeof(int));
+    while (wayBackIndex >= 0) {
+        way[wayBackIndex--] = v;
+        v = graphData->parents[v];
+    }
+    printf("%d  %d  ", graphData->wayWeights[dst], wayLen);
+    for (int i = 0; i < wayLen; ++i)
+        printf("%d ", way[i]+1);
+    printf("\n");
+    free(way);
+}
+
+int main() {
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+
+    int verticesCnt, edgesCnt, friendsCnt;
+    scanf("%d %d %d\n", &verticesCnt, &edgesCnt, &friendsCnt);
+
+    int *friends = (int*) calloc(friendsCnt, sizeof(int));
+    for (int i = 0; i < friendsCnt; ++i)
+        scanf("%d", friends + i);
+
+    GraphData *graphData = initGraphData(verticesCnt, edgesCnt);
+    readEdges(graphData, edgesCnt);
+
+    bellmanFord(graphData, 1);
+    for (int i = 0; i < friendsCnt; ++i)
+        printWayData(graphData, friends[i]);
+
+    freeGraphData(graphData);
+    free(friends);
+    return 0;
+}
+```
+
+## Дийкстра на куче
+**DUNGEON MASTER среди графовых алгоритмов**
+
+```c
+#include "stdlib.h"
+#include <stdio.h>
+
+#define BIG_INT 100000000000
+
+typedef struct {
+    int u, v, id;
+    long long w;
+} Edge;
+
+typedef struct ListE {
+    Edge val;
+    struct ListE* next;
+} ListE;
+
+ListE* initList() {
+    ListE *head = (ListE*) calloc(1, sizeof(ListE));
+    head->next = head;
+    return head;
+}
+
+void addAfter(ListE* prevElem, Edge value) {
+    ListE *newElem = (ListE*) calloc(1, sizeof(ListE)),
+            *nextElem = prevElem->next;
+    newElem->val = value;
+    prevElem->next = newElem;
+    newElem->next = nextElem;
+}
+
+void freeList(ListE* head) {
+    ListE *elemForDel, *elem = head->next;
+    while (elem != head) {
+        elemForDel = elem;
+        elem = elem->next;
+        free(elemForDel);
+    }
+    free(head);
+}
+
+typedef struct {
+    int verticesCnt, edgesCnt;
+    ListE **edges;
+    Edge *edgeToParent;
+    long long *wayWeights;
+    int *verticesInWay;
+
+    int *heap;
+    int heapFreeIndex;
+    int *heapI2Vertex;
+    int *vertex2heapI;
+} GraphData;
+
+void heapSwap(GraphData *graphData, int heapIA, int heapIB) {
+    int a = graphData->heap[heapIA], b = graphData->heap[heapIB];
+    graphData->heap[heapIA] = b;
+    graphData->heap[heapIB] = a;
+    graphData->heapI2Vertex[heapIA] = b;
+    graphData->heapI2Vertex[heapIB] = a;
+    graphData->vertex2heapI[a] = heapIB;
+    graphData->vertex2heapI[b] = heapIA;
+}
+
+void siftUp(GraphData *graphData, int index) {
+    while (
+            graphData->wayWeights[graphData->heap[index]]
+            < graphData->wayWeights[graphData->heap[(index - 1) / 2]]
+    ) {
+        heapSwap(graphData, index, (index - 1) / 2);
+        index = (index - 1) / 2;
+    }
+}
+
+void siftDown(GraphData *graphData, int index) {
+    int leftI, rightI, swapI;
+    long long curW, leftW, rightW;
+    while (index*2 + 1 < graphData->heapFreeIndex) {
+        leftI = index*2 + 1;
+        rightI = index*2 + 2;
+        swapI = leftI;
+        curW = graphData->wayWeights[graphData->heap[index]];
+        leftW = graphData->wayWeights[graphData->heap[leftI]];
+        if (rightI < graphData->heapFreeIndex && graphData->wayWeights[graphData->heap[rightI]] < leftW)
+            swapI = rightI;
+        if (curW <= graphData->wayWeights[graphData->heap[swapI]])
+            break;
+        heapSwap(graphData, index, swapI);
+        index = swapI;
+    }
+}
+
+void heapAdd(GraphData *graphData, int vertex) {
+    graphData->heap[graphData->heapFreeIndex] = vertex;
+    graphData->heapI2Vertex[graphData->heapFreeIndex] = vertex;
+    graphData->vertex2heapI[vertex] = graphData->heapFreeIndex;
+    graphData->heapFreeIndex++;
+    siftUp(graphData, graphData->heapFreeIndex - 1);
+}
+
+int extractMin(GraphData *graphData) {
+    if (graphData->heapFreeIndex == 0)
+        return -1;
+    int res = graphData->heap[0];
+    heapSwap(graphData, 0, graphData->heapFreeIndex-1);
+    graphData->heapFreeIndex--;
+    siftDown(graphData, 0);
+    return res;
+}
+
+void nullWays(GraphData *graphData, int startVertex) {
+    graphData->heapFreeIndex = 0;
+    for (int i = 0; i < graphData->verticesCnt; ++i) {
+        if (i == startVertex) {
+            graphData->wayWeights[i] = 0;
+            graphData->verticesInWay[i] = 1;
+        }
+        else
+            graphData->wayWeights[i] = BIG_INT;
+        heapAdd(graphData, i);
+    }
+}
+
+GraphData *initGraphData(int verticesCnt, int edgesCnt) {
+    GraphData *graphData = (GraphData*) calloc(1, sizeof(GraphData));
+
+    graphData->verticesCnt = verticesCnt;
+    graphData->edgesCnt = edgesCnt;
+    graphData->edges = (ListE **) calloc(verticesCnt, sizeof(ListE*));
+    graphData->edgeToParent = (Edge*) calloc(verticesCnt, sizeof(Edge));
+    graphData->wayWeights = (long long*) calloc(verticesCnt, sizeof(long long));
+    graphData->verticesInWay = (int*) calloc(verticesCnt, sizeof(int));
+
+    graphData->heap = (int*) calloc(verticesCnt, sizeof(int));
+    graphData->heapI2Vertex = (int*) calloc(verticesCnt, sizeof(int));
+    graphData->vertex2heapI = (int*) calloc(verticesCnt, sizeof(int));
+
+    return graphData;
+}
+
+void addEdge(GraphData* graphData, Edge newEdge) {
+    if (!graphData->edges[newEdge.u])
+        graphData->edges[newEdge.u] = initList();
+    addAfter(graphData->edges[newEdge.u], newEdge);
+}
+
+void readEdges(GraphData* graphData, int edgesCnt) {
+    int a, b;
+    long long w;
+    for (int i = 0; i < edgesCnt; ++i) {
+        scanf("%d %d %lld\n", &a, &b, &w);
+        Edge forwardEdge = {.u = a - 1, .v = b - 1, .w = w, .id = i+1};
+        addEdge(graphData, forwardEdge);
+    }
+}
+
+void freeGraphData(GraphData* graphData) {
+    for (int i = 0; i < graphData->verticesCnt; ++i)
+        if (graphData->edges[i])
+            freeList(graphData->edges[i]);
+    free(graphData->edges);
+    free(graphData->edgeToParent);
+    free(graphData->wayWeights);
+    free(graphData->verticesInWay);
+
+    free(graphData->heap);
+    free(graphData->heapI2Vertex);
+    free(graphData->vertex2heapI);
+
+    free(graphData);
+}
+
+void relax(GraphData *graphData, Edge edge) {
+    if (graphData->wayWeights[edge.v] > graphData->wayWeights[edge.u] + edge.w) {
+        graphData->wayWeights[edge.v] = graphData->wayWeights[edge.u] + edge.w;
+        graphData->edgeToParent[edge.v] = edge;
+        graphData->verticesInWay[edge.v] = graphData->verticesInWay[edge.u] + 1;
+        siftUp(graphData, graphData->vertex2heapI[edge.v]);
+    }
+}
+
+void dijkstra(GraphData *graphData, int startVertex) {
+    nullWays(graphData, startVertex);
+
+    int v = extractMin(graphData);
+    ListE *elem;
+    while (v != -1) {
+        if (graphData->edges[v]) {
+            elem = graphData->edges[v]->next;
+            while (elem != graphData->edges[v]) {
+                relax(graphData, elem->val);
+                elem = elem->next;
+            }
+        }
+
+        v = extractMin(graphData);
+    }
+}
+
+void printWayData(GraphData *graphData, int from, int to) {
+    if (graphData->wayWeights[to] == BIG_INT) {
+        printf("DOOMED\n");
+        return;
+    }
+    int edgesInWay = graphData->verticesInWay[to] - 1, wayBackIndex = edgesInWay - 1;
+    Edge parentEdge = graphData->edgeToParent[to];
+    int *way = (int*) calloc(edgesInWay, sizeof(int));
+    while (wayBackIndex >= 0) {
+        way[wayBackIndex--] = parentEdge.id;
+        parentEdge = graphData->edgeToParent[parentEdge.u];
+    }
+    printf("quarantine  %lld %d  ", graphData->wayWeights[to], edgesInWay);
+    for (int i = 0; i < edgesInWay; ++i)
+        printf("%d ", way[i]);
+    printf("\n");
+    free(way);
+}
+
+int main() {
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+
+    int verticesCnt, edgesCnt, requestsCnt;
+    scanf("%d %d %d\n", &verticesCnt, &edgesCnt, &requestsCnt);
+
+    Edge *requestPoints = (Edge *) calloc(requestsCnt, sizeof(Edge));
+    for (int i = 0; i < requestsCnt; ++i)
+        scanf("%d %d\n", &requestPoints[i].u, &requestPoints[i].v);
+
+    GraphData *graphData = initGraphData(verticesCnt, edgesCnt);
+    readEdges(graphData, edgesCnt);
+
+    for (int i = 0; i < requestsCnt; ++i) {
+        dijkstra(graphData, requestPoints[i].u - 1);
+        printWayData(graphData, requestPoints[i].u - 1, requestPoints[i].v - 1);
+    }
+
+    freeGraphData(graphData);
+    free(requestPoints);
+    return 0;
 }
 ```
 
@@ -2376,6 +2730,8 @@ cl lib.c /LD
 
 Для корня: проверяем количество детей. Если их `>= 2`, значит корень - cut-vertex
 
+[Версия с MAXimal](https://e-maxx.ru/algo/cutpoints)
+
 #### Код для поиска точек сочленения
 *При замене знакак между `ups` и `inTimes` на `>` внутри первого условия и удалении второго, получим поиск мостов*
 
@@ -2597,7 +2953,7 @@ int relax(int u, int v) {
 
 ---
 
-<!-- TODO: Добавить алгоритм -->
+[Реализация с массивом рёбер](#беллман-форд-с-массивом-рёбер)
 
 ## Алгоритм Дейкстры
 - Иниициализация такая же как у Б.-Ф.
@@ -2607,12 +2963,12 @@ int relax(int u, int v) {
 
 Если использовать для хранения вершин с минимальным путём кучу, то эффективность будет `O(|V|log|V| + |E|log|E|)`. Лоагрифм берётся также от количества рёбер, потому что при релаксации надо перераспределять значения в куче. Из-за этого использовать кучу имеет смысл только в случае разреженного графа.
 
-<!-- TODO: Добавить алгоритм -->
+[Дийкстра на куче](#дийкстра-на-куче)
 
 ## Флойд-Уоршалл
 Алгоритм архипростой, поэтому тут только отмечу, что самый внешний цикл должен итерироваться по промежуточной вершины
 
-<!-- TODO: Добавить алгоритм -->
+[Флойд-Уоршелл с рекурсивным восстановлением путей](#флойд-уоршалл-с-восстановлением-путей)
 
 # 23.04.14 - лекция
 ## Переборы
