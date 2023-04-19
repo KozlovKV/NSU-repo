@@ -124,6 +124,7 @@
     - [Топологическая сортировка](#топологическая-сортировка-1)
     - [Поиск мостов](#поиск-мостов)
     - [Точки сочленения](#точки-сочленения)
+      - [Код для поиска точек сочленения](#код-для-поиска-точек-сочленения)
 - [23.04.06 - семинар](#230406---семинар)
   - [Поиск компонентов сильной связности](#поиск-компонентов-сильной-связности)
 - [23.04.07 - лекция](#230407---лекция)
@@ -2373,9 +2374,188 @@ cl lib.c /LD
 
 Если у потомка вершины `v` значение `up` меньше или равно `v.depth`, то `v` - точка сочленения.
 
-Для корня:
+Для корня: проверяем количество детей. Если их `>= 2`, значит корень - cut-vertex
 
-У всех потомков `up` должно быть 1 
+#### Код для поиска точек сочленения
+*При замене знакак между `ups` и `inTimes` на `>` внутри первого условия и удалении второго, получим поиск мостов*
+
+```c
+#include "stdlib.h"
+#include <stdio.h>
+
+typedef struct {
+    int a, b, w, id;
+} Edge;
+
+typedef struct ListE {
+    Edge val;
+    struct ListE* next;
+} ListE;
+
+ListE* initList() {
+    ListE *head = (ListE*) calloc(1, sizeof(ListE));
+    head->next = head;
+    return head;
+}
+
+void addAfter(ListE* prevElem, Edge value) {
+    ListE *newElem = (ListE*) calloc(1, sizeof(ListE)),
+            *nextElem = prevElem->next;
+    newElem->val = value;
+    prevElem->next = newElem;
+    newElem->next = nextElem;
+}
+
+void freeList(ListE* head) {
+    ListE *elemForDel, *elem = head->next;
+    while (elem != head) {
+        elemForDel = elem;
+        elem = elem->next;
+        free(elemForDel);
+    }
+    free(head);
+}
+
+#define WHITE 0
+#define GREY 1
+#define BLACK 2
+
+typedef struct {
+    int verticesCnt, edgesCnt;
+    ListE **edges;
+    int *parents;
+
+    char *colors;
+    char *isTreeEdges;
+    char *isCutV;
+    int cutVCnt;
+
+    int *ups;
+    int *inTimes;
+    int time;
+} GraphData;
+
+void addEdge(ListE **edges, Edge edge) {
+    if (!edges[edge.a])
+        edges[edge.a] = initList();
+    addAfter(edges[edge.a], edge);
+}
+
+void readEdges(GraphData *graphData) {
+    int a, b;
+    Edge newEdge;
+    for (int i = 0; i < graphData->edgesCnt; ++i) {
+        scanf("%d %d\n", &a, &b);
+        newEdge.a = a - 1;
+        newEdge.b = b - 1;
+        newEdge.id = i;
+        addEdge(graphData->edges, newEdge);
+        newEdge.a = b - 1;
+        newEdge.b = a - 1;
+        addEdge(graphData->edges, newEdge);
+    }
+}
+
+GraphData *initGraphData(int n, int m) {
+    GraphData *graphData = (GraphData*) calloc(1, sizeof(GraphData));
+    graphData->verticesCnt = n;
+    graphData->edgesCnt = m;
+    graphData->cutVCnt = 0;
+    graphData->colors = (char*) calloc(n, sizeof(char));
+    graphData->isTreeEdges = (char*) calloc(m, sizeof(char));
+    graphData->isCutV = (char*) calloc(n, sizeof(char));
+    graphData->ups = (int*) calloc(n, sizeof(int));
+    graphData->inTimes = (int*) calloc(n, sizeof(int));
+    graphData->parents = (int*) calloc(n, sizeof(int));
+
+    graphData->edges = (ListE**) calloc(n, sizeof(ListE*));
+
+    return graphData;
+}
+
+void freeGraphData(GraphData* graphData) {
+    for (int i = 0; i < graphData->verticesCnt; ++i)
+        if (graphData->edges[i])
+            freeList(graphData->edges[i]);
+    free(graphData->edges);
+    free(graphData->colors);
+    free(graphData->isCutV);
+    free(graphData->ups);
+    free(graphData->inTimes);
+    free(graphData->parents);
+    free(graphData);
+}
+
+// returns min up
+void dfs(GraphData *graphData, int v) {
+    graphData->colors[v] = GREY;
+    graphData->ups[v] = graphData->time;
+    graphData->inTimes[v] = graphData->time;
+    graphData->time++;
+    int childrenCnt = 0;
+    ListE *head = graphData->edges[v];
+    if (head) {
+        ListE *elem = head->next;
+        int u;
+        while (elem != head) {
+            u = elem->val.b;
+            if (!graphData->isTreeEdges[elem->val.id] &&
+                graphData->colors[u] != WHITE && graphData->inTimes[u] < graphData->ups[v])
+                graphData->ups[v] = graphData->inTimes[u];
+            if (graphData->colors[u] == WHITE) {
+                childrenCnt++;
+                graphData->isTreeEdges[elem->val.id] = 1;
+                graphData->parents[u] = v;
+                dfs(graphData, u);
+                if (graphData->ups[u] < graphData->ups[v])
+                    graphData->ups[v] = graphData->ups[u];
+                if (
+                    graphData->parents[v] != -1 && !graphData->isCutV[v]
+                    && graphData->ups[u] >= graphData->inTimes[v]
+                ) {
+                    graphData->cutVCnt++;
+                    graphData->isCutV[v] = 1;
+                }
+            }
+            elem = elem->next;
+        }
+    }
+    if (graphData->parents[v] == -1 && childrenCnt > 1) {
+        graphData->cutVCnt++;
+        graphData->isCutV[v] = 1;
+    }
+    graphData->colors[v] = BLACK;
+}
+
+void printCutEdges(GraphData *graphData) {
+    printf("%d\n", graphData->cutVCnt);
+    for (int i = 0; i < graphData->verticesCnt; ++i)
+        if (graphData->isCutV[i])
+            printf("%d ", i+1);
+}
+
+int main() {
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+
+    int n, m;
+    scanf("%d %d\n", &n, &m);
+    GraphData *graphData = initGraphData(n, m);
+    readEdges(graphData);
+
+    graphData->time = 0;
+    for (int i = 0; i < graphData->verticesCnt; ++i)
+        if (graphData->colors[i] == WHITE) {
+            graphData->parents[i] = -1;
+            dfs(graphData, i);
+        }
+
+    printCutEdges(graphData);
+
+    freeGraphData(graphData);
+    return 0;
+}
+```
 
 # 23.04.06 - семинар
 ## Поиск компонентов сильной связности
