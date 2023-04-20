@@ -25,6 +25,8 @@ Words, phrasal verbs and collocations that I have learned.
   - [CIU: Unit 24 - Music](#ciu-unit-24---music)
   - [CIU: Unit 25 - Sport](#ciu-unit-25---sport)
   - [CIU: Unit 26 - Health and illness](#ciu-unit-26---health-and-illness)
+  - [CIU: Unit 27 - Using the internet](#ciu-unit-27---using-the-internet)
+  - [CIU: Unit 28 - Study and learning](#ciu-unit-28---study-and-learning)
 - [Phrasal verbs in use](#phrasal-verbs-in-use)
   - [PVIU: Unit 27 - Success and failure](#pviu-unit-27---success-and-failure)
   - [PVIU: Unit 42 - The classroom and learning](#pviu-unit-42---the-classroom-and-learning)
@@ -697,6 +699,49 @@ In most everyday cases we can use *get* or *have* with illnesses but also we can
 - splitting headache - strong headache (будто голова раскалывается)
 - heavy cold
   - slight cold - opp.
+
+---
+
+## CIU: Unit 27 - Using the internet
+- do a web search
+- refine - усовершенствовать
+- evaluate - оценивать
+  - evaluate critically
+- issue - проблема / вопрос / задание
+  - back issues - прошлые издания (журнала или чего-то ещё, что выходит периодически)
+- hack into one's computer - вторгнуться в чей-то компьютер
+
+---
+
+## CIU: Unit 28 - Study and learning
+Alternatives for collocations with *do*, *get* and *go*:
+- (take / sit) an exam - do an exam (**process! Don't confuse with *pass an exam***)
+- (carry out / conduct) a research [project] - do a research [project]
+- (take / enrol on) course - do a course - пройти курс
+  - enrol - регистрировать
+- (study for / take) a degree - do a degree
+- (study for / take) - do a subject
+  - write an (essay / assignment) - do an (essay / assignment)
+- give a lecture - do a lecture
+- (obtain / to be awarded) a (diploma / degree) - get a (degree / diploma)
+- (receive / to be given) - get a grade
+- (obtain / acquire) a qualification - get a qualification
+- receive an education - get an education
+
+Formal collocations with other verbs:
+- attend the lecture - go to the lecture
+- class will be held - class will be
+- hand in work - give work - сдать
+- submit one's application - send in application - отправить заявку
+- withdraw from the course - leave the course
+
+Other collocations:
+- keep an abstract - вести конспект
+- (first / final) draft
+- give one's feedback
+- continuous assessment - продолжительная оценка (означает оценивание в процессе)
+- tertiary education - higher education
+- recognize qualification - признавать квалификацию
 
 ---
 
