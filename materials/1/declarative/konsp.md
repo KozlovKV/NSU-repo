@@ -129,6 +129,14 @@
   - [`right outer join`](#right-outer-join)
   - [`full outer join`](#full-outer-join)
   - [Alternative syntax](#alternative-syntax)
+- [23.04.20 - Lecture](#230420---lecture)
+  - [Grouping and aggregation](#grouping-and-aggregation)
+    - [`group by`](#group-by)
+    - [Execution order](#execution-order)
+    - [After-grouping selection](#after-grouping-selection)
+  - [Relational DB design](#relational-db-design)
+  - [Key types (by projection)](#key-types-by-projection)
+  - [Key types (by origin)](#key-types-by-origin)
 
 
 # Контакты преподов
@@ -1374,3 +1382,83 @@ FROM PRODUCT p, MATERIAL m
 WHERE p.BILL_ID = m.BILL_ID(+)
 ```
 **NOT SUPPORTED BY SQLITE**
+
+# 23.04.20 - Lecture
+## Grouping and aggregation
+### `group by`
+`group by NAME` - split record by selected column
+
+`group by` turns on specific aggregation mode when we can use attributes after `group by` for projection and other attributes in aggregation
+
+This query will show us wares' count by classes:
+```SQL
+SELECT CLASS, COUNT(WARE)
+FROM CATEGORY
+GROUP BY CLASS
+```
+
+All unique ware which are used as materials for different products:
+```SQL
+SELECT p.WARE AS PRODUCT,
+COUNT(m.WARE) AS MATERIALS_NUM
+FROM MATERIAL m
+JOIN PRODUCT p
+ON p.BILL_ID=m.BILL_ID
+GROUP BY p.WARE;
+
+-- Fixed version
+SELECT p.WARE AS PRODUCT,
+COUNT(DISTINCT m.WARE) AS MATERIALS_NUM
+FROM PRODUCT p
+LEFT JOIN MATERIAL m
+ON p.BILL_ID=m.BILL_ID
+GROUP BY p.WARE;
+```
+
+### Execution order
+1. `join` with `on`
+2. `where`
+3. `group by`
+4. `select`
+5. set operations
+6. `order by`
+7. `offset`, `limit`
+
+### After-grouping selection
+Because `where` goes before `group by`, we cannot filters grouped records.
+
+For additional filtering we can use `having` after `group by` statement. It's useless to use `having` for selection by columns names comparing. **Mostly used case is aggregations by ungrouped fields** (*but we also can use simple comparing for grouped fields*)
+
+Show string-list of all materials for products which need 2 or more materials
+```SQL
+SELECT p.WARE AS PRODUCT,
+GROUP_CONCAT(DISTINCT m.WARE) AS MATERIALS
+FROM PRODUCT p
+JOIN MATERIAL m
+ON p.BILL_ID=m.BILL_ID
+JOIN CATEGORY pc
+ON pc.WARE=p.WARE
+GROUP BY p.WARE
+HAVING COUNT(DISTINCT m.WARE)>1;
+```
+
+*В конце был 1 интересный слайд. Возможно имеет смысл его посмотреть*
+
+## Relational DB design
+Normalization - process of reducing the data redundency and improving the consistancy and efficency
+
+Superky - additional attribute that must have unique value for all of records in table.
+
+*Also superkey can be interpreted as projection that is bijective with record (thus, we can have many combinations of field for superkeys)*
+
+## Key types (by projection)
+- Candidate key - superkey without redundant fields.
+  - Prime attribute - part of candidate key.
+  - Simple key - candidate key that contains only 1 attribute
+  - Compound key - candidate composed from multiple attributes
+- Primary key - one of the candidate keys chosen to be used as the main identifier.
+- Foreign key - set of attributes that are equal to some candidate key. Used for references.
+
+## Key types (by origin)
+- Surrogate key - candidate key (usually simple) that is artifically generated
+- Natural key - simple or compund - candidate which comes from domain attributes 
