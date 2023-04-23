@@ -89,6 +89,8 @@
   - [Clause of reason (причины)](#clause-of-reason-причины)
   - [Clause of purpose (цели)](#clause-of-purpose-цели)
   - [Clause of contrast](#clause-of-contrast)
+  - [Clause of result](#clause-of-result)
+- [Murphey: Unit 85 - Some and any](#murphey-unit-85---some-and-any)
 
 # Websites
 - [Cambridge Learner's dictionary](https://dictionary.cambridge.org/dictionary/learner-english)
@@ -774,7 +776,7 @@ Complex-Conjunctions (*союзы для сложносочинённых (even 
 - **N**or
 - **B**ut
 - **O**r
-- **Y**es
+- **Y**et
 - **S**o
 
 **В сложносочинённых предложениях запятая чаще всего ставится.**
@@ -799,7 +801,7 @@ Conjunctions:
 
 ## Clause of purpose (цели)
 - to `Vinf` (**DO NOT USE WITH *not***)
-- in order to / so as to + `clause` (formal) (Negative forms: **in order not to / so as not to**)
+- in order to / so as to (formal) + `clause` (Negative forms: **in order not to / so as not to**)
 - so that
   - `can / will` - for present and future references (**we detect reference by verb in main clause**) (*We will add more kitties to TES 6 so that they will be wearing daedric armor*)
   - `could` / `would` - for past references (*Ivan was wearing a pink hoodie so that he could be mixed with Ruslan*)
@@ -819,3 +821,28 @@ Conjunctions:
 - in spite of / despite + `noun` / `-ing form` (*(In spite of / Despite) the bad weather, they sat in the garden* / *They sat in the garden (in spite of / despite) the (bad weather / weather being bad)*)
 - however (однако) / nevertheless (тем не менее) + `clause` - after these conjunctions comma is always used (*He was very motivated. (However / nevertheless) he lost*)
 - while / whereas + `clause` - in the meaning **"тогда как"** (*Your flat is big (while / whereas) mine is small*)
+
+## Clause of result
+- so + `clause` - поэтому
+- such (a / an) + `adj` + `singular countable noun` + `clause` - *She is such a nice girl (that) everybody likes her*
+- such + `adj` + `plural / uncountable noun` + `clause`
+  - *They are such friendly people (that) they make you feel welcome*
+  - *It was such hot weather (that) we went swimming*
+- such a lot of + `plural / uncountable noun` + `clause` - *They gave me such a lot of presents (that) I couldn't carry them home*
+- so + `adj/adv` + `clause` - *He runs so fast (that) no one can compete with him*
+- so (much / little) + `uncountable noun`
+- so (many / few) + `plural noun`
+- as a result / therefore / consequently
+
+# Murphey: Unit 85 - Some and any
+`Some` also used in positive sentences and `any` - in negative: *We bought some flowers* / *We didn't buy any flowers*
+
+`Any` is used even though the sentence has positive verbs forms but with negative meaning - *She went out without any money* = *She didn't take any money* 
+
+Both words can be used in questions but `some` (and `somebody`, `something`, etc.) means sth/sb exist (we think that or we know) and `any` (and `anybody`, `anything`, etc.) when we don't know anything about question object (`any` is used more often):
+- *Are you waiting for somebody* (I think you're waiting sb)
+- *Do anybody know him?* (We don't sure that anybody know him)
+
+`Any` can be used with `if`. `Any` also can mean "it doesn't matter which"
+
+**All words with `some` and `any` are SINGULAR, but pronouns for them are `they`, `them` etc. (Мы как бы говорим о ком-то неопределённом неизвестного пола и потому не конкретизируем его)** 

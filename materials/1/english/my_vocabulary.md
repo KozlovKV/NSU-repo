@@ -27,6 +27,7 @@ Words, phrasal verbs and collocations that I have learned.
   - [CIU: Unit 26 - Health and illness](#ciu-unit-26---health-and-illness)
   - [CIU: Unit 27 - Using the internet](#ciu-unit-27---using-the-internet)
   - [CIU: Unit 28 - Study and learning](#ciu-unit-28---study-and-learning)
+  - [CIU: Unit 29 - Presentations](#ciu-unit-29---presentations)
 - [Phrasal verbs in use](#phrasal-verbs-in-use)
   - [PVIU: Unit 27 - Success and failure](#pviu-unit-27---success-and-failure)
   - [PVIU: Unit 42 - The classroom and learning](#pviu-unit-42---the-classroom-and-learning)
@@ -664,7 +665,7 @@ Different words are associated with *water*:
 - fierce - жёстко
 - fail in drugs test - провалить тест на доппинг
 - tackle - столкнуться / сразиться
-- foul your opponent - уронить (*?*) оппонента
+- foul your opponent - очернить оппонента
 - whistle - свисток
 - substitute - замена
 - bring on a substitute - провести замену
@@ -673,7 +674,7 @@ Different words are associated with *water*:
 
 ## CIU: Unit 26 - Health and illness
 In most everyday cases we can use *get* or *have* with illnesses but also we can use these collocations:
-- catch (cold / flu / chill *?* / pneumonia)
+- catch (cold / flu / chill (озноб) / pneumonia)
 - contract (disease / malaria / typhoid) - formal
 - develop (cancer / AIDS (СПИД) / diabetes / arthritis / Alzheimer's disease)
 - suffer from (asthma / hay fever (аллергия) / backache)
@@ -742,6 +743,26 @@ Other collocations:
 - continuous assessment - продолжительная оценка (означает оценивание в процессе)
 - tertiary education - higher education
 - recognize qualification - признавать квалификацию
+
+---
+
+## CIU: Unit 29 - Presentations
+- core message - most important point(s)
+- target audience
+- (hold / keep) attention
+- interactive presentation - involving presentation
+- connect with audience
+- body language
+- (stand / sit) straight
+- hand gesture
+- maintain - поддерживать
+- eye connect
+- aids - вспомогательные средства
+  - visual aids
+- keep simple
+- follow argument - understand your reasons or explanation
+- bring to life - оживить (в данном контексте - сделать бодрее)
+- 
 
 ---
 
@@ -2077,3 +2098,4 @@ In this PV particle can place either before or after verb:
 - maul - мять
   - mauled - помятый
 - black eye - синяк под глазом
+- beforehand / in advance - заранее
