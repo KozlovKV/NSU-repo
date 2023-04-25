@@ -15,7 +15,7 @@ Words, phrasal verbs and collocations that I have learned.
   - [CIU: Unit 14 - Travel](#ciu-unit-14---travel)
   - [CIU: Unit 15 - Countryside](#ciu-unit-15---countryside)
   - [CIU: Unit 16 - Towns and cities](#ciu-unit-16---towns-and-cities)
-  - [CIU: Unit 17 - People: character and behaviour](#ciu-unit-17---people-character-and-behaviour)
+  - [CIU: Unit 17 - People: character and behavior](#ciu-unit-17---people-character-and-behavior)
   - [CIU: Unit 18 - People: physical appearance](#ciu-unit-18---people-physical-appearance)
   - [CIU: Unit 19 - Families](#ciu-unit-19---families)
   - [CIU: Unit 20 - Relationships](#ciu-unit-20---relationships)
@@ -42,7 +42,7 @@ Words, phrasal verbs and collocations that I have learned.
 - to appeal - взывать
   - appealing - привлекательный / привлекающий
 - arouse - пробуждать
-- I'd like to talk you through the following [number] points - я хотел бы поговорить с вами о следующих [number] пунктов
+- I'd like to talk you through the following [number] points - я хотел бы поговорить с вами о следующих [number] пунктах
 - as you can see
 - you'll notice
 - that means
@@ -65,7 +65,7 @@ Words, phrasal verbs and collocations that I have learned.
   - accept sth
   - write sth
   - wear particular size in clothes (*I take size 43 shoes*)
-- take it/things easy - делать что-то расслабленно
+- take (it/things) easy - делать что-то расслабленно
 - take a break
 
 ---
@@ -269,7 +269,7 @@ Different words are associated with *water*:
 - mist - fog / darkness
 - fog/mist comes down
   - opp. - lift
-- thick/dense fog / patches of fog/mist
+- (thick/dense) fog / patches of (fog/mist)
 - a blanket of fog
 - strong / weak sun
 - heavy (*NOT STRONG*) / driving rain
@@ -325,10 +325,10 @@ Different words are associated with *water*:
 ---
 
 ## CIU: Unit 15 - Countryside
-- surrounding contryside
+- surrounding countryside
 - gentle landscape - спокойный пейзаж
 - open fields
-- bleak - марчный
+- bleak - мрачный
   - bleak landscape
 - catch a glimpse of - мельком увидеть
 - catch sight of - заметить
@@ -350,14 +350,14 @@ Different words are associated with *water*:
 - uninterrupted view - открытый обзор
 - panoramic view - wide view
 - spectacular view - dramatic view
-- to enjoy / admire a view
+- to (enjoy / admire) a view
 - breathtaking scenery
 - to dominate the landscape - виднеться издалека (быть главной частью пейзажа на мили вокруг)
 - beach stretches - пляж раскинулся (тянется)
 - sandy beach
 - secluded beach - немноголюдный пляж
 - golden sands
-- peaceful / tranquil countryside 
+- (peaceful / tranquil) countryside 
 
 ---
 
@@ -374,7 +374,7 @@ Different words are associated with *water*:
 - pavement cafe
 - residential area - жилой район
 - high-rise flats - квартиры в многоэтажках
-- inner city - центр города (*в книжке почему-то отмечен, как зачастую неблагополучная часть города с беднейшим населением...*)
+- inner city - нижний город (*в отличие от downtown имеет несколько негативный окрас*)
 - imposing building - внушительное здание
 - urban wasteland - городская пустошь
 - no-go area - опасный для посещения район
@@ -396,7 +396,7 @@ Different words are associated with *water*:
 
 ---
 
-## CIU: Unit 17 - People: character and behaviour
+## CIU: Unit 17 - People: character and behavior
 - sb is good company
 - selfish streak
   - streak - полоса
@@ -521,7 +521,7 @@ Different words are associated with *water*:
 - mutual friends
 - a casual acquaintance - простые знакомые
 - have a good relationship with sb
-- keep in contact / touch
+- keep in (contact / touch)
   - lost - opp.
 - fall in love / fall madly in love / desperately in love with
 - love at first sight
@@ -547,7 +547,7 @@ Different words are associated with *water*:
 - refurbished - переоборудованный
 - do up - (for house) repair, repaint and decorate
 - (add / built) an extension - расширить квартиру
-- move into a flat / house - переселиться в квартиру дом
+- move into a (flat / house) - переселиться в квартиру / дом
 - move out - переселиться из места, где живёшь сейчас
 - dilapidated - полуразрушенный
 - draughty - продуваемый сквозняком
@@ -762,7 +762,6 @@ Other collocations:
 - keep simple
 - follow argument - understand your reasons or explanation
 - bring to life - оживить (в данном контексте - сделать бодрее)
-- 
 
 ---
 

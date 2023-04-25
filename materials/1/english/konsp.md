@@ -91,6 +91,7 @@
   - [Clause of contrast](#clause-of-contrast)
   - [Clause of result](#clause-of-result)
 - [Murphey: Unit 85 - Some and any](#murphey-unit-85---some-and-any)
+- [Murphey: Unit 86 - No/none/any and Nothing/nobody](#murphey-unit-86---nononeany-and-nothingnobody)
 
 # Websites
 - [Cambridge Learner's dictionary](https://dictionary.cambridge.org/dictionary/learner-english)
@@ -846,3 +847,11 @@ Both words can be used in questions but `some` (and `somebody`, `something`, etc
 `Any` can be used with `if`. `Any` also can mean "it doesn't matter which"
 
 **All words with `some` and `any` are SINGULAR, but pronouns for them are `they`, `them` etc. (Мы как бы говорим о ком-то неопределённом неизвестного пола и потому не конкретизируем его)** 
+
+# Murphey: Unit 86 - No/none/any and Nothing/nobody
+We use `no <noun>` as *not a* or *not any* (*There was no shops open*) and `none` without nouns (*All tickets have been sold. There are none left*) or `none of <noun>` (*This money is all yours. None of it is mine*)
+
+`Nothing`, `nobody` etc. = `not anything`, `not anybody` etc. These words have negative meaning so we cannot use negative verbs with them.
+
+As `somebody`, with `nobody`, `no-one` etc. we can use plural pronouns to show undefined reference.
+

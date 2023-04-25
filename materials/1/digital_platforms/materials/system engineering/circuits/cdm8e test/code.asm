@@ -1,7 +1,9 @@
 asect 0xf0
 IOA: 
 
-asect 0
+asect 0x00
+goto eq, start
+
 start:
 
 	setsp 0xf0
