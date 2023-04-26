@@ -643,6 +643,7 @@ Different words are associated with *water*:
 - strum a guitar - бренчать на гитаре
 - take up - принять / заняться
   - take up the guitar
+- feature - представлять (*в этом контексте*)
 
 ---
 
@@ -2098,3 +2099,8 @@ In this PV particle can place either before or after verb:
   - mauled - помятый
 - black eye - синяк под глазом
 - beforehand / in advance - заранее
+- mat - коврик
+- mustard - горчица
+- vinegar - уксус
+- grate - тереть
+- secluded - изолированный
