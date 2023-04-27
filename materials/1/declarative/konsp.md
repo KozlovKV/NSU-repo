@@ -137,6 +137,12 @@
   - [Relational DB design](#relational-db-design)
   - [Key types (by projection)](#key-types-by-projection)
   - [Key types (by origin)](#key-types-by-origin)
+- [23.04.27 - lecture](#230427---lecture)
+  - [Normal forms (Continue about DB design)](#normal-forms-continue-about-db-design)
+    - [Multivaluated dependencies (4NF)](#multivaluated-dependencies-4nf)
+    - [REAL non-binary (join) dependency (5NF)](#real-non-binary-join-dependency-5nf)
+  - [Relational design with entities](#relational-design-with-entities)
+    - [DB design procedure](#db-design-procedure)
 
 
 # Контакты преподов
@@ -1462,3 +1468,150 @@ Superky - additional attribute that must have unique value for all of records in
 ## Key types (by origin)
 - Surrogate key - candidate key (usually simple) that is artifically generated
 - Natural key - simple or compund - candidate which comes from domain attributes 
+
+# 23.04.27 - lecture
+## Normal forms (Continue about DB design)
+**1NF** - every record is unique
+
+**2NF** - 1NF + all non-prime attributes are in fucntional dependency from any whole candidate key
+
+Non-2NF example:
+```SQL
+CATEGORY:
+  WARE TEXT (PK)
+  CLASS TEXT (PK)
+  RECOMMENDED_PRICE REAL
+```
+But `RECOMMENDED_PRICE` must depence only from `WARE`. Thus we need this schemes:
+```SQL
+CATEGORY:
+  WARE TEXT (PK,FK)
+  CLASS TEXT (PK)
+WARE:
+  WARE TEXT (PK)
+  RECOMMENDED_PRICE REAL
+```
+
+**Heath's Theorem** if we have relation `R = {A, B, C}` and `A -> B` then `R = {A, B} + {A, C}` where `{A, B}` and `{A, C}` are projections.
+
+**3NF** - 2NF + forall non-prime attributes there are no transitive functional dependencies from any candidate key
+
+Non-3NF example:
+```SQL
+ANUFACTURER:
+  BILL_ID INTEGER (PK)
+  COMPANY TEXT
+  ADDRESS TEXT
+```
+Address depends to `BILL_ID` but also address is unique for `COMPANY`
+
+3NF example:
+```SQL
+MANUFACTURER:
+  BILL_ID INTEGER (PK)
+  COMPANY TEXT (FK)
+COMPANY:
+  COMPANY TEXT (PK)
+  ADDRESS TEXT
+```
+
+**Boyce-Codd normal form (BCNF or 3.5NF)** - any functional dependency `f: A -> B` must be one of cases below:
+- `f` is trivial (`B` is subset of `A`)
+- `A` is a superkey
+
+Non-BCNF example:
+```SQL
+PRODUCT:
+  BILL_ID INTEGER (PK, CK)
+  WARE TEXT (PK)
+  BRAND TEXT (CK)
+  …
+```
+Brand depends only from `BILL_ID` => non-2NF, but `BRAND` and `BILL_ID` compose new candidate key so we cannot use `2NF` rules, but can use `BCNF` rules:
+```SQL
+PRODUCT:
+  BILL_ID INTEGER (PK,FK)
+  BRAND TEXT (PK,FK)
+  …
+BRANDING:
+  BRAND TEXT (PK)
+  WARE TEXT
+```
+*Yes. We have 1 additional NF but algorithm is the same*
+
+### Multivaluated dependencies (4NF)
+For relation with `cols > 2` (e.g. `R = {A, B, C}`) we define multivalued dependency `A ->> B` iff for each `(A, C)` the set of values `B` will depends only from `A`
+
+Pseudo SQL example:
+```SQL
+SELECT B FROM R WHERE A=a AND C=c1
+SELECT B FROM R WHERE A=a AND C=c2
+-- Both queries must return the same result
+```
+
+For `R = {A, B, C}` we have multivalued dependency `A ->> B` we also have multivalued dependency `A ->> C` (common write: `A ->> B | C`)
+
+**Fegin's theorem** - if we have multivalued `A ->> B | C` for relation `R = {A, B, C}` than `R = {A, B} + {A, C}`
+
+**4NF** - BCNF + if we have `A ->> B` one of this cases must be true:
+- `A ->> B` is `A -> B` (functional dependency) 
+- `A ->> B` is trivial (`R = A + B` - BOTH FIELDS ARE PRIMARY AND RELATION HAS NOTHING ELSE)
+
+Non-4NF example:
+```SQL
+CATEGORY:
+  WARE TEXT (PK)
+  CLASS TEXT (PK)
+  TRADER TEXT (PK)
+  PROD_CONDITION TEXT (PK)
+```
+4NF example:
+```SQL
+CATEGORY:
+  WARE TEXT (PK)
+  CLASS TEXT (PK)
+TRADER:
+  WARE TEXT (PK)
+  TRADER TEXT (PK)
+PROD_CONDITION:
+  WARE TEXT (PK)
+  CONDITION TEXT (PK)
+```
+
+### REAL non-binary (join) dependency (5NF)
+**Join dependency** is a generalized version of multivalued dependency.
+
+**5NF** - there is no join dependencies besides simple multivalued dependencies.
+
+Non-5NF example:
+```SQL
+RETAIL:
+  WARE TEXT (PK)
+  TRADER TEXT (PK)
+  MANUFACTURER TEXT (PK)
+```
+5NF example:
+```SQL
+RETAIL_LICENSE:
+  TRADER TEXT (PK)
+  WARE TEXT (PK)
+MANUFACTURING:
+  WARE TEXT (PK)
+  MANUFACTURER TEXT (PK)
+RETAIL_CONTRACT:
+  TRADER TEXT (PK)
+  MANUFACTURER TEXT (PK)
+```
+**More harder to get data, but easier to put**
+
+## Relational design with entities
+Example of entities schema with Crow's foot notation:
+![](./lectures/SQL/SQL_lec04_entities.png)
+
+### DB design procedure
+1. Identify entities and their PK (or create surrogate)
+2. Identify all the properties
+3. Single-valued property comes to entity (simple dependency)
+4. Each multivalued property comes to the separate table (4NF)
+5. All properties that have their own attributes become separate entities and go to separate table (2NF)
+6. Indentify all the relationships between entitites
