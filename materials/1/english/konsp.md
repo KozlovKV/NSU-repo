@@ -834,6 +834,7 @@ Conjunctions:
 - so (much / little) + `uncountable noun`
 - so (many / few) + `plural noun`
 - as a result / therefore / consequently
+  - After them comma goes when they are at the begin of sentence
 
 # Murphey: Unit 85 - Some and any
 `Some` also used in positive sentences and `any` - in negative: *We bought some flowers* / *We didn't buy any flowers*

@@ -143,6 +143,8 @@
     - [REAL non-binary (join) dependency (5NF)](#real-non-binary-join-dependency-5nf)
   - [Relational design with entities](#relational-design-with-entities)
     - [DB design procedure](#db-design-procedure)
+- [23.05.04 - lecture](#230504---lecture)
+  - [Subqueries](#subqueries)
 
 
 # Контакты преподов
@@ -1615,3 +1617,85 @@ Example of entities schema with Crow's foot notation:
 4. Each multivalued property comes to the separate table (4NF)
 5. All properties that have their own attributes become separate entities and go to separate table (2NF)
 6. Indentify all the relationships between entitites
+
+# 23.05.04 - lecture
+## Subqueries
+Every `SELECT` produces table-like structure so we can use query in query.
+
+Example:
+```SQL
+SELECT DISTINCT m.COMPANY
+FROM MANUFACTURER m,
+  (SELECT p.BILL_ID AS BILL
+  FROM PRODUCT p, CATEGORY c
+  WHERE p.WARE=c.WARE AND c.CLASS='Food') b
+WHERE m.BILL_ID=b.BILL;
+```
+
+Subqueries are good for designing but work slower.
+
+Main tips:
+1. Write initial queries with subqueries
+2. Try to rewrite queries without sub-q
+3. Keep sub-q simple, move all complexity to the parent query
+
+Subqueries example in `WHERE-IN` expression:
+```SQL
+SELECT DISTINCT COMPANY
+FROM MANUFACTURER
+WHERE BILL_ID IN (
+  SELECT BILL_ID
+  FROM PRODUCT
+  WHERE WARE IN (
+    SELECT WARE
+    FROM CATEGORY
+    WHERE CLASS='Food'
+  )
+);
+```
+
+`EXISTS` - true if we have at least one row in tuple.
+
+`NOT EXISTS` - opposite
+
+**In subquery we can access all data from parent query.**
+
+Example with one row for product with its materials ordered by `ASC`:
+```SQL
+SELECT p.WARE, (
+  SELECT GROUP_CONCAT(WARE)
+  FROM (
+    SELECT DISTINCT mt1.WARE
+    FROM MATERIAL mt1, PRODUCT p1
+    WHERE mt1.BILL_ID=p1.BILL_ID
+    AND p1.WARE=p.WARE
+    ORDER BY mt1.WARE
+  )
+)
+FROM (SELECT DISTINCT WARE FROM PRODUCT) p
+ORDER BY p.WARE;
+```
+
+*Imo, `GROUP BY` is better*
+
+Example of query which gives all companies producing having >= 2 different bills:
+```SQL
+SELECT m.COMPANY,
+  (
+    SELECT COUNT(BILL_ID) FROM MANUFACTURER m1
+    WHERE m1.COMPANY=m.COMPANY
+  ) AS CNT
+FROM (SELECT DISTINCT COMPANY FROM MANUFACTURER) m
+WHERE CNT > 2;
+```
+Example with `GROUP BY` (*fastest*):
+```SQL
+SELECT DISTINCT m.COMPANY
+  FROM MANUFACTURER m
+  GROUP BY m.COMPANY
+  HAVING COUNT(BILL_ID) > 2;
+```
+
+Comparing of filtering using `COUNT`, `[NOT] EXISTS` and `JOIN`:
+![](./lectures/SQL/SQL_lec05_comparing_count_exists_and_join.png)
+
