@@ -1,5 +1,8 @@
 Words, phrasal verbs and collocations that I have learned.
 
+- [Collocations for letters](#collocations-for-letters)
+  - [For business letters](#for-business-letters)
+  - [For friendly letters](#for-friendly-letters)
 - [Collocations for the presentation](#collocations-for-the-presentation)
 - [Vocabulary in use](#vocabulary-in-use)
   - [VIU: Unit 81 - Make, do and take: uses and phrases](#viu-unit-81---make-do-and-take-uses-and-phrases)
@@ -28,6 +31,7 @@ Words, phrasal verbs and collocations that I have learned.
   - [CIU: Unit 27 - Using the internet](#ciu-unit-27---using-the-internet)
   - [CIU: Unit 28 - Study and learning](#ciu-unit-28---study-and-learning)
   - [CIU: Unit 29 - Presentations](#ciu-unit-29---presentations)
+  - [CIU: Unit 30 - Work](#ciu-unit-30---work)
 - [Phrasal verbs in use](#phrasal-verbs-in-use)
   - [PVIU: Unit 27 - Success and failure](#pviu-unit-27---success-and-failure)
   - [PVIU: Unit 42 - The classroom and learning](#pviu-unit-42---the-classroom-and-learning)
@@ -35,6 +39,86 @@ Words, phrasal verbs and collocations that I have learned.
   - [PVIU: Unit 68 - Power and authority](#pviu-unit-68---power-and-authority)
 - [Common words](#common-words)
 
+# Collocations for letters
+## For business letters
+Finishing:
+- should you need any further information, please do not hesitate to contact me
+  - hesitate - стесняться / колебаться
+- we would appreciate your cooperation in this matter - будем признательны за сотрудничество в этом вопросе
+- thanks for your extremely helpful attention to this matter
+- thanks again for your attention, consideration, and time
+  - consideration - рассмотрение / тщательное обдумывание
+- we look forward to building a strong business relationship in the future
+- we take this opportunity of thanking you for your assistance
+- we are looking forward to your confirmation
+- we look forward to hearing from you soon
+- it is always a pleasure doing business with you
+- assuring you of our best attention at all times
+  - assure - уверять
+
+Signatures:
+- **This 2 signatures are used for cases when writer doesn't know recipient personally**
+  - yours faithfully - с искренним почтением
+  - respectfully yours - с уважением
+- sincerely yours - искренне ваш
+- with appreciation - искренне признателен
+- with gratitude - искренне благодарен
+- thanks and regards - с благодарностью и пожеланием добра
+- best regards
+- kind regards
+- best wishes - с желанием успехов
+
+## For friendly letters
+Finishing:
+- well, got to go now - что ж, на этом пожалуй всё
+- anyway, I must go and get with my work
+- I must finish my letter because I must go to bed
+- do keep in touch - будем на связи
+- I'm sorry I must go to (sth)
+- I have much work to do
+- hope to hear from you soon
+- well, I must finish now
+- write back soon!
+- write soon and let me know all the news
+- can't wait to hear from you!
+- don't forget to write!
+- please, tell me more about (sth)
+- let me know what happens - расскажи, что у вас происходит (**не "расскажи мне, что случилось"**)
+- drop me a line when you're free - напиши пару строчек, когда будешь свободен
+- bye for now! - а теперь пока
+- have a nice day!
+
+Signatures:
+- For relatives and kind friends:
+  - yours cordially - сердечно твой
+  - yours ever - всегда твой
+  - eternally yours - неизменно твой
+  - your loving (brother / sister / etc.)
+  - your friend
+  - your very sincere friend - твой преданный друг
+  - best wishes
+  - give my regards to (sb) - передавай привет
+  - all the best - всего наилучшего
+- For best friends and lovers
+  - affectionately - с нежностью
+  - lots of love
+  - lots of kisses
+  - hugs - обнимаю
+  - with love and kisses
+  - with all my love
+  - passionately yours - страстно твой
+  - always and forever - твой навеки веков (*никогда не говори "никогда"... и "всегда"*)
+  - missing you - скучаю по тебе
+  - send my love to (sb) - передавай привет
+  - take care
+  - till next time - до следующего раза
+    - till - short version of *until*
+  - see you soon
+  - see ya - увидимся
+  - cheers! - пока
+  - ciao! - чао
+
+---
 
 # Collocations for the presentation
 - (some enumerations) and things like that
@@ -693,7 +777,7 @@ In most everyday cases we can use *get* or *have* with illnesses but also we can
 - (excruciating / unbearable) pain - невыносимая боль
 - ailment - недуг
 - life-threating
-- (acutely / intensely) painful - отсрая боль
+- (acutely / intensely) painful - острая боль
   - dull ache - opp.
 - prescribe medicines - прописать лекарства
 - relieve - освободить
@@ -763,6 +847,43 @@ Other collocations:
 - keep simple
 - follow argument - understand your reasons or explanation
 - bring to life - оживить (в данном контексте - сделать бодрее)
+
+---
+
+## CIU: Unit 30 - Work
+- have a job (**NOT *have a work***)
+- a fulfilling job - приносящая удовлетворение работа
+- high-powered job - высокоэффективная работа (мощная) / важная работа
+- a demanding job - ответственная работа
+- to apply for a job - согласиться на работу / устроиться на работу
+- a steady job - стабильная работа
+- to offer someone a job
+- a permanent job - постоянная работа
+- to carry out work - осуществлять работу
+- to complete work
+- available to start work
+- to supervise work
+- to work closely with - тесно сотрудничать с кем-то
+- to take on work - взяться за работу
+- to (wreck / ruin) someone's career - разрушить чью-то карьеру
+- at the (height / peak) of sb's career
+- sb's career lasted
+- ladder - лестница
+- to climb the career ladder
+- embark - начинать
+- to embark on a career
+- to have a career in [some sphere]
+- a promising career
+- a brilliant career
+- a career takes off - то же значение, что и для самолёта - взлёт
+- team player
+- close team
+- integral part - неотъемлемая часть
+- job satisfaction
+- generous benefits
+- entitlement - право
+- vacancy must be filled
+- take a minutes - вести запись (*стенограмму?*)
 
 ---
 
