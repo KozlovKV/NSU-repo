@@ -145,6 +145,13 @@
     - [DB design procedure](#db-design-procedure)
 - [23.05.04 - lecture](#230504---lecture)
   - [Subqueries](#subqueries)
+- [23.05.11 - lecture](#230511---lecture)
+  - [How optimize queries?](#how-optimize-queries)
+  - [Special joins aplgos](#special-joins-aplgos)
+    - [Nested loops join](#nested-loops-join)
+    - [Hash join DB](#hash-join-db)
+    - [Merge-join](#merge-join)
+  - [Laziness](#laziness)
 
 
 # Контакты преподов
@@ -1353,7 +1360,7 @@ We can join 1 table more than once (i.e. to find unique records that have one qu
 
 Types of join:
 - Equijoin - selection by `=`
-- theta-join - selection by other conditional operaotrs
+- theta-join - selection by other conditional operators
 - Cross join - both types of join above
 
 **Equijoin is the most effective type**
@@ -1699,3 +1706,37 @@ SELECT DISTINCT m.COMPANY
 Comparing of filtering using `COUNT`, `[NOT] EXISTS` and `JOIN`:
 ![](./lectures/SQL/SQL_lec05_comparing_count_exists_and_join.png)
 
+# 23.05.11 - lecture
+## How optimize queries?
+Main close - make the total complexity close as possible to the final cardinality
+
+Sub-goal - kepp complexity as small as possible on each stage
+
+Rule - keep the cardinality as small as possible
+
+**Hint 1** - place filters as early as possible
+
+**Hint 2** - place joins with lower cardinality as early as possible
+
+## Special joins aplgos
+**For this algorighms we should define indexed field in tables**
+### Nested loops join
+For tables `T1` and `T2` and predicate `P`: for each `row1 in T1` and `row2 in T2`: `result += (row1, row2) when P(row1, row2)`
+
+`O(N*M)`
+
+### Hash join DB
+Use hash-table concept
+
+**Only for equijoin**
+
+**DB version with index tree also supports `<` and `>`**
+
+`O(N log M)`
+
+### Merge-join
+Merges pre-sorted `T1` and `T2`
+
+**Predicates: `=`, `<`, `>`**
+
+## Laziness
