@@ -32,6 +32,8 @@ Words, phrasal verbs and collocations that I have learned.
   - [CIU: Unit 28 - Study and learning](#ciu-unit-28---study-and-learning)
   - [CIU: Unit 29 - Presentations](#ciu-unit-29---presentations)
   - [CIU: Unit 30 - Work](#ciu-unit-30---work)
+  - [CIU: Unit 31 - Business](#ciu-unit-31---business)
+  - [CIU: Unit 32 -](#ciu-unit-32--)
 - [Phrasal verbs in use](#phrasal-verbs-in-use)
   - [PVIU: Unit 27 - Success and failure](#pviu-unit-27---success-and-failure)
   - [PVIU: Unit 42 - The classroom and learning](#pviu-unit-42---the-classroom-and-learning)
@@ -884,6 +886,39 @@ Other collocations:
 - entitlement - право
 - vacancy must be filled
 - take a minutes - вести запись (*стенограмму?*)
+
+---
+
+## CIU: Unit 31 - Business
+- do business - **NOT *make***
+- go into business
+- set up a business
+- go into partnership
+- make a loss - понести убытки
+- make a profit
+- business is going under / will fold (*свёртка, лол*) / going bankrupt / go out of business - обанкротился / провалился
+- win a contract
+- (cut-throat / stiff) competition
+  - stiff - жёсткая
+- take on staff - набирать персонал
+- sales figures - показатели продаж
+- annual turnover - ежегодный оборот
+- rumour - слух
+- (carry out / conduct) market research
+- float the company / go public - (for business) start IPO
+- cease trading - прекратить торговлю
+- market forces - **невидимая рука рыыынка**
+- business is booming - business is going very well
+- rival - конкурент
+- resign - уволиться
+- (do / strike) a deal
+- leisure - досуг
+- put in a bid - предложить услуги
+  - bid - заявка
+
+---
+
+## CIU: Unit 32 - 
 
 ---
 
