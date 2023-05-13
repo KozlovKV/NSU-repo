@@ -33,7 +33,8 @@ Words, phrasal verbs and collocations that I have learned.
   - [CIU: Unit 29 - Presentations](#ciu-unit-29---presentations)
   - [CIU: Unit 30 - Work](#ciu-unit-30---work)
   - [CIU: Unit 31 - Business](#ciu-unit-31---business)
-  - [CIU: Unit 32 -](#ciu-unit-32--)
+  - [CIU: Unit 32 - Academic writing: giving opinions](#ciu-unit-32---academic-writing-giving-opinions)
+  - [CIU: Unit 33 - Academic writing 2: structuring an argument](#ciu-unit-33---academic-writing-2-structuring-an-argument)
 - [Phrasal verbs in use](#phrasal-verbs-in-use)
   - [PVIU: Unit 27 - Success and failure](#pviu-unit-27---success-and-failure)
   - [PVIU: Unit 42 - The classroom and learning](#pviu-unit-42---the-classroom-and-learning)
@@ -918,7 +919,66 @@ Other collocations:
 
 ---
 
-## CIU: Unit 32 - 
+## CIU: Unit 32 - Academic writing: giving opinions
+- groundbreaking - новаторский
+- shape thinking
+  - to shape - формировать
+- make a significant contribution
+- give an account - предоставить отчёт
+- give an account of (sth) - рассказать о чёи-то
+- support the claim
+  - claim - претензия
+- concise summary
+  - concise - лаконичный
+- defend strenuously
+  - strenuously - усиленно
+- come under attack
+- play a central role
+- go into great details - вдаваться в мельчайшие детали
+- significant trend
+- establish a connection - установить связь
+- irrefutable proofs - нерушимые доказательства
+- key factor
+- perfect example
+- clear illustration
+- long-term - долговременный
+- tentative explanation - предварительное объяснение
+- broadly support - широко поддерживает
+- strong tendency
+- inferior - низший
+- gather evidence
+  - to gather - собирать
+- carry out a study
+- (carry out / do) research - **NOT** make
+- play a part - играть роль
+- supporting evidence - подкрепляющие доказательства
+- challenge the theory - испытывать теорию / бросать вызов теории
+- acknowledge your sources
+  - acknowledge - признавать / отмечать
+- commit plagiarism - совершить плагиат
+
+---
+
+## CIU: Unit 33 - Academic writing 2: structuring an argument
+- fall into (number) categories - разделяются на сколько-то категорий
+- make reference to (sb/sth)
+- draw a distinction between - обозначить различие между
+- raise question
+- touch on issue - влиять на вопрос
+- make a case for - приводить доводы в пользу
+- take into consideration - принять во внимание
+- assess the significance - оценивать значимость
+- lays emphasis on - делать акцент на
+- lend support to - дают поддержку
+- attitude - отношение
+- hold firmly to - крепко держатся за
+- draw an analogy
+- draw parallels
+- (take up / adopt) the position - занимать позицию
+- argue convincingly
+  - convincingly - убедительно
+- disagree profoundly - глубоко не согласен
+- draw a conclusion
 
 ---
 
