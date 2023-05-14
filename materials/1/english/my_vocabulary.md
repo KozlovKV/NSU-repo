@@ -36,6 +36,7 @@ Words, phrasal verbs and collocations that I have learned.
   - [CIU: Unit 32 - Academic writing: giving opinions](#ciu-unit-32---academic-writing-giving-opinions)
   - [CIU: Unit 33 - Academic writing 2: structuring an argument](#ciu-unit-33---academic-writing-2-structuring-an-argument)
   - [CIU: Unit 34 - Laws and punishments](#ciu-unit-34---laws-and-punishments)
+  - [CIU: Unit 35 - Crime](#ciu-unit-35---crime)
 - [Phrasal verbs in use](#phrasal-verbs-in-use)
   - [PVIU: Unit 27 - Success and failure](#pviu-unit-27---success-and-failure)
   - [PVIU: Unit 42 - The classroom and learning](#pviu-unit-42---the-classroom-and-learning)
@@ -1016,6 +1017,38 @@ Punishment collocations:
 - a harsh (penalty / sentence) - суровый приговор
 - hard legal battle - тяжёлая судебная тяжба
 - win a case - выиграть дело (*судебно в данном случае*)
+
+---
+
+## CIU: Unit 35 - Crime
+- hardened criminal
+  - hardened - затвердевший
+- offenсe - преступление
+- serve a sentence of - отбывать наказание в виде
+- common criminal - обычный преступник
+- political prisoner
+- act of terrorism
+- the lawyer for the prosecution - адвокат обвинения (прокурор)
+  - prosecution - обвинение
+- conviction crime - осуждение за преступление
+- convicted criminal - осуждённый преступник
+- criminal record - судимость
+- offender - правонарушитель
+- vital - жизненно важный
+- (fight against / tackle / combat) crime - бороться с преступностью
+- break into house
+- steal (sth)
+- rob (sb)
+- juvenile crime - подростковая преступность / преступления несовершеннолетних
+- crime wave
+- petty crime - несерьёзные преступления (*без насилия?*)
+- spate of burglaries
+  - spate - поток
+  - burglary - кража со взломом
+- staggering increase - ошеломляющий рост
+- vehicle theft
+- drug abuse
+- mindless vandalism
 
 ---
 
