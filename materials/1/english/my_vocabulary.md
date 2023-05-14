@@ -35,6 +35,7 @@ Words, phrasal verbs and collocations that I have learned.
   - [CIU: Unit 31 - Business](#ciu-unit-31---business)
   - [CIU: Unit 32 - Academic writing: giving opinions](#ciu-unit-32---academic-writing-giving-opinions)
   - [CIU: Unit 33 - Academic writing 2: structuring an argument](#ciu-unit-33---academic-writing-2-structuring-an-argument)
+  - [CIU: Unit 34 - Laws and punishments](#ciu-unit-34---laws-and-punishments)
 - [Phrasal verbs in use](#phrasal-verbs-in-use)
   - [PVIU: Unit 27 - Success and failure](#pviu-unit-27---success-and-failure)
   - [PVIU: Unit 42 - The classroom and learning](#pviu-unit-42---the-classroom-and-learning)
@@ -979,6 +980,42 @@ Other collocations:
   - convincingly - убедительно
 - disagree profoundly - глубоко не согласен
 - draw a conclusion
+
+---
+
+## CIU: Unit 34 - Laws and punishments
+Laws and rules collocations:
+- (observe / obey) the law - соблюдать закон (the first is more formal)
+- the law (pass / introduce) (sth) - закон вводит что-то
+- act within the law - действовать в рамках закона
+- (uphold / enforce) the law - защищать закон
+- break the law
+- respect the law
+- forbid / prohibit - запрещать
+- permit / allow
+- (rules / regulations) apply to - правила относятся к
+- follow the rules
+  - comply with the regulations - formal
+- the regulations (require / stipulate)
+  - stipulate - оговаривать
+- bend the rules - обойти правила (*почти дословно*), когда речь о каком-то не критичном моменте
+
+Punishment collocations:
+- carry out an investigation
+- appear in court - явиться в суд
+- go on trial - предстать перед судом
+- a fair trial - честный суд
+- reach a verdict - вынести вердикт
+- be severely punished - быть сурово наказанным
+- (pay / face) a [heavy] fine - получить [жёсткий] штраф
+- face the death penalty
+  - death penalty - смертная казнь (*ну и название, мать вашу...*)
+- act as deterrent
+  - deterrent - сдерживающий фактор
+- suffer the consequences - пострадать от последствий
+- a harsh (penalty / sentence) - суровый приговор
+- hard legal battle - тяжёлая судебная тяжба
+- win a case - выиграть дело (*судебно в данном случае*)
 
 ---
 
