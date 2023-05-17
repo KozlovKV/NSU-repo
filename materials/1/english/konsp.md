@@ -815,11 +815,11 @@ Conjunctions:
 
 ## Clause of contrast
 - but + `clause` (*She had a cold, but she went to work*)
-  - yet + `clause` - formal
+  - yet + `clause` - formal - и всё же
 - although / even though / though + `clause`
   - *even though* more emphatic than *although* (*She went to work (although / even though) she had a cold* / *(Although / Even though) she had a cold, she went to work*)
   - *though* is usually used in everyday speech, can be placed at the end (*She went to work though she had a cold* / *She went to work, she had a cold though*)
-- in spite of / despite + `noun` / `-ing form` (*(In spite of / Despite) the bad weather, they sat in the garden* / *They sat in the garden (in spite of / despite) the (bad weather / weather being bad)*)
+- in spite of (назло) / despite (несмотря на / вопреки) + `noun` / `-ing form` (*(In spite of / Despite) the bad weather, they sat in the garden* / *They sat in the garden (in spite of / despite) the (bad weather / weather being bad)*)
 - however (однако) / nevertheless (тем не менее) + `clause` - after these conjunctions comma is always used (*He was very motivated. (However / nevertheless) he lost*)
 - while / whereas + `clause` - in the meaning **"тогда как"** (*Your flat is big (while / whereas) mine is small*)
 

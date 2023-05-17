@@ -138,6 +138,9 @@ Signatures:
 - I'd now like to tell you about / I'm going to talk you
 - run out of time - выйти за сроки
 - feel free / you're welcome
+- sorry, but this question is irrelevant
+- during our presentation we will talk about
+- after the presentation / at the end of presentation
 
 # Vocabulary in use
 ## VIU: Unit 81 - Make, do and take: uses and phrases
@@ -2390,3 +2393,6 @@ In this PV particle can place either before or after verb:
 - vinegar - уксус
 - grate - тереть
 - secluded - изолированный
+- common sense - здравый смысл
+- chalk - мел
+- ware - товар
