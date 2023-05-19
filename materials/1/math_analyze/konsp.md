@@ -2300,7 +2300,7 @@ $$
 Для вектора $\vec{t}$ определяются частные производные по каждой компоненте вектора $\vec{t}$:
 
 $$
-\froall J \le m : \frac{d g}{d t_j} = \sum_{i=1}^n \frac{df}{dx_i}\frac{dx_i}{d t_j}
+\forall J \le m : \frac{d g}{d t_j} = \sum_{i=1}^n \frac{df}{dx_i}\frac{dx_i}{d t_j}
 $$
 
 ## Касательная к плоскости функции от двух переменных
