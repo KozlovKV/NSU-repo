@@ -132,6 +132,7 @@ Signatures:
   - appealing - привлекательный / привлекающий
 - arouse - пробуждать
 - I'd like to talk you through the following [number] points - я хотел бы поговорить с вами о следующих [number] пунктах
+  - I'm going to (focus on / look at / deal with) [number] main points
 - as you can see
 - you'll notice
 - that means
@@ -141,6 +142,11 @@ Signatures:
 - sorry, but this question is irrelevant
 - during our presentation we will talk about
 - after the presentation / at the end of presentation
+- There'll be plenty of time for question at the end of my presentation
+- If you have any questions I'd be happy to answer them now
+- today I'd like to talk you about
+- for those of you who don't know me, I'm...
+- let me start from telling a lot of bit about my background
 
 # Vocabulary in use
 ## VIU: Unit 81 - Make, do and take: uses and phrases
