@@ -37,6 +37,9 @@ Words, phrasal verbs and collocations that I have learned.
   - [CIU: Unit 33 - Academic writing 2: structuring an argument](#ciu-unit-33---academic-writing-2-structuring-an-argument)
   - [CIU: Unit 34 - Laws and punishments](#ciu-unit-34---laws-and-punishments)
   - [CIU: Unit 35 - Crime](#ciu-unit-35---crime)
+  - [CIU: Unit 36 - News](#ciu-unit-36---news)
+  - [CIU: Unit 37 - Money](#ciu-unit-37---money)
+  - [CIU: Unit 38 - War and peace](#ciu-unit-38---war-and-peace)
 - [Phrasal verbs in use](#phrasal-verbs-in-use)
   - [PVIU: Unit 27 - Success and failure](#pviu-unit-27---success-and-failure)
   - [PVIU: Unit 42 - The classroom and learning](#pviu-unit-42---the-classroom-and-learning)
@@ -131,7 +134,7 @@ Signatures:
 - to appeal - взывать
   - appealing - привлекательный / привлекающий
 - arouse - пробуждать
-- I'd like to talk you through the following [number] points - я хотел бы поговорить с вами о следующих [number] пунктах
+- I'd like to take you through the following [number] points - я хотел бы поговорить с вами о следующих [number] пунктах
   - I'm going to (focus on / look at / deal with) [number] main points
 - as you can see
 - you'll notice
@@ -1058,6 +1061,88 @@ Punishment collocations:
 - vehicle theft
 - drug abuse
 - mindless vandalism
+
+---
+
+## CIU: Unit 36 - News
+- a news story breaks - новостная сенсация прогремела
+- news come(s - *?*) in - поступают новости
+- news leaks out - новости просочились
+- hit the headlines - попасть в заголовки
+- make headlines
+- front-page headline - главный заголовок
+- the latest news - **NOT *last***
+- be (headline / front-page) news
+- item of news - новостная тема
+- run a story / publish a story 
+- flick through the newspaper - пролистать газету
+- interested parties - заинтересованные стороны
+- to outline plan - наметить план
+- to be taken (captive / hostage) - быть взятым в плен / стать заложником
+- seize control - захватить контроль
+- lightning strike - удар молнии
+
+---
+
+## CIU: Unit 37 - Money
+- spend money [on sth]
+- save money
+- waste money - spend money in a bad way
+  - squander money - strong form
+  - throw money around
+- change money - exchange one currency for another
+- donate money [to sth] - жертвовать деньги
+- reasonably price - справедливая цена
+  - ridiculous price - opp.
+- low price
+  - rock-bottom price - strong form
+- high price
+- price (increases / goes up / rises)
+  - price soars - strong form
+  - price goes down - opp.
+- money is always tight - с деньгами всегда туго
+- be in short supply - быть в дефиците
+- steady income
+- big money
+- seriously rich
+- (make / earn) money
+- make a withdrawal - снимать деньги
+- get a bargain / get a really big deal
+- raise enough money - собрать достаточно денег
+- go cheap - дёшево продаваться
+- make a fortune - сколотить состояние
+  - make a small fortune
+- tie up - связывать
+  - money is tied up in sth - деньги завязаны в чём-то, то есть к ним нет простого доступа
+
+---
+
+## CIU: Unit 38 - War and peace
+- war breaks out - дословно "врывается", по смыслу - "разразилась"
+- fierce fighting
+- war is declared
+- all-out war - полномасштабная война
+- within firing range - на линии огня
+- decisive - решающий
+- battle rages - битва бушует, разгорается
+- horrors of war
+- peacekeepers - миротворцы
+- avert - предотвращать
+- bring about peace - принести мир
+- negotiate a peace agreement
+  - negotiate - вести переговоры
+- call a (truce / ceasefire)
+  - ceasefire - прекращение огня
+- sign a [peace] treaty
+  - treaty - договор
+- lasting peace - долгий (длящийся) мир
+- peace activist
+- keep the peace
+- restore order
+- put up a heroic fight against - вести героическую борьбу против
+- lose the battle
+- offer resistance - оказать сопротивление
+- fight for one's life
 
 ---
 
