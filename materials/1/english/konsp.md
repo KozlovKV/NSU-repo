@@ -6,7 +6,7 @@
 - [Suffixes](#suffixes)
   - [Noun](#noun)
   - [Verb](#verb)
-  - [Abjective](#abjective)
+  - [Adjective](#adjective)
 - [В субъектных вопросах используются вспомогательные глаголы do, does, did](#в-субъектных-вопросах-используются-вспомогательные-глаголы-do-does-did)
 - [Present simple](#present-simple)
   - [When to use](#when-to-use)
@@ -24,7 +24,7 @@
 - [Глагол to be в Present Simple СМЫСЛОВОЙ! Но его можно ставить на место do](#глагол-to-be-в-present-simple-смысловой-но-его-можно-ставить-на-место-do)
 - [so or such](#so-or-such)
 - [Have or have got](#have-or-have-got)
-- [Писать резуме, отправлять резюме и прочие действия для письма подразуемваются в данный момент, поэтому используется present continious](#писать-резуме-отправлять-резюме-и-прочие-действия-для-письма-подразуемваются-в-данный-момент-поэтому-используется-present-continious)
+- [Писать резюме, отправлять резюме и прочие действия для письма подразумеваются в данный момент, поэтому используется present continious](#писать-резюме-отправлять-резюме-и-прочие-действия-для-письма-подразумеваются-в-данный-момент-поэтому-используется-present-continious)
 - [Past simple](#past-simple)
   - [When to use](#when-to-use-2)
   - [Key words](#key-words)
@@ -213,7 +213,7 @@ See [this files](./my_vocabulary.md)
   - misapply - злоупотреблять
   - rely - полагаться
   
-## Abjective
+## Adjective
 - ish - like "quite"
   - stylish
   - longish
@@ -360,7 +360,7 @@ Stative verb describes states, conditions, features, traits rather than actions 
 3. Subject - Answer is a subject making sth (*Who said this?*, *Who is looking at you?*). Subject in question transforms into the question word
 4. Alternative - Answer: choice between sth (*Will you order a pizza or a pasta?*)
 5. Tag - "Не так ли?", using for expressing, confirmation. (*The weather is cool, isn't it?*, *I can't cook well, can I?*)
-6. Negative - Aux. verbs use in negative form. Using for emphasising. 
+6. Negative - Aux. verbs use in negative form. Using for emphasizing. 
    1. *Don't you want to go?*
       1. *Yes* = *Yes, I want to go*
       2. *No* = *No, I don't want to go*
@@ -382,7 +382,7 @@ Stative verb describes states, conditions, features, traits rather than actions 
 - trouble, difficulty, fun, a good time
 - a baby (= give birth to a baby)
 
-# Писать резуме, отправлять резюме и прочие действия для письма подразуемваются в данный момент, поэтому используется present continious
+# Писать резюме, отправлять резюме и прочие действия для письма подразумеваются в данный момент, поэтому используется present continious
 
 # Past simple
 All verbs on one timeline
@@ -431,11 +431,11 @@ All verbs on one timeline
 3. Interragative
 
 # Murphey 51 - Auxillary verbs in questions and narratives
-*Have / can't / to be / do etc* in snaswers used for shorting: *Have you locked the door? Yes, I have.*
+*Have / can't / to be / do etc* in answers used for shorting: *Have you locked the door? Yes, I have.*
 
 Also auxillary verbs can help to deny what sb says: *You're sitting at my place. No, i'm not.* / *You didn't lock the door before you left. Yes, I did.*
 
-We use *have [obj]? / to be not [obj]? / do [obj]?* to show intrest in what sb has said: *Lisa isn't very well today. Oh isn't she? What is wrong with her?*
+We use *have [obj]? / to be not [obj]? / do [obj]?* to show interest in what sb has said: *Lisa isn't very well today. Oh isn't she? What is wrong with her?*
 
 Если мы хотим подтвердить аналогичную ситуацию или опровергнуть, мы можем использовать `so` или `neither` (`nor` или `not _ either`) (Для утвердительного предложения согласие тоже утвердительное - и наоборот). Причём будет такой порядок слов - `so/neither [aux. verb] [subj]`:
 - *I'm tired. So am I.*
@@ -449,7 +449,7 @@ We use *have [obj]? / to be not [obj]? / do [obj]?* to show intrest in what sb h
 `in` Используется, если мы говорим о фундаментальном начале или конце, тогда как `at` используется, если мы говорим о части плана (работы, например)
 
 # Murphey 50 - (Do you know where ...? / He asked me where ...?)
-If we have question like *Do you know where* we need use narrative word oredring (*Do you know where Tom has gone?* - not *has Tom gone?*)
+If we have question like *Do you know where* we need use narrative word ordering (*Do you know where Tom has gone?* - not *has Tom gone?*)
 
 We can use *if* and *whether* if there is no other question words:
 - *Did anybody see you?*
@@ -499,7 +499,7 @@ Nouns with *-out* and *-over* are usual written without hyphen
 
 Question and negative form is just past simple
 
-*would to `<verb>`* - regulary in some situation - **NOT WITH STATIVE VERBS**
+*would to `<verb>`* - regularly in some situation - **NOT WITH STATIVE VERBS**
 
 # Murphey 61. "Be/get used to sth (I'm used to ...)"
 `Sb be/get used to sth` = sth is not new or strange
@@ -705,13 +705,13 @@ Forms:
 Usually used with `to V`, not with `Ving`
 
 ## `Would rather`
-`Would rather Vinf` = `would prefer to V`
+`Would rather V` = `would prefer to V`
 
 - *Shall we go by train?*
   - *I'd prefer to drive*
   - *I'd rather drive*
 
-Negative: `would rather not Vinf`
+Negative: `would rather not V`
 
 Comparing form: `Would rather do sth than do sth else`
 
@@ -768,7 +768,7 @@ We can insert modal verbs between `there` and `is/are`.
 # `Than that of`
 В отличии от 
 
-*Earth has more oxydent atmosphere than that of Venus*
+*Earth has more oxygen atmosphere than that of Venus*
 
 # Clauses
 Complex-Conjunctions (*союзы для сложносочинённых (even - равные)*):
@@ -782,13 +782,10 @@ Complex-Conjunctions (*союзы для сложносочинённых (even 
 
 **В сложносочинённых предложениях запятая чаще всего ставится.**
 
-Subordinate clauses:
-- if-clause - clause of condition
-
-**Чаще всего без запятой**
+Subordinate clauses - сложноподчинённые предложения. Связь в них сильна по смыслу, поэтому **они чаще всего без запятой**
 
 ## Clause of reason (причины)
-If clause of reason goes behind main clause we should use comma.
+**If clause of reason goes behind main clause we should use comma**.
 
 Conjunctions:
 - (because of / due to) the fact that `reason-clause` - в связи с тем фактом, что
