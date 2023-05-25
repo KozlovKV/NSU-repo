@@ -40,6 +40,7 @@ Words, phrasal verbs and collocations that I have learned.
   - [CIU: Unit 36 - News](#ciu-unit-36---news)
   - [CIU: Unit 37 - Money](#ciu-unit-37---money)
   - [CIU: Unit 38 - War and peace](#ciu-unit-38---war-and-peace)
+  - [CIU: Unit 39 - Global problems](#ciu-unit-39---global-problems)
 - [Phrasal verbs in use](#phrasal-verbs-in-use)
   - [PVIU: Unit 27 - Success and failure](#pviu-unit-27---success-and-failure)
   - [PVIU: Unit 42 - The classroom and learning](#pviu-unit-42---the-classroom-and-learning)
@@ -1143,6 +1144,45 @@ Punishment collocations:
 - lose the battle
 - offer resistance - оказать сопротивление
 - fight for one's life
+
+---
+
+## CIU: Unit 39 - Global problems
+- greenhouse gases - парниковые газы
+- greenhouse - теплица
+- stock - склад
+- fish stock
+- tackle - сдерживать / снасти
+- tackle pollutions
+- fossil fuel
+  - fossil - ископаемое
+- irreparable / irreversible - необратимый
+- depleted - истощённый
+- urgent - срочный
+- measure - мера
+- crops fail - неурожай
+- famine - голод
+- poverty - бедность
+- lift out of poverty
+  - lift out - поднять
+- widening gulf - водораздел, расширяющая пропасть (переносное значение)
+- deprived region
+- sleeping rough - бездомный
+- margins of society
+- street children
+- desperate need - острая нужда
+- breed crime - порождать преступность
+- golden opportunity - отличная возможность
+- perhaps - возможно
+- eradicate - искоренить
+- alleviate - смягчить
+- asylum - убежище
+- genuine - подлинный
+- toll - пошлина
+- death toll - число погибших
+- world-wide problem
+- child labor
+- sexual exploitation
 
 ---
 
