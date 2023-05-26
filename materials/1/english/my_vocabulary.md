@@ -41,6 +41,8 @@ Words, phrasal verbs and collocations that I have learned.
   - [CIU: Unit 37 - Money](#ciu-unit-37---money)
   - [CIU: Unit 38 - War and peace](#ciu-unit-38---war-and-peace)
   - [CIU: Unit 39 - Global problems](#ciu-unit-39---global-problems)
+  - [CIU: Unit 40 - Time](#ciu-unit-40---time)
+  - [CIU: Unit 41 - Sound](#ciu-unit-41---sound)
 - [Phrasal verbs in use](#phrasal-verbs-in-use)
   - [PVIU: Unit 27 - Success and failure](#pviu-unit-27---success-and-failure)
   - [PVIU: Unit 42 - The classroom and learning](#pviu-unit-42---the-classroom-and-learning)
@@ -1183,6 +1185,69 @@ Punishment collocations:
 - world-wide problem
 - child labor
 - sexual exploitation
+
+---
+
+## CIU: Unit 40 - Time
+- spend time - **for common context**
+  - sth passes the time - коротать время
+  - have a [good / great / etc.] time - провести время
+- waste time
+  - save time - opp.
+- tell sb the time - подсказать кому-то время
+- (spare / free) time - свободное время
+- have time to - хватает на что-то времени
+  - have the time of
+- make time for - выделить время для
+- kill time
+- take your time - не спешить
+- (bang / dead / right) on time - быть вовремя (*первые 2 формы очень неформальные*)
+- time (goes by / passes) - время проходит
+- run out of time - выйти за временной лимит
+- big time - *informal* - extremely (*You'll be sorry big time! - Ты сильно пожалеешь. ИЛИ Ты будешь долго извиняться*)
+- past few weeks
+  - recent past
+- early
+- prehistoric
+- from dawn till dusk - all day
+- the small hours - предрассветные часы (2-4 a.m.)
+- ungodly hours - неадекватное время
+- worth one's while - что-то стоит чьего-то времени
+- have a (good / great / bad / etc.) future ahead
+- not too distant future - не слишком далёкое будущее
+- future holds - будущее готовит
+
+---
+
+## CIU: Unit 41 - Sound
+- eerie - зловещий
+- rumble - грохот
+- the wind is whistling
+- babble - лепетать
+  - babbling stream - журчащий ручеёк
+- patter of rain - стук дождя
+- piercing - пронзительный
+- (ear-splitting / deafening) (sound / noise) - раздирающий шум (*noise and sound are used as countable nouns*)
+- excessive noise - чрезмерный шум (*noise as uncountable noun*)
+- background noise
+- muffled sound - приглушённый
+- shrill (voice / laugh) - пронзительный (голос / смех)
+- raucous laugher - грубый / хриплый смех
+- dull thud - глухой удар
+- grating (noise / sound) - суровый и неприятный звук
+- (loud / almighty) (bang / explosion)
+- roar traffic
+- (music / radio) blares [out]
+- machine (hums / whirrs)
+  - hum - гул
+  - whirr - жужжание 
+- a gasp - вздох
+- to gasp - дышать с трудом
+- a groan - стон
+- sb gives sound
+- (sb / sth) make a sound
+- rustle - шелест
+- crackle - потрескивание
 
 ---
 
