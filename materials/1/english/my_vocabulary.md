@@ -43,11 +43,13 @@ Words, phrasal verbs and collocations that I have learned.
   - [CIU: Unit 39 - Global problems](#ciu-unit-39---global-problems)
   - [CIU: Unit 40 - Time](#ciu-unit-40---time)
   - [CIU: Unit 41 - Sound](#ciu-unit-41---sound)
+  - [CIU: Unit 42 - Distance and size](#ciu-unit-42---distance-and-size)
 - [Phrasal verbs in use](#phrasal-verbs-in-use)
   - [PVIU: Unit 27 - Success and failure](#pviu-unit-27---success-and-failure)
   - [PVIU: Unit 42 - The classroom and learning](#pviu-unit-42---the-classroom-and-learning)
   - [PVIU: Unit 54 - secrets and conversations](#pviu-unit-54---secrets-and-conversations)
   - [PVIU: Unit 68 - Power and authority](#pviu-unit-68---power-and-authority)
+  - [PVIU: Unit 64 - Mobile devices](#pviu-unit-64---mobile-devices)
 - [Common words](#common-words)
 
 # Collocations for letters
@@ -163,8 +165,8 @@ Signatures:
 - do/take course
 - make [angry, upset, etc.]
 - make me/us/... `V` - заставить кого-то что-то сделать
-- make up sb's mind to `V` - решить что-то
-- take
+- make up one's mind to `V` - решить что-то
+- take sth - means:
   - remove sth [without permission]
   - accept sth
   - write sth
@@ -219,8 +221,8 @@ Often *get* is informal verb in a lot of cases:
   - do/take exercises - делать упражнения
   - do someone a good turn / do someone a favour - оказать услугу
   - do harm - принести вред
-  - do sb's hair - расчёсывать
-  - do sb's homework
+  - do one's hair - расчёсывать
+  - do one's homework
   - do the washing / ironing / shopping
   - do some work
 
@@ -244,8 +246,8 @@ Words below collocate with *have* rather then other verbs:
 - have fun / a good time
 - have a look
 - have a party
-- have a problem / problems
-- have a try/go - попытаться
+- have a problem(s)
+- have a (try / go) - попытаться
 
 Take:
 - take `transport`
@@ -259,7 +261,7 @@ Take:
 Pay:
 - pay attention
 - pay a compliment
-- pay sb's (last) respect - отдать (последнюю) честь
+- pay one's (last) respect - отдать (последнюю) честь
 - pay tribute - оценить вклад / воздать должное
 
 ---
@@ -267,7 +269,7 @@ Pay:
 ## CIU: Unit 10 - Synonyms and confusable words 1
 - close / shut
   - close meeting / discussion / conference
-  - shut up / your mouth - **impolite**
+  - shut up [your mouth] - **impolite**
 - start / begin
   - start - for engines or vehicles
   - begin - more formal and abstract context
@@ -318,9 +320,9 @@ Make *profit / money* - income not only by working
 
 Achieve *success / your aims / your goals* - clear abstract nouns
 
-Beat / defeat *a team / an opponent* - when we won, we defeated sb
+(Beat / defeat) *a team / an opponent* - when we won, we defeated sb
 
-Take / carry / wear
+Take / carry / wear:
 - take *clothes*
 - carry *phone / bag*
 - wear *hat / dress*
@@ -342,13 +344,13 @@ Spent / pass
 
 Different words are associated with *water*:
 - ideas flow / conversation flows - things progress easily, without efforts
-- flood(s) of tears / tears are streaming down sb's face
+- flood(s) of tears / tears are streaming down one's face
 - people pour / stream - поток людей двигается медленно
 - people trickle - небольшая группа ("ручеёк") людей двигается медленно
 - a stream of visitors / traffic - непрерывный поток посетителей / машин
 
 *Fire* and *heat* are often associated with anger:
-- heated debate / discussion / conversation
+- heated (debate / discussion / conversation)
 - fiery temper - взрывной характер
 - tempers flare - обстановка накаляется
 - violence flares up / troubles flare up - ушедшие в прошлое проблемы снова стали серьёзными (разгорелись)
@@ -375,12 +377,12 @@ Different words are associated with *water*:
   - opp. - lift
 - (thick/dense) fog / patches of (fog/mist)
 - a blanket of fog
-- strong / weak sun
+- (strong / weak) sun
 - heavy (*NOT STRONG*) / driving rain
-- hard / light frost
+- (hard / light) frost
 - the wind picks up / dies down
 - the wind blows / whistles - ветер порывается, свистит
-- high / strong / light wind
+- (high / strong / light) wind
 - biting wind - пробирающий ветер
 - freak - неожиданный, необычный
 - freak weather conditions hit - причудливая погода / перепады погоды
@@ -423,7 +425,7 @@ Different words are associated with *water*:
 - luxury hotel
 - smart hotel
   - opp. - budget accommodation
-- to book / make a reservation - бронировать
+- to (book / make) a reservation - бронировать
 - fully booked - всё забронировано
 
 ---
@@ -502,10 +504,10 @@ Different words are associated with *water*:
 
 ## CIU: Unit 17 - People: character and behavior
 - sb is good company
-- selfish streak
+- selfish streak - эгоистичная жилка
   - streak - полоса
 - outgoing personality - общительная личность
-- good/bad sense of humour
+- (good / bad) sense of humour
 - vivid imagination
   - vivid - яркий
 - lose temper - терять самообладание
@@ -528,16 +530,16 @@ Different words are associated with *water*:
 - bear a grudge [against sb] - затаить обиду
 - make a fool out of you
 - brutally honest - невероятно прямолинейный
-- hurt sb's feelings - задеть кого-то
+- hurt one's feelings - задеть кого-то
 - play a joke/trick [on sb] [by sth] - разыграть кого-то чем-то
 - take a joke - принять шутку (не разозлиться)
-- swallow sb's pride - отбросить гордость (**[NO FUCKING GACHI!!!](http://soundboard.ass-we-can.com/static/music/VanD/Swallow%20my%20cum.mp3)**)
+- swallow one's pride - отбросить гордость (**[NO FUCKING GACHI!!!](http://soundboard.ass-we-can.com/static/music/VanD/Swallow%20my%20cum.mp3)**)
 - throw a tantrum - потерять контроль
   - tantrum - вспышка гнева
-- lose sb's patience
+- lose one's patience
 - come to terms with sth - смириться с чем-то психологически
-- reveal sb's true character
-  - conceal/hide sb's true character - opp.
+- reveal one's true character
+  - conceal/hide one's true character - opp.
 
 ---
 
@@ -609,7 +611,7 @@ Different words are associated with *water*:
 - custody - опека
 - apply for custody of sb - запросить опеку над кем-то
 - give / grant custody - дать право опеки
-- provide for sb's family - обеспечивать семью
+- provide for one's family - обеспечивать семью
 - set up home - начать жить отдельно
 
 ---
@@ -632,7 +634,7 @@ Different words are associated with *water*:
 - the love of my life
 - love is returned - ответная любовь
 - make a commitment - взять на себя обязательства (*?*)
-- accept sb's proposal - принять предложение
+- accept one's proposal - принять предложение
 - love each other unconditionally - любить не смотря ни на что
 - have an affair - *дословно* - иметь дело. В данном контексте речь идёт об измене (*Have an affair with sb else*)
 
@@ -886,8 +888,8 @@ Other collocations:
 - to work closely with - тесно сотрудничать с кем-то
 - to take on work - взяться за работу
 - to (wreck / ruin) someone's career - разрушить чью-то карьеру
-- at the (height / peak) of sb's career
-- sb's career lasted
+- at the (height / peak) of one's career
+- one's career lasted
 - ladder - лестница
 - to climb the career ladder
 - embark - начинать
@@ -1251,6 +1253,29 @@ Punishment collocations:
 
 ---
 
+## CIU: Unit 42 - Distance and size
+- a (considerable / long / short) distance from sth - что-то на (значительном / большом / малом) расстоянии от чего-то
+- within (commuting / walking) distance of sth - на расстоянии пешей прогулки от чего-то
+- (cover / travel) [a distance of] (N) kilometres - преодолеть расстояние в N километров (очевидно, можно брать и другие единицы измерения)
+- (far-off / far-flung) place - далёкое место
+- at close range - вблизи
+- neighboring (town / country / area / etc.)
+- low (price / wage / level)
+  - wage - зарплата
+- small (scale / quantity / number / amount / increase / decrease / etc.)
+  - quantity - количество
+  - large - opp.
+- little - often used in informal speech to say that sth isn't important or sb is young
+- (fat / slim) (books / people)
+- **only for people:**
+  - plump - полный
+  - skinny - худой
+  - painfully thin - болезненно тощий
+- a great deal of (time / money / energy / enthusiasm / etc.) - очень много чего-то
+- (major / minor) (difference / argument / issue / point / etc.)
+
+---
+
 # Phrasal verbs in use
 ## PVIU: Unit 27 - Success and failure
 - bring [sth] off - заставить что-то осуществиться / провести сделку 
@@ -1322,6 +1347,26 @@ In this PV particle can place either before or after verb:
 - entered into - officially agree to do sth
 - carry out - выполнять (обещания)
 - break away - покинуть (партию или любую другую группу)
+
+---
+
+## PVIU: Unit 64 - Mobile devices
+- set up
+- plug (in / out)
+- (switch / turn) (on / off)
+- (sign / log) (in / out)
+- sign up - подписать / зарегистрироваться
+- lock out - не иметь возможности войти
+- (type / put) in - вставлять / вводить
+- zoom (in / out)
+- bring up - **в этом контексте:** вывести что-то на экран
+- turn (up / down) - increase or decrease volume
+- scroll (up / down)
+- call breaks up - звонок прервался
+- phone goes off - *в обычном смысле это значит выходить,* в данном случае, издавать звуки
+- connection cuts off - связь оборвалась
+- battery runs out - батарея разрядилась
+- use up - израсходовать / использовать полностью
 
 ---
 
@@ -1683,7 +1728,7 @@ In this PV particle can place either before or after verb:
   - to grant - предоставить
   - tie - галстук
   - drinking habits - алкоголизм
-  - sth is right up sb's street - что-то по части кого-то (его любимое дело или то, в чём он разбирается)
+  - sth is right up one's street - что-то по части кого-то (его любимое дело или то, в чём он разбирается)
   - forensic - судебный
   - forensics - суд.-мед. экспертиза
   - right behind sb - give sb complete support
@@ -1695,7 +1740,7 @@ In this PV particle can place either before or after verb:
   - cuppa - чашка чаю
   - bit of trouble - небольшая неприятность
   - decent - приличие
-  - out of sb's depth - не обладать достаточными навыками или знаниями, чтобы справиться с ситуацией
+  - out of one's depth - не обладать достаточными навыками или знаниями, чтобы справиться с ситуацией
     - out of one's league - the same
   - shot in the dark - ткнул пальцем в небо, выстрел вслепую
   - piss off - отвали! (грубая форма)
@@ -1713,7 +1758,7 @@ In this PV particle can place either before or after verb:
   - get off sth - leave bus/aircraft/boat / leave sth place
   - get off on sth - feel very excited by doing sth
   - get off with sb - begin sexual relationship with sb
-  - get on sb's nerves - действовать кому-то на нервы
+  - get on one's nerves - действовать кому-то на нервы
     - drive sb crazy - the same
     - to be one's pain in neck
   - any point in sth - есть ли смысл в чём-то (e.g. *any point I'm asking*)
@@ -1734,7 +1779,7 @@ In this PV particle can place either before or after verb:
   - shout - орать
   - fill in - выполнять чужую работу
   - fill sb in - give sb extra or missing info
-  - fill sb's shoes - do sb's job or accept sb's responsibilities
+  - fill one's shoes - do one's job or accept one's responsibilities
   - dull - boring
   - withhold - утаивать что-то
   - break sb in - ввести в курс дела
@@ -1931,7 +1976,7 @@ In this PV particle can place either before or after verb:
     - pregnant - adjective
   - anniversary - годовщина
 - a couple of - несколько
-- on sb's own - act alone
+- on one's own - act alone
 - intention - намерение
   - intend - намереваться
 - don't make (any) sense / make no sense - не иметь смысла
@@ -2012,7 +2057,7 @@ In this PV particle can place either before or after verb:
   - взрывать (сносить здание)
   - sb blows up - suddenly becomes angry
 - to slip up - make mistake
-- to catch sb's breath - отдышаться
+- to catch one's breath - отдышаться
 - Arkane 1st episode
   - bash - удар
   - envy - зависть
@@ -2126,7 +2171,7 @@ In this PV particle can place either before or after verb:
   - to wear - носить
   - take off sth - снять
     - put sth on - opp.
-      - put sb's shirts on sth - idiom - рискнуть всем, что у тебя есть
+      - put one's shirts on sth - idiom - рискнуть всем, что у тебя есть
   - undo sth - расстегнуть что-то
     - do sth up - idiom - застегнуть что-то
   - to suit - хорошо смотреться
@@ -2288,7 +2333,7 @@ In this PV particle can place either before or after verb:
   - road sign - дорожный знак
   - to overtake - обогнать (concrete and abstract)
   - get lost - потеряться
-  - on sb's way to - по пути
+  - on one's way to - по пути
   - via - through
   - end up - оказаться там, где не ожидал
   - pavement - тротуар
@@ -2403,7 +2448,7 @@ In this PV particle can place either before or after verb:
   - dial - make call to particular number
   - left a message
   - answerphone - автоответчик
-  - to ring / to give sb's a ring - позвонить
+  - to ring / to give one's a ring - позвонить
   - line engaged - линия занята
   - Texting abbreviations:
     - ASAP - as soon as possible
@@ -2458,7 +2503,7 @@ In this PV particle can place either before or after verb:
   - for the time being - в ближайшем будущем
   - one day - однажды
   - fortnight - 2 weeks (Fun fact: root of word - **fourteen nights** - in a lot of countries payday goes one time per 2 weeks. It is called *fortnightly basis*)
-  - sth take [sb's] [time period] - что-то займёт [период времени]
+  - sth take [one's] [time period] - что-то займёт [период времени]
   - last [time period] - длиться [период времени]
 - Email and Internet (VIU: Unit 55)
   - essential - important / necessary
@@ -2564,7 +2609,7 @@ In this PV particle can place either before or after verb:
 - rumour - сплетни
 - take credit for - пожинать плоды
 - high up - занимать выгодную позицию
-- to be in sb's good books
+- to be in one's good books
 - keep up your mouth
 - to be out - to be excluded
 - to come to light
@@ -2592,3 +2637,5 @@ In this PV particle can place either before or after verb:
 - common sense - здравый смысл
 - chalk - мел
 - ware - товар
+- to rid - избавиться
+- a rid - избавление
