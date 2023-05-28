@@ -152,6 +152,12 @@
     - [Hash join DB](#hash-join-db)
     - [Merge-join](#merge-join)
   - [Laziness](#laziness)
+- [23.05.18 - lecture](#230518---lecture)
+  - [Data modification](#data-modification)
+    - [Transactions](#transactions)
+  - [DBs types](#dbs-types)
+  - [DB usage patterns](#db-usage-patterns)
+  - [Type and patterns combining](#type-and-patterns-combining)
 
 
 # Контакты преподов
@@ -1740,3 +1746,55 @@ Merges pre-sorted `T1` and `T2`
 **Predicates: `=`, `<`, `>`**
 
 ## Laziness
+So... It's basically integrated in SQL
+
+# 23.05.18 - lecture
+## Data modification
+SQL command for data modifications:
+- `INSERT`
+- `UPDATE`
+- `MERGE`
+- `DELETE`
+
+For consistency we need next points are true:
+- Low-level consistency
+  - values correspond their types
+  - big-/little-endian, ecndings etc. are correct
+  - all references point to existing objects
+- High-level:
+  - PKs are unique
+  - All DB constraints (like unique, non-null, FK, etc.) are met
+  - All constraints for references (other domain) are met (*Если снаружи мы должны воспринимать список как строку со значениями через запятую, то так и должно быть. И т.п.*)
+
+Durability (долговечность) is important property of data. We must:
+- Have way to get framgents which are fit into the RAM
+- Have `O(1)` complexity for getting fragment
+- Consume data on disk as close as possible
+
+### Transactions
+Transaction is an operations set which must be executed correctly and completely or not executed at all.
+
+Transactions have ACID properties:
+- Atomicity - all operations inside work as single unit
+- Consistency - we'll get correct result if it can be reached
+- Isolation - concurent transactions will work as consequent
+- Durability
+
+## DBs types
+- Raltion
+- Key-value
+- Hierarchical
+- Graph
+
+## DB usage patterns
+- OLAP - On-line analitical processing - DB with mostly static data and complex read queries
+- OLTP - On-line transaction processing - DB with simple read and write queries
+- Hybrid of both above
+
+## Type and patterns combining
+- Key-value (map or multimap) is simple and good for massive OLTP, but isn't convenient for OLAP and storing complex structures
+- Hierarchical - tree (or forest) with value in node. More complex than map, but still be not so good for OLAP and much complex structures
+- Property Graph - convenient for complex structures and different query languages, but perfomance is worse than in raltional DB
+  - <img src="./lectures/SQL/SQL_lec07_property_graph.png" width="50%"> 
+- Triple store graph - good for formal ontologues and has flexible dynamic schema, but perfomance is worse than in propert graph
+  - <img src="./lectures/SQL/SQL_lec07_triple_graph.png" width="50%"> 

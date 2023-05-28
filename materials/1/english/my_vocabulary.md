@@ -1462,7 +1462,6 @@ In this PV particle can place either before or after verb:
 - give away - give sth for free
 - pick up - купить что-то вдогонку (когда планировал на самом деле что-то другое)
 - knockdown price - сногшибательная цена
-- 
 
 ---
 
