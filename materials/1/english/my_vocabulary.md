@@ -44,12 +44,15 @@ Words, phrasal verbs and collocations that I have learned.
   - [CIU: Unit 40 - Time](#ciu-unit-40---time)
   - [CIU: Unit 41 - Sound](#ciu-unit-41---sound)
   - [CIU: Unit 42 - Distance and size](#ciu-unit-42---distance-and-size)
+  - [CIU: Unit 43 - Color and light](#ciu-unit-43---color-and-light)
+  - [CIU: Unit 44 - Texture](#ciu-unit-44---texture)
 - [Phrasal verbs in use](#phrasal-verbs-in-use)
   - [PVIU: Unit 27 - Success and failure](#pviu-unit-27---success-and-failure)
   - [PVIU: Unit 42 - The classroom and learning](#pviu-unit-42---the-classroom-and-learning)
   - [PVIU: Unit 54 - secrets and conversations](#pviu-unit-54---secrets-and-conversations)
   - [PVIU: Unit 68 - Power and authority](#pviu-unit-68---power-and-authority)
   - [PVIU: Unit 64 - Mobile devices](#pviu-unit-64---mobile-devices)
+  - [PVIU: Unit 47 - Money: salaries, bills and payments](#pviu-unit-47---money-salaries-bills-and-payments)
 - [Common words](#common-words)
 
 # Collocations for letters
@@ -1218,6 +1221,7 @@ Punishment collocations:
 - have a (good / great / bad / etc.) future ahead
 - not too distant future - не слишком далёкое будущее
 - future holds - будущее готовит
+- at once - сразу
 
 ---
 
@@ -1273,6 +1277,80 @@ Punishment collocations:
   - painfully thin - болезненно тощий
 - a great deal of (time / money / energy / enthusiasm / etc.) - очень много чего-то
 - (major / minor) (difference / argument / issue / point / etc.)
+
+---
+
+## CIU: Unit 43 - Color and light
+- fade - исчезать
+- color fades - цвет тускнеет
+  - color runs
+- clash - столкновение
+- colors clash - цвета дисгармонируют
+  - colors go well - opp.
+  - color matches - opp.
+- pale
+  - bright - opp.
+- subdued color - приглушённый цвет
+- a touch of color - немного цвета
+  - add a touch of color - добавить немного красок
+- dark grows - тьма сгущается / наступает ночь
+- pitch dark - кромешная тьма
+- candle flickers - мерцание свечей
+- twinkle - мерцать
+- beam of light - луч света
+- sunlight - солнечный свет
+- ray of sunlight - луч солнца
+- glare - яркий свет
+  - dim light - opp.
+- pinpoint of light - точечка света
+- (weak / faint) glow
+  - glow - свечение
+- tinged with gold
+  - to tinge - придать оттенок
+- Metaphors:
+  - grey area
+  - add color
+  - green issues - экологические проблемы
+  - to blacken one's name
+  - (shed / throw) light on
+  - cast a shadow - добавлять ложку дёгтя (**НЕ означает "бросать тень" в русском понимании этой метафоры**)
+  - be under the shadow of sb - быть в чьей-то тени
+
+---
+
+## CIU: Unit 44 - Texture
+- greasy hair - засаленные волосы
+  - dry hair - opp.
+- dry skin
+  - oily skin
+- *smooth* and opposite *rough* for:
+  - skin / surface / complexion
+  - water / sea
+  - road / flight
+- choppy (water / sea) - волнующееся море / вода
+- soft (pillow / bed / ground)
+  - hard / firm - opp.
+- tender meat - нежное мясо
+  - tough - opp.
+- sharp (pencil / knife)
+  - blunt - opp.
+- (ice / snow) melts - тает
+  - snow thaws - syn.
+- go (soft / hard)
+  - softens / hardens
+- matt - матовый
+- gloss - глянцевый
+- finely chopped - мелко нарезанный
+  - coarsely chopped - opp.
+- fine grains - мелкие зёрна
+  - coarse - opp.
+- sticky - липкий
+- Metaphors:
+  - go smoothly 
+  - have a sharp tongue - say unkind things
+  - sticky situation - difficult situation
+  - coarse joke - грубая шутка
+  - velvety sky - бархатное небо
 
 ---
 
@@ -1367,6 +1445,24 @@ In this PV particle can place either before or after verb:
 - connection cuts off - связь оборвалась
 - battery runs out - батарея разрядилась
 - use up - израсходовать / использовать полностью
+
+---
+
+## PVIU: Unit 47 - Money: salaries, bills and payments
+- take out - withdraw
+- cut back - потратить
+- pay back (sb/sth) / settle up - repay - вернуть долг
+- come to - total - составлять в сумме
+- pay off - pay back completely
+- pay up - same as *pay back*, but especially for cases when you don't want to pay
+- run up - набрать счёт на внушительную сумму
+- save up
+- set aside - откладывать деньги на какую-то конкретную цель
+- write off - принять факт чего-то (для денег - списать со счетов, то есть мысленно принять затраты)
+- give away - give sth for free
+- pick up - купить что-то вдогонку (когда планировал на самом деле что-то другое)
+- knockdown price - сногшибательная цена
+- 
 
 ---
 
