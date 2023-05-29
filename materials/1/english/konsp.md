@@ -92,6 +92,7 @@
   - [Clause of result](#clause-of-result)
 - [Murphey: Unit 85 - Some and any](#murphey-unit-85---some-and-any)
 - [Murphey: Unit 86 - No/none/any and Nothing/nobody](#murphey-unit-86---nononeany-and-nothingnobody)
+- [Historical present](#historical-present)
 
 # Websites
 - [Cambridge Learner's dictionary](https://dictionary.cambridge.org/dictionary/learner-english)
@@ -853,3 +854,9 @@ We use `no <noun>` as *not a* or *not any* (*There was no shops open*) and `none
 
 As `somebody`, with `nobody`, `no-one` etc. we can use plural pronouns to show undefined reference.
 
+# Historical present
+*What is historical present.* Is an verbal tense for telling stories
+
+*How is it used? What are the purposes?* Historical present is used in the main part of story name complicated action to emphasize involving effect of actions when we don't specify separated time
+
+*How do we use it?* Just use present simple when we talk about past, but not often to make effect stronger.

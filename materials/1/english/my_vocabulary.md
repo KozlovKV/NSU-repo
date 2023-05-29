@@ -53,6 +53,8 @@ Words, phrasal verbs and collocations that I have learned.
   - [PVIU: Unit 68 - Power and authority](#pviu-unit-68---power-and-authority)
   - [PVIU: Unit 64 - Mobile devices](#pviu-unit-64---mobile-devices)
   - [PVIU: Unit 47 - Money: salaries, bills and payments](#pviu-unit-47---money-salaries-bills-and-payments)
+  - [PVIU: Unit 59 - Socializing](#pviu-unit-59---socializing)
+  - [PVIU: Unit 60 - Food and drink](#pviu-unit-60---food-and-drink)
 - [Common words](#common-words)
 
 # Collocations for letters
@@ -706,8 +708,7 @@ Different words are associated with *water*:
 - book reviewer / film critic
 - give a bad / good review
 - (book / film) captures an atmosphere / (book / film) deals with a topic
-- (opening / closing) scenes
-- (opening / closing) chapters
+- (opening / closing) (scenes / chapters)
 - (beginning / end) of a (book / film)
 - happy ending
 - highly recommended
@@ -722,7 +723,7 @@ Different words are associated with *water*:
 - cast a film - choose actors for a film
 - star in a film - сниматься в фильме
 - engross / absorb - поглощать
-- be (engross / absorb) in a book
+- be (engrossed / absorbed) in a book
 - compulsive reading - навязчивое чтение
 - bedtime reading
 - an easy read - лёгкое чтение
@@ -773,7 +774,7 @@ Different words are associated with *water*:
 - set a new world record
 - world record holder
 - fierce - жёстко
-- fail in drugs test - провалить тест на доппинг
+- fail in drugs test - провалить тест на допинг
 - tackle - столкнуться / сразиться
 - foul your opponent - очернить оппонента
 - whistle - свисток
@@ -784,7 +785,8 @@ Different words are associated with *water*:
 
 ## CIU: Unit 26 - Health and illness
 In most everyday cases we can use *get* or *have* with illnesses but also we can use these collocations:
-- catch (cold / flu / chill (озноб) / pneumonia)
+- catch a (cold / flu / chill (озноб) / pneumonia)
+- disease - болезнь
 - contract (disease / malaria / typhoid) - formal
 - develop (cancer / AIDS (СПИД) / diabetes / arthritis / Alzheimer's disease)
 - suffer from (asthma / hay fever (аллергия) / backache)
@@ -802,7 +804,7 @@ In most everyday cases we can use *get* or *have* with illnesses but also we can
 - (excruciating / unbearable) pain - невыносимая боль
 - ailment - недуг
 - life-threating
-- (acutely / intensely) painful - острая боль
+- (acutely / intensely) pain - острая боль
   - dull ache - opp.
 - prescribe medicines - прописать лекарства
 - relieve - освободить
@@ -884,10 +886,10 @@ Other collocations:
 - a steady job - стабильная работа
 - to offer someone a job
 - a permanent job - постоянная работа
-- to carry out work - осуществлять работу
+- to carry out work - do a work
 - to complete work
 - available to start work
-- to supervise work
+- to supervise work - контролировать работу
 - to work closely with - тесно сотрудничать с кем-то
 - to take on work - взяться за работу
 - to (wreck / ruin) someone's career - разрушить чью-то карьеру
@@ -908,7 +910,7 @@ Other collocations:
 - generous benefits
 - entitlement - право
 - vacancy must be filled
-- take a minutes - вести запись (*стенограмму?*)
+- take a minutes - протоколировать
 
 ---
 
@@ -919,7 +921,9 @@ Other collocations:
 - go into partnership
 - make a loss - понести убытки
 - make a profit
-- business is going under / will fold (*свёртка, лол*) / going bankrupt / go out of business - обанкротился / провалился
+- business is going (under / bankrupt) - обанкротился / провалился
+  - business will fold (*свёртка, лол*)
+  - go out of business
 - win a contract
 - (cut-throat / stiff) competition
   - stiff - жёсткая
@@ -943,7 +947,7 @@ Other collocations:
 
 ## CIU: Unit 32 - Academic writing: giving opinions
 - groundbreaking - новаторский
-- shape thinking
+- to shape thinking
   - to shape - формировать
 - make a significant contribution
 - give an account - предоставить отчёт
@@ -961,8 +965,7 @@ Other collocations:
 - establish a connection - установить связь
 - irrefutable proofs - нерушимые доказательства
 - key factor
-- perfect example
-- clear illustration
+- perfect example / clear illustration
 - long-term - долговременный
 - tentative explanation - предварительное объяснение
 - broadly support - широко поддерживает
@@ -1036,7 +1039,7 @@ Punishment collocations:
 - suffer the consequences - пострадать от последствий
 - a harsh (penalty / sentence) - суровый приговор
 - hard legal battle - тяжёлая судебная тяжба
-- win a case - выиграть дело (*судебно в данном случае*)
+- win a case - выиграть дело (*судебное в данном случае*)
 
 ---
 
@@ -1057,8 +1060,8 @@ Punishment collocations:
 - vital - жизненно важный
 - (fight against / tackle / combat) crime - бороться с преступностью
 - break into house
-- steal (sth)
-- rob (sb)
+- steal (sth) - украсть что-то
+- rob (sb) - ограбить кого-то
 - juvenile crime - подростковая преступность / преступления несовершеннолетних
 - crime wave
 - petty crime - несерьёзные преступления (*без насилия?*)
@@ -1073,8 +1076,9 @@ Punishment collocations:
 ---
 
 ## CIU: Unit 36 - News
+***news* is always singular**
 - a news story breaks - новостная сенсация прогремела
-- news come(s - *?*) in - поступают новости
+- news comes in - поступают новости
 - news leaks out - новости просочились
 - hit the headlines - попасть в заголовки
 - make headlines
@@ -1082,7 +1086,7 @@ Punishment collocations:
 - the latest news - **NOT *last***
 - be (headline / front-page) news
 - item of news - новостная тема
-- run a story / publish a story 
+- run a story / publish a story
 - flick through the newspaper - пролистать газету
 - interested parties - заинтересованные стороны
 - to outline plan - наметить план
@@ -1215,6 +1219,7 @@ Punishment collocations:
 - early
 - prehistoric
 - from dawn till dusk - all day
+  - dusk - сумерки
 - the small hours - предрассветные часы (2-4 a.m.)
 - ungodly hours - неадекватное время
 - worth one's while - что-то стоит чьего-то времени
@@ -1260,7 +1265,7 @@ Punishment collocations:
 ## CIU: Unit 42 - Distance and size
 - a (considerable / long / short) distance from sth - что-то на (значительном / большом / малом) расстоянии от чего-то
 - within (commuting / walking) distance of sth - на расстоянии пешей прогулки от чего-то
-- (cover / travel) [a distance of] (N) kilometres - преодолеть расстояние в N километров (очевидно, можно брать и другие единицы измерения)
+- (cover / travel) [a distance of] (N) kilometers - преодолеть расстояние в N километров (очевидно, можно брать и другие единицы измерения)
 - (far-off / far-flung) place - далёкое место
 - at close range - вблизи
 - neighboring (town / country / area / etc.)
@@ -1322,7 +1327,7 @@ Punishment collocations:
 - greasy hair - засаленные волосы
   - dry hair - opp.
 - dry skin
-  - oily skin
+  - oily skin - opp.
 - *smooth* and opposite *rough* for:
   - skin / surface / complexion
   - water / sea
@@ -1462,6 +1467,37 @@ In this PV particle can place either before or after verb:
 - give away - give sth for free
 - pick up - купить что-то вдогонку (когда планировал на самом деле что-то другое)
 - knockdown price - сногшибательная цена
+
+---
+
+## PVIU: Unit 59 - Socializing
+- (ask / invite) (over / round) - позвать к себе домой
+- bring along -  взять с собой
+- come (over / round / around) - приходить в себя / посещать кого-то дома
+- pop (in / into) / call round - заскочить
+- have (round / around) - держать рядом
+- ask after - ask for information about sb, especially about health
+- drop (in / round) - visit sb in their home without arranging
+- (ask / invite) out - позвать наружу
+- bring round - занести что-то кому-то домой / привести в чувства
+
+---
+
+## PVIU: Unit 60 - Food and drink
+- measure out - отмерить / взвесить
+- go off - портиться
+- thaw out - разморозить
+- put on - начать готовить (*Есть вообще хоть одна ситуация, где put on не подойдёт по какому-то из своих значений*)
+- heat up - разогреть
+- boil over - вскипятить
+- pour out - наложить порции еды
+- handed round - раздать всем присутствующим
+- top up - пополнять / доливатьн
+- go with - хорошо сочетаться
+- left over - остаться (*nothing will left over* - ничего не осталось)
+  - leftover - noun
+- live (on / off) - жить только на чём-то (то есть питаться только этим)
+- eat out
 
 ---
 
@@ -2734,3 +2770,7 @@ In this PV particle can place either before or after verb:
 - ware - товар
 - to rid - избавиться
 - a rid - избавление
+- snail - улитка
+- purse - кошелёк
+- gathering - сбор
+- casserole - запеканка
