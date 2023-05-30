@@ -55,6 +55,8 @@ Words, phrasal verbs and collocations that I have learned.
   - [PVIU: Unit 47 - Money: salaries, bills and payments](#pviu-unit-47---money-salaries-bills-and-payments)
   - [PVIU: Unit 59 - Socializing](#pviu-unit-59---socializing)
   - [PVIU: Unit 60 - Food and drink](#pviu-unit-60---food-and-drink)
+  - [PVIU: Unit 51 - Feelings](#pviu-unit-51---feelings)
+  - [PVIU: Unit 52 - Relationships](#pviu-unit-52---relationships)
 - [Common words](#common-words)
 
 # Collocations for letters
@@ -1501,6 +1503,45 @@ In this PV particle can place either before or after verb:
 
 ---
 
+## PVIU: Unit 51 - Feelings
+- phrasal verbs with *up* can mean positive emotions and emotional events or hight emotional intensity:
+  - bright up - оживиться
+  - cheer up - развеселить
+  - to be hung up about sth - (inf. form - *hang up*) - зацикливаться на чём-то 
+    - hang-up - загон (*ну... вы поняли в каком смысле. Примерно как "комплекс", но не совсем*)
+- phrasal verbs with *down* can mean negative emotions and emotional events or low emotional intensity:
+  - break down - lose control and start crying
+  - calm down - успокоиться (причём от любых эмоций, не обязательно негативных)
+  - cool down - become calmer
+- bottle up - keep emotions inside, especially anger and sadness
+- tear yourself apart - разрывать себя на части
+- carry away - lose control because of excitement
+- jump at - catch sth with eagerness
+  - jump at the chance
+- warm to sth - подгореть интерес к чему-то
+- sth grow on - что-то становится всё более и более приятным, хотя изначально таким не было
+- take to sth - like sth
+- feel for - сочувствовать
+- pull yourself together - успокоиться и привести мысли в порядок
+
+---
+
+## PVIU: Unit 52 - Relationships
+- go out with
+- fall out 
+  - falling-out - noun
+- chat up - флиртовать
+  - chat-up - noun
+- fall for - запасть на кого-то
+- fit in - вписаться в коллектив
+- get along - хорошо ладить
+- hit it off with sb - тут же поладить с кем-то
+- pair off with sb - start a romantic relationship with sb
+- go for (sth / sb) - like that type of sb or sth
+- 
+
+---
+
 # Common words
 - spell - Диктовать по буквам
 - pronounce - произнести
@@ -1838,7 +1879,7 @@ In this PV particle can place either before or after verb:
   - sth - to be tricked by believing in lie
 - fall out
   - about tooth/hair - выпадать
-  - argue with sb and stop being friendly
+  - argue with sb and damage our relationship
 - make out sth/sb - see, hear or understand sth/sb with difficulty
 - brush sth/sb aside - refuse to consider sth/sb seriously (syn. ignore)
 - put out
@@ -2774,3 +2815,17 @@ In this PV particle can place either before or after verb:
 - purse - кошелёк
 - gathering - сбор
 - casserole - запеканка
+- tidy up - прибраться
+- settle down - успокоиться
+- strike a balance - сбалансировать свою жизнь
+- custom - традиция
+- trade-off - компромисс
+- stuff - материал
+- staff - персонал
+- sincere - искренний
+- excite - возмбуждать
+  - excitement - noun
+- eager - жаждущий / нетерпеливый
+  - eagerly - adv.
+  - eagerness - noun
+- kangaroo - кенгуру
