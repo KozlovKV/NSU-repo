@@ -293,7 +293,7 @@ See [this files](./my_vocabulary.md)
 ## Words-markers
 In question goes after `to be` but before meaningful verb
 - always, usually
-- every day/week/month/year
+- every day / week / month / year
 - on Mondays / Tuesdays
 - In morning / afternoon / evening
 - at night
@@ -319,7 +319,7 @@ Stative verb describes states, conditions, features, traits rather than actions 
 - Длительное изменение ситуации (e.g. *Young people are spending more and more time playing on the computer*)
 - Если говорим о часто повторяющихся событиях и хотим подчеркнуть своё недовольство по их поводу
 - Когда речь об уже запланированных событиях в ближайшем будущем
-- Limit - есть какое-то ограничение (today, thiw week)
+- Limit - есть какое-то ограничение (today, this week)
 
 ## Untypical states
 Если кто-то находится в данный момент в нетипичном состоянии, иногда можно употребить сочетание **am/is/are being [V]ing** (*I can't understand why he's being so selfish. He isn't usually like that*)
@@ -338,7 +338,7 @@ Stative verb describes states, conditions, features, traits rather than actions 
 1. A little bit
 2. pretty / quite
 3. really / very
-4. extremelly
+4. extremely
 
 # Наречия rarely, seldom, never носят отрицающее значение, поэтому с ними не используется отрицательная форма глагола
 
@@ -376,7 +376,7 @@ Stative verb describes states, conditions, features, traits rather than actions 
 Когда речь идёт о владении чем-то, допустимы обе формы. **Главное не having!**. В прошедшем времени используется только had (**без got**).
 
 Со словами, представленными ниже, можно использовать have или having, а при отрицании или вопросе всегда используются don't, doesn't или didn't
-- breakfast, dinner, a cup of coffee, something to eat etc.
+- breakfast, dinner, a cup of coffee, something to eat, etc.
 - a bath, a shower, a swim, a break, a rest, a party, a holiday, an accident, an experience, a dream
 - a look (at something)
 - a chat, a conversation, a discussion
@@ -583,7 +583,6 @@ If we talk about new event we usually use **Present perfect** in the first sente
 - If we talk about unfinished period => **Present perfect**
 - Period ended => **Past simple**
 
-
 # Present perfect continuous
 `have/has been V4(P1)`
 
@@ -675,7 +674,7 @@ For Present perfect:
 
 Negative - `had better not`
 
-This collocation is about present or future although had is past form.
+This collocation is about present or future although `had` is past form.
 
 `V` **without** *to*
 
@@ -855,8 +854,8 @@ We use `no <noun>` as *not a* or *not any* (*There was no shops open*) and `none
 As `somebody`, with `nobody`, `no-one` etc. we can use plural pronouns to show undefined reference.
 
 # Historical present
-*What is historical present.* Is an verbal tense for telling stories
+*What is historical present?* It's an verbal tense for telling stories
 
-*How is it used? What are the purposes?* Historical present is used in the main part of story name complicated action to emphasize involving effect of actions when we don't specify separated time
+*How is it used? What are the purposes?* Historical present is used in the main part of story on complicated action to emphasize involving effect of actions when we don't specify separated time.
 
 *How do we use it?* Just use present simple when we talk about past, but not often to make effect stronger.

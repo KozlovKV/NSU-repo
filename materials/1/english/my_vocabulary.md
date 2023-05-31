@@ -5,6 +5,37 @@ Words, phrasal verbs and collocations that I have learned.
   - [For friendly letters](#for-friendly-letters)
 - [Collocations for the presentation](#collocations-for-the-presentation)
 - [Vocabulary in use](#vocabulary-in-use)
+  - [VIU: Unit 9 - The body and movement](#viu-unit-9---the-body-and-movement)
+  - [VIU: Unit 10 - Describing appearance](#viu-unit-10---describing-appearance)
+  - [VIU: Unit 11 - Character describing](#viu-unit-11---character-describing)
+  - [VIU: Unit 12 - Feelings](#viu-unit-12---feelings)
+  - [VIU: Unit 13 - Family and friends](#viu-unit-13---family-and-friends)
+  - [VIU: Unit 14 - Growing up](#viu-unit-14---growing-up)
+  - [VIU: Unit 15 - Romance, marriage and divorce](#viu-unit-15---romance-marriage-and-divorce)
+  - [VIU: Unit 16 - Daily routines](#viu-unit-16---daily-routines)
+  - [VIU: Unit 17 - The place where you live](#viu-unit-17---the-place-where-you-live)
+  - [VIU: Unit 18 - Around the home](#viu-unit-18---around-the-home)
+  - [VIU: Unit 19 - Money](#viu-unit-19---money)
+  - [VIU: Unit 20 - Health](#viu-unit-20---health)
+  - [VIU: Unit 21 - Clothes](#viu-unit-21---clothes)
+  - [VIU: Unit 22 - Fashion and buying clothes](#viu-unit-22---fashion-and-buying-clothes)
+  - [VIU: Unit 23 - Shopping](#viu-unit-23---shopping)
+  - [VIU: Unit 24 - Food](#viu-unit-24---food)
+  - [VIU: Unit 26 - City life](#viu-unit-26---city-life)
+  - [VIU: Unit 27 - Life in the country](#viu-unit-27---life-in-the-country)
+  - [VIU: Unit 28 - Transport](#viu-unit-28---transport)
+  - [VIU: Unit 29 - On the road](#viu-unit-29---on-the-road)
+  - [VIU: Unit 30 - Notices and warnings](#viu-unit-30---notices-and-warnings)
+  - [VIU: Unit 31 - Classroom language](#viu-unit-31---classroom-language)
+  - [VIU: Unit 32 - School education](#viu-unit-32---school-education)
+  - [VIU: Unit 33 - Studying English and taking exams](#viu-unit-33---studying-english-and-taking-exams)
+  - [VIU: Unit 34 - University education](#viu-unit-34---university-education)
+  - [VIU: Unit 35 - Jobs](#viu-unit-35---jobs)
+  - [VIU: Unit 53 - Phoning and texting](#viu-unit-53---phoning-and-texting)
+  - [VIU: Unit 40 - Business and finance](#viu-unit-40---business-and-finance)
+  - [VIU: Unit 57 - Politics](#viu-unit-57---politics)
+  - [VIU: Unit 60 - Time](#viu-unit-60---time)
+  - [VIU: Unit 55 - Email and Internet](#viu-unit-55---email-and-internet)
   - [VIU: Unit 81 - Make, do and take: uses and phrases](#viu-unit-81---make-do-and-take-uses-and-phrases)
   - [VIU: Unit 83 - Get: uses, phrases and phrasal verbs](#viu-unit-83---get-uses-phrases-and-phrasal-verbs)
 - [Collocations in use](#collocations-in-use)
@@ -57,6 +88,11 @@ Words, phrasal verbs and collocations that I have learned.
   - [PVIU: Unit 60 - Food and drink](#pviu-unit-60---food-and-drink)
   - [PVIU: Unit 51 - Feelings](#pviu-unit-51---feelings)
   - [PVIU: Unit 52 - Relationships](#pviu-unit-52---relationships)
+- [Sherlock](#sherlock)
+  - [S1E1](#s1e1)
+- [Megamind movie](#megamind-movie)
+- [Arkane](#arkane)
+  - [S1E1](#s1e1-1)
 - [Common words](#common-words)
 
 # Collocations for letters
@@ -163,7 +199,600 @@ Signatures:
 - for those of you who don't know me, I'm...
 - let me start from telling a lot of bit about my background
 
+---
+
 # Vocabulary in use
+## VIU: Unit 9 - The body and movement
+- forehead - лоб
+- lips - губы
+- cheek - щёки
+- neck - шея
+- chest - грудная клетка / туловище
+- waist - талия / поясница
+- elbow - локоть
+- hip - бедро
+- knee - колено
+- ankle - лодыжка
+- chimb - подбородок
+- breast - грудь (женская?) / грудная клетка
+- wrist - запястье
+- thumb - большой палец
+- heel - пятка
+- toe - палец ноги
+- finger - палец
+- foot - стопа
+- leg - нога
+- arm - рука
+- nod head - кивать головой
+- shake head - мотать головой
+- yawn - зевать
+- wave to sb - махать кому-то рукой
+
+---
+
+## VIU: Unit 10 - Describing appearance
+- appearance - внешность
+- attractive, good-looking - about women (good)
+- pretty - about girl or boy
+- beautiful, gorgeous - about women (very good)
+- attractive, good-looking, but also handsome - about men (good)
+- gorgeous - about men (very good)
+- ugly - not beautiful
+- ordinary - polite ver. of *ugly* (and more soft by meaning)
+- fat 
+  - overweight - polite
+- weigh - весить
+- tall - высокий
+- Hair colors:
+  - blond(e)
+  - fair - светлые
+  - brown - русые
+  - red
+  - dark
+  - black
+  - straight - прямые (не только о волосах можно говорить)
+  - wavy
+  - curly - кудрявые
+- narrow - узкий
+- broad - широкий
+- smart - (about appearance) clean, tidy and stylish
+- approximately - примерно, приблизительно
+- athletic - здоровый, спортивный
+
+---
+
+## VIU: Unit 11 - Character describing
+- (un)reliable - (не)надёжный
+- confident - уверенный в себе
+  - shy - opposite, especially about communication
+- hard-working
+- lazy
+- sense of humor
+- serious
+- (im)patient - (не)терпеливый
+- clever / intelligent - смышлёный
+  - stupid - opposite
+- calm - спокойный
+- nervous / anxious - нервный / обеспокоенный
+  - anxiety - noun
+- sensible - практичный, рациональный
+  - silly - opp.
+
+---
+
+## VIU: Unit 12 - Feelings
+- disappoint - разочаровывать
+- curious - любопытный
+  - curiosity - noun
+- miserable - unhappy
+- affect - влиять
+- cheerful - relaxed and happy
+- mood
+
+---
+
+## VIU: Unit 13 - Family and friends
+- aunt - тётя
+- elder - older
+- twins - близнецы
+- close family - very friendly family
+- get on well - хорошо ладить
+  - with sb - to be in a good relationship with sb
+- nephew - племянник
+  - nieces - plural
+- step(father / mother / sister / brother) - сводные отец, мать, сестра, брат
+- (father / mother / sister / brother)-in-law - тесть, тёща, невестка, шурин
+- ex-(husband / wife / boy(girl)friend, etc.) - husband, wife etc. in the past
+- get to know sb - познакомиться с кем-то
+  - get to know each other - познакомились друг с другом
+
+---
+
+## VIU: Unit 14 - Growing up
+- toddler - ползунок (1-3 years old)
+- childhood - 3-12 years
+- teenager - 13-18 years approximately
+- adult - 18+ years
+- middle-age(d) - 40+ years
+- retirement - 60-65 years
+  - retire - выйти на пенсию (в отставку)
+- elderly - 80+ years
+- N-year-old man - man who is N years old (**NOT N-years-old!**)
+- bring up - растить кого-то до совершеннолетнего возраста
+
+---
+
+## VIU: Unit 15 - Romance, marriage and divorce
+- date - свидание
+- go out with sb - to have a romantic relationship with sb
+- get engaged - обручиться
+  - engagement - помолвка
+- get married - жениться / выйти замуж
+  - get married to sb (**NOT "with"**)
+- bride - невеста
+- bride (groom) - жених
+- ceremony - important public event
+- wedding - церемония бракосочетания
+- reception - wedding party
+- honeymoon - медовый месяц
+- get pregnant - забеременеть
+  - pregnancy - noun
+  - pregnant - adjective
+- anniversary - годовщина
+
+---
+
+## VIU: Unit 16 - Daily routines
+- wake up - проснуться
+  - wake sb up - make sb waked up
+- get up - get out from the bed
+- straight away - immediately
+- have a late/early night - go to sleep late/early
+- cereal - каша
+- don't bother to do sth - don't do sth because there is no reason or because it is too much work
+- bother - беспокоиться
+- takeaway - еда на дом (на вынос)
+- do washing - стираться
+- ironing - глажка
+- to iron / do ironing - гладить
+- leisure - досуг
+- go shopping - leisure activity when we buy clothes, tech, books etc.
+- do **the** shopping - закупаться продуктами
+- stay in - idiom - отдыхать (ничего не делать) дома
+
+---
+
+## VIU: Unit 17 - The place where you live
+- outskirts - окраина
+- flat / apartment - British / American *But now both words are becoming more common*
+  - apartment - usually in a large buildings
+  - flat - part of a large house or like an apartment
+- heat - нагревать
+
+---
+
+## VIU: Unit 18 - Around the home
+- en suite / en-suite bathroom - bathroom that connected to bedroom
+- dishwasher - machine that do dishes
+- Раковина
+  - sink - in the kitchen
+  - wash / basin - in the bathroom
+- cupboard - кухонный шкаф
+- wardrobe - шкаф
+- freezer - холодильник
+- fridge - морозилка
+- oven - духовка
+- cooker - плита
+- cushion - подушечка / диванная подушка
+- armchair - кресло
+- firm - твёрдое
+- rug - коврик
+- carpet - ковёр
+- curtains - шторы
+- blinds - жалюзи
+- duvet - пуховое одеяло
+- sheet - простыня / лист
+- blanket - чехол / одеяло / покрывало / плед
+- pillow - подушка (нормальная)
+
+---
+
+## VIU: Unit 19 - Money
+- currency - валюта
+- loan - кредит
+- fee - доля / процент / оплата
+- amount - сумма
+- to save up - копить деньги
+- to afford - позволять (тут в значении позволить себе что-то)
+- deposit - депозит / залог
+- good value for money - хорошо за свою цену
+- to charge - требовать / обвинять / заряжать
+  - a charge - заряд / требование / плата
+- арендовать
+  - rent - for long period
+  - hire - for short period
+
+---
+
+## VIU: Unit 20 - Health
+- matter - дело (*What's the matter? - В чём дело? / Что случилось?*)
+- sore - больное место / больное
+- bandage - повязка (*и не только XD*)
+- chemist - аптека
+- stomach - желудок
+- -ache - this part (or word) describes pain that isn't always strong but continues a long time
+  - headache
+  - backache
+  - stomach ache
+  - to ache - причинять боль (*My head is aching for 3 hours!*)
+- pain - like above, but for other parts of body
+- to hurt - when pain is more stronger
+- lungs - лёгкие
+- liver - печень
+- disease - serious medical problem that often affects part of body (*heart disease*)
+- illness - used to talk about serious and minor medical problems, also affecting the mind
+  - **for period of medical problem we should use ONLY illness**
+- attack - for illness - situation when some disease cause suddenly hurting
+  - heart attack
+  - asthma attack
+
+---
+
+## VIU: Unit 21 - Clothes
+- well-dressed / look stylish - wearing nice clothes and looking attractive
+- smartly dressed - clean and tidy clothes, usually for formal situations
+- casual - comfortable clothes, usually for informal situations
+- earring - серьга
+- bracelet - браслет
+- necklace - ожерелье
+- skirt - юбка
+- tights - колготки
+- sleeve - рукав
+- collar - воротник
+- shirt - рубашка
+- trousers - брюки
+- t-shirt - футболка
+- rucksack / backpack - рюкзак
+- briefcase - портфель
+- jacket - куртка
+- trainers / sneakers
+- jumper / sweater
+- to get dressed - одеться
+- to wear - носить
+- take off sth - снять
+  - put sth on - opp.
+    - put one's shirts on sth - idiom - рискнуть всем, что есть
+- undo sth - расстегнуть что-то
+  - do sth up - idiom - застегнуть что-то
+- to suit - хорошо смотреться
+  - a suit - костюм
+- to fit - подходить по размеру
+- item of clothing (clothes) - элемент одежды
+- change into sth (for clothes) - change sth piece of clothes
+
+---
+
+## VIU: Unit 22 - Fashion and buying clothes
+- to try on - примерять одежду 
+- to go with - look good together
+- to dress in - одеваться по определённому стилю
+- to match - совпадать / быть похожими
+- coat - пальто
+- to fit - подходить по размеру
+- to suit - хорошо смотреться
+- to serve - обслуживать
+- tight - узкий
+- loose - широкий / свободный
+- that's a shame / that's a pity - это меня не устраивает / это ужас
+- I'll leave it - я ухожу
+- I'll take it/them - я беру это
+- changing room - примерочная
+
+---
+
+## VIU: Unit 23 - Shopping
+  - a basket - корзина
+  - a trolley - тележка
+  - a checkout - касса
+  - a shelve - стеллаж / прилавок / шельф
+  - to shelve - откладывать
+  - under one roof - буквально - "Под одной крышей" - в одном месте
+  - convenient - удобно
+  - a stall - прилавок, небольшая комната
+  - to stall - suddenly stop working / stop making progress / задержать кого-то в процессе чего-то
+  - to haggle - торговаться
+    - a haggling
+
+---
+
+## VIU: Unit 24 - Food
+- peach - персик
+- pear - груша
+- melon - дыня
+- lemon
+- coconut
+- strawberry
+- pineapple
+- olives
+- grape
+- bunch - кучка / гроздь
+- beans - бобы / семена
+- peas - горох
+- garlic - чеснок
+- onion - лук
+- carrot - морковь
+- mushrooms - грибы
+- spinach - шпинат
+- cabbage - капуста
+- pepper
+- broccoli
+- courgette - кабачок
+- aubergine - баклажан
+- lettuce - лист салата
+- tomato
+- cucumber
+- vinegar - уксус
+- beef - говядина
+- calf - телёнок
+  - veal - телятина
+- lamb - детёныш овцы / его мясо
+- pork - свинина
+- chicken / hen - курица
+  - chicken - курятина
+- vegetarian
+- salmon - лосось
+- prawns - креветки
+- mussels - моллюски
+- crab
+
+---
+
+## VIU: Unit 26 - City life
+  - rush hour - час-пик
+  - to be in a hurry - do sth or go somewhere quickly
+  - get stuck - застрять
+  - traffic jam - пробка (машин)
+  - car park / parking space (**NOT parking** if we say particularly about place where we can leave a car)
+  - advantages
+    - disadvantages - opp.
+  - crowded
+    - quiet
+  - nightlife
+
+---
+
+## VIU: Unit 27 - Life in the country
+- be surrounded by sth
+- scenery - пейзаж
+- bank of river - берег
+- countryside - сельская местность
+- crop - урожай
+- barley - ячмень
+- wheat - пшеница
+- footpath - тропинка
+
+---
+
+## VIU: Unit 28 - Transport
+- lorry / track - грузовик
+- van - газель
+- bus
+- coach - trainer / tourist bus
+- bicycle
+- motorbike
+- fare - плата за проезд
+- Ездить
+  - train / bus / coach - get / catch / go by
+  - plane - fly 
+  - taxi - get / take
+  - bicycle - go by / ride a
+- Сесть на / выйти
+  - bus / coach / train / plane / bicycle - get on / get off
+  - taxi - get in / get out
+- taxi rank - стоянка такси
+
+---
+
+## VIU: Unit 29 - On the road
+  - traffic lights
+  - bend - поворот
+  - junction - соединение (пересечение) дорог / перекрёсток
+  - pedestrian - пешеход
+  - pedestrian crossing - пешеходный переход
+  - motorway - шоссе
+    - inside / slow lane - обочина
+    - outside / fast lane - внутренние полосы
+  - bridge
+  - road sign - дорожный знак
+  - to overtake - обогнать (concrete and abstract)
+  - get lost - потеряться
+  - on one's way to - по пути
+  - via - through
+  - end up - оказаться там, где не ожидал
+  - pavement - тротуар
+  - step off - сойти с
+  - to approach - приближаться
+  - a brake - тормоз
+  - to brake - затормозить
+  - to swerve - suddenly change direction
+  - to / a damage - for things
+  - to injure / an injury - for persons
+
+---
+
+## VIU: Unit 30 - Notices and warnings
+- out of order
+  - for machine - stop working
+  - for person - behaves unacceptable
+- no vacancies - concrete / no places in hotel, parking etc.
+- sold out
+- admission - вход
+- fragile - хрупкий (concrete and abstract)
+- parcel - посылка
+
+---
+
+## VIU: Unit 31 - Classroom language
+- sharpener - точилка
+- ruler - линейка
+- socket - розетка / разъём / гнездо
+- plug - штекер / пробка / затычка
+- lend - одолжить (совсем ненадолго, даже короче, чем hire)
+
+---
+
+## VIU: Unit 32 - School education
+- nursery - питомник
+- nursery school - детский сад
+- primary school
+- secondary school
+- take/do exams
+- vocational training - квалификационные курсы (в колледже)
+- go on to university
+- math (american) / maths (british)
+- lipstick - помада
+- stay behind - оставаться после уроков (в более общем смысле - оставаться где-то, когда все уходят)
+
+---
+
+## VIU: Unit 33 - Studying English and taking exams
+- wide vocabulary
+- accurately
+- fluent speaking
+- vowel - гласная буква
+- consonant - согласная буква
+- willing - готовый
+- retake exam
+- revise - check sth and improve it / study sth and for taking test
+  - revise for exam
+
+---
+
+## VIU: Unit 34 - University education
+- qualification - concrete meaning / sth that you get passing the exam
+- degree - учёная степень
+  - study for degree / do a degree
+- lecturer
+- undergraduates - обучающиеся на бакалавра
+- graduates - получившие учёную степень бакалавра
+- postgraduate degrees - более высокие учёные степени (Master, PhD, etc.)
+
+---
+
+## VIU: Unit 35 - Jobs
+  - builder
+  - carpenter - makes things using wood
+  - pipe - труба
+  - plumber - installs and repairs water pipes
+  - electrician
+  - mechanic - repairs cars
+  - fix / repair
+  - fix / repair / mend - for small equipment
+  - mend - for clothes
+  - accountant - бухгалтер
+  - architect
+  - lawyer
+  - engineer
+  - to treat - лечить
+  - GP - терапевт
+  - dentist
+  - vet - ветеринар
+  - nurse - медсестра
+  - sailor - моряк
+  - navy - флот
+  - fireman / firefighter - works in fire brigade
+
+---
+
+## VIU: Unit 53 - Phoning and texting
+- phrases to ask who is speaking with you by phone
+  - Is that sb? - informal
+  - Who's calling? - formal
+- answer to this question
+  - It's sb - informal
+  - Calling - formal ("у аппарата")
+- put sb through - connect sb with sb else
+- get through - connect
+- to be on the phone to sb - говорить с кем-то
+- dial - make call to particular number
+- left a message
+- answerphone - автоответчик
+- to ring / to give one's a ring - позвонить
+- line engaged - линия занята
+- Texting abbreviations:
+  - ASAP - as soon as possible
+  - BF / GF - boyfriend / girlfriend
+  - B4 - before
+  - 2DAY - today
+  - 2MORO - tomorrow
+  - Y - why?
+  - PLS - please
+  - CU - see you
+  - IMO - in my opinion
+  - FYI - for your information
+  - U - you
+  - THX - thanks
+  - LOL - laughing out loud
+  - X - kiss
+  - FAQ - frequently asked questions
+
+---
+
+## VIU: Unit 40 - Business and finance
+- gradually - постепенно
+- sharply - резко
+- stay the same - не меняться
+- interest rate - процентная ставка
+- figure - фигура / число / цифра / изображение / иллюстрация / показатель
+
+---
+
+## VIU: Unit 57 - Politics
+- ballot - бюллетень
+- vote for - elect
+- constituency - избирательный округ
+- policies - курс политической партии / программа
+- belief - вера
+
+---
+
+## VIU: Unit 60 - Time
+- in time - вовремя (либо раньше)
+- on time - вовремя
+- It's time for/to sth
+- have time for sth - have enough time to do sth
+- the (lost / next) time - в прошлый/следующий раз (*дальше обычно описываются условия следующего раза*)
+- at the same time - одновременно
+- (until / by) [time] - не (раньше / позже) [времени]
+- for [period of time] - в течение
+- since [time moment in the past] - с [момента времени]
+- during [period] - в течение / пока что происходило (*I've worked on the farm during the summer*)
+- in [period]'s time / in time of [period] - через какой-то период времени
+- for ages - for a long time
+- recently / lately - недавно (несколько месяцев)
+- a long time ago / ages ago
+- the other day (for past) - совсем недавно (чаще всего пару дней, возможно неделю назад)
+- these days / nowadays
+- for the time being - в ближайшем будущем
+- one day - однажды
+- fortnight - 2 weeks (Fun fact: root of word - **fourteen nights** - in a lot of countries payday goes one time per 2 weeks. It is called *fortnightly basis*)
+- sth take [one's] [time period] - что-то займёт [период времени]
+- last [time period] - длиться [период времени]
+
+---
+
+## VIU: Unit 55 - Email and Internet
+- essential - important / necessary
+- junk mail - spam
+- @ - at
+- on the Internet - **NOT in the**
+- ISP - Internet service provider
+- go online - use the Internet (быть в сети)
+- search the Internet - do an Internet search
+- instant - моментальный
+
+---
+
 ## VIU: Unit 81 - Make, do and take: uses and phrases
 - take a photo
 - take/have a shower
@@ -1369,7 +1998,7 @@ Punishment collocations:
 - take off - в данном контексте: взлететь в популярности
 - downfall - падение
   - riseup - opp. *?*
-- fall through - провалиться (*чем отличается от fail?*)
+- fall through - провалиться
 - pull off - сдвинуться
 - build on - строить нечто новое (в т.ч. переносно), опираясь на что-то уже имеющееся
 - walk into - очень легко (прогулочным шагом)
@@ -1402,14 +2031,14 @@ In this PV particle can place either before or after verb:
 - keep sth from sb - хранить что-то втайне
 - sort of - частично / немного
 - open up - открыться
-- pour up - лить (*в контексте этого юнита - излить душу о чём-то наболевшем*)
+- pour (out / up) - лить (*в контексте этого юнита - излить душу о чём-то наболевшем*)
   - outpouring - noun
 - go back on - отказаться от / нарушить слово
 - let on [to sb] [about sth] - проговориться
 - own up - признаться
 - talk down to sb - говорить с кем-то свысока
 - play down sth / play sth down - пытаться замять что-то, уменьшить значимость или убедить в нереальности
-- pin down sb / pin sb down on sth - потребовать от кого-то точной информации о чём-то и получить её
+- pin down sb / pin sb down on sth - потребовать от кого-то точной информации о чём-то и получить её, то есть "пригвоздить"
 - have it out with sb - **informal** - обсудить проблему
 - wind up sb / wind sb up - **informal** - обманывать кого-то (с целью подшутить или разозлить)
 - mouth off - **informal** - молоть языком
@@ -1423,7 +2052,7 @@ In this PV particle can place either before or after verb:
   - firmly - adj.
 - do away with - справиться / разделаться
 - clamp down on - стать строгим с кем-то или чем-то (прижать)
-- stand up for - защищать (вставать за что что-то)
+- stand up for - защищать (вставать за что-то)
 - stand up to - противостоять кому-то или чему-то
 - go ahead - начать делать что-то
   - go-ahead - разрешение на проделывание чего-то
@@ -1448,7 +2077,7 @@ In this PV particle can place either before or after verb:
 - turn (up / down) - increase or decrease volume
 - scroll (up / down)
 - call breaks up - звонок прервался
-- phone goes off - *в обычном смысле это значит выходить,* в данном случае, издавать звуки
+- phone goes off - *в обычном смысле это значит выходить,* в данном случае - издавать звуки
 - connection cuts off - связь оборвалась
 - battery runs out - батарея разрядилась
 - use up - израсходовать / использовать полностью
@@ -1468,7 +2097,7 @@ In this PV particle can place either before or after verb:
 - write off - принять факт чего-то (для денег - списать со счетов, то есть мысленно принять затраты)
 - give away - give sth for free
 - pick up - купить что-то вдогонку (когда планировал на самом деле что-то другое)
-- knockdown price - сногшибательная цена
+- knockdown price - сногсшибательная цена
 
 ---
 
@@ -1494,7 +2123,7 @@ In this PV particle can place either before or after verb:
 - boil over - вскипятить
 - pour out - наложить порции еды
 - handed round - раздать всем присутствующим
-- top up - пополнять / доливатьн
+- top up - пополнять / доливать
 - go with - хорошо сочетаться
 - left over - остаться (*nothing will left over* - ничего не осталось)
   - leftover - noun
@@ -1504,7 +2133,7 @@ In this PV particle can place either before or after verb:
 ---
 
 ## PVIU: Unit 51 - Feelings
-- phrasal verbs with *up* can mean positive emotions and emotional events or hight emotional intensity:
+- phrasal verbs with *up* can mean positive emotions and emotional events or high emotional intensity:
   - bright up - оживиться
   - cheer up - развеселить
   - to be hung up about sth - (inf. form - *hang up*) - зацикливаться на чём-то 
@@ -1538,7 +2167,133 @@ In this PV particle can place either before or after verb:
 - hit it off with sb - тут же поладить с кем-то
 - pair off with sb - start a romantic relationship with sb
 - go for (sth / sb) - like that type of sb or sth
-- 
+
+---
+
+# Sherlock
+## S1E1
+- go down / decline - снижаться
+- ensure - гарантировать / способствовать
+- to grant - предоставить
+- tie - галстук
+- drinking habits - алкоголизм
+- sth is right up one's street - что-то по части кого-то (его любимое дело или то, в чём он разбирается)
+- forensic - судебный
+- forensics - суд.-мед. экспертиза
+- right behind sb - give sb complete support
+- landlady / landlord - домовладелица / домовладелец
+  - homeowner - syn.
+- housekeeper - домработник
+- wait up - don't go to bed cause you are expecting someone to arrive ("ждать, не смыкая глаз")
+- bloody thing - чёртова штука
+- cuppa - чашка чаю
+- bit of trouble - небольшая неприятность
+- decent - приличие
+- out of one's depth - не обладать достаточными навыками или знаниями, чтобы справиться с ситуацией
+  - out of one's league - syn.
+- shot in the dark - ткнул пальцем в небо, выстрел вслепую
+- piss off - отвали! (грубая форма)
+- divorce - развод
+- imply - подразумевать
+- assume - предполагать / допускать
+- put on / wear - надеть
+- adultery - измена
+- adulterer - изменник
+- pass out - потерять сознание
+- unconscious - не ощущающий окружающего мира, не понимающий происходящего
+- pass sth out - дать что-то каждому из группы людей
+- get off! - stop touching sth
+- get off sth - leave bus/aircraft/boat / leave sth place
+- get off on sth - feel very excited by doing sth
+- get off with sb - begin sexual relationship with sb
+- get on one's nerves - действовать кому-то на нервы
+  - drive sb crazy - the same
+  - to be one's pain in neck
+- any point in sth - есть ли смысл в чём-то (e.g. *any point I'm asking*)
+- none at all - absolutely no (вообще нет / никакого)
+- get moving - to hurry
+- hurry - поторопиться
+- discreet - осторожность
+- barely - едва
+- capable - способный
+- arch-enemy - заклятый враг
+- to be above all that - быть выше (всего) этого
+- fire sb up - make sb excited or angry
+- sustain
+  - to support emotionally
+  - to suffer experience of damage or loss
+  - to keep alive
+  - let sth to continue
+- shout - орать
+- fill in - выполнять чужую работу
+- fill sb in - give sb extra or missing info
+- fill one's shoes - do one's job or accept one's responsibilities
+- dull - boring
+- withhold - утаивать что-то
+- break sb in - ввести в курс дела
+- break sth in - разнашивать какую-то вещь
+- break in - перебивать
+- break-in - незаконное проникновение
+
+---
+
+# Megamind movie
+- lot worse - намного хуже
+- move on - двигаться дальше
+- set out - start journey / start doing something when you have already decided what you want to achieve
+- turn out - одновременно начать что-то делать или достигнуть одинакового результата
+- rivalry - соперничество
+- no big deal - ничего страшного / ну и ладно
+- have life handed to sb on a silver platter - идиома - получать всё на блюде с голубой каёмочкой / на всём готовеньком
+- knack - талант
+- screw (sth) up - совершить ошибку или что-то испортить
+- screw sb up - нанести кому-то вред или расстроить
+- screw up - make mistake
+  - screw-up - noun 
+- The die had been cast - жребий брошен
+- would it kill you to do sth - неужели ты не мог сделать что-то
+- nosey - пронырливый / любопытный (*from nose, lol*)
+- sb behind bars - кто-то за решёткой
+- rampant - угрожающий / свирепствующий
+- stand up to sb/sth - сопротивляться кому-то или чему-то
+- welfare - благоденствие
+- yell - кричать
+- figure out - выяснить / постигнуть что-либо
+- such a pill - такой зануда
+- dove - голубь
+- gosh - боже!
+- I am running late - я опаздываю
+- get out of town - idiom - да ну нафиг
+- boggle - умопомрачительный
+  - boggles - adverb
+- get to the bottom - докопаться до сути
+- squander - расточительствовать
+
+---
+
+# Arkane
+## S1E1
+- bash - удар
+- envy - зависть
+- to bash in - врезать кому-то
+- to get a pass - idiom - don't get punishment for a mistake
+- jinx - сглаз
+- to peek - заглянуть
+  - peek in (to sth) - мельком глянуть на что-то
+  - peek out (from sth) - быстро выглянуть откуда-то
+- folk - народ
+- to negotiate - вести переговоры
+  - negotiations - переговоры
+- to owe - быть должным
+- vile - подлый, мерзкий, гадкий
+- to flee / fled - бежать
+- to show up - появляться
+- to tie - связывать
+- to brag - хвастаться
+- a culprit - преступник
+- to pipe down / to cool off - остыть (успокоиться)
+- grasp - понимать / понимание
+- to interfere - вмешиваться (*классно сочетается с интерференцией*)
 
 ---
 
@@ -1568,7 +2323,6 @@ In this PV particle can place either before or after verb:
 - to have in common - в общем
 - whereas - в то время как
 - while - в то время пока
-- used to - было правдой, теперь нет
 - complain - жаловаться
 - encourage someone - поддерживать
 - persuade someone - убеждать / агитировать
@@ -1576,7 +2330,7 @@ In this PV particle can place either before or after verb:
 - fence - забор
 - break up - расстаться
 - main one - главный из чего-то
-- Sequence - последовательность
+- sequence - последовательность
 - observe - наблюдать, обозревать всё вокруг
 - sailing - ходить под парусом
 - fortune teller - гадалка
@@ -1591,9 +2345,9 @@ In this PV particle can place either before or after verb:
 - to hold one's tongue - держать язык за зубами
 - one's cup of tea - чьё-то хобби
 - They say - говорят, что ... (не "они говорят")
-- Make one's bed - заправлять кровать
-- Dishes - посуда
-- Do dishes - мыть посуду
+- make one's bed - заправлять кровать
+- dishes - посуда
+- do dishes - мыть посуду
 - it's a settled / it's a deal - договорились
 - vary - разнообразить
 - deforestation - вырубка леса
@@ -1661,7 +2415,7 @@ In this PV particle can place either before or after verb:
 - narration - повествование
 - emphasize - усилить
 - hesitate - сомневаться
-- rather then - а не
+- rather than - а не
 - a venue - место встречи
 - unaware of - не в курсе
 - to make most of something - извлекать максимум пользы
@@ -1676,7 +2430,6 @@ In this PV particle can place either before or after verb:
 - get on - справляться / войти
   - abstract - don't like sb
 - admire - восхищаться
-- although - хотя
 - tough - жёсткий
 - immediately - немедленно
 - thus - таким образом
@@ -1736,7 +2489,7 @@ In this PV particle can place either before or after verb:
 - in particular / particularly - в частности / в особенности
 - generous - щедрый
   - mean - наоборот
-- (dis)honest - (не) честный
+- (dis)honest - (не)честный
   - (dis)honesty - noun
 - come out - стать известным общественности, вернуться откуда-то
 - shake hands - пожать руки
@@ -1759,7 +2512,7 @@ In this PV particle can place either before or after verb:
 - affectionate - привязчивая
 - stroke - гладить / удар
 - sofa - диван
-- lorry / trucks - грузовик
+- lorry / truck - грузовик
 - slippery - скользкий
 - doing sth by hand - делать что-то своими руками (**БЕЗ s НА КОНЦЕ**)
 - alterations - преобразования
@@ -1800,8 +2553,8 @@ In this PV particle can place either before or after verb:
   - for conversation - conversation fails because there is a problem or disagreement
 - sort sth out / deal with sth - разобраться с чем-то
 - mess about/around - тратить время, делая что-то неважное / тратить время, играя, без какой-либо цели
-- put sth off - отложить что-то на потом
 - postpone - откладывать
+- put sth off - postpone sth
 - call sth off - что-то не случится / что-то прекратится
 - look down on sb - смотреть на кого-то свысока
 - do away with sth/sb - избавиться от чего-то / убить кого-то
@@ -1842,8 +2595,8 @@ In this PV particle can place either before or after verb:
   - can't/couldn't get over sth - to be very surprised or shocked about sth / deal with sth
 - keep on - продолжать раздражающе говорить о чём-то
   - keep on doing sth - continue to do sth or do sth again and again 
-- pass sth up - don't use the opportunity to do sth interesting
 - opportunity - возможность
+- pass sth up - don't use the opportunity to do sth interesting
 - pick up - improving in business or social situation / wind becomes stronger
   - pick up sth - увеличение чего
   - pick sb/sth up - to lift sth/sb by using hands / collect sb who is waiting for you / collect sth that you have left
@@ -1859,9 +2612,9 @@ In this PV particle can place either before or after verb:
   - decide to stop an activity
 - go against sb - don't get needed result by decision or voting
 - go against sth - что-то идёт вразрез с вашими убеждениями
-- obey - подчинятья
-- cut out - suddenly stop working
+- obey - подчиняться
 - suddenly - внезапно
+- cut out - suddenly stop working
 - dress up
   - надеть формальную одежду для особого случая
   - надеть специальную одежду для вечеринки или чего-то подобного
@@ -1871,7 +2624,8 @@ In this PV particle can place either before or after verb:
 - ill at ease - чувство тревоги
 - brush up on sth - improve your skills in sth
 - leave sth for/to sb - возложить на кого-то ответственность за что-то
-- chase sb up - напомнить кому-то о том, что он не сделал то, что обещал (synonym - remind)
+- chase sb up - напомнить кому-то о том, что он не сделал то, что обещал
+  - remind - syn.
 - miss/leave sb/sth out - exclude sb/sth, omit
 - leave aside - оставить одну тему разговора в стороне для обсуждения другой
 - fall for
@@ -1881,162 +2635,33 @@ In this PV particle can place either before or after verb:
   - about tooth/hair - выпадать
   - argue with sb and damage our relationship
 - make out sth/sb - see, hear or understand sth/sb with difficulty
-- brush sth/sb aside - refuse to consider sth/sb seriously (syn. ignore)
+- brush sth/sb aside - refuse to consider sth/sb seriously
+  - ignore - syn.
 - put out
   - turn off by clicking on the button 
   - make sth stop burning
   - agree to have a sex
 - put sb out - to cause sb extra work or troubles
-- put yourself out - попытаться кому-то помочь, даже если это не очень удобно
+  - put yourself out - попытаться кому-то помочь, даже если это не очень удобно
 - put sth out
   - move part of body
   - сломать какую-то часть тела (syn. injure)
   - produce public information, produce a large counts of items to be sold
   - make wrong (e.g. in math calc)
   - give work
-- Sherlock (S1E1):
-  - go down / decline - снижаться
-  - ensure - гарантировать / способствовать
-  - to grant - предоставить
-  - tie - галстук
-  - drinking habits - алкоголизм
-  - sth is right up one's street - что-то по части кого-то (его любимое дело или то, в чём он разбирается)
-  - forensic - судебный
-  - forensics - суд.-мед. экспертиза
-  - right behind sb - give sb complete support
-  - landlady - домовладелица
-  - homeowner - домовладелец
-  - housekeeper - домработник
-  - wait up - don't go to bed cause you are expecting someone to arrive ("ждать, не смыкая глаз")
-  - bloody thing - чёртова штука
-  - cuppa - чашка чаю
-  - bit of trouble - небольшая неприятность
-  - decent - приличие
-  - out of one's depth - не обладать достаточными навыками или знаниями, чтобы справиться с ситуацией
-    - out of one's league - the same
-  - shot in the dark - ткнул пальцем в небо, выстрел вслепую
-  - piss off - отвали! (грубая форма)
-  - divorce - развод
-  - imply - подразумевать
-  - assume - предполагать / допускать
-  - wear - надеть
-  - put on - надеть
-  - adultery - измена (в замужестве)
-  - adulterer - изменник
-  - pass out - потерять сознание
-  - unconscious - не ощущающий окружающего мира, не понимающий происходящего
-  - pass sth out - дать что-то каждому из группы людей
-  - get off! - stop touching sth
-  - get off sth - leave bus/aircraft/boat / leave sth place
-  - get off on sth - feel very excited by doing sth
-  - get off with sb - begin sexual relationship with sb
-  - get on one's nerves - действовать кому-то на нервы
-    - drive sb crazy - the same
-    - to be one's pain in neck
-  - any point in sth - есть ли смысл в чём-то (e.g. *any point I'm asking*)
-  - none at all - absolutely no (вообще нет / никакого)
-  - get moving - to hurry
-  - hurry - поторопиться
-  - discreet - осторожность
-  - barely - едва
-  - capable - способный
-  - arch-enemy - заклятый враг
-  - to be above all that - быть выше (всего) этого
-  - fire sb up - make sb excited or angry
-  - sustain
-    - to support emotionally
-    - to suffer experience of damage or loss
-    - to keep alive
-    - let sth to continue
-  - shout - орать
-  - fill in - выполнять чужую работу
-  - fill sb in - give sb extra or missing info
-  - fill one's shoes - do one's job or accept one's responsibilities
-  - dull - boring
-  - withhold - утаивать что-то
-  - break sb in - ввести в курс дела
-  - break sth in - разнашивать какую-то вещь
-  - break in - перебивать
-  - break-in - незаконное проникновение
-- forehead - лоб
-- lips - губы
-- cheek - щёки
-- neck - шея
-- chest - грудная клетка / туловище
-- waist - талия / поясница
-- elbow - локоть
-- hip - бедро
-- knee - колено
-- ankle - лодыжка
-- chimb - подбородок
-- breast - грудь (женская?) / грудная клетка
-- wrist - запястье
-- thumb - большой палец
-- heel - пятка
-- toe - палец ноги
-- finger - палец
-- foot - стопа
-- leg - нога
-- arm - рука
-- nod head - кивать головой
-- shake head - мотать головой
-- yawn - зевать
-- wave to sb - махать кому-то рукой
 - consider - рассматривать
 - consideration - рассмотрение
   - to put under consideration - отправить на рассмотрение
 - wealth - богатство
   - wealthy - богатые
 - to last - длиться
-- capital punishment - смертная казнь
+- capital punishment / death penalty - смертная казнь
 - imaginary - воображаемый
 - fair - справедливый
   - fairly - справедливо
   - unfairly - несправедливо
 - vanity fair - ярмарка тщеславия
 - turn out - оказаться
-- appearance - внешность
-- attractive, good-looking - about women (good)
-- pretty - about girl or boy
-- beautiful, gorgeous - about women (very good)
-- attractive, good-looking, but also handsome - about men (good)
-- gorgeous - about men (very good)
-- ugly - not beautiful
-- ordinary - polite ver. of ugly (and more soft by meaning)
-- fat => overweight
-- weigh - весить
-- tall - высокий
-- Цвет волос:
-  - blond(e)
-  - fair - светлые
-  - brown - русые
-  - red
-  - dark
-  - black
-  - straight - прямые (не только о волосах можно говорить)
-  - wavy
-  - curly - кудрявые
-- narrow - узкий
-- broad - широкий
-- smart - (about appearance) clean, tidy and stylish
-- approximately - примерно, приблизительно
-- athletic - здоровый, спортивный
-- Character describing:
-  - (un)reliable - (не)надёжный
-  - confident - уверенный в себе
-    - shy - opposite, especially about communication
-  - hard-working
-  - lazy
-  - sense of humo(u)r
-  - serious
-  - (im)patient - (не)терпеливый
-  - clever / intelligent - смышлёный
-    - stupid - opposite
-  - calm - спокойный
-  - nervous / anxious - нервный / обеспокоенный
-    - anxiety - noun
-  - sensible - практичный, рациональный
-    - silly - opp.
 - typist - машинистка
 - cold comfort - слабое утешение
 - gain the upper hand - одержать верх
@@ -2077,136 +2702,32 @@ In this PV particle can place either before or after verb:
 - check out - pay for sth and leave
   - checkout - place for payment (in the shop or on the website)
 - crack down - начать более жёстко бороться с плохим поведением
-  - crackdown - the same noun
+  - crackdown - noun
 - lookout - person who watches for danger and warns other people
 - handout - милостыня / копия документов для всех собравшихся
 - change over - stop using one thing and start using other one
 - changeover - changing of the situation
 - leftover - остатки еды
 - lie in - stay in bed in the morning later then usual
-  - lie-in - state noun of action above
+  - lie-in - noun
 - put sb down
-  - make sb feel stupid or unimportant by criticazing them
+  - make sb feel stupid or unimportant by criticizing them
   - вписать чьё-то имя в список, чаще всего, чтобы они что-то сделали
 - put a damper on sth - помешать чему-то быть приятным
 - onlooker - зеваки
-- Feelings / emotions:
-  - disappoint - разочаровывать
-  - curious - любопытный
-    - curiosity - noun
-  - miserable - unhappy
-  - affect - влиять
-  - cheerful - relaxed and happy
-  - mood
 - care for - look after sb, especially sb young
-- aunt - тётя
-- Family and friends:
-  - elder - older
-  - twins - близнецы
-  - close family - very friendly family
-  - get on well - хорошо ладить
-    - with sb - to be in a good relationship with sb
-  - nephew - племянник
-    - nieces - plural
-  - step(father / mother / sister / brother) - сводные отец, мать, сестра, брат
-  - (father / mother / sister / brother)-in-law - тесть, тёща, невестка, шурин
-  - ex-(husband / wife / boy(girl)friend, etc.) - husband, wife etc. in the past
-  - get to know sb - познакомиться с кем-то
-    - get to know each other - познакомились друг с другом
 - shut - закрыть
 - hire - арендовать
 - truce - перемирие
 - explain sth to sb - объяснить что-то кому-то
-- Words about growing up:
-  - toddler - ползунок (1-3 years old)
-  - childhood - 3-12 years
-  - teenager - 13-18 years approximately
-  - adult - 18+ years
-  - middle-age(d) - 40+ years
-  - retirement - 60-65 years
-    - retire - выйти на пенсию (в отставку)
-  - elderly - 80+ years
-  - N-year-old man - man who is N years old (**NOT N-years-old!**)
-  - bring up - растить кого-то до совершеннолетнего возраста
 - stay out late - допоздна не возвращаться домой
 - manage sth - do sth with that's difficult
-- Words about romance, marriage and divorce
-  - date - свидание
-  - go out with sb - to have a romantic relationship with sb
-  - get engaged - обручиться
-    - engagement - помолвка
-  - get married - жениться / выйти замуж
-    - get married to (**NOT "with"**)
-  - bride - невеста
-  - bride (groom) - жених
-  - ceremony - important public event
-  - wedding - церемония бракосочетания
-  - reception - wedding party
-  - honeymoon - медовый месяц
-  - get pregnant - забеременеть
-    - pregnancy - noun
-    - pregnant - adjective
-  - anniversary - годовщина
 - a couple of - несколько
 - on one's own - act alone
 - intention - намерение
   - intend - намереваться
 - don't make (any) sense / make no sense - не иметь смысла
 - count on - rely
-- Megamind:
-  - lot worse - намного хуже
-  - move on - двигаться дальше
-  - set out - start journey / start doing something when you have already decided what you want to achieve
-  - turn out - одновременно начать что-то делать или достигнуть одинакового результата
-  - rivalry - соперничество
-  - no big deal - ничего страшного / ну и ладно
-  - have life handed to sb on a silver platter - идиома - получать всё на блюде с голубой каёмочкой / на всём готовеньком
-  - knack - талант
-  - screw (sth) up - совершить ошибку или что-то испортить
-  - screw sb up - нанести кому-то вред или расстроить
-  - screw up - make mistake
-  - screw-up - noun 
-  - The die had been cast - жребий брошен
-  - would it kill you to do sth - неужели ты не мог сделать что-то
-  - nosey - пронырливый / любопытный (*from nose, lol*)
-  - sb behind bars - кто-то за решёткой
-  - rampant - угрожающий / свирепствующий
-  - stand up to sb/sth - сопротивляться кому-то или чему-то
-  - welfare - благоденствие
-  - yell - кричать
-  - figure out - выяснить / постигнуть что-либо
-  - such a pill - такой зануда
-  - dove - голубь
-  - gosh - боже!
-  - I am running late - я опаздываю
-  - get out of town - idiom - да ну нафиг
-  - boggle - умопомрачительный
-    - boggles - adverb
-  - get to the bottom - докопаться до сути
-  - squander - расточительствовать
-- Daily routines (VIU: Unit 16)
-  - wake up - проснуться
-    - wake sb up - make sb waked up
-  - get up - get out from the bed
-  - straight away - immediately
-  - have a late/early night - go to sleep late/early
-  - cereal - каша
-  - don't bother to do sth - don't do sth because there is no reason or because it is too much work
-  - bother - беспокоиться
-  - takeaway - еда на дом (на вынос)
-  - do washing - стираться
-  - ironing - глажка
-  - to iron / do ironing - гладить
-  - leisure - досуг
-  - go shopping - leisure activity when we buy clothes, tech, books and etc.
-  - do **the** shopping - закупаться продуктами
-  - stay in - idiom - отдыхать (ничего не делать) дома
-- The place where you live (VIU: Unit 17)
-  - outskirts - окраина
-  - flat / apartment - British / American *But now both words are becoming more common*
-    - apartment - usually in a large buildings
-    - flat - part of a large house or like an apartment
-  - heat - нагревать
 - didn't have any chance / had no chances / couldn't stand against - most strongest is 2nd
 - to stand for - mean
   - *What does sth stand for?*
@@ -2230,29 +2751,6 @@ In this PV particle can place either before or after verb:
   - sb blows up - suddenly becomes angry
 - to slip up - make mistake
 - to catch one's breath - отдышаться
-- Arkane 1st episode
-  - bash - удар
-  - envy - зависть
-  - to bash in - врезать кому-то
-  - to get a pass - idiom - don't get punishment for a mistake
-  - jinx - сглаз
-  - to peek - заглянуть
-    - peek in (to sth) - мельком глянуть на что-то
-    - peek out (from sth) - быстро выглянуть откуда-то
-  - folk - народ
-  - to negotiate - вести переговоры
-    - negotiations - переговоры
-  - to owe - быть должным
-  - vile - подлый, мерзкий, гадкий
-  - to flee - fled - бежать
-  - to show up - появляться
-  - to tie - связывать
-  - to brag - хвастаться
-  - a culprit - преступник
-  - to cool off - остыть (успокоиться)
-  - to pipe down - успокоиться
-  - to (a) grasp - понимать(понимание)
-  - to interfere - вмешиваться (*классно сочетается с интерференцией*)
 - disaster - катастрофа
 - rescuer - спасатель
 - destructive - разрушительный
@@ -2260,97 +2758,8 @@ In this PV particle can place either before or after verb:
 - flood - наводнение
 - volcanic eruption - вулканическое извержение
 - underestimate - недооценивать
-- Around the home (VIU: Unit 18)
-  - en suite / en-suite bathroom - bathroom that connected to bedroom
-  - dishwasher - machine that do dishes
-  - Раковина
-    - sink - in the kitchen
-    - wash / basin - in the bathroom
-  - cupboard - кухонный шкаф
-  - wardrobe - шкаф
-  - freezer - холодильник
-  - fridge - морозилка
-  - oven - духовка
-  - cooker - плита
-  - cushion - подушечка / диванная подушка
-  - armchair - кресло
-  - firm - твёрдое
-  - rug - коврик
-  - carpet - ковёр
-  - curtains - шторы
-  - blinds - жалюзи
-  - duvet - пуховое одеяло
-  - sheet - простыня / лист
-  - blanket - чехол / одеяло / покрывало / плед
-  - pillow - подушка (нормальная)
 - to offend - обижать
   - offendence - noun
-- Money (VIU: Unit 19)
-  - currency - валюта
-  - loan - кредит
-  - fee - доля / процент / оплата
-  - amount - сумма
-  - to save up - копить деньги
-  - to afford - позволять (тут в значении позволить себе что-то)
-  - deposit - депозит / залог
-  - good value for money - хорошо за свою цену
-  - to charge - требовать / обвинять / заряжать
-    - a charge - заряд / требование / плата
-  - арендовать
-    - rent - for long period
-    - hire - for short period
-- Health (VIU: Unit 20)
-  - matter - дело (*What's the matter? - В чём дело? / Что случилось?*)
-  - sore - больное место / больное
-  - bandage - повязка (*и не только XD*)
-  - chemist - аптека
-  - stomach - желудок
-  - -ache - this part (or word) describes pain that isn't always strong but continues a long time
-    - headache
-    - backache
-    - stomach ache
-    - to ache - причинять боль (*My head is aching for 3 hours!*)
-  - pain - like above, but for other parts of body
-  - to hurt - when pain is more stronger
-  - lungs - лёгкие
-  - liver - печень
-  - disease - serious medical problem that often affects part of body (*heart disease*)
-  - illness - used to talk about serious and minor medical problems, also affecting the mind
-    - **for period of medical problem we should use ONLY illness**
-  - attack - for illness - situation when some disease cause suddenly hurting
-    - heart attack
-    - asthma attack
-- Clothes (VIU: Unit 21)
-  - well-dressed / look stylish - wearing nice clothes and looking attractive
-  - smartly dressed - clean and tidy clothes, usually for formal situations
-  - casual - comfortable clothes, usually for informal situations
-  - earring - серьга
-  - bracelet - браслет
-  - necklace - ожерелье
-  - skirt - юбка
-  - tights - колготки
-  - sleeve - рукав
-  - collar - воротник
-  - shirt - рубашка
-  - trousers - брюки
-  - t-shirt - футболка
-  - rucksack / backpack - рюкзак
-  - briefcase - портфель
-  - jacket - куртка
-  - trainers / sneakers
-  - jumper / sweater
-  - to get dressed - одеться
-  - to wear - носить
-  - take off sth - снять
-    - put sth on - opp.
-      - put one's shirts on sth - idiom - рискнуть всем, что у тебя есть
-  - undo sth - расстегнуть что-то
-    - do sth up - idiom - застегнуть что-то
-  - to suit - хорошо смотреться
-    - a suit - костюм
-  - to fit - подходить по размеру
-  - item of clothing (clothes) - элемент одежды
-  - change into sth (for clothes) - change sth piece of clothes
 - intention - намерение
 - pavement - тротуар
 - come across / run into - пересечься
@@ -2358,74 +2767,6 @@ In this PV particle can place either before or after verb:
   - a denial
 - to refuse / put down - отказывать
   - a refusal
-- Fashion and buying clothes (VIU: Unit 22)
-  - to try on - примерять одежду 
-  - to go with - look good together
-  - even / though - хотя
-  - even though - не смотря на что-то
-  - to dress in - одеваться по определённому стилю
-  - to match - совпадать / быть похожими
-  - coat - пальто
-  - to fit - подходить по размеру
-  - to suit - хорошо смотреться
-  - to serve - обслуживать
-  - tight - узкий
-  - loose - широкий / свободный
-  - that's a shame / that's a pity - это меня не устраивает / это ужас
-  - I'll leave it - я ухожу
-  - I'll take it/them - я беру это
-  - changing room - примерочная
-- Shopping (VIU: Unit 23)
-  - a basket - корзина
-  - a trolley - тележка
-  - a checkout - касса
-  - a shelve - стеллаж / прилавок / шельф
-  - to shelve - откладывать
-  - under one roof - буквально - "Под одной крышей" - в одном месте
-  - convenient - удобно
-  - a stall - прилавок, небольшая комната
-  - to stall - suddenly stop working / stop making progress / задержать кого-то в процессе чего-то
-  - to haggle - торговаться
-    - a haggling
-- Food (VIU: Unit 24)
-  - peach - персик
-  - pear - груша
-  - melon - дыня
-  - lemon
-  - coconut
-  - strawberry
-  - pineapple
-  - olives
-  - grape
-  - bunch - кучка / гроздь
-  - beans - бобы / семена
-  - peas - горох
-  - garlic - чеснок
-  - onion - лук
-  - carrot - морковь
-  - mushrooms - грибы
-  - spinach - шпинат
-  - cabbage - капуста
-  - pepper
-  - broccoli
-  - courgette - кабачок
-  - aubergine - баклажан
-  - lettuce - лист салата
-  - tomato
-  - cucumber
-  - vinegar - уксус
-  - beef - говядина
-  - calf - телёнок
-    - veal - телятина
-  - lamb - детёныш овцы / его мясо
-  - pork - свинина
-  - chicken / hen - курица
-    - chicken - курятина
-  - vegetarian
-  - salmon - лосось
-  - prawns - креветки
-  - mussels - моллюски
-  - crab
 - Some useful phrasal verbs
   - come up - подойти чтобы заговорить / возникнуть
   - cut sb/sth off
@@ -2455,134 +2796,7 @@ In this PV particle can place either before or after verb:
   - stand out - выделяться
   - watch out - be careful
   - work out - go through sth
-- City life (VIU: Unit 26)
-  - rush hour - час-пик
-  - to be in a hurry - do sth or go somewhere quickly
-  - get stuck - застрять
-  - traffic jam - пробка (машин)
-  - car park / parking space (**NOT parking** if we say particularly about place where we can leave a car)
-  - advantages
-    - disadvantages - opp.
-  - crowded
-    - quiet
-  - nightlife
-- Life in the country (VIU: Unit 27)
-  - be surrounded by sth
-  - scenery - пейзаж
-  - bank of river - берег
-  - countryside - сельская местность
-  - crop - урожай
-  - barley - ячмень
-  - wheat - пшеница
-  - footpath - тропинка
-- Transport (VIU: Unit 28)
-  - lorry / track - грузовик
-  - van - газель
-  - bus
-  - coach - trainer / tourist bus
-  - bicycle
-  - motorbike
-  - fare - плата за проезд
-  - Ездить
-    - train / bus / coach - get / catch / go by
-    - plane - fly 
-    - taxi - get / take
-    - bicycle - go by / ride a
-  - Сесть на / выйти
-    - bus / coach / train / plane / bicycle - get on / get off
-    - taxi - get in / get out
-  - taxi rank - стоянка такси
-- On the road (VIU: Unit 29)
-  - traffic lights
-  - bend - поворот
-  - junction - соединение (пересечение) дорог / перекрёсток
-  - pedestrian - пешеход
-  - pedestrian crossing - пешеходный переход
-  - motorway - шоссе
-    - inside / slow lane - обочина
-    - outside / fast lane - внутренние полосы
-  - bridge
-  - road sign - дорожный знак
-  - to overtake - обогнать (concrete and abstract)
-  - get lost - потеряться
-  - on one's way to - по пути
-  - via - through
-  - end up - оказаться там, где не ожидал
-  - pavement - тротуар
-  - step off - сойти с
-  - to approach - приближаться
-  - a brake - тормоз
-  - to brake - затормозить
-  - to swerve - suddenly change direction
-  - to / a damage - for things
-  - to injure / an injury - for persons
-- Notices and warnings (VIU: Unit 30)
-  - out of order
-    - for machine - stop working
-    - for person - behaves unacceptable
-  - no vacancies - concrete / no places in hotel, parking etc.
-  - sold out
-  - admission - вход
-  - fragile - хрупкий (concrete and abstract)
-  - parcel - посылка
-- Classroom language (VIU: Unit 31)
-  - sharpener - точилка
-  - ruler - линейка
-  - socket - розетка / разъём / гнездо
-  - plug - штекер / пробка / затычка
-  - lend - одолжить (совсем ненадолго, даже короче, чем hire)
-- School education (VIU: Unit 32)
-  - nursery - питомник
-  - nursery school - детский сад
-  - primary school
-  - secondary school
-  - take/do exams
-  - vocational training - квалификационные курсы (в колледже)
-  - go on to university
-  - math (american) / maths (british)
-  - lipstick - помада
-  - stay behind - оставаться после уроков (в более общем смысле - оставаться где-то, когда все уходят)
-- Studying English and taking exams (VIU: Unit 33)
-  - wide vocabulary
-  - accurately
-  - fluent speaking
-  - vowel - гласная буква
-  - consonant - согласная буква
-  - willing - готовый
-  - retake exam
-  - revise - check sth and improve it / study sth and for taking test
-    - revise for exam
-- University education (VIU: Unit 34)
-  - qualification - concrete meaning / sth that you get passing the exam
-  - degree - учёная степень
-    - study for degree / do a degree
-  - lecturer
-  - undergraduates - обучающиеся на бакалавра
-  - graduates - получившие учёную степень бакалавра
-  - postgraduate degrees - более высокие учёные степени (Master, PhD, etc.)
 - probably - возможно
-- Jobs (VIU: Unit 35)
-  - builder
-  - carpenter - makes things using wood
-  - pipe - труба
-  - plumber - installs and repairs water pipes
-  - electrician
-  - mechanic - repairs cars
-  - fix / repair
-  - fix / repair / mend - for small equipment
-  - mend - for clothes
-  - accountant - бухгалтер
-  - architect
-  - lawyer
-  - engineer
-  - to treat - лечить
-  - GP - терапевт
-  - dentist
-  - vet
-  - nurse - медсестра
-  - sailor - моряк
-  - navy - флот
-  - fireman / firefighter - works in fire brigade
 - coherent - связность
   - linkers - связки
   - linking words
@@ -2604,88 +2818,12 @@ In this PV particle can place either before or after verb:
 - controversial - спорный 
 - insult - оскорблять
 - go up - подняться
-- Books and films (VIU: Unit 43)
-  - What is on - то, что сейчас в прокате
-  - film director - режиссёр
-- Phoning and texting (VIU: Unit 53)
-  - phrases to ask who is speaking with you by phone
-    - Is that sb? - informal
-    - Who's calling? - formal
-  - answer to this question
-    - It's sb - informal
-    - Calling - formal ("у аппарата")
-  - put sb through - connect sb with sb else
-  - get through - connect
-  - to be on the phone to sb - говорить с кем-то
-  - dial - make call to particular number
-  - left a message
-  - answerphone - автоответчик
-  - to ring / to give one's a ring - позвонить
-  - line engaged - линия занята
-  - Texting abbreviations:
-    - ASAP - as soon as possible
-    - BF / GF - boyfriend / girlfriend
-    - B4 - before
-    - 2DAY - today
-    - 2MORO - tomorrow
-    - Y - why?
-    - PLS - please
-    - CU - see you
-    - IMO - in my opinion
-    - FYI - for your information
-    - U - you
-    - THX - thanks
-    - LOL - laughing out loud
-    - X - kiss
-- Computers (VIU: Unit 54)
-  - back up / make a backup
-  - print out / get hard copy / get a printout
-  - FAQ - frequently asked questions
+- that is on - то, что сейчас в прокате в кино
+- film director - режиссёр
+- back up / make a backup
+- print out / get hard copy / get a printout
 - caviar - икра
-- Numeral
-- Business and finance (VIU: Unit 40)
-  - gradually - постепенно
-  - sharply - резко
-  - stay the same - не меняться
-  - interest rate - процентная ставка
-  - figure - фигура / число / цифра / изображение / иллюстрация
-- Politics (VIU: Unit 57)
-  - ballot - бюллетень
-  - vote for - elect
-  - constituency - избирательный округ
-  - policies - курс политической партии / программа
-  - belief - вера
-- Time (VIU: Unit 60)
-  - in time - вовремя (либо раньше)
-  - on time - вовремя
-  - It's time for/to sth
-  - have time for sth - have enough time to do sth
-  - the lost/next time - в прошлый/следующий раз (*дальше обычно описываются условия следующего раза*)
-  - at the same time - одновременно
-  - until/by [time] - не раньше/позже [времени]
-  - for [period of time] - в течение
-  - since [time moment in the past] - с [момента времени]
-  - during [event in the past] - в течение / пока что происходило (*I've worked on the farm during the summer*)
-  - in [period]'s time / in time of [period] - через какой-то период времени
-  - for ages - for a long time
-  - recently / lately - недавно (несколько месяцев)
-  - a long time ago / ages ago
-  - the other day (for past) - совсем недавно (чаще всего пару дней, возможно неделю назад)
-  - these days / nowadays
-  - for the time being - в ближайшем будущем
-  - one day - однажды
-  - fortnight - 2 weeks (Fun fact: root of word - **fourteen nights** - in a lot of countries payday goes one time per 2 weeks. It is called *fortnightly basis*)
-  - sth take [one's] [time period] - что-то займёт [период времени]
-  - last [time period] - длиться [период времени]
-- Email and Internet (VIU: Unit 55)
-  - essential - important / necessary
-  - junk mail - spam
-  - @ - at
-  - on the Internet - **NOT in the**
-  - ISP - Internet service provider
-  - go online - use the Internet (быть в сети)
-  - search the Internet - do an Internet search
-  - instant - моментальный
+- numeral - числительное
 - give a hug - to hug
 - towel - полотенце
 - scenery - пейзаж
@@ -2764,12 +2902,12 @@ In this PV particle can place either before or after verb:
 - it takes two tango
 - MTMTE - more than meet the eyes / more than meets the eye
 - full-fledged - полное / полноценное
-- [couldn't recall / didn't remember] anything
+- (couldn't recall / didn't remember) anything
 - avoid - избегать
 - succeed - преуспеть
 - hesitate - колебаться
   - hesitation - noun
-- (un)deliberate - намеренный
+- (un)deliberate - (не)намеренный
 - time lasting - растягивание времени
 - dignity - достоинство (*Да-да, из Древнего Рима*)
 - attentive - внимательный
@@ -2823,9 +2961,12 @@ In this PV particle can place either before or after verb:
 - stuff - материал
 - staff - персонал
 - sincere - искренний
-- excite - возмбуждать
+- excite - возбуждать
   - excitement - noun
 - eager - жаждущий / нетерпеливый
   - eagerly - adv.
   - eagerness - noun
 - kangaroo - кенгуру
+- rookie - новичок
+- pace - темп
+- tear / tore / torn - рвать
