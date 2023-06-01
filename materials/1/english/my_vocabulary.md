@@ -77,6 +77,7 @@ Words, phrasal verbs and collocations that I have learned.
   - [CIU: Unit 42 - Distance and size](#ciu-unit-42---distance-and-size)
   - [CIU: Unit 43 - Color and light](#ciu-unit-43---color-and-light)
   - [CIU: Unit 44 - Texture](#ciu-unit-44---texture)
+  - [CIU: Unit 48 - Change](#ciu-unit-48---change)
 - [Phrasal verbs in use](#phrasal-verbs-in-use)
   - [PVIU: Unit 27 - Success and failure](#pviu-unit-27---success-and-failure)
   - [PVIU: Unit 42 - The classroom and learning](#pviu-unit-42---the-classroom-and-learning)
@@ -88,6 +89,7 @@ Words, phrasal verbs and collocations that I have learned.
   - [PVIU: Unit 60 - Food and drink](#pviu-unit-60---food-and-drink)
   - [PVIU: Unit 51 - Feelings](#pviu-unit-51---feelings)
   - [PVIU: Unit 52 - Relationships](#pviu-unit-52---relationships)
+  - [PVIU: Unit 53 - Relationships: problems](#pviu-unit-53---relationships-problems)
 - [Sherlock](#sherlock)
   - [S1E1](#s1e1)
 - [Megamind movie](#megamind-movie)
@@ -1990,6 +1992,36 @@ Punishment collocations:
 
 ---
 
+## CIU: Unit 48 - Change
+Small changes:
+- make a (few adjustments / few modifications / slight alterations)
+- adopt new approach - принять новый подход
+- have sth altered - (поменять / заменить) что-то
+
+Major changes:
+- (break / kick) a habit
+- revolutionize
+  - revolutionize the way
+- converted to (some religion) - сменить религию
+- sth has power to transform - что-то может изменить жизнь к лучшему
+
+Other collocations:
+- change (places / seats / jobs / schools / doctors / the beds / clothes)
+- move house - **NOT *change***
+- change (one's mind / the subject)
+- change the baby - переодеть ребёнка
+- nappy - подгузник
+- become (available / successful) - **NOT *get***
+- standard of living is (rising / improving) - **NOT *increasing* or *growing***
+- improvement in performance - **NOT *increase***
+- problem arise - **NOT *appear***
+
+*exchange* can be used only when we give sth and get sth in response
+
+*rise* is used for inanimate things (*prices rise*, *Sun rises*, etc.), but we should use *raise* for people or organizations (*I raise a hand*, *government rose taxes*, *raise question*, etc.)
+
+---
+
 # Phrasal verbs in use
 ## PVIU: Unit 27 - Success and failure
 - bring [sth] off - заставить что-то осуществиться / провести сделку 
@@ -2167,6 +2199,23 @@ In this PV particle can place either before or after verb:
 - hit it off with sb - тут же поладить с кем-то
 - pair off with sb - start a romantic relationship with sb
 - go for (sth / sb) - like that type of sb or sth
+
+---
+
+## PVIU: Unit 53 - Relationships: problems
+- (split / break) up - end relationship or marriage
+  - break-out - noun
+- (drift / grow) apart - gradually become less friendly
+- finish with (him / her) - informal - end relationship
+  - break off [with sb] - syn.
+- let sb down - разочаровывать кого-то / подвести кого-то
+- make up - forgive and become friendly again
+- miss out - потерять шанс или возможность
+- run off with sb - сбежать с кем-то с романтической целью 
+- live sth down - оставить что-то позади и жить дальше
+- settle down - остепениться
+- fault - ошибка / недостаток
+- settle for sth - принять что-то, что тебе неприятно
 
 ---
 
@@ -2970,3 +3019,4 @@ In this PV particle can place either before or after verb:
 - rookie - новичок
 - pace - темп
 - tear / tore / torn - рвать
+- incentive - стимул
