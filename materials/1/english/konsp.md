@@ -574,11 +574,9 @@ Also we use **past simple** when we talk about events that haven't influence now
 - *Tom has found his key* (**he has it now**)
 - *Tom lose his key* (**We don't know Tom has his key now**)
 
-For new or recent events we can use both tenses (*I have repaired my car / I repaired my car. It's OK now.*)
+For new or recent events we can use both tenses (*I have repaired my car / I repaired my car. It's OK now.*). If we talk about new event we usually use **Present perfect** in the first sentence, but next we use **past simple**
 
 For not recent or new events we **NEED** to use **present simple** (obviously past) (*Mozart was a composer*)
-
-If we talk about new event we usually use **Present perfect** in the first sentence, but next we use **past simple**
 
 - If we talk about unfinished period => **Present perfect**
 - Period ended => **Past simple**
@@ -600,7 +598,7 @@ If we talk about new event we usually use **Present perfect** in the first sente
 See more info about this words [here](#key-words-2)
 
 ## perfect continuous and continuous
-If activity continues and we don't want to describe how long time it went we use **Present continuous**. If we define period or activity stopped recently we use **Present perfect continuous**:
+If activity continues and we don't want to describe how long time it went, we use **Present continuous**. If we define period or activity stopped recently we use **Present perfect continuous**:
 - *Don't disturb me now. I'm working.*
 - *I've been working hard. Now I'm going to have a break*
 - *I've been working for 3 hours*
@@ -674,7 +672,7 @@ For Present perfect:
 
 Negative - `had better not`
 
-This collocation is about present or future although `had` is past form.
+This collocation is about present or future although `had` is a past form.
 
 `V` **without** *to*
 

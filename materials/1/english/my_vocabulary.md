@@ -3020,3 +3020,8 @@ In this PV particle can place either before or after verb:
 - pace - темп
 - tear / tore / torn - рвать
 - incentive - стимул
+- sweat - пот (*читается "свэт", тогда как сладость - "свит"*)
+- to dread - опасаться / быть напряжённым из-за страха
+- together - adj. - confident and organized
+- check on (sb / sth) - проверить состояние или положение кого-то или чего-то
+- scenarios - сценарии
