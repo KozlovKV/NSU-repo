@@ -684,7 +684,7 @@ This collocation is about present or future although `had` is a past form.
 Also `had better` means some problem by ignoring advice whereas `should` means simple advice
 
 ## `it's time`
-`it's time [for sb] Vinf` or `it's time [sb] V2` mean that somebody should have already done sth or started it. Often used to criticize or complain.
+`it's time [for sb] Vinf` or `it's time [sb] V2` mean that somebody should have already done sth or started it. Often we use it to criticize or complain.
 
 `It's **about** time ...` - makes criticizing stronger.
 

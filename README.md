@@ -10,3 +10,7 @@
   - [Books](./materials/1/english/books/)
 - [Сиии ~~Цзинь Пин~~](./materials/1/imperative/konsp.md)
 - [МатАн~~ал~~](./materials/1/math_analyze/konsp.md)
+
+## [2 курс](./materials/2)
+- [ТерВер и МатСтатистика](./materials/2/TVMS/konsp.md)
+- [отс**ОС**и](./materials/2/OS/konsp.md)

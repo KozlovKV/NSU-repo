@@ -95,6 +95,7 @@ Words, phrasal verbs and collocations that I have learned.
 - [Megamind movie](#megamind-movie)
 - [Arkane](#arkane)
   - [S1E1](#s1e1-1)
+- [Nimona](#nimona)
 - [Common words](#common-words)
 
 # Collocations for letters
@@ -2343,6 +2344,23 @@ In this PV particle can place either before or after verb:
 - to pipe down / to cool off - остыть (успокоиться)
 - grasp - понимать / понимание
 - to interfere - вмешиваться (*классно сочетается с интерференцией*)
+
+---
+
+# Nimona
+- Noble - благородный
+- hilarious - уморительный
+- to screw - трахаться (*не, ну так переводчик сказал*) / вкручивать 
+- sb is heartbroken - кто-то убит корен
+- to mope - хандрить / киснуть
+- vicious - порочный
+- to stare - глазеть
+- whale - кит
+- sneeze - чихать
+- stab - удар ножом
+- slap - шлепок / удар
+- go south - идти наперекосяк (*фразеологизм*)
+- to beg - умолять
 
 ---
 
