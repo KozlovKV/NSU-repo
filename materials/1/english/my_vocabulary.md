@@ -3043,3 +3043,9 @@ In this PV particle can place either before or after verb:
 - together - adj. - confident and organized
 - check on (sb / sth) - проверить состояние или положение кого-то или чего-то
 - scenarios - сценарии
+- bar chart - гистограмма
+- armchair - кресло
+- noticeable - отмечаем / заметный
+- incr'ease - verb
+- 'increase - noun
+- change dramatically
