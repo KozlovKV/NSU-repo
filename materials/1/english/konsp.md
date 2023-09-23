@@ -93,6 +93,9 @@
 - [Murphey: Unit 85 - Some and any](#murphey-unit-85---some-and-any)
 - [Murphey: Unit 86 - No/none/any and Nothing/nobody](#murphey-unit-86---nononeany-and-nothingnobody)
 - [Historical present](#historical-present)
+- [23.09.22](#230922)
+  - [Types of reading](#types-of-reading)
+  - [Little bit about *used to* and *would*](#little-bit-about-used-to-and-would)
 
 # Websites
 - [Cambridge Learner's dictionary](https://dictionary.cambridge.org/dictionary/learner-english)
@@ -857,3 +860,13 @@ As `somebody`, with `nobody`, `no-one` etc. we can use plural pronouns to show u
 *How is it used? What are the purposes?* Historical present is used in the main part of story on complicated action to emphasize involving effect of actions when we don't specify separated time.
 
 *How do we use it?* Just use present simple when we talk about past, but not often to make effect stronger.
+
+# 23.09.22
+## Types of reading
+1. Skimming - look on headers
+2. Scanning - find important parts
+3. Reading for the gist (main idea)
+4. Reading for details
+
+## Little bit about *used to* and *would*
+Оба используются для того, чтобы сказать о чём-то, что было в прошлом и не правда сейчас, но `would` отдельно относится к вредным привычкам и повторяющимся событиям

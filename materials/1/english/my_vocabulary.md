@@ -3048,4 +3048,8 @@ In this PV particle can place either before or after verb:
 - noticeable - отмечаем / заметный
 - incr'ease - verb
 - 'increase - noun
-- change dramatically
+- change dramatically - резко изменяется
+- fluctuate - колебаться вокруг центрального значения
+- decent - приличный
+- live fast - прожигать жизнь
+- didactic - поучительный
