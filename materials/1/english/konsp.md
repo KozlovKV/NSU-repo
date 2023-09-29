@@ -95,7 +95,7 @@
 - [Historical present](#historical-present)
 - [23.09.22](#230922)
   - [Types of reading](#types-of-reading)
-  - [Little bit about *used to* and *would*](#little-bit-about-used-to-and-would)
+  - [Little bit about `used to` and `would`](#little-bit-about-used-to-and-would)
 
 # Websites
 - [Cambridge Learner's dictionary](https://dictionary.cambridge.org/dictionary/learner-english)
@@ -868,5 +868,11 @@ As `somebody`, with `nobody`, `no-one` etc. we can use plural pronouns to show u
 3. Reading for the gist (main idea)
 4. Reading for details
 
-## Little bit about *used to* and *would*
-Оба используются для того, чтобы сказать о чём-то, что было в прошлом и не правда сейчас, но `would` отдельно относится к вредным привычкам и повторяющимся событиям
+## Little bit about `used to` and `would`
+Оба используются для того, чтобы сказать о чём-то, что было в прошлом и не правда сейчас, но `would` отдельно относится к привычкам и повторяющимся событиям.
+
+**Don't use** `used to` and `would` when things happened **only once** or we describe **how many times** they happened
+
+`No longer` and `any more` mean *больше не*, but the first is used with positive verb whereas the second - with negative
+
+Don't confuse with `be/get used to <noun/gerund>` that mean *стало привычно / не в первый раз*

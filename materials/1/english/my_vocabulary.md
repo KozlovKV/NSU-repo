@@ -3053,3 +3053,7 @@ In this PV particle can place either before or after verb:
 - decent - приличный
 - live fast - прожигать жизнь
 - didactic - поучительный
+- approach - подход
+- remedy - средство
+- estimate - оценивать
+- robust - крепкий
