@@ -875,4 +875,4 @@ As `somebody`, with `nobody`, `no-one` etc. we can use plural pronouns to show u
 
 `No longer` and `any more` mean *больше не*, but the first is used with positive verb whereas the second - with negative
 
-Don't confuse with `be/get used to <noun/gerund>` that mean *стало привычно / не в первый раз*
+Don't confuse with `be/get used to <noun/gerund>` that mean *стало привычно / не в первый раз*. Причём `get used to` используется обычно в процессе привыкания, а `be used to` - когда мы уже полностью привыкли

@@ -3057,3 +3057,11 @@ In this PV particle can place either before or after verb:
 - remedy - средство
 - estimate - оценивать
 - robust - крепкий
+- insipid - бесвкусный
+- vicious circle - порочный круг
+- cycle violance - спираль насилия
+- samply - выборка
+- result in sth - выражается в чём-то
+- lead to sth - приводит к чему-то
+- affect - оказывать влияние
+- effect - эффект
