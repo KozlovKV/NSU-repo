@@ -3065,3 +3065,9 @@ In this PV particle can place either before or after verb:
 - lead to sth - приводит к чему-то
 - affect - оказывать влияние
 - effect - эффект
+- leisure - досуг
+- attitude - отношение
+- porch - крыльцо
+- steer - управлять
+- cross sbs heart - клясться чьим-то сердцем (*cross by heart*)
+- moor - болото
