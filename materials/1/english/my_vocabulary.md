@@ -3071,3 +3071,6 @@ In this PV particle can place either before or after verb:
 - steer - управлять
 - cross sbs heart - клясться чьим-то сердцем (*cross by heart*)
 - moor - болото
+- airship - дирижабль
+- moviegoers - кинозрители
+- circumnavigation - кругосветное плавание

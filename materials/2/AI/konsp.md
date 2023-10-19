@@ -459,20 +459,91 @@ true.
 
 Преобразованная ЭС будет выглядеть так:
 
-*Добавить версию goal-driven backward*
+```prolog
+known(hall_wet).
+known(kitchen_dry).
+
+% Делаем так, чтобы при Пролог мог обрабатывать выражения с использованием этих операторов, то есть рабабатываем движок ЭС
+true(A) :- known(A).
+true(A and B) :- true(A), true(B).
+true(A or B) :- true(A); true(B).
+true(Conclusion) :- 
+  if Condition then Conclusion,
+  true(Condition).
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                         KNOWLEDGE BASE                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+if
+    hall_wet and kitchen_dry
+then
+    leak_in_bathroom.
+
+
+if
+    hall_wet and bathroom_dry
+then
+    problem_in_kitchen.
+
+
+if
+    window_closed or no_rain
+then
+    no_water_from_outside.
+
+
+if
+    problem_in_kitchen and no_water_from_outside
+then
+    leak_in_kitchen.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                         KNOWLEDGE BASE                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+```
 
 ### Data-driven forward
 Идёт от фактов к выводам, записывая их по пути. 
 
 Хорош, когда данных мало, а гипотез много
 
-`asserta(pred)` / `assertz(pred)` - добавляет в код Пролога предикат в начало или конец соответственно. Чтобы операции работали, необходимо определить динамически `:- dynamic prod`.
+`asserta(pred)` / `assertz(pred)` - добавляет в код Пролога предикат в начало или конец соответственно. Чтобы операции работали, необходимо определить динамически `:- dynamic pred`.
 
 `retract(pred)` удалит из кода первое вхождение предиката. `retract_all(pred)` - удалит все вхождения предиката.
 
 <blockquote><code>\+</code> - операторная форма <code>not()</code></blockquote>
 
-*Добавить forward метод с предикатом deprived*
+```prolog
+:- dynamic derived/1.
+% Clear all derived relations on program startup
+:- retractall(derived(_)).
+
+% Fact is either something that is already derived or a combination
+% of the other derived facts.
+fact(F) :- derived(F).
+fact(F1 and F2) :- fact(F1), fact(F2).
+fact(F1 or F2) :- fact(F1) ; fact(F2).
+
+% Some statement is derivable if it is not derived yet, and
+% if there is a rule of a form
+% IF Cond THEN Statement where Cond is already a known fact
+derivable(Conclusion) :-
+  if Condition then Conclusion,
+  \+ derived(Conclusion),
+  fact(Condition).
+
+% Keep trying to derive facts while there is information
+fc :-
+  derivable(Statement), !,
+  format('Inferred that ~w;\n', [Statement]),
+  assertz(derived(Statement)),
+  fc ;
+  write('---------------------------------').
+
+fc_inference :-
+  retractall(derived(_)),
+  asserta(derived(S) :- known(S)), % После очистки списка выведенных фактов снова заносим в него известные заранее
+  fc.
+```
 
 ### Смешанный вывод
 Получаем часть фактов и выбираем гипотезы, которые, вероятно, подошли бы нам. А затем идёт от гипотезы к фактам.
@@ -480,6 +551,7 @@ true.
 Смешанная ЭС будет самой оптимальной для большинства предметных областей. Исключениями будут частные случаи, когда между данными и гипотезами есть сильный переход в одну из сторон.
 
 ```prolog
+% Выбираем заключение, которое ещё не выведено и не отклонено на основании выведенных фактов
 suppose(Concl) :-
   derived(F),
   (
@@ -489,9 +561,28 @@ suppose(Concl) :-
     Cond = F or _ ;
     Cond = _ or F
   ),
-  if Cond then Concl.
+  if Cond then Concl,
+  \+ rejected(Concl),
+  \+ derived(Concl).
 
-hc :- ...
+hc :-
+  supposed(Statement),
+  !,
+  ( true(Statement)
+    ->
+      format('Inferred that ~w;\n', [Statement]),
+      asserta(derived(Statement))
+    ; 
+      assertz(rejected(Statement))
+  ), % Нотация в скобках является ветвление вида (if_preds -> then_preds ; else_preds)
+  hc ;
+  write('---------------------------------').
+
+hc_inference :-
+  retractall(derived(_)),
+  retractall(rejected(_)),
+  asserta(derived(S) :- known(S)),
+  hc.
 ```
 
 # 23.10.13 - лекция
