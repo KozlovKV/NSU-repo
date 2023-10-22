@@ -96,6 +96,7 @@ Words, phrasal verbs and collocations that I have learned.
 - [Arkane](#arkane)
   - [S1E1](#s1e1-1)
 - [Nimona](#nimona)
+- [Plural nouns for animals](#plural-nouns-for-animals)
 - [Common words](#common-words)
 
 # Collocations for letters
@@ -2364,6 +2365,30 @@ In this PV particle can place either before or after verb:
 
 ---
 
+# Plural nouns for animals
+- Ants and caterpillars - army
+- Apes - shrewdness - проницательность
+- Bears - sleuth / sloth
+- Cats - clowder - стая кошек
+- Crickets - orchestra
+- Crows - murder
+- Ferrets - business
+- Giraffes - tower
+- Goldfish - troubling
+- Mice and rats - mischief
+- Otters - romp - возня
+- Owls - parliament
+- Pandas - embarrassment
+- Raccoons - gaze - пристальный взгляд
+- Ravens - unkindness
+- Rhinos - crash
+- Sharks - shiver - вселяющие дрожь
+- Toads - knot - комок
+- unicorns - blessing
+- Wombots - wisdom
+
+---
+
 # Common words
 - spell - Диктовать по буквам
 - pronounce - произнести
@@ -3074,3 +3099,8 @@ In this PV particle can place either before or after verb:
 - airship - дирижабль
 - moviegoers - кинозрители
 - circumnavigation - кругосветное плавание
+- a pack of dogs
+- a flock of birds
+- a school of fish
+- a herd of cattle
+- 
