@@ -40,7 +40,9 @@
     - [Плюсы / Минусы СП](#плюсы--минусы-сп)
     - [Использование СП](#использование-сп)
 - [Что надо на КР](#что-надо-на-кр)
-- [23.10.18 - семинар](#231018---семинар)
+- [23.10.25 - семинар](#231025---семинар)
+  - [Пример экспертной системы с юзер-интерфейсом](#пример-экспертной-системы-с-юзер-интерфейсом)
+  - [Семантическая сеть на prolog](#семантическая-сеть-на-prolog)
 
 
 # Инфо
@@ -458,6 +460,8 @@ true.
   - `yfx` - левоасоциативен
 - Третий - имя оператора
 
+*Данная конструкция позволяет объявлять предикаты в коде сразу в инфиксном формате*
+
 Преобразованная ЭС будет выглядеть так:
 
 ```prolog
@@ -656,4 +660,148 @@ hc_inference :-
 - Метод резолюций
 - Нечёткие модели
 
-# 23.10.18 - семинар
+# 23.10.25 - семинар
+`read_string(user_input, "\n", "\r\t", _, Answer)` - читает строку из указанного потока и пишет в `Answer`. Заканчивается чтение на любом символе из второго аргумента. Из `Answer` удаляются символы из третьего аргумента
+
+## Пример экспертной системы с юзер-интерфейсом
+```prolog
+/*
+* Using Prolog's syntax for rules has certain disadvantages, however.
+*
+* First, this syntax may not be the most suitable for a user unfamiliar
+* with Prolog. And second, the knowledge base is not syntacticaly
+* distinguishable from the rest of the program; a more explicit
+* distinction between the knowledge base and the rest source code
+* may be desirable.
+*
+* It is handy to tailor the syntax of expert rules by using Prolog
+* operator notation.
+*/
+
+:- op(800, fx, if).     % IF 
+:- op(700, xfx, then).  % THEN
+:- op(300, xfy, or).    % OR
+:- op(200, xfy, and).   % AND
+:- op(800, xfy, <==).   % <==
+
+:- dynamic derived/1.  % Хранит выведенные предикаты
+:- retractall(derived(_)).
+
+:- dynamic asked/1.  % Хранит факты, которые мы уже спросили
+:- retractall(asked(_)).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                         KNOWLEDGE BASE                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+if
+    hall_wet and kitchen_dry
+then
+    leak_in_bathroom.
+
+
+if
+    hall_wet and bathroom_dry
+then
+    problem_in_kitchen.
+
+
+if
+    window_closed or no_rain
+then
+    no_water_from_outside.
+
+
+if
+    problem_in_kitchen and no_water_from_outside
+then
+    leak_in_kitchen.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                     END OF KNOWLEDGE BASE                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Нам необходимо запрашивать у пользователя о начальных фактах - тех, которые не выводятся ни одним из правил
+
+askable(hall_wet).
+askable(kitchen_dry).
+askable(bathroom_dry).
+askable(window_closed).
+askable(no_rain).
+
+% Новая версия предиката true будет хранить не только проверяемое выражение, 
+% но также ProofTree - дерево выводов до проверяемого факта и путь
+% Trace - содержит правила от гипотезы до проверяемого факта
+true(S, _, _) :- derived(S).
+true(S1 and S2, ProofTree1 and ProofTree2, Trace) :- 
+  true(S1, ProofTree1, Trace),
+  true(S2, ProofTree2, Trace).
+true(S1 or S2, AnyProofTree, Trace) :- 
+  true(S1, AnyProofTree, Trace);
+  true(S2, AnyProofTree, Trace).
+true(Concl, Concl <== ProofTree, Trace) :- 
+  if Cond then Concl, 
+  true(Cond, ProofTree, [(if Cond then Concl) | Trace]).
+
+% Если это начальный факт, спрашиваем у пользователя
+true(S, ProofTree, Trace) :- 
+  askable(S),
+  \+ derived(S),
+  \+ asked(S),
+  ask(S, ProofTree, Trace).
+
+% User interface
+ask(S, ProofTree, Trace) :- 
+  format("\nIs ~w? Answer 'yes', 'no' or 'why': ", [S]),
+  read_string(user_input, "\n", "\r\t", _, Answer),
+  process_user_answer(Answer, S, ProofTree, Trace).
+
+% Записываем факт как выведенный и спрошенный, сохраняя в дерево, что мы узнали факт от пользователя
+process_user_answer("yes", S, S <== was_told, _) :- !,
+  asserta(derived(S)), asserta(asked(S)).
+% Если ответ нет, просто отмечаем вопрос, как спрошенный и возвращаем ложь
+process_user_answer("no", S, _, _) :- !,
+  asserta(asked(S)), fail.
+% Выводим правила, для которых задавался вопрос, и спрашиваем вопрос снова
+process_user_answer("why", S, ProofTree, Trace) :- !,
+  show_reasons(Trace), ask(S, ProofTree, Trace).
+% cut-оператор в данных предикатах используется как break в конструкции switch-case, чтобы мы не попали в наш вариант default-ветки
+process_user_answer(_, S, ProofTree, Trace) :-
+  write("\nIncorrect answer\nPlease, answer 'yes', 'no' or 'why': "),
+  read_string(user_input, "\n", "\r\t", _, Answer),
+  process_user_answer(Answer, S, ProofTree, Trace).
+
+show_reasons([]).
+show_reasons([if Cond then Concl|Trace]) :- 
+  format("\n'~w' is true when \n\t'~w'\n", [Concl, Cond]),
+  show_reasons(Trace).
+
+start_system(S, Proof) :- 
+  retractall(asked(_)), retractall(derived(_)),
+  true(S, Proof, []).
+```
+
+## Семантическая сеть на prolog
+Оператор `Pred =.. [PredName, Args...]` - разбирает предикат слева на его имя и аргументы. Если передать `[PredName, Args...] =.. Pred`, то аргументы соберутся в предикат `PredName(Args...)`
+
+```prolog
+% Semantic web
+
+isa(bird, animal).
+isa(albatrose, bird).
+isa(kiwi, bird).
+isa('Albert', albatrose).
+isa('Rose', albatrose).
+isa('Kim', kiwi).
+
+color(kiwi, gray).
+color(albatrose, white).
+
+moving(kiwi, walks).
+moving(bird, flies).
+
+fact(Pred) :- Pred, !.
+fact(Pred) :- Pred =.. [PredName, A, B], 
+  isa(A, Seg),
+  [PredName, Seg, B] =.. NewPred,
+  fact(NewPred).
+```
+Предикат `fact` в данном случае будет работать в одну сторону. Мы сможем узнать, какого цвета `Kim`, но не сможем узнать всех белых птиц поимённо.
