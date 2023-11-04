@@ -28,6 +28,7 @@
 - [23.10.19 - лекция](#231019---лекция)
   - [Модификаторы полей класса](#модификаторы-полей-класса)
   - [Nested-классы (вложенные)](#nested-классы-вложенные)
+    - [Анонимные классы](#анонимные-классы)
   - [Типизация](#типизация)
     - [Duck typing](#duck-typing)
   - [Полиморфизм](#полиморфизм)
@@ -395,9 +396,83 @@ public abstract class Animal {
 ## Nested-классы (вложенные)
 Можно объявить класс внутри класса. Будет иметь возможность обращаться к полям внешнего класса, что порой оказывается ооочень удобно.
 
-`static`-nested класс, что логично, не будет иметь возможности обращаться к полям внешнего класса.
+`static`-nested класс, что логично, будет иметь возможность работать только со статическим контекстом внешнего класса. Иногда **Nested-классами называют только статические**
 
-**Анонимные классы** используются, когда мы хотим использовать функционал класса лишь в одном месте:
+Нестатические вложенные классы называют Inner-классами. Они подразделяются на:
+- Простой Inner class
+- Method-local
+- Anonymous Inner class
+
+Эти типы классов могут работать только в контексте объекта, то есть:
+- Могут обращаться к полям внешнего класс с любом модификатором доступа
+- К ним нельзя обратиться по имени внешнего класса (из статического контекста), только по имению объекта
+- Нельзя обращаться к внутреннему Inner-классу из статического метода класс-обёртки (что вытекает из первого пункта)
+- В Inner-классе не может быть статических методов
+
+Пример простейшего использования:
+```java
+public class Bicycle {
+
+   private String model;
+   private int weight;
+
+   public Bicycle(String model, int weight) {
+       this.model = model;
+       this.weight = weight;
+   }
+
+   public void start() {
+       System.out.println("Поехали!");
+   }
+
+   public class HandleBar {
+
+       public void right() {
+           System.out.println("Руль вправо!");
+       }
+
+       public void left() {
+
+           System.out.println("Руль влево!");
+       }
+   }
+
+   public class Seat {
+
+       public void up() {
+
+           System.out.println("Сиденье поднято выше!");
+       }
+
+       public void down() {
+
+           System.out.println("Сиденье опущено ниже!");
+       }
+   }
+}
+
+// ...
+
+public class Main {
+
+   public static void main(String[] args) {
+
+       Bicycle peugeot = new Bicycle("Peugeot", 120);
+       Bicycle.HandleBar handleBar = peugeot.new HandleBar();
+       Bicycle.Seat seat = peugeot.new Seat();
+
+       seat.up();
+       peugeot.start();
+       handleBar.left();
+       handleBar.right();
+   }
+}
+```
+
+[Подробнее об Inner-классах](https://javarush.com/groups/posts/2181-vlozhennihe-vnutrennie-klassih)
+
+### Анонимные классы
+Используются, когда мы хотим использовать функционал класса лишь в одном месте:
 ```java
 var value = new SuperClass() { // Если не указать SuperClass, будем наследоваться от Object
   // Code for class
@@ -443,6 +518,8 @@ System.out.println(operation3.calculate(20, 10)); //200
 # 23.11.02 - семинар
 ## Строки
 **Строки иммутабельны**. Иммутабельность обеспечивает максимальную производительность и надёжность.
+
+[Чуть-чуть подробнее про иммутабельность](https://habr.com/ru/companies/otus/articles/552630/)
 
 *Дальше идёт описание разных базовых функций типа `indexOf`, `substring`, `equals`, `equalsIgnoringCase` и т.п., описывать которые здесь не вижу смысла - куда оптимальнее смотреть доки или исходники*
 
