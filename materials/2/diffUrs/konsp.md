@@ -594,7 +594,7 @@ $$
 ### Уравнение Эйлера
 Общий вид:
 $$
-x^ny^{(n)} + a_1x^{n-1}y^{(n-1)} + ... a_{n-1}xy' + a_ny = f(x)
+x^ny^{(n)} + a_1x^{n-1}y^{(n-1)} + ... + a_{n-1}xy' + a_ny = f(x)
 $$
 - $x = e^t, x > 0 \rArr t = \ln x$
 - $x = -e^t, x < 0 \rArr t = \ln (-x)$
@@ -605,7 +605,7 @@ $$
 $$
 p(\lambda) = \lambda(\lambda - 1)(\lambda - 2)...(\lambda - n + 1) + ... + a_{n-2}\lambda(\lambda - 1) + a_{n-1}\lambda + a_n
 $$
-**Найденные через него корни дадут нам ответы в виде суммы $Ce^{\lambda t}$, то есть далее мы должны произвести замену $t = \ln x$ и получить $Cx^{\lambda}$
+**Найденные через него корни дадут нам ответы в виде суммы $Ce^{\lambda t}$, то есть далее мы должны произвести замену $t = \ln x$ и получить $Cx^{\lambda}$**
 
 ### Уравнение Лагранжа
 Общий вид:
@@ -687,6 +687,7 @@ $$
 u(s) = y(e^s) = y(t) \newline
 \frac{dy}{dt} = \frac{du}{ds}\frac{ds}{dt} = u'\frac{1}{t} \newline
 \frac{d^2y}{dt^2} = \frac{d}{dt}(u'\frac{1}{t}) = \frac{-1}{t^2}u' + (u''\frac{1}{t})\frac{1}{t} = \frac{1}{t^2}(u'' - u') \newline
+y''' = \frac{d}{dt}\frac{1}{t^2}(u'' - u') = \frac{-2}{t^3}(u'' - u') + \frac{1}{t^2}(u'''\frac{1}{t} - u''\frac{1}{t}) = \frac{1}{t^3}(u''' - u'' - 2u'' + 2u') = \frac{1}{t^3}(u''' - 3u'' + 2u') \newline
 $$
 *Дальнейшие производные считаются также*
 
