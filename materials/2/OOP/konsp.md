@@ -6,6 +6,7 @@
   - [`equals` и `hashCode`](#equals-и-hashcode)
   - [`Iterable<T>`, `Spliterator` и `Stream`](#iterablet-spliterator-и-stream)
   - [Параметризованное тестирование](#параметризованное-тестирование)
+  - [`record`-классы](#record-классы)
 - [23.09.07 - лекция](#230907---лекция)
   - [Введение](#введение)
 - [23.09.14 - Лекция](#230914---лекция)
@@ -41,6 +42,8 @@
 - [23.11.02 - семинар](#231102---семинар)
   - [Строки](#строки)
   - [Коллекции](#коллекции)
+- [23.11.09 - лекция](#231109---лекция)
+  - [Исключения](#исключения)
 
 
 # Инфо
@@ -147,6 +150,67 @@ System.out.println(l);
 **Очень полезна при тестировании полиморфных объектов, наследующихся от общего предка**
 
 *Может быть когда-нибудь сделаю саммари, а пока что пусть тут будет [ссылка на статью](https://habr.com/ru/articles/591007/)*
+
+## `record`-классы
+`record`-классы - синтаксический сахар для создания классов, все поля которого будут `final` (*то есть иммутабельных*). Прописываем в скобках после имени класса поля с типами. Автоматически будут сгенерированы конструктор для их установки, `equals` и `hashCode`, а также геттеры, но при необходимости можно переопределить этим методы полностью или частично (если речь о конструкторах)
+
+Пример из [лабы 1.4.1](https://github.com/KozlovKV/OOP/tree/9684a368a6daa55b923fd1c1d9dcf87e2a1f52e2/task_1_4_1)
+```java
+package kozlov.kirill.creditBook;
+
+import java.util.Objects;
+
+/**
+ * Mark record-class.
+ *
+ * @param value mark value between LOWEST_VALUE and HIGHEST_VALUE constants
+ * @param semester semester of mark
+ * @param subject study subject from Subject enum
+ */
+public record Mark(int value, int semester, Subject subject) {
+    public static final int LOWEST_VALUE = 2;
+    public static final int HIGHEST_VALUE = 5;
+
+    public Mark{
+        if (value > HIGHEST_VALUE) {
+            value = HIGHEST_VALUE;
+        } else {
+            value = Math.max(value, LOWEST_VALUE);
+        }
+    }
+
+    @ExcludeFromJacocoGeneratedReport
+    @Override
+    public String toString() {
+        return subject.getSubjectName() + " in semester "
+                + semester + ": " + value;
+    }
+
+    /**
+     * Marks override comparator.
+     * Mark's value is ignored because we cannot have to Marks with the same semester and subject
+     * and different mark's values
+     *
+     * @param o the reference object with which to compare
+     * @return true weather objects have equal semesters and subjects
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Mark mark = (Mark) o;
+        return semester == mark.semester
+                && subject.equals(mark.subject);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(semester, subject);
+    }
+}
+```
+
+[Мини-статья про `record`](https://metanit.com/java/tutorial/3.18.php)
 
 # 23.09.07 - лекция
 ## Введение
@@ -537,3 +601,65 @@ System.out.println(operation3.calculate(20, 10)); //200
 - Неупорядоченные коллекции (множества)
   - `HashSet` хэш-таблица
   - `TreeSet` бинарное дерево поиска
+
+# 23.11.09 - лекция
+## Исключения
+**Исключение** ситуация, реакцию на которую мы не можем определить в данный момент. Следовательно, нам необходимо передать информацию об этой ситуации (ошибке) в другое место.
+
+Для обработки различных исключительных ситуаций и их передачи удобно использовать конструкцию `try-catch`:
+```java
+readFile {
+  try {
+    // Блок, в котором будут ловиться исключения
+    open the file;
+    determine its size;
+    allocate that much memory;
+    read the file into memory;
+    close the file;
+  } catch (FileOpenFailed e) {
+    // Обработка исключений по их типам. Можем также пробросить исключение выше, прописав throw new ExceptionType
+    doSomething;
+  } catch (SizeDeterminationFailed e) {
+    doSomething;
+  } catch (MemoryAllocationFailed e) {
+    doSomething;
+  } catch (ReadFailed e) {
+    doSomething;
+  } catch (FileCloseFailed e) {
+    doSomething;
+  } finally {
+    // Исполняется независимо от возникновения или отсутствия исключений. Необходим для очистки каких-то данных и некоторых других специфических действий (закрытие файлов при завершении работы с ними)
+  }
+}
+```
+
+Если метод не отлавливает исключения, а только выбрасывает их, в объяснении после аргументов необходимо прописать `throws ExceptionType`
+
+Пример с пробросом исключения вверх
+```java
+method1 {
+  try {
+    call method2;
+  } catch (exception) {
+    doErrorProcessing;
+  }
+}
+method2 throws exception {
+  call method3;
+}
+method3 throws exception {
+  throw new  Exception(“Error”); 
+}
+```
+
+Исключения делятся на **проверяемые** (checked) и **непроверяемые** (unchecked).
+
+Все исключения реализуют интерфейс `Throwable`, от которого реализуются `Error` и `Exception`
+
+Исключения-наследники типа `Error` и `Exception RuntimeException` относятся к непроверяемым и могут возникнут в любом месте. Не требуют прописывать `throws` в методе и являются насколько критическими, что завершают программу почти всегда
+
+Все исключения-наследники `Exception`, не считая `RuntimeException` относятся к проверяемым и могут быть обработаны в коде, поэтому должны быть указаны в методах, которые могут их выбросить.
+
+Иногда реакцией на исключение будет другое исключение, которое будет обозначено как причина возникновения нового. Это полезно для комплексных программ, где сломаться метод `A` может из-за методов `B`, `C` или `D`, но обрабатывая исключение от `A` мы ожидаем получить именно его исключения, а не одно из исключений вложенных методов.
+
+Можно после ключевого слова указать определённые переменные в скобках. В таком случае они будут доступны только внутри `try`. Объекты в скобках должны реализовывать интерфейс `AutoClosable`

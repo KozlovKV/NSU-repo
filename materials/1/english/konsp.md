@@ -96,6 +96,8 @@
 - [23.09.22](#230922)
   - [Types of reading](#types-of-reading)
   - [Little bit about `used to` and `would`](#little-bit-about-used-to-and-would)
+- [23.11.10](#231110)
+  - [Obligation and permission](#obligation-and-permission)
 
 # Websites
 - [Cambridge Learner's dictionary](https://dictionary.cambridge.org/dictionary/learner-english)
@@ -876,3 +878,9 @@ As `somebody`, with `nobody`, `no-one` etc. we can use plural pronouns to show u
 `No longer` and `any more` mean *больше не*, but the first is used with positive verb whereas the second - with negative
 
 Don't confuse with `be/get used to <noun/gerund>` that mean *стало привычно / не в первый раз*. Причём `get used to` используется обычно в процессе привыкания, а `be used to` - когда мы уже полностью привыкли
+
+# 23.11.10
+## Obligation and permission
+We can use `must` only when we are making rules. `have to` can be used everywhere.
+
+After `let` and `make` we cannot use `to`

@@ -3103,4 +3103,17 @@ In this PV particle can place either before or after verb:
 - a flock of birds
 - a school of fish
 - a herd of cattle
-- 
+- sink / sank / sunk - утонуть (3 формы)
+- martial - боевой
+- arduous - трудный
+- build up - наращивать
+  - build down - opp.
+- gruelling - изнурительные
+- rigor - строгость
+  - rigorous - adj.
+- sth difficult:
+  - testing - just *diffucult*
+  - punishing / gruelling / arduous - требующий больших усилий или хатрат
+  - tricky - needs careful, attention or skill
+  - demanding - needing a lot of time, attention or energy
+  - strict / rigorous / tough - строгий 
