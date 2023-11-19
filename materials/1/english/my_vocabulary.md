@@ -3112,7 +3112,7 @@ In this PV particle can place either before or after verb:
 - rigor - строгость
   - rigorous - adj.
 - sth difficult:
-  - testing - just *diffucult*
+  - testing - just *difficult*
   - punishing / gruelling / arduous - требующий больших усилий или хатрат
   - tricky - needs careful, attention or skill
   - demanding - needing a lot of time, attention or energy
