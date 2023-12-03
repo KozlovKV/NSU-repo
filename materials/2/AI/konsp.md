@@ -62,13 +62,17 @@
     - [Алгоритмы поиска по графам](#алгоритмы-поиска-по-графам)
     - [Метод редукции](#метод-редукции)
 - [23.11.22 - семинар](#231122---семинар)
-  - [Алгоритмы поиска](#алгоритмы-поиска)
+  - [Жадный алгоритмы поиска](#жадный-алгоритмы-поиска)
 - [23.11.24 - лекция](#231124---лекция)
   - [Поиск в иерархии пространств](#поиск-в-иерархии-пространств)
     - [Поиск в факторизованном пространстве](#поиск-в-факторизованном-пространстве)
     - [Поиск в фиксированном множестве пространств](#поиск-в-фиксированном-множестве-пространств)
     - [Поиск в изменяющемся множестве иерархических пространств](#поиск-в-изменяющемся-множестве-иерархических-пространств)
     - [Правило наименьшх свершений](#правило-наименьшх-свершений)
+- [23.11.29 - семинар](#231129---семинар)
+  - [Unified cos search](#unified-cos-search)
+- [23.12.01 - лекция](#231201---лекция)
+  - [Теория игр](#теория-игр)
 
 
 # Инфо
@@ -1040,8 +1044,234 @@ $$
 **Метод редукции** заключается в поиске общего решения задачи через решение её подзадач
 
 # 23.11.22 - семинар
-## Алгоритмы поиска
-*Можно вставить код... А можно и нет*
+## Жадный алгоритмы поиска
+Ускорить поиск позволяет добавление к поиску в ширину эвристической функции, которая будет тем меньше, чем лучше какая-то вершина будет подходить для достижения цели. Самый простой пример - функция расстояния от точки до цели (манхеттенское либо евклидово)
+
+Дополнительный код
+```pl
+:- module('10.1-area-map', [neighbor/2, grid_cell/3]).
+:- use_module(library(clpfd)).
+
+%
+% Area map with 100 cells, from 0 to 99.
+% The top left cell is (0,0), the bottom right cell is (9,9).
+% Cells enclosed in parentheses are those with cost greater than 1.
+% The second scheme shows cost of every cell on the map.
+%
+
+% ---> X
+% |      0   1    2     3    4   5   6   7   8   9
+% |     10  11   12    13   14  15  16  17  18  19
+% V     20  21  (22)  (23)  24  25  26  27  28  29
+%       30  31  (32)  (33)  34  35  36  37  38  39
+% Y     40  41  (42)  (43)  44  45  46  47  48  49
+%       50  51  (52)  (53)  54  55  56  57  58  59
+%       60  61  (62)   63   64  65  66  67  68  69
+%       70  71   72    73   74  75  76  77  78  79
+%       80  81   82    83   84  85  86  87  88  89
+%       90  91   92    93   94  95  96  97  98  99
+
+% -> X| 0    1   2   3   4   5   6   7   8   9
+%-----|----------------------------------------
+% |  0| 1    1   1   1   1   1   1   1   1   1
+% |  1| 1    1   1   1   1   1   1   1   1   1
+% V  2| 1    1  10  12   1   1   1   1   1   1
+%    3| 1    1  12  10   1   1   1   1   1   1
+% Y  4| 1    1  12  11   1   1   1   1   1   1
+%    5| 1    1  14  15   1   1   1   1   1   1
+%    6| 1    1  18   1   1   1   1   1   1   1
+%    7| 1    1   1   1   1   1   1   1   1   1
+%    8| 1    1   1   1   1   1   1   1   1   1
+%    9| 1    1   1   1   1   1   1   1   1   1
+
+
+%	Predicate holds iff N1 and N2 are neighbors on the map grid
+neighbor(ID1, ID2) :-
+  grid_cell(ID1, coords(X1, Y1), _),
+  grid_cell(ID2, coords(X2, Y2), _),
+  DX #= X1 - X2, DY #= Y1 - Y2,
+  \+ (abs(DX) #= 1, abs(DY) #= 1),
+  (
+    (abs(DX) #= 1, DY #= 0); 
+    (DX #= 0, abs(DY) #= 1)
+  ).
+
+
+% grid_cell(?ID, ?Coordinates, ?Cost)
+% 		ID: cell identifier
+%		Coordinates: cell coondinates on the grid
+%		Cost: cost of traversing the cell
+%
+%		Definition of the map grid.
+grid_cell(0, coords(0,0), 1).
+grid_cell(1, coords(1,0), 1).
+grid_cell(2, coords(2,0), 1).
+grid_cell(3, coords(3,0), 1).
+grid_cell(4, coords(4,0), 1).
+grid_cell(5, coords(5,0), 1).
+grid_cell(6, coords(6,0), 1).
+grid_cell(7, coords(7,0), 1).
+grid_cell(8, coords(8,0), 1).
+grid_cell(9, coords(9,0), 1).
+
+grid_cell(10, coords(0,1), 1).
+grid_cell(11, coords(1,1), 1).
+grid_cell(12, coords(2,1), 1).
+grid_cell(13, coords(3,1), 1).
+grid_cell(14, coords(4,1), 1).
+grid_cell(15, coords(5,1), 1).
+grid_cell(16, coords(6,1), 1).
+grid_cell(17, coords(7,1), 1).
+grid_cell(18, coords(8,1), 1).
+grid_cell(19, coords(9,1), 1).
+
+grid_cell(20, coords(0,2), 1).
+grid_cell(21, coords(1,2), 1).
+grid_cell(22, coords(2,2), 10).
+grid_cell(23, coords(3,2), 12).
+grid_cell(24, coords(4,2), 1).
+grid_cell(25, coords(5,2), 1).
+grid_cell(26, coords(6,2), 1).
+grid_cell(27, coords(7,2), 1).
+grid_cell(28, coords(8,2), 1).
+grid_cell(29, coords(9,2), 1).
+
+grid_cell(30, coords(0,3), 1).
+grid_cell(31, coords(1,3), 1).
+grid_cell(32, coords(2,3), 12).
+grid_cell(33, coords(3,3), 10).
+grid_cell(34, coords(4,3), 1).
+grid_cell(35, coords(5,3), 1).
+grid_cell(36, coords(6,3), 1).
+grid_cell(37, coords(7,3), 1).
+grid_cell(38, coords(8,3), 1).
+grid_cell(39, coords(9,3), 1).
+
+grid_cell(40, coords(0,4), 1).
+grid_cell(41, coords(1,4), 1).
+grid_cell(42, coords(2,4), 12).
+grid_cell(43, coords(3,4), 11).
+grid_cell(44, coords(4,4), 1).
+grid_cell(45, coords(5,4), 1).
+grid_cell(46, coords(6,4), 1).
+grid_cell(47, coords(7,4), 1).
+grid_cell(48, coords(8,4), 1).
+grid_cell(49, coords(9,4), 1).
+
+grid_cell(50, coords(0,5), 1).
+grid_cell(51, coords(1,5), 1).
+grid_cell(52, coords(2,5), 14).
+grid_cell(53, coords(3,5), 15).
+grid_cell(54, coords(4,5), 1).
+grid_cell(55, coords(5,5), 1).
+grid_cell(56, coords(6,5), 1).
+grid_cell(57, coords(7,5), 1).
+grid_cell(58, coords(8,5), 1).
+grid_cell(59, coords(9,5), 1).
+
+grid_cell(60, coords(0,6), 1).
+grid_cell(61, coords(1,6), 1).
+grid_cell(62, coords(2,6), 18).
+grid_cell(63, coords(3,6), 1).
+grid_cell(64, coords(4,6), 1).
+grid_cell(65, coords(5,6), 1).
+grid_cell(66, coords(6,6), 1).
+grid_cell(67, coords(7,6), 1).
+grid_cell(68, coords(8,6), 1).
+grid_cell(69, coords(9,6), 1).
+
+grid_cell(70, coords(0,7), 1).
+grid_cell(71, coords(1,7), 1).
+grid_cell(72, coords(2,7), 1).
+grid_cell(73, coords(3,7), 1).
+grid_cell(74, coords(4,7), 1).
+grid_cell(75, coords(5,7), 1).
+grid_cell(76, coords(6,7), 1).
+grid_cell(77, coords(7,7), 1).
+grid_cell(78, coords(8,7), 1).
+grid_cell(79, coords(9,7), 1).
+
+grid_cell(80, coords(0,8), 1).
+grid_cell(81, coords(1,8), 1).
+grid_cell(82, coords(2,8), 1).
+grid_cell(83, coords(3,8), 1).
+grid_cell(84, coords(4,8), 1).
+grid_cell(85, coords(5,8), 1).
+grid_cell(86, coords(6,8), 1).
+grid_cell(87, coords(7,8), 1).
+grid_cell(88, coords(8,8), 1).
+grid_cell(89, coords(9,8), 1).
+
+grid_cell(90, coords(0,9), 1).
+grid_cell(91, coords(1,9), 1).
+grid_cell(92, coords(2,9), 1).
+grid_cell(93, coords(3,9), 1).
+grid_cell(94, coords(4,9), 1).
+grid_cell(95, coords(5,9), 1).
+grid_cell(96, coords(6,9), 1).
+grid_cell(97, coords(7,9), 1).
+grid_cell(98, coords(8,9), 1).
+grid_cell(99, coords(9,9), 1).
+```
+Код алгоритма:
+```pl
+:- use_module(library(clpfd)).
+:- use_module('10.1-area-map').
+
+:- dynamic came_from/2.
+
+% Эвристическая функция, которая показывает манхеттенское расстояние между точками. 
+% Будет использоваться для того, чтобы мы двигались примерно в верную сторону
+h(Goal, Curr, MD) :-
+  grid_cell(Goal, coords(X1, Y1), _),
+  grid_cell(Curr, coords(X2, Y2), _),
+  DX #= abs(X1 - X2), DY #= abs(Y1 - Y2),
+  MD #= DX + DY.
+
+% Добавляет новый элемент формата (ID, H), сохраняя порядок сортировки по значению H (результату эвристической функции)
+insert((NewID, NewH), [], [(NewID, NewH)]).
+insert((NewID, NewH), [Head|List], [(NewID, NewH),Head|List]) :-
+  Head = (_, HeadH),
+  NewH #=< HeadH, !.
+insert((NewID, NewH), [Head|List], [Head|NewList]) :-
+  insert((NewID, NewH), List, NewList).
+
+% Добавляет список пар формата (ID, H) по описанным выше правилам
+insert_list([], Origin, Origin).
+insert_list([NewPair|RestNewPairs], Origin, Result) :- 
+  insert(NewPair, Origin, Updated),
+  insert_list(RestNewPairs, Updated, Result).
+
+greed_search(Start, Goal, Path) :- 
+  retractall(came_from(_, _)),
+  asserta(came_from(Start, start)),
+  traverse(Goal, [(Start, 0)], Path).
+  
+traverse(Goal, [(Goal, _)|_], Path) :- 
+  unroll(Goal, [], Path), !.
+traverse(Goal, [(NextID, _)|Queue], Path) :- 
+  add_neighbors(Goal, NextID, List),
+  assert_neighbors(NextID, List),
+  insert_list(List, Queue, NewQueue),
+  traverse(Goal, NewQueue, Path).
+
+add_neighbors(Goal, Curr, NeighborsPairs) :-
+  findall((NeighborID, NeighborH), (
+    neighbor(Curr, NeighborID),
+    \+ came_from(NeighborID, _),
+    h(Goal, NeighborID, NeighborH)
+  ), NeighborsPairs).
+
+assert_neighbors(_, []).
+assert_neighbors(Curr, [(Neighbor, _)|Neighbors]) :- 
+  asserta(came_from(Neighbor, Curr)),
+  assert_neighbors(Curr, Neighbors).
+
+unroll(Start, Path, [Start | Path]) :- came_from(Start, start), !.
+unroll(Curr, Path, Result) :- 
+  came_from(Curr, Prev),
+  unroll(Prev, [Curr | Path], Result).
+```
 
 # 23.11.24 - лекция
 ## Поиск в иерархии пространств
@@ -1079,3 +1309,164 @@ $$
 - Объединять полученную разными подзадачами информацию
 
 *Дописать*
+
+# 23.11.29 - семинар
+## Unified cos search
+По сути, это просто Дийкстра. Находит оптимальные по цене пути, но в сравнении с жадным работает дольше
+
+*вспомогательный код тот же, что и на прошлом семинаре + здесь же код жадного алгоритма для удобного сравнения*
+```pl
+:- use_module(library(clpfd)).
+:- use_module('10.1-area-map').
+
+:- dynamic came_from/2.
+:- dynamic way_cost/2.
+
+% Эвристическая функция, которая показывает манхеттенское расстояние между точками. 
+% Будет использоваться для того, чтобы мы двигались примерно в верную сторону
+h(Goal, Curr, MD) :-
+  grid_cell(Goal, coords(X1, Y1), _),
+  grid_cell(Curr, coords(X2, Y2), _),
+  DX #= abs(X1 - X2), DY #= abs(Y1 - Y2),
+  MD #= DX + DY.
+
+% Добавляет новый элемент формата (ID, H), сохраняя порядок сортировки по значению H (результату эвристической функции)
+insert((NewID, NewH), [], [(NewID, NewH)]).
+insert((NewID, NewH), [Head|List], [(NewID, NewH),Head|List]) :-
+  Head = (_, HeadH),
+  NewH #=< HeadH, !.
+insert((NewID, NewH), [Head|List], [Head|NewList]) :-
+  insert((NewID, NewH), List, NewList).
+
+% Добавляет список пар формата (ID, H) по описанным выше правилам
+insert_list([], Origin, Origin).
+insert_list([NewPair|RestNewPairs], Origin, Result) :- 
+  insert(NewPair, Origin, Updated),
+  insert_list(RestNewPairs, Updated, Result).
+
+greed_search(Start, Goal, Path) :- 
+  retractall(came_from(_, _)),
+  asserta(came_from(Start, start)),
+  traverse(Goal, [(Start, 0)], Path).
+  
+traverse(Goal, [(Goal, _)|_], Path) :- 
+  unroll(Goal, [], Path), !.
+traverse(Goal, [(NextID, _)|Queue], Path) :- 
+  add_neighbors(Goal, NextID, List),
+  assert_neighbors(NextID, List),
+  insert_list(List, Queue, NewQueue),
+  traverse(Goal, NewQueue, Path).
+
+add_neighbors(Goal, Curr, NeighborsPairs) :-
+  findall((NeighborID, NeighborH), (
+    neighbor(Curr, NeighborID),
+    \+ came_from(NeighborID, _),
+    h(Goal, NeighborID, NeighborH)
+  ), NeighborsPairs).
+
+assert_neighbors(_, []).
+assert_neighbors(Curr, [(Neighbor, _)|Neighbors]) :- 
+  asserta(came_from(Neighbor, Curr)),
+  assert_neighbors(Curr, Neighbors).
+
+unroll(Start, Path, [Start | Path]) :- came_from(Start, start), !.
+unroll(Curr, Path, Result) :- 
+  came_from(Curr, Prev),
+  unroll(Prev, [Curr | Path], Result).
+
+ucs(Start, Goal, Path, Cost) :-
+  retractall(came_from(_, _)),
+  retractall(way_cost(_, _)),
+  asserta(came_from(Start, start)),
+  asserta(way_cost(Start, 0)),
+  ucs_traverse(Goal, [(Start, 0)], Path, Cost).
+
+ucs_traverse(Goal, [(Goal, _)|_], Path, Cost) :- 
+  way_cost(Goal, Cost),
+  unroll(Goal, [], Path), !.
+ucs_traverse(Goal, [(NextID, NextWayCost)|Queue], Path, Cost) :- 
+  ucs_add_neighbors(NextID, NextWayCost, List),
+  ucs_assert_neighbors(NextID, List),
+  insert_list(List, Queue, NewQueue),
+  ucs_traverse(Goal, NewQueue, Path, Cost).
+
+ucs_add_neighbors(Curr, CurrentWayCost, NeighborsPairs) :-
+  findall((NeighborID, NewighborWayCost), (
+    neighbor(Curr, NeighborID),
+    cost(CurrentWayCost, NeighborID, NewighborWayCost)
+  ), NeighborsPairs).
+
+cost(CurrentCost, NextNode, NewWayCost) :- 
+  grid_cell(NextNode, _, NextCost),
+  NewWayCost is CurrentCost + NextCost,
+  (\+ way_cost(NextNode, _) ; way_cost(NextNode, OldWayCost) , NewWayCost < OldWayCost).
+
+ucs_assert_neighbors(_, []).
+ucs_assert_neighbors(Curr, [(Neighbor, Cost)|Neighbors]) :- 
+  retractall(came_from(Neighbor, _)),
+  retractall(way_cost(Neighbor, _)),
+  asserta(came_from(Neighbor, Curr)),
+  asserta(way_cost(Neighbor, Cost)),
+  ucs_assert_neighbors(Curr, Neighbors).
+```
+
+# 23.12.01 - лекция
+## Теория игр
+Теория игр изучает **конфликтные ситуации** - ситуации, в которых сталкиваются интересы двух или более сторон, которые называются **игроками**.
+
+При этом **конфликт** - это не только противостояние, но вообще любое взаимодействие игроков, влияющих на поведение друг на друга
+
+Инетересы игроков определяются **функцией выигрыша**.
+
+**Ходы** - действия игроков. **Партия** - последовательность ходов.
+
+**Ходы** могут осуществляться не только игроками, но также могут быть и случайны.
+
+**Стратегия** - выбор правил и инструкций, однозачно описывающий ходы в любой ситуации.
+
+**Важно для теории игр и в целом по жизни**: при формировании стратегии следует считать противника не глупее вас, а значит исходить из предположения, что всем игрокам известны все стратегии.
+
+**Важное ограничение теории игр** - цель должна быть **одна**, чтобы игрок точно понимал, к чему стремиться.
+
+Математическая модель теории игр предполагает
+
+**Теория игр** - математическая модель принятия решений в условиях неопределённости, когда принимающий решение субъект (игрок) обладает иноформацией лишь о:
+- *добавить список*
+
+Классификация теории игр:
+- По возможности предварительной договорённости ((не)кооперативные)
+- Конечные / бесконечные
+- По наличию элементов случайности при выборе стратегий (чистая / смешанная)
+- По функции выиграша: 
+  - (без)матричные
+  - с (не)нулевой суммой
+- По правилам осуществления ходов:
+  - статические - игроки могут делать одновременно
+  - динамические - игроки ходят по очереди
+- По доступности информации
+  - *дописать*
+- По координации игроков (*фактически, совпадают с классификацией по кооперации*):
+  - Безкоаллиционные - каждый игрок принимает решение независимо от другого игрока (статические игры, антогонистические)
+  - Коалиционные - игроки могут принимать решения по согласованию друг с другом, вступать в коалиции и т.п. 
+
+**Равновесие по Нэшу** - набор стратегий нескольких игроков (ситуация), отклонение от любой из которых в одиночку не выгодно ни одному из игроков (в дилеме заключённых оба сдали)
+
+**Оптимальная по Парето ситуация** - это когда не существует другой ситуации, которая все игроки, действйя совместно, не могут увеличить выигрыш каждого (в дилеме заключённых оба молчат)
+
+Формы описания игры делятся на развёрнутую и нормальную.
+- **Развёрнутая (экстенсивная)** - описывает все ходы в процессе игры и возникающие в их результате ситуации. Часто описывается дерева
+- **Нормальная форма** описание в виде матрицы функций выигрыша, где номер строки и столбца определяет стратегии каждого игрока, я чейки - вектора функций выигрыша для всех игроков. Таким образом, в матрице будет столько измерений, сколько у нас игроков
+
+Безкоалиционная игра в **нормальной** (стратегической форме) будет определяться тройкой $(I, S, H)$, где:
+- $I = \{1, 2, 3, ..., n\}$ - ноемера игроков
+- $S_i = \{s_i1, s_i2, s_i3, ..., s_in\}$ - набор стратегий $i$-го игрока
+  - Таким образом, исход игры будет одним из элементов декартова произведения $s \in S_1 \times S_2 \times ... \times S_n$
+- $H$ - отображение исхода в выигрыш для каждого игрока
+
+Ситуация $s$ называется **приемлемой** для игрока $i$, если любая замена им своей стратегии не даст ему значение $H$ больше. Если же мы можем найти стратегию с большим выигрышем, то текущая будет названа **неприемлемой**
+
+**Ситуация равновесия по Нэшу (более формально)** - ситуация $s$, которая приемлема для всех игроков (важно, что приемлемость для этой формальной модели неколлиционных игр определяется возможностью **ИНДИВИДУАЛЬНО** максимизировать прибыль)
+
+**Равновесной** будет называться стратегия игрока, входящая в одну из равновесных ситуаций игры.
+
+Нахождение равновесной ситуации и будет решением безколлиционной игры

@@ -3118,3 +3118,4 @@ In this PV particle can place either before or after verb:
   - demanding - needing a lot of time, attention or energy
   - strict / rigorous / tough - строгий 
   - stretch
+- cautious - осторожный
