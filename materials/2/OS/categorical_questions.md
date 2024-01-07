@@ -1,7 +1,6 @@
 # Categorical questions
 
-### Written by: 
-@AntonTsoy
+### Written by: [@AntonTsoy](https://github.com/AntonTsoy)
 
 ### Содержание:
 - [Понятие файла и файловой системы. Что такое каталог?](#понятие-файла-и-файловой-системы-что-такое-каталог)
