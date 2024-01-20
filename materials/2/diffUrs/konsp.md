@@ -1,6 +1,7 @@
 - [Инфо](#инфо)
 - [23.09.07 - лекция](#230907---лекция)
   - [Основные понятия](#основные-понятия)
+    - [Сведение к системе ОДУ](#сведение-к-системе-оду)
   - [Простейшие классы диффуров и методы их решения](#простейшие-классы-диффуров-и-методы-их-решения)
 - [23.09.12 - семинар](#230912---семинар)
   - [Уравнения с однородной правой частью (однородное уравнение)](#уравнения-с-однородной-правой-частью-однородное-уравнение)
@@ -23,7 +24,7 @@
   - [Линейные уравнения первого порядка](#линейные-уравнения-первого-порядка)
 - [23.09.28 - лекция](#230928---лекция)
   - [Продолжаем про неразрешимый первый порядок](#продолжаем-про-неразрешимый-первый-порядок)
-  - [Решением диффуров высокого порядка](#решением-диффуров-высокого-порядка)
+  - [Решение диффуров высокого порядка](#решение-диффуров-высокого-порядка)
     - [Линейный диффур высокого порядка](#линейный-диффур-высокого-порядка)
     - [Формула общего решения для линейных уравнений с постоянными коэффициентами](#формула-общего-решения-для-линейных-уравнений-с-постоянными-коэффициентами)
 - [23.10.03 - семинар](#231003---семинар)
@@ -35,7 +36,7 @@
   - [Понижение порядка](#понижение-порядка)
 - [23.10.12 - лекция](#231012---лекция)
   - [Неоднородные линейные диффуры с переменными коэффициентами](#неоднородные-линейные-диффуры-с-переменными-коэффициентами)
-  - [(Не)Зависимость системы функций без определителя Вронского](#независимость-системы-функций-без-определителя-вронского)
+  - [(Не)зависимость системы функций без определителя Вронского](#независимость-системы-функций-без-определителя-вронского)
   - [Методы решения ЛДУ с переменными коэффициентами](#методы-решения-лду-с-переменными-коэффициентами)
     - [Уравнение Эйлера](#уравнение-эйлера)
     - [Уравнение Лагранжа](#уравнение-лагранжа)
@@ -95,29 +96,42 @@
 ## Основные понятия
 Мы будем говорить только об обыкновенны дифференциальных уравнения (*БОЛЬШОЕ СПАСИБО*)
 
-**О.** Обыкновенное дифф. уравнение порядка $n$ относительно функции $y(x)$ - уравнение вида $F(x, y, y', ..., y^{(n)}) = 0$. В дифф.уре всегда есть производные. Порядком уравнения называется порядок старшей производной. Разделение диффуров на классы производится по их порядку. Для разных классов есть разные методы решения.
+**О.** Обыкновенное дифф. уравнение порядка $n$ относительно неизвестной функции $y(x)$ - уравнение вида $F(x, y, y', ..., y^{(n)}) = 0$. В дифф.уре всегда есть производные. Порядком уравнения называется порядок старшей производной. Разделение диффуров на классы производится по их порядку. Для разных классов есть разные методы решения.
 
 **О.** Решение диффура - это функция $y = \phi(x)$, если при подстановке в уравнение $y \rArr \phi, y' \rArr \phi'$ получается тождество. Как правило уравнение имеет бесконечное количество решений, которые, также, зависят от произвольных констант C, такое решение записывается как $\phi(x, C_1, C_2, ..., C_n)$ - такая запись называется **общим решением диффура**
 
-Часто в ходе преобразований мы получаем лишь **неявное задание** решения диффура вида $\Phi(x, y, C_1, C_2, ..., C_n) = 0$. Обычно перейти к явному решению от неявного мы можем лишь локально
+Часто в ходе преобразований мы получаем лишь **нефявное задание** - функциональное соотношение вида $\Phi(x, y, C_1, C_2, ..., C_n) = 0$. Обычно перейти к явному решению от неявного мы можем лишь локально
 
-**Нормальная форма** - форма диффура, в которой мы старшую производную выражаем через остальные производные ($y^{(n)} = f(x, y, y', ..., y^{(n-1)}$)
+**Нормальная форма** - форма диффура, в которой мы старшую производную выражаем через остальные производные: $y^{(n)} = f(x, y, y', ..., y^{(n-1)})$
 
 **О.** График решения диффура $y = \phi(x)$ называется **интегральной кривой**
 
 **Поле направлений** для системы $y' = f(x, y)$ - множество всех прямых, проходящих через точки $(x, y)$ ООФ под углом, тангенс которого будет равняться $f(x, y)$. Для интегральной кривой диффура поле её касательных совпадает с полем направлений этого уравнения.
 
+![](data:image/jpeg;base64,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)
+
 *Не уверен, что важно хоть где-то, но пусть будет:* для уравнений второго порядка всякая интегральная кривая определяется связью между координатами точек этой кривой, наклоном касательной и кривизной в каждой её точке
 
 **Для системы диффуров большинство определений аналогичны**
 
-**Задача Коши для заданного ОДУ** состоит в том, чтобы из всех решений найти такое решение $y = y(x)$, которое вместе со своими производными $n - 1$ порядка принимает заданные значения $y_0, y_1, ..., y_n$ при заданном значении независимой переменной $x_0$
+Связь интегральных кривых с полем направлений и возможность представить их в параметрическом виде позволяет представить нам в параметрическом виде и решение диффура (то есть $x = \phi(t)$, $y = \psi(t)$)
 
-**Траектория ОДУ первого порядка** - $(\phi_1(t), \phi_2(t), ..., \phi_n(t))$ - при изменении параметра $t$ эта точка будет описывать кривую $n$-мерном пространстве. Каждая координата точки задаётся решением ОДУ: $\forall i \le n: \phi_{i1}(x) = y_{i1}(x), \phi_{i2}(x) = y_{i2}(x), ..., \phi_{im}(x) = y_{im}(x)$. Соответственно, для систему ОДУ задача Коши сводится к поиску подходящей траектории
+**Система обыкновенных дифференциальных уравнений** - совокупность ОДУ, в каждом из которых есть $y_1, y_1', ..., y_1^{m_1}, ..., y_n, y_n', ..., y_n^{m_n}$. Соответственно, решением будет $n$ функций, обращающих систему в тождество. *Нормальная форма и общее решение также определяются аналогично*
 
-**Не у всякой задачи Коши есть решение и не у всякой оно единственное.** Решение, в котором в каждой точки нарушается условие единственности, называется **особым**
+**Интеграл системы диффуров первого порядка в нормальной форме** в окрестности точки $(x_0, y_{01}, ... y_{0n})$ - функция вида $\phi(x, y_1, ..., y_n)$, которая в этой точке имеет непрерывные первые частные производные и при этом сумма частных производных равняется нулю (частные производные по $y_i$ домножаются на $f_i(x, y_1, ..., y_n)$)
 
-ОДУ порядка $n$ может быть преобразовано в систему ОДУ первого порядка путём не очень хитрого переобозначения: $y \harr y_1, y' \harr y_2, ..., y^{(n-1)} \harr y_n \rArr y_{(n-1)}' = y_n$. Считая, что исходное ОДУ записано в нормальной форме, получаем из него систему:
+**Общим интегралом системы** будет система, в которой от равенств $\phi_i(x, y_1, ..., y_n) = C_i$ мы можем перейти к $y_i = \psi_i(x, C_1, ..., C_n)$
+
+**Задача Коши для заданного ОДУ** состоит в том, чтобы из всех решений найти такое решение $y = y(x)$, которое вместе со своими производными $n - 1$ порядка принимает заданные значения $y_0, y_1, ..., y_{n-1}$ при заданном значении независимой переменной $x_0$. Начальными значениями будут называться заданные $x_0, y_0, ..., y_{n-1}$. *Аналогичным образом можно определить задачу Коши для системы ОДУ первого порядка (с индексами только чутка подшаманить)*
+
+**Траектория ОДУ первого порядка** - $(\phi_1(t), \phi_2(t), ..., \phi_n(t))$ - при изменении параметра $t$ эта точка будет описывать кривую $n$-мерном пространстве. Каждая координата точки задаётся решением ОДУ: $\phi_1(t) = y_1, \phi_2(t) = y_2, ..., \phi_n(t) = y_n$. Соответственно, для систему ОДУ задача Коши сводится к поиску подходящей траектории
+
+**Не у всякой задачи Коши есть решение и не у всякой оно единственное.** Решение, в котором в каждой точки нарушается условие единственности, называется **особым**.
+
+*Пример:* Для $y' = \sqrt{y}$ и задачи Коши $y(x_0) = 0$ будет 2 решения: $y(x) = \frac{1}{4}(x - x_0)^2$ и $y(x) \equiv 0$ (*особым решением тут будет $y(x) \equiv 0$*)
+
+### Сведение к системе ОДУ
+ОДУ порядка $n$ в нормальной форме может быть преобразовано в систему ОДУ первого порядка путём не очень хитрого переобозначения: $y \harr y_1, y' \harr y_2, ..., y^{(n-1)} \harr y_n \rArr y_{(n-1)}' = y_n$. Считая, что исходное ОДУ записано в нормальной форме, получаем из него систему:
 $$
 \begin{cases}
   y_1' = y_2 \newline
@@ -128,12 +142,16 @@ $$
 \end{cases}
 $$
 
-Возможен и обратный процесс, то есть переход от систему ОДУ высокого порядка к одному ОДУ более низкого порядка. Для этого требуется существование первых частных производных для функции одного из уравнений системы, а также возможность выразить одну незивестную функцию через другую
+Возможен и обратный процесс, то есть переход от системы из $n$ ОДУ в НФ первого порядка к одному ОДУ $n$-го порядка. Для этого требуется существование первых частных производных для функции одного из уравнений системы, а также возможность выразить одну незивестную функцию через другую (то есть $y_2 = g_1(x, y_1, y_1')$ и наоборот).
 
-*Скипнул до простейших классов диффуров и методов их решения*
+*Пример на стр. 40 первой презентации*
+
+Тем же алгоритмом можно свети систему высокого порядке к системе первого порядка в НФ (*стр. 45*)
 
 ## Простейшие классы диффуров и методы их решения
-**Уравнения с разделяющимися переменными** - уравнения вида $y' = f(x)g(y)$ либо $f_1(x)g_1(y)y' = f_2(x)g_2(y)$ - в них нет подфункций, зависящих сразу от обеих переменных. Путём преобразований (деления) и понимания, что $y' = \frac{dy}{dx}$ переходим к форме, в которой слева и справа остаются только переменные одного имени, затем интегрируем обе половины и получаем решение - **PROFIT** (**Однако необходимо учитывать, что во время преобразований мы можем потерять режи... *Стоп, что?..* Решение мы можем потерять, поэтому то, на что мы делили, надо будет отдельно подставить для проверки**)
+**Уравнение первого порядка, разрешённые относительно производной**: вид $y' = f(x, y)$ либо $f_1(x, y)y' = f_2(x, y)$. Хотя при $f_1 \ne 0$ мы можем перейти от второго вида к первому, это сузит множество точек $(x, y)$, поэтому есть риск потерять решение. В таком классе диффуров возможно выразить $x$ как функцию от $y$ и $C$ и решать диффур $x' = \frac{1}{f(x, y)}$ либо $f_1(x, y) = f_2(x, y)x'$, что в некоторых случаях будет удобнее. Можно записывать уравнение такое уравнение через дифференциалы в симметричной форме $M(x, y)dx + N(x, y)dy = 0$, но надо следить за эквивалентностями переходов
+
+**Уравнения с разделяющимися переменными** - уравнения вида $y' = f(x)g(y)$ либо $f_1(x)g_1(y)y' = f_2(x)g_2(y)$ - в них нет подфункций, зависящих сразу от обеих переменных. Путём преобразований (деления) и понимания, что $y' = \frac{dy}{dx}$ переходим к симметричной форме, в которой слева и справа остаются только переменные одного имени, затем интегрируем обе половины и получаем решение - **PROFIT** (**Однако необходимо учитывать, что во время преобразований мы можем потерять режи... *Стоп, что?..* Решение мы можем потерять, поэтому то, на что мы делили, надо будет отдельно подставить для проверки**)
 
 Если переменные находятся под одной и той же функцией и не могут разделены, то мы производим замену выражения под функцией. Пример: уравнение $y' = f(ax + by + c)$. Берём $z = ax + by + c$, считаем $dz = adx + bdy \rArr dy = \frac{dz - adx}{b}$, подставляем в исходное уравнение:
 $$
@@ -152,6 +170,8 @@ $$
 $h()$ - однородная функция степени $k$, если $\forall C > 0 : h(Cx) = C^k h(x)$. Если однородна по группе переменных $y_1, ..., y_n$, то $\forall C > 0 : h(x, ..., Cy_1, ..., Cy_n) = C^kh(x, ..., y_1, ..., y_n)$
 
 Для проверки однородности можно дописать произвольный коэффициент ко всем $x, y$. Если все коэффициенты могут быть сокращены, значит уравнение однородное.
+
+**Однородный диффур** - диффур приведённого выше вида, в котором $h$ - однородная функция степени нуль
 
 Чтобы перейти к разделённому диффуру, надо провести замену $y(x) = t(x)x \rArr y'(x) = t'(x)x + t(x)$. *Дальше всё как обычно*
 
@@ -192,6 +212,8 @@ $$
 2. Для $q(x) \not= 0$
    1. Делаем подстановку решения однородного уравнения при $q(x) = 0$, заменяя константу на неизвестную $y = C(x)\phi(x)$
    2. Поиск решения будет сводиться к поиску $C(x)$ классическими методами
+
+Запись линейного диффура в симметричной форме: $dy - [f(x)y + g(x)]dx = 0$ (*ИМХО. Очень неудобная и некрасиваф форма, которая ещё и требует преобразований для использования метода Лагранжа*)
 
 Некоторые диффуры можно привести к линейному виду, представив $x(y)$, то есть поменять местами зависимую и независимую переменные (*ясное дело, мы не просто меняем букву производной, а проводим преобразования, держа в голове, что $y'^{-1} = x'$*) $(2e^y - x)y' = 1 | / y' \rArr 2e^y - x = x' \rArr x' + x = 2e^y$
 
@@ -307,14 +329,14 @@ $$
 
 Для линейных уравнений $\mu$ ищется относительно просто.
 
-Напомни, что линейный диффуры имеют вид $y' = p(x)y + q(x)$.
+Напомни, что линейный диффуры имеют вид $y' + p(x)y = q(x)$.
 
 $$
 \mu(x) = e^{\int_{x_0}^xp(t)dt}
 $$
 
 #### Для однородных
-Если у нас имеется однородный диффур вида:
+Если у нас имеется однородный диффур вида (*держим в голове, что в такой форме M и N должны быть ОДИНАКОВОЙ СТЕПЕНИ ОДНОРОДНОСТИ, НО ВОВСЕ НЕ ОБЯЗАТЕЛЬНО НУЛЕВОЙ*):
 $$
 M(x, y)dx + N(x, y)dy = 0
 $$
@@ -332,7 +354,7 @@ $$
 $$
 M_1(x, y)dx + N_2(x, y)dy + M_2(x, y)dx + N_2(x, y)dy = 0
 $$
-где $M_1,N_1$ однородны степени $\alpha_1$, а $M_2, N_2$ - степени $\alpha_2$
+где $M_1,N_1$ однородны степени $\alpha_1$, а $M_2, N_2$ - степени $\alpha_2$, то для первой и второй пары целесообразно искать собственный интегрирующий множитель (*не то чтобы безумный, но очень жёсткий пример на стр. 39 3-й лекции*)
 
 #### Какой-то ещё тип диффуров, вроде однородный, но не уверен
 Диффур вида:
@@ -341,10 +363,10 @@ $$
 $$
 имеет интегральный множитель:
 $$
-\mu(x, y) = e^{\int \psi(t)dt}|t=\omega(x, y)
+\mu(x, y) = e^{\int \psi(t)dt}|_{t=\omega(x, y)}
 $$
 
-*Примеры настолько страшные, что даже Васкевич их не дал. Ещё там есть 4 частных случая, которые вроде как проще, но я, пожалуй, оставлю тут общее правило в надежде никогда его не применять...*
+*Примеры настолько страшные (стр. 45 3-й лекции), что даже Васкевич их не дал. Ещё там есть 4 частных случая, которые вроде как проще, но я, пожалуй, оставлю тут общее правило в надежде никогда его не применять...*
 
 <hr>
 
@@ -354,6 +376,10 @@ $$
 Общий вид уравнений первого порядка неразрешённых относительно производной таков: $F(x, y, y') = 0$. 
 
 В простейшем случае левая часть уравнение элементарно представляется в разрешённом относительно производной $F(x, y, y') = (y' - f_1(x,y))(y' - f_2(x,y))...(y' - f_m(x,y))$, при этом диффур распадается на $m$ диффуров вида $y' = f_1(x,y), ..., y' = f_m(x,y)$ - решение каждого из них будет решением исходного диффура, то есть будет ветвью общего решения. Кроме того, решениями будут частные особые решения этих систем, а также решения, полученные склеиванием нескольких ветвей решения.
+
+В самом простом случае у нас будет диффур $F(y') = 0$, в котором функциональное уравнение $F(\xi) = 0$ имеет вещественные корни $\xi = a_1, ..., \xi = a_n$, тогда решения диффура будут неявно задаваться формулой $F(\frac{y - C}{x}) = 0$ (*получаем такое выражение, просто интегрируя $y' = a_i$*), однако если решения $\xi$ заполняют некоторый интервал, эта формула может не давать всех решений диффура
+
+Для диффура $F(x, y') = 0$, в таком случае мы можем найти функции для уравнения $F(\xi, f_i(\xi)) = 0$, а решения диффура тогда будут находиться интегрированием $f_i$-х
 
 ## Параметрическое решение дифференциальных уравнений
 Диффур $F(x, y, y') = 0$ Допускает запись в параметрической форме, если $\exist \phi(u,v), \psi(u,v), \chi(u,v)$ параметров $u,v$ такие, что имеет место тождество $F(\phi(u,v), \psi(u,v), \chi(u,v)) \equiv 0$
@@ -375,8 +401,9 @@ $$
 Однако есть 2 случая, в которых поиск параметрических функций сильно упрощён:
 - Если $F(x, y, y') = 0$ разрешим относительно $y$: $y = \psi(x, y') \rArr \phi = u = x, \chi = v = y'$
 - Если $F(x, y, y') = 0$ разрешим относительно $x$: $x = \phi(y, y') \rArr \psi = u = y, \chi = v = y'$
+- *В обоих этих случаях сильно упрощается запись выражения $dy = y'dx$, так что приводить её тут не буду, смогу если что вывести*
 
-*Дальше идут примеры, которые ну уж очень страшны для понимания*
+*Пример со стр. 69 3-й лекции*
 
 # 23.09.26 - семинар
 ## Линейные уравнения первого порядка
@@ -389,14 +416,18 @@ $$
 
 # 23.09.28 - лекция
 ## Продолжаем про неразрешимый первый порядок
-**Уравнение Лагранжа** - диффур вида $y = x \phi(y') + \psi(y')$, в котором $\phi(\xi) \not \equiv \xi$. Уравнение разрешимо относительно $y \rArr y = \psi(u, v), x = u, y' = v$, Затем запишем уравнение в дифференциалах $du, dv$ и... *чего-то дальше ещё делаем...*
+**Уравнение Лагранжа** - диффур вида $y = x \phi(y') + \psi(y')$, в котором $\phi(\xi) \not \equiv \xi$. Уравнение разрешимо относительно $y \rArr y = \psi(u, v), x = u, y' = v$, Затем запишем уравнение в дифференциалах $du, dv$ и далее действуем классическим параметрическим методом
 
 Если в уравнении Лагранжа $\phi(\xi) \equiv \xi$, то мы получаем **уравнение Клеро**. Выражаем его через те же параметры и получаем $[u + \psi'(v)]dv = 0 \rArr dv = 0$ или $u + \psi'(v) = 0$. Первое уравнение имеет решение $v = C \rArr y = Cx + \psi(C)$. Второе уравнение имеет особое решение уравнения Клеро $x = -\psi'(v), y = -v\psi'(v) + \psi(v)$ - в каждой точке соответствующей ему интегральной кривой нарушается единственность решения задачи Коши. 
 
-## Решением диффуров высокого порядка
-[Про понижение смотри в семинаре](#231010---семинар)
+## Решение диффуров высокого порядка
+[Про простые способы понижения порядка смотри в семинаре](#231010---семинар)
 
-*Сначала идут записи для простейших диффуров порядка $n$, которые необходимо последовательно интегрировать $n$ раз, чтобы получить ответ вида $y = a_1x^{n-1} + a_2x^{n-2} + ... + a_{n-1}x + a_n$*
+При решении задачи Коши для диффуров выского порядка целесообразно находить значения константу сразу же после их появления, а не всех в конце (*вообще слабо представляю, как найти значения всех в конце*)
+
+Диффур вида $y^{(n)} = 0$ будет решаться последовательным интегрированием $n$ раз. Ответ будет выглядеть так: $y = a_1x^{n-1} + a_2x^{n-2} + ... + a_{n-1}x + a_n$
+
+Диффур порядка $n$ в нормальной форме сводится к системе диффуров первого порядка (смотри [тут](#сведение-к-системе-оду))
 
 ### Линейный диффур высокого порядка
 $$
@@ -408,18 +439,22 @@ $$
 $$
 Если в этой форме $a_i$ - константы, то говорят **линейном уравнении с постоянными коэффициентами**
 
+При $f(x) = 0$ ЛДУ будет **однородным**, иначе - **неоднородным**
+
 *Также существует ещё одна максимально извращённая запись с подстановкой $D = \frac{d}{dx}$:*
 $$
 (D^n + a_1D^{n-1} + .... + a_{n-1}D + a_n)y = f(x)
 $$
 
-**Характеристический полином** $p(\lambda) = \lambda^n + a_1 \lambda^{n-1} + ... + a_{n-1}\lambda + a_n$ будет характеристическим полиномом уравнения, если $a_i$ - постоянные уравнения, равны $a_j$ полинома.
+**Характеристический полином** $p(\lambda) = \lambda^n + a_1 \lambda^{n-1} + ... + a_{n-1}\lambda + a_n$ будет характеристическим полиномом линейного однородного уравнения, если $a_i$ - постоянные уравнения, равны $a_j$ полинома
 
-Если полином $p(\lambda)$ имеет $k$ вещественных и комплексных корней, то, оказывается соответствующий ему диффур в операторной форме (при $f(x) = 0$, то есть для **однородных уравнений**) можно записать в **факторизованной форме**
+Уравнение $p(\lambda) = 0$ будет называться **характеристическим** для данного диффура, причём его корням будут вещественные числа 
+
+Если полином $p(\lambda)$ имеет $k$ вещественных и комплексных корней (для условия вещественности каждому комплексному корни будет соответствовать комплексно сопряжённый), то, оказывается соответствующий ему диффур в операторной форме можно записать в **факторизованной форме**
 $$
 (D - \lambda_1)(D - \lambda_2)...(D - \lambda_k)y = 0
 $$
-*Доказывается через пример для порядка `2`*
+*Доказывается через пример для порядка `2` с использованием формулы Виета*
 
 ### Формула общего решения для линейных уравнений с постоянными коэффициентами
 Для однородного линейного диффура в факторизованной форме порядка $n$ решениями будут $y_1 = C_1e^{\lambda_1x}, ..., y_n = C_ne^{\lambda_n x}$, а также любая их линейная комбинация. Если все $\lambda$ различны, то **линейная комбинация всех $y_i$** будет описывать **общее решение диффура**.
@@ -488,14 +523,16 @@ y^{(3)} = 24Ax + 6B \newline
   24A + 6B = 0 \newline
   6B + 2C = 0 \newline
 \end{cases}
-A = 1/12 \rArr B = -1/3 \rArr C = 1 \newline
-\rArr y_{частн} = \frac{Ax^4}{12} - \frac{x^3}{3} + x^2 \newline
-\rArr y = C_1x + C_2 + C_3e^{-x} + \frac{Ax^4}{12} - \frac{x^3}{3} + x^2
+\rArr A = 1/12 \rArr B = -1/3 \rArr C = 1 \newline
+\rArr y_{частн} = \frac{x^4}{12} - \frac{x^3}{3} + x^2 \newline
+\rArr y = C_1x + C_2 + C_3e^{-x} + \frac{x^4}{12} - \frac{x^3}{3} + x^2
 $$
 
 Если правая часть представлена в виде $e^{ax}[P_m(x)\cos bx + Q_l(x)\sin bx]$ и $a + bi$ **не является корнем общего решения однородного диффура**, то частное решение представима в виде $e^{ax}[R_p(x)\cos bx + T_p(x)\sin bx], p = \max(m,l)$. Соответственно, если $a + bi$ **является корнем степени $k$**, мы домножаем частное решение на $x^k$. В остальном метод решения идентичен.
 
 **Если правая часть представима в виде суммы нескольких функций, то её частное решение будет суммой частных решений всех этих функций.** Бывает полезно в случаях, когда у нас смешаны вещественные и комплексные числа, или разные степени у экспоненты.
+
+*На стр. 25-29 5-й лекции идут задачи для самостоятельного решения. Перед экзом может даже 2-3 решить можно*
 
 ## Линейные уравнения с переменными коэффициентами
 Вместо констант $a_i$ у нас теперь идут функции $a_i(x)$
@@ -504,7 +541,7 @@ $L(y) \equiv y^{(n)} + a_1(x)y^{(n-1)} + ... + a_{n-1}(x)y' + a_n(x)y$ - **ли�
 
 *Освежим память* функции $y_n(x)$ будут линейно независимы, если их линейная комбинация равняется нулю только при умножении функций на ноль ($\forall x \in <a,b> : \sum a_iy_i(x) = 0, a_1 = ... = a_n = 0$). Линейно независимыми будут системы $\{x^i\}$ и $\{e^{\lambda_ix}| \forall i\not=j : \lambda_i \not = \lambda_j \}$. Система $\cos^2 x, \sin^2 x, 1$ будет линейно зависима.
 
-**Определитель Вронского** Определитель матрица для системы из $n$ функций, где $w_{ij} = y_j^{(i-1)}(x)$ - производная j-й функции порядка $i-1$ (то каждая строка - производные всех функций порядка от 1 до $n$).
+**Определитель Вронского** для системы из $n$ функций - определитель матрицы для системы из $n$ функций, где $w_{ij} = y_j^{(i-1)}(x)$ - производная j-й функции порядка $i-1$ (*то есть каждая строка - производные всех функций порядка от 0 до $n-1$*).
 
 **Т.** Если система функций линейно зависима в интервале, то определитель Вронского будет равняться нулю в каждой точке этого интервала. *Доказывается через факт линейной зависимости и выражение функции $y_n$ через остальные функции, а затем её дифференцирование $n-1$ раз, чтобы получить последний столбец матрицы, который будет представлять собой линейную комбинацию предыдущих, из **чего и следует равенство определителя матрицы нулю***.
 
@@ -521,19 +558,22 @@ $L(y) \equiv y^{(n)} + a_1(x)y^{(n-1)} + ... + a_{n-1}(x)y' + a_n(x)y$ - **ли�
 **Т. О формуле Остроградского-Лиувилля.** Если $y_i$ - решения $L(y) = 0$, тогда 
 
 $$
-\forall x,x_0 \in (a,b) : W(x) = W(x)e^{-\int_{x_0}^xa_1(s)ds}
+\forall x,x_0 \in (a,b) : W(x) = W(x_0)e^{-\int_{x_0}^xa_1(s)ds}
 $$
-**Существенно, что тут $a_1(x)$ именно по нашей нотации, то есть мы обязательно берём функцию при $y^{(n-1)}$, $a_0(x)$ строго $= 1$**
+- **Существенно, что тут $a_1(x)$ именно по нашей нотации, то есть мы обязательно берём функцию при $y^{(n-1)}$, $a_0(x)$ строго $= 1$**
+- Фактически, в практическом приложении мы считаем, что $W(x_0) = C$ (*что в целом и логично*)
 
-*Доказывается через тот факт, что производная определителя Вронского будет равняться сумме $n$ определителей, где строки поочерёдно заменяются на свои производные (то есть для всех строк кроме последней определители будут нулевыми). Затем через умножение $n-1$ строчек определителя на $a_n, ..., a_2$ и факт того, что любое $y_i$ - решение, получаем (не особо понимаю, как), что $W'(x) = -a_1(x)W(x)$, а затем домножаем выражение на $e^{\int_{x_0}^xa_1(s)ds}$ и путём "нехитрых" преобразований получаем искомую формулу*
+*Доказывается через тот факт, что производная определителя Вронского будет равняться сумме $n$ определителей, где строки поочерёдно заменяются на свои производные (то есть при замене всех строк кроме последней определители будут нулевыми). Затем через умножение $n-1$ строчек определителя на $a_n, ..., a_2$ и факт того, что любое $y_i$ - решение, получаем (не особо понимаю, как), что $W'(x) = -a_1(x)W(x)$, а затем домножаем выражение на $e^{\int_{x_0}^xa_1(s)ds}$ и путём "нехитрых" преобразований получаем искомую формулу*
 
 **Фундаментальная система решений** - совокупность решений $L(y) = 0$, определённых и линейно независимых на $(a, b)$.
 
-**Т.** Для любой $L(y)$ с непрерывными на $(a,b)$ коэффициентами $a_i(x)$ найдётся ФСР. *Доказывается подбором таких решений $y_1(x), ..., y_n(x)$, что их определитель Вронского будет определителем диагональной матрицы, то есть будет равняться единице (в лекции почему-то считается очевидным, что матрица будет такой, хотя мне это таковым не кажется...)*
+**Т.** Для любой $L(y)$ с непрерывными на $(a,b)$ коэффициентами $a_i(x)$ найдётся ФСР. *Доказывается подбором таких решений $y_1(x), ..., y_n(x)$, что их определитель Вронского будет определителем диагональной матрицы, то есть будет равняться единице, а из этого следует, что система из таких решений линейно независима*
 
-**Т.** Любая линейная комбинация ФСР также будет решением $L(y) = 0$
+**Т.** Любая линейная комбинация ФСР также будет решением $L(y) = 0$ (*На самом деле формулировка и теоремы другая, но так это мне кажется вполне корректным*)
 
-**Т.** В однородном $L(y)$ не может быть больше $n$ линейно независимых решений.
+Также есть обратное утверждение: произвольное решение $L(y) = 0$ может раскладываться на линейную комбинацию ФСР. *Доказывается (как по мне, с такой формулировкой и доказательства не надо) через построение системы уравнений с одинаковыми множителями линейной комбинации, где каждое уравнение содержит все части ФСР в виде производных от 0 в первом уравнении до $n-1$ в последнем, в правой части уравнений будет стоять наше произвольное решение (и также его производные). Определитель этой системы будет определителем Вронского, а значит, учитывая, что слева стоят элементы ФСР, определитель будет ненулевым, а значит сама система будет иметь единственное решение, причём это решение будет совпадать с тем, которое мы выбрали в начале для доказательства в силу единственности решения задачи Коши (это настолько страшно, что я всеми бы силами хотел избегать упоминания этого доказательства)*
+
+**Т.** В однородном $L(y)$ не может быть больше $n$ линейно независимых решений. *Доказывается от противного: если $n$ решений уже линейно зависимы, то $n+1$ также будут зависимы. Если $n$ решений линейно независимы, значит это ФСР по определению, значит $n+1$-е решение будет выражаться из остальных по предыдущей теореме*
 
 # 23.10.10 - семинар
 ## Понижение порядка
@@ -549,7 +589,7 @@ $$
 ## Неоднородные линейные диффуры с переменными коэффициентами
 Очевидно, что вместо $L(y) = 0$ будет $L(y) = f(x)$. Как и для однородных, общее решение = частное решение + ФСР (*следует из линейности ФСР*)
 
-Обратное утверждение также верно: если мы знаем решение неоднородного линейного диффура, то найдутся такие константы $C_1,...,C_n$, что они выделят из общего решения частное решение и ФСР.
+Обратное утверждение также верно: если мы знаем решение неоднородного линейного диффура, то найдутся такие константы $C_1,...,C_n$, что они выделят из общего решения частное решение и ФСР. (*доказывается тривиально по предпоследней теореме с прошлой лекции*)
 
 Если была найдена ФСР, то частное НЛДУПК (*ужасная аббревиатура, но я не хочу больше писать "неоднородное линейное дифференциальное уравнение с переменными коэффициентами"*) можно найти методом вариации постоянных:
 - Представим частное решение через ФСР: $y_0(x) = C_1(x)y_1(x) + ... + C_n(x)y_n(x)$. Теперь наша цель - найти $C_i(x)$
@@ -586,18 +626,18 @@ $$
 
 *Практическое применение рассмотрим на семинарах (надеюсь)*
 
-Если правая часть НДУПК $f(x) = f_1(x) + ... + f_n(x)$, то решением будет сумма решений НДУПК с правой частью только из $f_i(x)$
+Если правая часть НДУПК $f(x) = f_1(x) + ... + f_n(x)$, то частным решением будет сумма частных решений НДУПК с правой частью только из $f_i(x)$
 
-## (Не)Зависимость системы функций без определителя Вронского
-**Определитель Грама** $\Gamma(y_1,...,y_m) = |A|$, где $a_ij = \int_a^b y_j(t)y_i(t)dt$.
+## (Не)зависимость системы функций без определителя Вронского
+**Определитель Грама** $\Gamma(y_1,...,y_m) = |A|$, где $a_{ij} = \int_a^b y_j(t)y_i(t)dt$.
 
-Система функций линейно независима на $(a, b) \hArr \Gamma(\vec{y}) \ne 0$
+Система непрерывных на $(a, b)$ функций линейно независима на $(a, b) \hArr \Gamma(\vec{y}) \ne 0$
 
-**Л.** Если система функций линейно независима на интервале, то и любая её подсистема будет линейно независима. (*Доказательство: если предположить обратное, то найдутся такие $1 \le j \le k : a_j \ne 0 : a_1y_1 + ... + a_ky_k = 0$, но тогда при $k < i \le n : a_i = 0 : a_1y_1 + ... + a_ky_k + ... + a_ny_n = 0$, а это противоречит условию*)
+**Л.** Если система функций линейно независима на интервале, то и любая её подсистема будет линейно независима. (*Доказательство: если предположить обратное, то найдутся такие $1 \le j \le k : a_j \ne 0 : a_1y_1 + ... + a_ky_k = 0$, но тогда при $k < i \le n : a_i = 0 : a_1y_1 + ... + a_ky_k + ... + a_ny_n = 0$, а это противоречит условию линейной независимости всей системы*)
 
 **Л.** Если какая-либо из подсистем системы функций линейно зависима, то и вся система будет линейно зависима (*доказывается от противного банально по прошлой лемме*)
 
-**Л.** Если функции линейно независимы на $(a,b) \rArr$ они линейно независимы на любом $(c,d)$ таком, что $(a,b) \subseteq (c,d)$ (*Следует из факта, что линейно зависимые функции должны быть зависимы на всём интервале, а на его части $(a, b)$ они линейно независимы по условию)
+**Л.** Если функции линейно независимы на $(a,b) \rArr$ они линейно независимы на любом **объемлющем** интервале $(c,d)$, то есть таком, что $(a,b) \subseteq (c,d)$ (*Следует из факта, что линейно зависимые функции должны быть зависимы на всём интервале, а на его части $(a, b)$ они линейно независимы по условию*)
 
 По линейно независимой системе непрерывно дифференцируемых $n$ раз функций $y_1, ..., y_n$ с определителем Вронского не равным нулю можно найти единственное однородное уравнение, решив систему вида:
 $$
@@ -640,7 +680,7 @@ $$
 $$
 (ax + b)^ny^{(n)} + a_1(ax + b)^{n-1}y^{(n-1)} + ... a_{n-1}(ax + b)y' + a_ny = f(x)
 $$
-*Замена тоже достаточно похожая:* $ax + b = e^t, x > 0 \rArr t = \ln |ax + b|$
+*Замена тоже достаточно похожая:* $ax + b = e^t \rArr t = \ln |ax + b|$
 
 Также частные решения уравнения Эйлера часто удобно искать после замены $y = x^{\lambda}$, где $\lambda$ - неизвестная постоянная
 
@@ -667,7 +707,9 @@ $$
 
 <hr>
 
-Зная частное решение линейного уравнения мы можем повысить его порядок на единицу, сохранив линейность. Для этого проводим замены $y = y_0z$, где $z$ - новая неизвестная функция. После преобразований делаем замену $z' = u$ и находим функцию $u$ и её первообразную $z$
+Зная частное решение линейного уравнения мы можем понизить его порядок на единицу, сохранив линейность. Для этого проводим замены $y = y_0z$, где $z$ - новая неизвестная функция. После преобразований делаем замену $z' = u$ и находим функцию $u$ и её первообразную $z$
+
+Зная $n-1$ частное решение диффура, мы можем использовать для нахождения общего решения формулу Остроградского-Лиувилля
 
 *Дальше идёт несколько очень страшных уравнений, для которых мы подбираем частные решения чуть ли не в ручном режиме*
 
