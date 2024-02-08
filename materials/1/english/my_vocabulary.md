@@ -3119,3 +3119,9 @@ In this PV particle can place either before or after verb:
   - strict / rigorous / tough - строгий 
   - stretch
 - cautious - осторожный
+- may well - достаточно вероятно
+- will certainly - очень вероятно
+- will probably - вероятно
+- to be likely to 
+- doubt - сомневаться
+- bound - (в смысле вероятности) - очень вероятно

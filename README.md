@@ -15,14 +15,17 @@
 
 ---
 
-## [2 курс](./materials/2)
-- [ТерВер и МатСтатистика](./materials/2/TVMS/konsp.md)
-- [отс**ОС**и](./materials/2/OS/konsp.md)
-  - [КРИТЫ](./materials/2/OS/categorical_questions.md)
-- [**Дифф**еренцируй, властвуй, унижай (*себя*)](./materials/2/diffUrs/konsp.md)
-- [Skynet: начало](./materials/2/AI/konsp.md)
-- [ООПа!](./materials/2/OOP/konsp.md)
-- [Модели](./materials/2/models/konsp.md)
+## [2 курс, 1 семестр](./materials/2-1)
+- [ТерВер и МатСтатистика](./materials/2-1/TVMS/konsp.md)
+- [отс**ОС**и](./materials/2-1/OS/konsp.md)
+  - [КРИТЫ](./materials/2-1/OS/categorical_questions.md)
+- [**Дифф**еренцируй, властвуй, унижай (*себя*)](./materials/2-1/diffUrs/konsp.md)
+- [Skynet: начало](./materials/2-1/AI/konsp.md)
+- [ООПа!](./materials/2-1/OOP/konsp.md)
+- [Модели](./materials/2-1/models/konsp.md)
+
+## [2 курс, 2 семестр](./materials/2-2)
+WIP
 
 ---
 
