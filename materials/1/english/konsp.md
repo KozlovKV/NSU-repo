@@ -98,6 +98,7 @@
   - [Little bit about `used to` and `would`](#little-bit-about-used-to-and-would)
 - [23.11.10](#231110)
   - [Obligation and permission](#obligation-and-permission)
+- [24.02.08](#240208)
 
 # Websites
 - [Cambridge Learner's dictionary](https://dictionary.cambridge.org/dictionary/learner-english)
@@ -884,3 +885,6 @@ Don't confuse with `be/get used to <noun/gerund>` that mean *стало прив
 We can use `must` only when we are making rules. `have to` can be used everywhere.
 
 After `let` and `make` we cannot use `to`
+
+# 24.02.08
+![](./materials/probabilities.png)
