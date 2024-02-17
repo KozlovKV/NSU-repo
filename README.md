@@ -23,11 +23,17 @@
 - [Skynet: начало](./materials/2-1/AI/konsp.md)
 - [ООПа!](./materials/2-1/OOP/konsp.md)
 - [Модели](./materials/2-1/models/konsp.md)
+- [Собрались мы как-то с пацанами, и понеслось...](./materials/2-1/PAK/konsp.md)
 
 ## [2 курс, 2 семестр](./materials/2-2)
-WIP
+- [Тесла знает, что удары током для живых организмов выходят боком...](./materials/2-2/AETI/konsp.md)
+- [А тройничок - это параллельная система?](./materials/2-2/concurrecncy/konsp.md)
+- [Skynet: строим роботов](./materials/2-2/seti/konsp.md)
+- [Эх... Щас бы на симпозиум в Грецию...](./materials/2-2/philosophy/konsp.md)
+- *Также актуальными остаются ссылки из первого семестра на ООП, модели, матстат и проектную работу*
 
 ---
 
 ## [Факультативы и прочие допы](./materials/additional/)
 - [Курс "Как быть HACKERMAN и не сесть"](./materials/additional/infobez/konsp.md)
+- [Wake the fuck up, samurai, we have KUBERNETES' cluster to burn](./materials/additional/kubernetes/konsp.md)

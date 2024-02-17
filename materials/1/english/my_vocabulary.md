@@ -3125,3 +3125,8 @@ In this PV particle can place either before or after verb:
 - to be likely to 
 - doubt - сомневаться
 - bound - (в смысле вероятности) - очень вероятно
+- lend - lent - lent
+- make - made - made
+- madden - приводить кого-то в ярость
+- latitude - широта, простор
+- turnout - явка, разборка
