@@ -10,7 +10,10 @@
   - [Ридеры (и немного райтеры)](#ридеры-и-немного-райтеры)
   - [Lombok](#lombok)
   - [Java Threads - цикл статей с Java Rush](#java-threads---цикл-статей-с-java-rush)
-    - [Часть 1 - потоки](#часть-1---потоки)
+    - [Часть 1 - Потоки](#часть-1---потоки)
+    - [Часть 2 - Синхронизация](#часть-2---синхронизация)
+    - [Часть 3 - Взаимодействие](#часть-3---взаимодействие)
+    - [Часть 4 - Callable, Future и друзья](#часть-4---callable-future-и-друзья)
 - [23.09.07 - лекция](#230907---лекция)
   - [Введение](#введение)
 - [23.09.14 - Лекция](#230914---лекция)
@@ -65,6 +68,11 @@
   - [Примитивы синхронизации](#примитивы-синхронизации)
 - [24.02.15 - лекция](#240215---лекция)
   - [Продолжаем про синхронизацию](#продолжаем-про-синхронизацию)
+- [24.02-22 - лекция](#2402-22---лекция)
+  - [Синхронизованные коллекции](#синхронизованные-коллекции)
+  - [Семафоры](#семафоры)
+  - [Дэдлоки](#дэдлоки)
+  - [ООП-шный дизайн приложений](#ооп-шный-дизайн-приложений)
 
 
 # Инфо
@@ -390,10 +398,173 @@ public abstract class StringFinder {
 Project Lombok позволяет при помощи аннотаций существенно сократить написание рутинного кода. Наткнулся на него почти случайно и пока что особо не применял, но запомнить смысл имеется.
 
 ## Java Threads - цикл статей с Java Rush
-### Часть 1 - потоки
+### Часть 1 - Потоки
 [Ссылка](https://javarush.com/groups/posts/2047-threadom-java-ne-isportishjh--chastjh-i---potoki)
 
+Статический метод `Thread.currentThread()` позволяет получить экземпляр того потока, который в данный момент исполняется
 
+*И... Больше ничего примечательного в этой части не было. Идём ко второй*
+
+### Часть 2 - Синхронизация
+[Тык](https://javarush.com/groups/posts/2048-threadom-java-ne-isportishjh--chastjh-ii---sinkhronizacija)
+
+Вместо `Thread.sleep(millis)` для засыпания можно использовать `TimeUnit.SECONDS.sleep(seconds)` - кроме засыпания, этот метод позволяет делать ещё много чего интересного и, конечно, не только по секундам
+
+`thread.join()` - будет выполнять `wait` на потоке, где был вызван, до тех пор, пока поток `thread` не завершится
+
+В противовес скрином с циклом жизни из лекции автор статьи приводит свой:
+![](https://cdn.javarush.com/images/article/cda1e7a1-bdf1-4ff8-8a0b-250a0ccfb52e/800.jpeg)
+При этом отдельно акцентирует внимание на том, что с точки зрения планировщика JVM состояния RUNNING и RUNNABLE - это ОДНО состояние
+
+Далее рассказывает о примитивах синхронизации `LockSupport` и `ReentrantLock`, которые основываются на семафорах и, откровенно говоря, мне не понятен смысл их существования и отличия от семафоров
+
+### Часть 3 - Взаимодействие
+[Сурс](https://javarush.com/groups/posts/2060-threadom-java-ne-isportishjh--chastjh-iii---vzaimodeystvie)
+
+Прикольный пример дэдлока:
+```java
+public class Deadlock {
+    static class Friend {
+        private final String name;
+        public Friend(String name) {
+            this.name = name;
+        }
+        public String getName() {
+            return this.name;
+        }
+        public synchronized void bow(Friend bower) {
+            System.out.format("%s: %s has bowed to me!%n",
+                    this.name, bower.getName());
+            bower.bowBack(this);
+        }
+        public synchronized void bowBack(Friend bower) {
+            System.out.format("%s: %s has bowed back to me!%n",
+                    this.name, bower.getName());
+        }
+    }
+
+    public static void main(String[] args) {
+        final Friend alphonse = new Friend("Alphonse");
+        final Friend gaston = new Friend("Gaston");
+        new Thread(() -> alphonse.bow(gaston)).start();
+        new Thread(() -> gaston.bow(alphonse)).start();
+    }
+}
+```
+Ни один из друзей не сможет поклониться в ответ, так как его объект уже был заблокирован в другом потоке
+
+Пример живой блокировки (*не самый понятный, увы*):
+```java
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+public class App {
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_PURPLE = "\u001B[35m";
+
+    public static void log(String text) {
+        String name = Thread.currentThread().getName(); //like Thread-1 or Thread-0
+        String color = ANSI_BLUE;
+        int val = Integer.valueOf(name.substring(name.lastIndexOf("-") + 1)) + 1;
+        if (val != 0) {
+            color = ANSI_PURPLE;
+        }
+        System.out.println(color + name + ": " + text + color);
+        try {
+            System.out.println(color + name + ": wait for " + val + " sec" + color);
+            Thread.currentThread().sleep(val * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void main(String[] args) {
+        Lock first = new ReentrantLock();
+        Lock second = new ReentrantLock();
+
+        Runnable locker = () -> {
+            boolean firstLocked = false;
+            boolean secondLocked = false;
+            try {
+                while (!firstLocked || !secondLocked) {
+                    firstLocked = first.tryLock(100, TimeUnit.MILLISECONDS);
+                    log("First Locked: " + firstLocked);
+                    secondLocked = second.tryLock(100, TimeUnit.MILLISECONDS);
+                    log("Second Locked: " + secondLocked);
+                }
+                first.unlock();
+                second.unlock();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        };
+
+        new Thread(locker).start();
+        new Thread(locker).start();
+    }
+}
+```
+
+Хороший пример race condition:
+```java
+public class App {
+    public static int value = 0;
+
+    public static void main(String[] args) {
+        Runnable task = () -> {
+            for (int i = 0; i < 1000000; i++) {
+                int oldValue = value;
+                int newValue = ++value;
+                if (oldValue + 1 != newValue) {
+                    throw new IllegalStateException(oldValue + " + 1 = " + newValue);
+                }
+            }
+        };
+        new Thread(task).start();
+        new Thread(task).start();
+        new Thread(task).start();
+        new Thread(task).start();
+        new Thread(task).start();
+        new Thread(task).start();
+        new Thread(task).start();
+        new Thread(task).start();
+        new Thread(task).start();
+        new Thread(task).start();
+    }
+}
+```
+*В изначальном примере было 3 потока и итерация до 10000, но так словить ошибку было слишком сложно*
+
+Из-за кэширования подобный поток будет сидеть в вайле вечно:
+```java
+public class Main {
+
+    public static boolean flag = false;
+
+    public static void main(String[] args) throws InterruptedException {
+        Runnable whileFlagFalse = () -> {
+            while(!flag) {
+            }
+            System.out.println("Flag is now TRUE");
+        };
+
+        new Thread(whileFlagFalse).start();
+        Thread.sleep(1000);
+        flag = true;
+        System.out.println("Flag changed");
+    }
+}
+```
+Добавив к полю `flag` ключевое слово `volatile` мы укажем JVM, что это поле кэшировать нельзя. Производительность из-за этого теоретически упадёт, но зато всё исполнится корректно
+
+Далее коротко упоминает про атомарные операции и классы `Atomic`
+
+Говорит, что есть ещё такая штука как Happens Before, однако тут про неё не рассказывает и просто даёт ссылку на [доклад по этой теме](https://www.youtube.com/watch?v=C6b_dFtujKo)
+
+*Может быть послушаю позже*
+
+### Часть 4 - Callable, Future и друзья
 
 # 23.09.07 - лекция
 ## Введение
@@ -1029,8 +1200,6 @@ $$
 
 Приоритеты нитей задаются константами и по умолчанию равняются пяти.
 
-*Посмотреть потом подробнее про возможности прерывания и усыпления нитей*
-
 # 24.02.08 - лекция
 ## Пул потоков
 Пул потоков - набор заранее созданных потоков, которые могут выполнять разные задачи. Выбор нужного потока из пула производится особым менеджером - `Executor` или `ServiceExecutor` (см. [доки](#https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html))
@@ -1038,16 +1207,47 @@ $$
 ## Примитивы синхронизации
 Самый простой вариант - блокировка.
 
-Если перед методом указать ключевое слово `synchronized`, которое будет блокировать объект для обычных методов, класс для статических методов и любой блок когда с выбранными аргументами, если написать
+Если перед методом указать ключевое слово `synchronized`, которое будет блокировать объект при указании у обычных методов, класс при указании у статических методов, и любой блок кода с выбранными аргументами, если написать
 ```java
-synchronized (args) {
+synchronized (obj) {
   // code
 }
 ```
 *Максимально кривой и сомнительный метод с возможностью неэффективного выполнения кода и создания дэдлоков и... Я уверен, ещё что-то страшное произойти может. С другой стороны, из плюсов - достаточно гибкий контроль над происходящим в программе*
 
-Методы `wait`, `notify` и `notifyAll` позволяют нам внутри `synchronized`-блока уснуть и снять блокировку, чтобы определённое действие произошло с объектом в другом `synchronized`-блоке, в котором должны вызываться `notify` и `notifyAll`, которые пробудят блок с `wait`
+Методы `wait`, `notify` и `notifyAll` позволяют нам внутри `synchronized`-блока уснуть и снять блокировку, чтобы определённое действие произошло с объектом в другом `synchronized`-блоке, в котором должны вызываться `notify` и `notifyAll`, которые пробудят блок с `wait`. При этом поток с `wait` продолжит исполнение, когда блокировка с объекта, для которого он вызывался, будет снята (то есть абсолютно не страшно вызывать `notify` прямо внутри другого блока `synchronized` (*более того, вне вызов даже нормально не работает*))
+
+Со всеми этими знаниями можно взглянуть на цикл жизни потока (состояния могут быть получены методом `getState`):
+![](./lectures/24-02-08%20-%20thread_states.png)
 
 # 24.02.15 - лекция
 ## Продолжаем про синхронизацию
 `synchronized`- блоки используют под капотом мутексы (*Иртегов их буквально только по имени упомянул, ха-ха*), которые при этом вшиты в `Object` (через это и используются методы `wait`, `notify` и т.п.)
+
+# 24.02-22 - лекция
+## Синхронизованные коллекции
+Во многих случаях для синхронизации (например, для системы производитель-потребитель) удобно использовать блокирующую очередь - наследников интерфейса `java.util.concurrent.BlockingQueue<E>` (реализации `ArrayBlockingQueue`, `LinkedBlockingQueue` и `PriorityBlockingQueue` - они могут быть закольцованными и нет)
+
+**Важно:** коллекции очень легко разрушаются при работе с ними из нескольких нитей, поэтому самый лучший вариант - использовать описанные выше очереди. Также можно создать синхронизованные версии большинства коллекций методами `synchronizedCollection`, `synchronizedList`, `synchronizedMap`, `synchronizedSet`, `synchronizedSortedMap`, которые... модифицируют все методы таким образом, что коллекция станет работать синхронизованно (все действия будут обёрнуты в блоки `synchronized`)
+
+## Семафоры
+**Семафоры** - расширение мутексов. Позволяет сразу нескольким нитям работать с критической секций. `java.util.concurrent.Semaphore`:
+- `Semaphore(countOfPermits: int)`
+- `Semaphore(countOfPermits: int, fairness: bool)` - пока что несколько загадочно, за что отвечает "доброта"
+- `acquire()` - запрашивает доступ и блокируется, если/пока он не появится
+- `release()` - вернуть единицу доступа семафору
+
+## Дэдлоки
+*По какой-то эвристике дэдлок возникает у нас примерно раз в миллион действий проги*
+
+**Использование иммутабельных объектов защитит от дэдлоков**
+
+*Очень драматичная история о доставке на МКС астронавту в день рождения горчицы вместо сшущёнки... Звучит будто что-то прям личное* - а вывод из этой истории, на самом деле, очень практичный - проверять корректность данных как можно чаще и кидать исключение как только мы обнаружили любую некорректность
+
+## ООП-шный дизайн приложений 
+**SOLID**:
+- Single - принцип единственности ответственности - один класс отвечает за одну определённую функцию
+- Open/closed - структуры должны быть открыты для расширения, но закрыты для модификации
+- Liskov - принцип подстановки Лисков (aka неразрушающее наследование)
+- Interface segregation - не надо имплементировать больше интерфейсов, чем нужно
+- Dependency inversion - новые реализации (возможно более высокоуровневые) не должны зависить от прошлых (возможно более низкоуровневых), а должны зависеть от абстракций, то есть в аргументах нам следует указывать имя интерфейса, а не его наследников (также желательно наследоваться напрямую от интерфейсов и абстрактных классов, так как наследование от реальных классов повышает риск нарушения контракта)

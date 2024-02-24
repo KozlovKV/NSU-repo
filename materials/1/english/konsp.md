@@ -99,6 +99,7 @@
 - [23.11.10](#231110)
   - [Obligation and permission](#obligation-and-permission)
 - [24.02.08](#240208)
+- [24.02.22](#240222)
 
 # Websites
 - [Cambridge Learner's dictionary](https://dictionary.cambridge.org/dictionary/learner-english)
@@ -888,3 +889,7 @@ After `let` and `make` we cannot use `to`
 
 # 24.02.08
 ![](./materials/probabilities.png)
+
+# 24.02.22
+***likely* and *unlikely* are ADJECTIVES (NOT ADVERBS)**
+

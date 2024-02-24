@@ -3130,3 +3130,4 @@ In this PV particle can place either before or after verb:
 - madden - приводить кого-то в ярость
 - latitude - широта, простор
 - turnout - явка, разборка
+- ride - rode - ridden - ехать верхом или на велике
