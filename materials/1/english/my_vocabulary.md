@@ -3134,4 +3134,4 @@ In this PV particle can place either before or after verb:
 - swashbuckling - дерзкий
   - swash - плескаться
   - a buckle - пряжка
-- 
+- blistering - покрытый волдырями / обжигающий

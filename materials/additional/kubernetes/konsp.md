@@ -247,3 +247,54 @@ STOPSIGNAL SIGQUIT
 
 ## Наконец, сам kubernetes
 [Инструкция по установке](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
+
+# 24.03.16
+## Субкоманды `kubeadm`
+- `init` - создать мастер-ноду (control plane)
+  - Создаётся конфиг для работы `kubelet`, однако сразу работать корректно он не начнёт
+  - `--pod-network-cidr=192.168.0.0/16` - задать адрес локальной сети с маской (ясное дело, можно и другую локалку задать)
+- `reset` - полный сброс
+  - После надо вызывать `ipvsadm --clear` (поставить `ipvsadm`, если его нет)
+    - Эта утилита предназначена для перенаправления адресов
+
+## Первичная настройка
+Подготовительные операции для работы с `kuberadm` (делается из-под рута (проще всего `sudo -i`))
+```sh
+vi /etc/fstab # закомментировать строчку со  swap
+swapoff -a
+
+# Отключаем сервисы свопа
+systemctl | grep swap # Ищем таргеты со свопом
+systemctl list-dependencies swap.target # Находим сервисы, связанные с ними
+systemctl disable <service_with_swap.target> # Выключаем все сервисы, связанные с таргетом
+swapon # Если всё сработало нормально, выдача будет пустой
+# Если не помогает disable
+systemctl mask <service_with_swap.target> 
+
+crictl -r /run/containerd/containerd.sock info # "SystemdCgroup" (ИМЕННО С БОЛЬШОЙ БУКВЫ) должно быть true
+
+mkdir /etc/containerd
+containerd config default > /etc/containerd/config.toml
+vi /etc/containerd/config.toml # Поставить "SystemdCgroup" true
+service containerd restart
+
+# Снова проверяем containerd.sock
+
+sysctl net.ipv4.ip_forward # Должно быть 1 (можно поменять через nano, но при установленном docker'е всё будет нормально)
+modprobe br_netfilter
+```
+
+---
+
+После этой настройки мы можем запустить `sudo kubeadm --pod-network-cidr=192.168.0.0/16`, затем скопировать конфиг файл к себе в домашнюю папку по инструкции в конце вывода команды. Теперь мы можем пользоваться `kubectl`
+
+## `kubectl`
+- `get nodes` - показать список нод
+  - При первом запуске нода будет помечаться как `notReady`
+- `describe node <name>` - вывести инфу о какой-то ноде
+  - Через эту команду мы сможем узнать, что при первом запуске нам не хватает CNI
+
+### CNI
+Далее для корректной работы необходимо настроить CNI - common network interface. Коротко о нём писалось выше, а здесь уточню, что она необходима для связывания не просто контейнеров на одной машине, а связывания контейнеров на нескольких машинах в общую подсеть
+
+[Инструкция](https://docs.tigera.io/calico/latest/getting-started/kubernetes/flannel/install-for-flannel)
