@@ -281,9 +281,9 @@ $tr \downarrow c = \#(tr \uparrow \{c\})$
 
 Процессы (*сложение и вычитание везде по модулю 5*):
 - $0 \le i \le 4 : PHIL_i$
-  - $$\alpha PHIL_i = \{ \\ i.sitsDown, \\ i.getsUp, \\ i.pickFork.i, \\ i.pickFork.(i + 1), \\ i.putFork.i, \\ i.putFork.(i + 1) \\ \}$$
+  - $$\alpha PHIL_i = \{ \\ i.sitsDown, \\ i.getsUp, \\ i.picksFork.i, \\ i.picksFork.(i \oplus 1), \\ i.putsFork.i, \\ i.putsFork.(i \oplus 1) \\ \}$$
 - $0 \le i \le 4 : FORK_i$
-  - $$\alpha FORK_i = \{ \\ i.pickFork.i, \\ (i - 1).pickFork.i, \\ i.putFork.i, \\ (i - 1).putFork.i \\ \}$$
+  - $$\alpha FORK_i = \{ \\ i.picksFork.i, \\ (i \ominus 1).picksFork.i, \\ i.putsFork.i, \\ (i \ominus 1).putsFork.i \\ \}$$
 
 Поведение философов может быть произвольным, в том числе и достаточно странным (вставать и садиться за стол циклически). В самом простом варианте он будет садиться, брать вилки последовательно, затем класть их и вставать (а дальше можем распараллелить взятие и отдавание вилок и что-нибудь ещё)
 

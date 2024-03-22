@@ -74,11 +74,22 @@
   - [Синхронизованные коллекции](#синхронизованные-коллекции)
   - [Семафоры](#семафоры)
   - [Дэдлоки](#дэдлоки)
-  - [ООП-шный дизайн приложений](#ооп-шный-дизайн-приложений)
 - [24.02.27 - семинар](#240227---семинар)
   - [Пометки ко второй лабе](#пометки-ко-второй-лабе)
 - [24.02.29 - лекция](#240229---лекция)
   - [Сокеты](#сокеты)
+- [24.03.14 - лекция](#240314---лекция)
+    - [RMI](#rmi)
+    - [HTTP](#http)
+  - [SOLID](#solid)
+    - [SRP - Single responsibility principle](#srp---single-responsibility-principle)
+    - [OCP - Open/closed principle](#ocp---openclosed-principle)
+- [24.03.20 - лекция](#240320---лекция)
+  - [Ссылочная адресация (*что это тут забыло вообще?..*)](#ссылочная-адресация-что-это-тут-забыло-вообще)
+  - [Продолжаем про SOLID](#продолжаем-про-solid)
+    - [Liskov principle](#liskov-principle)
+    - [Interface segregation](#interface-segregation)
+    - [Dependency inversion](#dependency-inversion)
 
 
 # Инфо
@@ -1366,14 +1377,6 @@ class BoundedBuffer<E> {
 
 *Очень драматичная история о доставке на МКС астронавту в день рождения горчицы вместо сгущёнки... Звучит будто что-то прям личное* - а вывод из этой истории, на самом деле, очень практичный - проверять корректность данных как можно чаще и кидать исключение как только мы обнаружили любую некорректность
 
-## ООП-шный дизайн приложений 
-**SOLID**:
-- Single - принцип единственности ответственности - один класс отвечает за одну определённую функцию
-- Open/closed - структуры должны быть открыты для расширения, но закрыты для модификации
-- Liskov - принцип подстановки Лисков (aka неразрушающее наследование)
-- Interface segregation - не надо имплементировать больше интерфейсов, чем нужно
-- Dependency inversion - новые реализации (возможно более высокоуровневые) не должны зависить от прошлых (возможно более низкоуровневых), а должны зависеть от абстракций, то есть в аргументах нам следует указывать имя интерфейса, а не его наследников (также желательно наследоваться напрямую от интерфейсов и абстрактных классов, так как наследование от реальных классов повышает риск нарушения контракта)
-
 # 24.02.27 - семинар
 ## Пометки ко второй лабе
 - Продумать все взаимодействия между потоками и решить, для чего там использовать TCP, для чего - UDP
@@ -1388,3 +1391,157 @@ class BoundedBuffer<E> {
 Для UDP протокола используются классы `DatagramSocket` и `MulticastSocket`
 
 Создавать по потоку для каждого соединения клиент-сервер будет очень затратно, поэтому предлагается использовать виртуальные потоки - за их планирование отвечает планировщик JVM, они располагаются в той же области адресного пространства
+
+# 24.03.14 - лекция
+### RMI
+Remote method invocation - удалённый вызов методов - позволяет нам работать с одним объектом на нескольких машинах
+
+Реализуется на основе сериализации. Над объектами, классы которых реализуют интерфейс `Remote`:
+- Интерфейс:
+```java
+package org.example.rmi;
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+
+public interface Hello extends Remote {
+  String sayHello() throws RemoteException;
+}
+```
+- Сервер:
+```java
+package org.example.rmi;
+
+import java.rmi.registry.Registry;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+
+public class Server implements Hello {
+  public Server() {}
+  public String sayHello() {
+    return "Hello, world!";
+  }
+  public static void main(String args[]) {
+    try {
+      Server obj = new Server();
+      Hello stub = (Hello) UnicastRemoteObject.exportObject(obj, 0);
+      // Bind the remote object's stub in the registry
+      Registry registry = LocateRegistry.getRegistry();
+      registry.bind("Hello", stub);
+      System.err.println("Server ready");
+    } catch (Exception e) {
+      System.err.println("Server exception: " + e.toString());
+      e.printStackTrace();
+    }
+  }
+}
+```
+- Клиент:
+```java
+package org.example.rmi;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+
+public class Client {
+  private Client() {}
+  public static void main(String[] args) {
+    String host = (args.length < 1) ? null : args[0];
+    try {
+      Registry registry = LocateRegistry.getRegistry(host);
+      Hello stub = (Hello) registry.lookup("Hello");
+      String response = stub.sayHello();
+      System.out.println("response: " + response);
+    } catch (Exception e) {
+      System.err.println("Client exception: " + e.toString());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+Один и тот же объект может использоваться на многих клиентских машинах, однако перед использованием надо проверить 2 момента (*так как сам по себе методж меня не особо впечатлил, пока что смысла гуглить не вижу*):
+- Как специфицируется адрес хоста в клиенте? Это строка только с IP, то есть порт протокола фиксированный, или это `IP:port`, или может быть и домен?
+- Как осуществляется синхронизация запросов и поддержание целостности данных в объекте на сервере?
+  - Возможно это очередь запросов, которые будут исполнены на сервере последовательно, а значит проблем с синхронизацией быть не должно
+  - Возможно запросы будут исполняться асинхронно, в таком случае 
+
+### HTTP
+В Java есть встроенная библиотека для отправки HTTP-запросов с удобным chain-интерфейсом. Существует возможность получать ответы синхронно и асинхронно.
+
+Синхронный вариант не представляет ничего необычного. При асинхронном для обработки будет создан демон-поток через [`ForkJoinPool`](#часть-5---executor-thread-pool-fork-join)
+
+Пример примитивного GET-ззапроса:
+```java
+package org.example;
+
+import java.net.Authenticator;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.time.Duration;
+import java.util.Timer;
+import java.util.concurrent.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        HttpClient client = HttpClient.newBuilder()
+                .version(HttpClient.Version.HTTP_1_1)
+                .build();
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("https://google.com/"))
+                .GET()
+                .build();
+
+        System.out.println(Thread.currentThread().getName());
+        var response = client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+                .thenApply(stringHttpResponse -> {
+                    System.out.println(Thread.currentThread().getName());
+                    return stringHttpResponse.body();
+                })
+                .thenAccept(responseStr -> {
+                    System.out.println(responseStr);
+                    System.out.println(Thread.currentThread().getName());
+                });
+        try {
+            response.get();
+        } catch (InterruptedException | ExecutionException e) {}
+    }
+}
+```
+
+## SOLID
+### SRP - Single responsibility principle
+Принцип единственности ответственности - один класс отвечает за одну определённую функцию (*"Класс должен иметь лишь одну причину для изменений"*). Позволяет легко модифицировать приложение, тестировать код и не путаться в программных модулях
+
+Придерживаясь этого принципа, важно не впадать в крайности и не дробить ответственность через чур сильно. Помним, что ответственность каждого класса в конечном счёте определеяем мы сами
+
+### OCP - Open/closed principle
+Структуры должны быть открыты для расширения, но закрыты для модификации. В первую очередь этот принцип позволит нам ничего не сломать в уже отлаженном коде (*если только целью не является изменение уже имеющегося функционала как такового*)
+
+# 24.03.20 - лекция
+## Ссылочная адресация (*что это тут забыло вообще?..*)
+Ссылочная адресация очень важна для механизма сборки мусора и аллокации памяти. Суть в том, что ссылка всегда будет указывать на валидный адрес объекта в памяти. Из этого вытекает, что прямого доступа к адресам мы не имеем => нет арифметики указателей.
+
+## Продолжаем про SOLID
+### Liskov principle
+Liskov - принцип подстановки Лисков (aka неразрушающее наследование)
+
+*Будто бы уже избиитый принцип, но раз уж его так часто повторяют, то пусть будет ещё раз:* **типы наследники не должны нарушать контракты своих предков**
+
+Позволяет всегда чётко понимать, как будут работать наши функции и объекты
+
+### Interface segregation
+Не надо имплементировать больше интерфейсов, чем нужно
+
+*Если утром мы готовим завтрак, то мы должны имплементировать интерфейс повара - без разницы, студент мы или нет. Если же мы после завтрака пришли на пару, то теперь мы должны имплементировать только интерфейс студента - без разницы, умеем мы готовить или нет*
+
+Частью этого принципа является также пожелание не создавать супер-интерфейсы, а делать много маленьких, чтобы каждый отвечал за конкретный контракт / набор контрактов. Потом классы смогут имплементировать сразу несколько нужных им и ничего ненужного
+
+### Dependency inversion
+Новые реализации (возможно более высокоуровневые) не должны зависить от прошлых (возможно более низкоуровневых) - и те, и другие должны зависеть от абстракций, то есть в аргументах нам следует указывать имя интерфейса, а не его реализаций
+
+Также желательно наследоваться напрямую от интерфейсов и абстрактных классов, так как наследование от реальных классов повышает риск нарушения контракта
+
+Соблюдение этого принципа сильно повышает удобство тестирования
