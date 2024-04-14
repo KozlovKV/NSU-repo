@@ -15,6 +15,7 @@
     - [Часть 3 - Взаимодействие](#часть-3---взаимодействие)
     - [Часть 4 - Callable, Future и друзья](#часть-4---callable-future-и-друзья)
     - [Часть 5 - Executor, Thread pool, Fork join](#часть-5---executor-thread-pool-fork-join)
+  - [Логгирование](#логгирование)
 - [23.09.07 - лекция](#230907---лекция)
   - [Введение](#введение)
 - [23.09.14 - Лекция](#230914---лекция)
@@ -626,6 +627,69 @@ public class Main {
 `WorkStealingPool` автоматически будет назначать ожидающим потокам новые задачи и возвращать к исполнению задачи, усыпившие поток, когда придёт их черёд
 
 `ForkJoinPool` используется под капотом у `WorkStealingPool`, работает с потоками-демонами и слабо тут объяснён. Ссылается на [этот доклад](https://www.youtube.com/watch?v=_2ciDWeeXJQ)
+
+## Логгирование
+*Нет желания особо глубоко в эту тему погружаться, так что:*
+1. Ссылка на статью с хорошими практиками по логгированию
+2. Куски из `build.gradle` для установки `log4j2`:
+```
+dependencies {
+    // ...
+    
+    implementation 'org.apache.logging.log4j:log4j-api:2.23.1'
+    implementation 'org.apache.logging.log4j:log4j-core:2.23.1'
+    
+    // ...
+}
+```
+3. Конфиг библиотеки (надо расположить в папке с ресурсами и назвать `log4j.xml`):
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="console">
+            <PatternLayout>
+                <Pattern>%d %p %c{1} [%t] %m %ex%n</Pattern>
+            </PatternLayout>
+        </Console>
+        <File name="all" fileName="log/log.log">
+            <PatternLayout>
+                <Pattern>%d %p %c [%t] %m %ex%n</Pattern>
+            </PatternLayout>
+        </File>
+        <File name="pizzeria" fileName="log/pizzeria.log">
+            <PatternLayout>
+                <Pattern>%d %p %c [%t] %m %ex%n</Pattern>
+            </PatternLayout>
+        </File>
+        <File name="couriers" fileName="log/couriers.log">
+            <PatternLayout>
+                <Pattern>%d %p %c [%t] %m %ex%n</Pattern>
+            </PatternLayout>
+        </File>
+        <File name="bakers" fileName="log/bakers.log">
+            <PatternLayout>
+                <Pattern>%d %p %c [%t] %m %ex%n</Pattern>
+            </PatternLayout>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="trace">
+            <AppenderRef ref="console" level="DEBUG"/>
+            <AppenderRef ref="all" level="DEBUG"/>
+        </Root>
+        <Logger name="kozlov.kirill.pizzeria.RunnablePizzeria" level="trace">
+            <AppenderRef ref="pizzeria" level="DEBUG"/>
+        </Logger>
+        <Logger name="kozlov.kirill.pizzeria.employees.RunnableBaker" level="trace">
+            <AppenderRef ref="bakers" level="DEBUG"/>
+        </Logger>
+        <Logger name="kozlov.kirill.pizzeria.employees.RunnableCourier" level="trace">
+            <AppenderRef ref="couriers" level="DEBUG"/>
+        </Logger>
+    </Loggers>
+</Configuration>
+```
 
 # 23.09.07 - лекция
 ## Введение
@@ -1585,6 +1649,8 @@ Liskov - принцип подстановки Лисков (aka неразру�
 - Зависимость (dependency) - объекты могут существовать независимо, но для некоторых операций одному из них необходим другой
 
 ![](./lectures/24-04-04%20-%20connections-hierarchy.png)
+
+Ultimate-версия IDEA [может генерить UML-диаграммы](https://www.jetbrains.com/help/idea/class-diagram.html), но если говорить о бесплатных вариантах, то мне весьма приятным кажется [`classdiagram` от Mermaid](https://mermaid.js.org/syntax/classDiagram.html)
 
 ## GUI
 **Отличительная особенность GUI** - асинхронное взаимодействие с пользователем, который может кликлнуть на любой из интерактивных элементов в произвольный заранее нам неизвестный момент

@@ -289,10 +289,19 @@ modprobe br_netfilter
 После этой настройки мы можем запустить `sudo kubeadm --pod-network-cidr=192.168.0.0/16`, затем скопировать конфиг файл к себе в домашнюю папку по инструкции в конце вывода команды. Теперь мы можем пользоваться `kubectl`
 
 ## `kubectl`
+Общий вид команд: `kubectl <verb> <objectType> [<args>]`
+
+Глаголы:
+- `get`
+- `describe`
+- `delete`
+- `apply`
+
 - `get nodes` - показать список нод
   - При первом запуске нода будет помечаться как `notReady`
 - `describe node <name>` - вывести инфу о какой-то ноде
   - Через эту команду мы сможем узнать, что при первом запуске нам не хватает CNI
+- `delete node <name>`
 
 Также глаголы `get`/`describe` применимы и к другим сущностям кубернетиса: `podes`/`services`/etc.
 
@@ -340,3 +349,251 @@ modprobe br_netfilter
 **Config map** - конфиги для всего-всего
 
 **Persistent volume claims** - какие-то источники персистентных данных. Можно подсовывать сюда БД или какие-то папки со статикой. Для корректного доступа могут использоваться сетевые ФС либо даже сетевые диски. *Их настройка - задача не самая тривиальная, но очень важная, потому что какой вообще крупный сервис может работать без статических данных или БД? В нормальном виде вряд ли успеем в рамках курса эту штуку сделать в полноценном виде не успеем (*
+
+# 24.04.06
+## Deployment
+Deployment - некоторая штука, которая предназначена для многократного запуска одних и тех же подиков
+
+Сконфигурировать деплоймент можно при помощи YAML-файла (почти всё по [документации](https://kubernetes.io/docs/tasks/run-application/run-stateless-application-deployment/)):
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment # Имя должно быть уникально в рамках namespace (если ns не указан, значит будет использоваться дэфолтное пространство имён)
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  replicas: 2 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.25.4-alpine
+        ports:
+        - containerPort: 80
+```
+
+По классике, `kubectl apply -f <file>`:
+- Создаётся `deployment`
+- Создаётся `replicaset`
+- Создадутся, собственно, поды с контейнерами nginx'а
+
+`kubectl scale deployment <deplymentName> --replicas <num>` - установит количество реплик у деплоймента равным `num` (в целом, аргментами команды можно и много чего другого творить)
+
+`kubectl edit deployment <deplymentName>` - открыть на редактирование конфиг деплоя, **ЗАГРУЖЕННЫЙ СЕЙЧАС** В kubernetes - он будет больше, чем тот
+
+Изменяем секцию `template` следующим образом:
+```yaml
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: nginx
+    spec:
+      # New part 1
+      volumes:
+        - name: html-volume
+          hostPath:
+            path: /home/kirill/html
+            type: Directory
+      # New part 1 END
+      containers:
+        - name: nginx
+          image: nginx:1.25.4-alpine
+          ports:
+            - containerPort: 80
+              protocol: TCP
+              name: http-port
+          resources: {}
+          # New part 2
+          volumeMounts:
+            - name: html-volume
+              readOnly: true
+              mountPath: /usr/share/nginx/html
+          # New part 2 END
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          imagePullPolicy: IfNotPresent
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst
+      securityContext: {}
+      schedulerName: default-scheduler
+```
+
+### Сервис для постоянных IP
+[Документация](https://kubernetes.io/docs/concepts/services-networking/service/)
+
+Ну и по большей части тут даже писать нечего. Оставлю здесь YAML для нашего сервиса:
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  selector:
+    app: nginx
+  ports:
+  - name: http
+    protocol: TCP
+    port: 80
+    targetPort: http-port # Можно и просто порт указывать, тогда в конфиге деплоймента не надо давать имени
+```
+
+# 24.04.13
+## Добавляем SSL (TLS) на nginx
+Попасть внутрь пода можно похожим на docker-контейнер образом:
+- `kubectl exec <podName> -it /bin/sh`
+
+Внутри идём в `/etc/nginx` и там открываем `nginx.conf` (через `vi`, видимо, потому что nano сюда не завезли)
+
+*Метод работы RSA-шифрования здесь описывать не буду*
+
+Получаемый от сервера публичный ключ сам по себе не гарантирует безопасности, поэтому появилась идея SSL-сертификата - публичного SSL-ключа, который какая-то доверенная контора подтвердила:
+- Платные SSL-сертификаты
+- Сервис letsEncrypt для публичных сайтов с незанятыми данными
+- Самоподписывающийся ключ - часто используется в закрытых сетях
+
+`config-map` - мапа с конфигами, которая может монтироваться прямо внутрь ноды
+
+Таким образом, задача добавления SSL в наш nginx сводится к следующему:
+- Сгенерить самоподписываемый SSL
+  - `openssl req -newkey rsa:4096 -x509 -sha256 -days 3650 -nodes -out ssl.crt -keyout ssl.key` - задаст пару вопросов и создаст публичный ключ `ssl.crt` и приватный `ssl.key`
+    - *В реальности называть ключ и помещать его где угодно `.key` очень нежелательно*
+  - `kubectl create secret generic nginx-ssl --from-file=key=ssl.key --from-file=crt=ssl.crt` - добавит ключи в kubernetes как секрет
+- Создать и применить `config-map`
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-config
+data:
+  nginx-ssl: |
+   server {
+    listen              443 ssl;
+    server_name         nginx-ssl;
+    ssl_certificate     /etc/ssl/local/ssl.crt;  # Именно по этим путям должны будут располагаться ключ и сертификат
+    ssl_certificate_key /etc/ssl/local/ssl.key;
+    location / {
+        root   /usr/share/nginx/html;
+        index  index.html index.htm;
+    }
+   }
+  default: |
+   server {
+    listen       80;
+    server_name  localhost;
+
+    #charset koi8-r;
+    #access_log  /var/log/nginx/host.access.log  main;
+
+    location / {
+        root   /usr/share/nginx/html;
+        index  index.html index.htm;
+    }
+
+    #error_page  404              /404.html;
+
+    # redirect server error pages to the static page /50x.html
+    #
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   /usr/share/nginx/html;
+    }
+
+    # proxy the PHP scripts to Apache listening on 127.0.0.1:80
+    #
+    #location ~ \.php$ {
+    #    proxy_pass   http://127.0.0.1;
+    #}
+
+    # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+    #
+    #location ~ \.php$ {
+    #    root           html;
+    #    fastcgi_pass   127.0.0.1:9000;
+    #    fastcgi_index  index.php;
+    #    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;
+    #    include        fastcgi_params;
+    #}
+
+    # deny access to .htaccess files, if Apache's document root
+    # concurs with nginx's one
+    #
+    #location ~ /\.ht {
+    #    deny  all;
+    #}
+   }
+```
+  - `kubectl apply -f configmap.yaml`
+- Редактируем деплоймент (`spec` внутри `template`):
+```yaml
+    spec:
+      containers:
+      - image: nginx:1.25.4-alpine
+        imagePullPolicy: IfNotPresent
+        name: nginx
+        ports:
+        - containerPort: 80
+          name: http-port
+          protocol: TCP
+        - containerPort: 443 # Добавляем порт
+          name: https-port
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /usr/share/nginx/html
+          name: html-volume
+          readOnly: true
+        - mountPath: /etc/nginx/conf.d
+          name: config # Имена должны совпадать с теми, которые мы дали волюмам в секции ниже
+          readOnly: true
+        - name: ssl
+          readOnly: true
+          mountPath: /etc/ssl/local
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - hostPath:
+          path: /home/kirill/html
+          type: Directory
+        name: html-volume
+      - name: config # Добавляем конфиг мапу с конфигами nginx
+        configMap:
+          name: nginx-config
+          items:
+          - key: nginx-ssl
+            path: nginx-ssl.conf
+          - key: default
+            path: default.conf
+      - name: ssl # Добавляем секреты
+        secret:
+          secretName: nginx-ssl
+          items:
+          - key: crt
+            path: ssl.crt
+          - key: key
+            path: ssl.key
+```
+- Теперь, получив командой `kubectl get pods -o wide` IP пода, сможем достучаться до него по `https`: `curl -k https://192.168.0.58`
+- Остаётся отредактировать сервис для проброса портов
+  - `kubectl edit service nginx-service`
+```yaml
+ports:
+- name: http
+  port: 80
+  protocol: TCP
+  targetPort: http-port
+- name: https:
+  port: 443
+  protocol: TCP
+  targetPort: https-port
+```
