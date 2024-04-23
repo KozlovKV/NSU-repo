@@ -3194,3 +3194,7 @@ In this PV particle can place either before or after verb:
 - to summon - призвать  
 - to wallow - барахтаться (чаще всего в грязи)  
 - to whack - ударить 
+- win - won - won
+- wake - woke - woken
+- write - wrote - written
+- wear - wore - worn
