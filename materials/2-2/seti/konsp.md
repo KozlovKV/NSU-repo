@@ -318,7 +318,7 @@ TCP - Transmission control protocol - отвечает за надёжную (п
 
 Цепочки таблицы `mangle` отвечают за обновление TTL (по умолчанию он 64)
 
-Цепочка таблицы `nat` ([инфа про сам NAT](#nat)):
+Цепочки таблицы `nat` ([инфа про сам NAT](#nat)):
 - `INPUT` и `OUTPUT` нам не очень интересны
 - `PREROUTING`
   - Проходится перед `filter.FORWARD`

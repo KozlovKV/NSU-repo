@@ -3198,3 +3198,9 @@ In this PV particle can place either before or after verb:
 - wake - woke - woken
 - write - wrote - written
 - wear - wore - worn
+- fancy - хотеть что-то, получать удовольствие
+- afford - позволить себе
+- dare - осмеливаться
+- pretend - привтряться
+- tend - тяготеть
+- 
