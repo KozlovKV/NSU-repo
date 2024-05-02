@@ -3203,4 +3203,5 @@ In this PV particle can place either before or after verb:
 - dare - осмеливаться
 - pretend - привтряться
 - tend - тяготеть
+- outskirt - окраина
 - 
