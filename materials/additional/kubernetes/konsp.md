@@ -30,6 +30,19 @@
   - [Добавление новых нод](#добавление-новых-нод)
 - [24.04.27](#240427)
   - [Работа с сетью](#работа-с-сетью)
+- [24.05.04](#240504)
+  - [Продолжаем про `iptables`](#продолжаем-про-iptables)
+- [24.05.11](#240511)
+  - [Persistent folder](#persistent-folder)
+    - [Создаём том для MySQL](#создаём-том-для-mysql)
+      - [SC](#sc)
+      - [PV](#pv)
+      - [PVC](#pvc)
+      - [Подик с MySQL](#подик-с-mysql)
+- [24.05.18](#240518)
+  - [`helm`](#helm)
+    - [Накатываем `wordpress` через `helm`](#накатываем-wordpress-через-helm)
+    - [`helm upgrade`](#helm-upgrade)
 
 
 # 24.02.17 
@@ -650,4 +663,182 @@ Kubernetes настраивает свою внутреннюю сеть при 
 
 Один из модулей - это `kube-proxy`. Может работать в одном из нескольких режимов: `iptables`, `ipvs`, `nftables`:
 - `nftables` - также позволяет мутить фаерволлы, но имеет тьюринг-полный синтаксис, что позволяет делать фильтрацию куда хитрее
-- 
+
+# 24.05.04
+## Продолжаем про `iptables`
+Некоторые из флагов `iptabes -t <tableName>` (многие другие описывал в [конспекте по сетям](../../2-2/seti/konsp.md#iptables-persistent)):
+- `-N <chainName>` - создать новую цепочку
+- `-F <chainName>` - стереть правила в цепочке
+- `-P <chainName> <POLICY>` - задать политику по умолчанию
+  - Политика `REJECT` удобная для отладки, однако в продакшене она достаточно опасна, так как может использоваться для rever-DOS атак
+  - Также удобны для отладки, но не очень для продашкена будут политики `LOG` и `TRACE`
+
+# 24.05.11
+## Persistent folder
+Persistent folder - папка, доступная во всех нодах. Делается благодаря особому поду с провижинером, который, собственно, и отвечает за создание томов, которые потом будут доступны другим подам и/или нодам
+
+Самый простой провижинер (**localhost provisioner**) будет всем клонировать папку. Более умные провижинеры могут давать доступ к папкам по сети, используя особые ФС.
+
+Зачастую данные располагаются на облачных сервисах.
+
+### Создаём том для MySQL
+Для начала общее описание структур:
+- storage class (SC) - содержит описание провижинера, который будет использоваться. Сам по себе служит для удобного взаимодействия остальных структур с провижинером
+  - В самых простых случаях может быть без провижинера
+- provisioner - под с прогой, которая будет отвечать за создание томов, их распределение и многие другие функции, о которых нам, при наличии, провижинера, не нужно будет заботиться
+- persistent volume (PV) - собственно, том. При использовании провижинера создавать их вручную нужды не будет
+- persistent volume claim (PVC) - сущность запроса к storage class на открытие доступа к томам этого класса
+  - Активируется только при наличии пода, использующего этот claim
+
+Цепочка взаимодействия будет такой:
+- Provisioner мутит свои дела
+- Storage class привязывается к провижинеру
+- **При глупом провижинере**, создаются вручную нужные persistent volume, связываемые со storage class
+- Создаётся persistent volume, связанный со storage class
+- Подику указывается, что он будет использовать том, предоставляемый через PVC
+- Через PVC идёт запрос к SC, который либо предоставляет PV напрямую, либо обращается к provisioner, который и предоставляет автоматически созданный PV
+
+---
+
+Мы будем делать самый простой вариант, то есть без провижинера.
+
+#### SC
+`storage-class.yaml`:
+```yaml
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: fast-disks # Ясное дело, название может быть любое
+provisioner: kubernetes.io/no-provisioner
+volumeBindingMode: WaitForFirstConsumer
+```
+`kubectl apply -f storage-class.yaml`
+
+Для просмотра SC: `kubectl get storageclasses.storage.k8s.io`
+
+#### PV
+Для начала надо создать папку для диска (чем по хорошему и должен заниматься провижинер):
+```sh
+sudo mkdir -p /mnt/fast-disks/pv1
+sudo chmod 777 /mnt/fast-disks/pv1
+```
+
+Теперь можем создавать сам PV:
+`persistent-volume.yaml`:
+```yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mysql-local-pv
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: fast-disks # Имя SC
+  local:
+    path: /mnt/fast-disks/pv1 # Путь до тома
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - osboxes # Имя ноды, на которой располагается том
+```
+Access modes:
+- `ReadWriteOnce` - для локальных папок
+- `ReadOnly`
+- `ReadWriteMany` - только для кластерных и облачных ФС
+
+Также применяем, как и любой конфиг. Сущность для `get` и прочих глаголов называется `pv`
+
+#### PVC
+`mysql-persistent-volume-claim.yaml`:
+```yaml
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: mysql-pv-claim
+spec:
+  accessModes:
+  - ReadWriteOnce
+  storageClassName: fast-disks # Также связываем с SC
+  resources:
+    requests:
+      storage: 10Gi
+```
+
+Название сущности - `pvc`
+
+#### Подик с MySQL
+`mysql.yaml` (тут через `---` содержатся сразу и деплоймент, и сервис):
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql
+spec:
+  selector:
+    matchLabels:
+      app: mysql
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+      - image: mysql:5.6
+        name: mysql
+        env:
+          # Use secret in real usage
+        - name: MYSQL_ROOT_PASSWORD
+          value: password
+        ports:
+        - containerPort: 3306
+          name: mysql
+        volumeMounts:
+        - name: mysql-persistent-storage
+          mountPath: /var/lib/mysql
+      volumes:
+      - name: mysql-persistent-storage
+        persistentVolumeClaim:
+          claimName: mysql-pv-claim # И через блок с именем нашего PVC связываем все компоненты воедино
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql
+spec:
+  ports:
+  - port: 3306
+  selector:
+    app: mysql
+  clusterIP: None # Да, эта версия не просто кривая, а скорее даже заготовка
+```
+
+---
+
+После применения всех конфигов и подгонки поля имени ноды всё должно заработать:
+- подик `running`
+- PV и PVC - `bound`
+
+# 24.05.18
+## `helm`
+`helm` - шаблонная утилита для настройки конфигов и их удобного использования на разных машинах. Позволяет нам прописать конфиг с особыми элементами разметки, за счёт которых будут подставлены разные значения на разных машинах
+
+`chart` - набор конфигов
+
+`values` - значения для подстановки
+
+Обладает целым рядом команд, описывать их тут не буду. Пишем `. <(helm completion zsh)` - и преисполняемся
+
+### Накатываем `wordpress` через `helm`
+*Добавить алгоритм накатывания `wordpress`*
+
+### `helm upgrade`

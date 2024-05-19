@@ -1,0 +1,1513 @@
+ubuntu@primary:~$ cat << EOF | kubectl apply -f -
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: local-storage
+provisioner: kubernetes.io/no-provisioner
+volumeBindingMode: WaitForFirstConsumer
+EOF
+storageclass.storage.k8s.io/local-storage created
+ubuntu@primary:~$ kubectl get storageclass
+NAME            PROVISIONER                    RECLAIMPOLICY   VOLUMEBINDINGMODE      ALLOWVOLUMEEXPANSION   AGE
+local-storage   kubernetes.io/no-provisioner   Delete          WaitForFirstConsumer   false                  14s
+ubuntu@primary:~$ cat << EOF | kubectl apply -f -
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: test-local-pv
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: local-storage
+  local:
+    path: /data/volumes/pv1
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - k8s-worker-01
+EOF
+persistentvolume/test-local-pv created
+ubuntu@primary:~$ kubectl get persistentvolumeclaims
+No resources found in default namespace.
+ubuntu@primary:~$ . <(kubectl completion bash)
+ubuntu@primary:~$ kubectl get persistentvolume
+persistentvolumeclaims  persistentvolumes       
+ubuntu@primary:~$ kubectl get persistentvolume
+persistentvolumeclaims  persistentvolumes       
+ubuntu@primary:~$ kubectl get persistentvolumeclaims 
+No resources found in default namespace.
+ubuntu@primary:~$ cat << EOF | kubectl apply -f -
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: test-local-pv
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: local-storage
+  local:
+    path: /data/volumes/pv1
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - k8s-worker-01
+EOF
+persistentvolume/test-local-pv unchanged
+ubuntu@primary:~$ kubectl get persistentvolumeclaims 
+No resources found in default namespace.
+ubuntu@primary:~$ kubectl get persistentvolume
+persistentvolumeclaims  persistentvolumes       
+ubuntu@primary:~$ kubectl get persistentvolumeclaims 
+No resources found in default namespace.
+ubuntu@primary:~$ kubectl get persistentvolume
+NAME            CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM   STORAGECLASS    VOLUMEATTRIBUTESCLASS   REASON   AGE
+test-local-pv   10Gi       RWO            Retain           Available           local-storage   <unset>                          2m48s
+ubuntu@primary:~$ kubectl get persistentvolumeclaims
+No resources found in default namespace.
+ubuntu@primary:~$ cat << EOF | kubectl apply -f -
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: test-pvc
+spec:
+  accessModes:
+  - ReadWriteOnce
+  storageClassName: local-storage
+  resources:
+    requests:
+      storage: 10Gi
+EOF
+persistentvolumeclaim/test-pvc created
+ubuntu@primary:~$ kubectl get persistentvolumeclaims
+NAME       STATUS    VOLUME   CAPACITY   ACCESS MODES   STORAGECLASS    VOLUMEATTRIBUTESCLASS   AGE
+test-pvc   Pending                                      local-storage   <unset>                 2s
+ubuntu@primary:~$ kubectl edit persistentvolumeclaims test-pvc 
+A copy of your changes has been stored to "/tmp/kubectl-edit-2764666758.yaml"
+error: At least one of apiVersion, kind and name was changed
+ubuntu@primary:~$ cat << EOF | kubectl apply -f -
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: mysql-pv-claim
+spec:
+  accessModes:
+  - ReadWriteOnce
+  storageClassName: local-storage
+  resources:
+    requests:
+      storage: 10Gi
+EOF
+persistentvolumeclaim/mysql-pv-claim created
+ubuntu@primary:~$ kubectl get persistentvolumeclaims 
+NAME             STATUS    VOLUME   CAPACITY   ACCESS MODES   STORAGECLASS    VOLUMEATTRIBUTESCLASS   AGE
+mysql-pv-claim   Pending                                      local-storage   <unset>                 11s
+test-pvc         Pending                                      local-storage   <unset>                 3m35s
+ubuntu@primary:~$ kubectl apply -f https://raw.githubusercontent.com/kubernetes/website/main/content/en/examples/application/mysql/mysql-deployment.yaml
+service/mysql created
+deployment.apps/mysql created
+ubuntu@primary:~$ kubectl get persistentvolumeclaims 
+NAME             STATUS    VOLUME   CAPACITY   ACCESS MODES   STORAGECLASS    VOLUMEATTRIBUTESCLASS   AGE
+mysql-pv-claim   Pending                                      local-storage   <unset>                 100s
+test-pvc         Pending                                      local-storage   <unset>                 5m4s
+ubuntu@primary:~$ kubectl get pods
+NAME                                READY   STATUS    RESTARTS      AGE
+mysql-795bf95547-jsz65              0/1     Pending   0             12s
+nginx-deployment-8678f5b4f6-5n8kr   1/1     Running   1 (20d ago)   21d
+nginx-deployment-8678f5b4f6-gbwm7   1/1     Running   1 (20d ago)   21d
+ubuntu@primary:~$ kubectl describe pod mysql-795bf95547-jsz65 
+Name:             mysql-795bf95547-jsz65
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             <none>
+Labels:           app=mysql
+                  pod-template-hash=795bf95547
+Annotations:      <none>
+Status:           Pending
+IP:               
+IPs:              <none>
+Controlled By:    ReplicaSet/mysql-795bf95547
+Containers:
+  mysql:
+    Image:      mysql:5.6
+    Port:       3306/TCP
+    Host Port:  0/TCP
+    Environment:
+      MYSQL_ROOT_PASSWORD:  password
+    Mounts:
+      /var/lib/mysql from mysql-persistent-storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-h298n (ro)
+Conditions:
+  Type           Status
+  PodScheduled   False 
+Volumes:
+  mysql-persistent-storage:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  mysql-pv-claim
+    ReadOnly:   false
+  kube-api-access-h298n:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason            Age   From               Message
+  ----     ------            ----  ----               -------
+  Warning  FailedScheduling  33s   default-scheduler  0/1 nodes are available: 1 node(s) didn't find available persistent volumes to bind. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+ubuntu@primary:~$ kubectl get pvc
+NAME             STATUS    VOLUME   CAPACITY   ACCESS MODES   STORAGECLASS    VOLUMEATTRIBUTESCLASS   AGE
+mysql-pv-claim   Pending                                      local-storage   <unset>                 2m57s
+test-pvc         Pending                                      local-storage   <unset>                 6m21s
+ubuntu@primary:~$ sudo mkdir -p /data/volumes/pv1
+ubuntu@primary:~$ sudo chmode 777 /data/volumes/pv1
+sudo: chmode: command not found
+ubuntu@primary:~$ sudo chmod 777 /data/volumes/pv1
+ubuntu@primary:~$ cat << EOF | kubectl apply -f -
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: test-local-pv
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: local-storage
+  local:
+    path: /data/volumes/pv1
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - k8s-worker-01
+EOF
+persistentvolume/test-local-pv unchanged
+ubuntu@primary:~$ kubectl get pv
+NAME            CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM   STORAGECLASS    VOLUMEATTRIBUTESCLASS   REASON   AGE
+test-local-pv   10Gi       RWO            Retain           Available           local-storage   <unset>                          11m
+ubuntu@primary:~$ ls /data/volumes/pv1/
+ubuntu@primary:~$ kubectl get pvc
+NAME             STATUS    VOLUME   CAPACITY   ACCESS MODES   STORAGECLASS    VOLUMEATTRIBUTESCLASS   AGE
+mysql-pv-claim   Pending                                      local-storage   <unset>                 6m15s
+test-pvc         Pending                                      local-storage   <unset>                 9m39s
+ubuntu@primary:~$ kubectl delete pvc test-pvc 
+persistentvolumeclaim "test-pvc" deleted
+ubuntu@primary:~$ kubectl get pvc
+NAME             STATUS    VOLUME   CAPACITY   ACCESS MODES   STORAGECLASS    VOLUMEATTRIBUTESCLASS   AGE
+mysql-pv-claim   Pending                                      local-storage   <unset>                 6m35s
+ubuntu@primary:~$ kubectl delete pvc mysql-pv-claim 
+persistentvolumeclaim "mysql-pv-claim" deleted
+ubuntu@primary:~$ kubectl get pods
+NAME                                READY   STATUS    RESTARTS      AGE
+mysql-795bf95547-jsz65              0/1     Pending   0             5m28s
+nginx-deployment-8678f5b4f6-5n8kr   1/1     Running   1 (20d ago)   21d
+nginx-deployment-8678f5b4f6-gbwm7   1/1     Running   1 (20d ago)   21d
+ubuntu@primary:~$ history | grep apply
+  200  kubectl apply -f canal.yaml 
+  206  kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml
+  211  kubectl apply -f admuser.yaml 
+  213  kubectl apply -f admrole.yaml 
+  216  kubectl apply -f https://k8s.io/examples/application/deployment.yaml
+  219  kubectl apply -f https://k8s.io/examples/application/deployment-update.yaml
+  233  kubectl apply -f nginx.yaml 
+  235  kubectl apply -f nginx-service.yaml 
+  243  kubectl apply -f nginx-configmap.yml openssl req -newkey rsa:4096 -x509 -sha256 -days 3650 -nodes -out ssl.crt -keyout ssl.key
+  293  cat << EOF | kubectl apply -f -
+  295  cat << EOF | kubectl apply -f -
+  299  cat << EOF | kubectl apply -f -
+  303  cat << EOF | kubectl apply -f -
+  306  cat << EOF | kubectl apply -f -
+  308  kubectl apply -f https://raw.githubusercontent.com/kubernetes/website/main/content/en/examples/application/mysql/mysql-deployment.yaml
+  316  cat << EOF | kubectl apply -f -
+  324  history | grep apply
+ubuntu@primary:~$ cat << EOF | kubectl apply -f -
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: mysql-pv-claim
+spec:
+  accessModes:
+  - ReadWriteOnce
+  storageClassName: local-storage
+  resources:
+    requests:
+      storage: 10Gi
+EOF
+persistentvolumeclaim/mysql-pv-claim created
+ubuntu@primary:~$ kubectl get pv
+NAME            CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM   STORAGECLASS    VOLUMEATTRIBUTESCLASS   REASON   AGE
+test-local-pv   10Gi       RWO            Retain           Available           local-storage   <unset>                          14m
+ubuntu@primary:~$ kubectl get pvc
+NAME             STATUS    VOLUME   CAPACITY   ACCESS MODES   STORAGECLASS    VOLUMEATTRIBUTESCLASS   AGE
+mysql-pv-claim   Pending                                      local-storage   <unset>                 11s
+ubuntu@primary:~$ kubectl get pvc
+NAME             STATUS    VOLUME   CAPACITY   ACCESS MODES   STORAGECLASS    VOLUMEATTRIBUTESCLASS   AGE
+mysql-pv-claim   Pending                                      local-storage   <unset>                 6m35s
+ubuntu@primary:~$ kubectl delete storageclass local-storage 
+storageclass.storage.k8s.io "local-storage" deleted
+ubuntu@primary:~$ cat << EOF | kubectl apply -f -
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: fast-disks   
+provisioner: kubernetes.io/no-provisioner
+volumeBindingMode: WaitForFirstConsumer
+EOF
+storageclass.storage.k8s.io/fast-disks created
+ubuntu@primary:~$ kubectl get pvc
+NAME             STATUS   VOLUME          CAPACITY   ACCESS MODES   STORAGECLASS    VOLUMEATTRIBUTESCLASS   AGE
+mysql-pv-claim   Bound    test-local-pv   10Gi       RWO            local-storage   <unset>                 8m21s
+ubuntu@primary:~$ kubectl get pv
+NAME            CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM                    STORAGECLASS    VOLUMEATTRIBUTESCLASS   REASON   AGE
+test-local-pv   10Gi       RWO            Retain           Bound    default/mysql-pv-claim   local-storage   <unset>                          23m
+ubuntu@primary:~$ kubectl delete pvc mysql-pv-claim 
+persistentvolumeclaim "mysql-pv-claim" deleted
+ubuntu@primary:~$ cat << EOF | kubectl apply -f -
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: mysql-pv-claim
+spec:
+  accessModes:
+  - ReadWriteOnce
+  storageClassName: fast-disks   
+  resources:
+    requests:
+      storage: 10Gi
+EOF
+persistentvolumeclaim/mysql-pv-claim created
+ubuntu@primary:~$ kubectl get pvc
+NAME             STATUS    VOLUME   CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE
+mysql-pv-claim   Pending                                      fast-disks     <unset>                 10s
+ubuntu@primary:~$ kubectl get pv
+NAME            CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS     CLAIM                    STORAGECLASS    VOLUMEATTRIBUTESCLASS   REASON   AGE
+test-local-pv   10Gi       RWO            Retain           Released   default/mysql-pv-claim   local-storage   <unset>                          24m
+ubuntu@primary:~$ kubectl get storageclass
+NAME         PROVISIONER                    RECLAIMPOLICY   VOLUMEBINDINGMODE      ALLOWVOLUMEEXPANSION   AGE
+fast-disks   kubernetes.io/no-provisioner   Delete          WaitForFirstConsumer   false                  114s
+ubuntu@primary:~$ kubectl delete pod mysql-795bf95547-jsz65 
+pod "mysql-795bf95547-jsz65" deleted
+ubuntu@primary:~$ kubectl get pv
+NAME            CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS     CLAIM                    STORAGECLASS    VOLUMEATTRIBUTESCLASS   REASON   AGE
+test-local-pv   10Gi       RWO            Retain           Released   default/mysql-pv-claim   local-storage   <unset>                          25m
+ubuntu@primary:~$ kubectl delete pv test-local-pv 
+persistentvolume "test-local-pv" deleted
+ubuntu@primary:~$ kubectl get pv
+No resources found
+ubuntu@primary:~$ kubectl get pvc
+NAME             STATUS    VOLUME   CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE
+mysql-pv-claim   Pending                                      fast-disks     <unset>                 2m1s
+ubuntu@primary:~$ kubectl de
+debug     (Create debugging sessions for troubleshooting workloads and nodes)
+delete    (Delete resources by file names, stdin, resources and names, or by resources and label selector)
+describe  (Show details of a specific resource or group of resources)
+ubuntu@primary:~$ kubectl describe 
+apiservices.apiregistration.k8s.io                            ipamhandles.crd.projectcalico.org
+bgpconfigurations.crd.projectcalico.org                       ippools.crd.projectcalico.org
+bgpfilters.crd.projectcalico.org                              ipreservations.crd.projectcalico.org
+bgppeers.crd.projectcalico.org                                jobs.batch
+blockaffinities.crd.projectcalico.org                         kubecontrollersconfigurations.crd.projectcalico.org
+caliconodestatuses.crd.projectcalico.org                      leases.coordination.k8s.io
+certificatesigningrequests.certificates.k8s.io                limitranges
+clusterinformations.crd.projectcalico.org                     mutatingwebhookconfigurations.admissionregistration.k8s.io
+clusterrolebindings.rbac.authorization.k8s.io                 namespaces
+clusterroles.rbac.authorization.k8s.io                        networkpolicies.crd.projectcalico.org
+componentstatuses                                             networkpolicies.networking.k8s.io
+configmaps                                                    networksets.crd.projectcalico.org
+controllerrevisions.apps                                      nodes
+cronjobs.batch                                                persistentvolumeclaims
+csidrivers.storage.k8s.io                                     persistentvolumes
+csinodes.storage.k8s.io                                       poddisruptionbudgets.policy
+csistoragecapacities.storage.k8s.io                           pods
+customresourcedefinitions.apiextensions.k8s.io                podtemplates
+daemonsets.apps                                               priorityclasses.scheduling.k8s.io
+deployments.apps                                              prioritylevelconfigurations.flowcontrol.apiserver.k8s.io
+endpoints                                                     replicasets.apps
+endpointslices.discovery.k8s.io                               replicationcontrollers
+events                                                        resourcequotas
+events.events.k8s.io                                          rolebindings.rbac.authorization.k8s.io
+felixconfigurations.crd.projectcalico.org                     roles.rbac.authorization.k8s.io
+flowschemas.flowcontrol.apiserver.k8s.io                      runtimeclasses.node.k8s.io
+globalnetworkpolicies.crd.projectcalico.org                   secrets
+globalnetworksets.crd.projectcalico.org                       serviceaccounts
+horizontalpodautoscalers.autoscaling                          services
+hostendpoints.crd.projectcalico.org                           statefulsets.apps
+ingressclasses.networking.k8s.io                              storageclasses.storage.k8s.io
+ingresses.networking.k8s.io                                   validatingwebhookconfigurations.admissionregistration.k8s.io
+ipamblocks.crd.projectcalico.org                              volumeattachments.storage.k8s.io
+ubuntu@primary:~$ kubectl describe pod mysql-795bf95547-gzrvb 
+Name:             mysql-795bf95547-gzrvb
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             <none>
+Labels:           app=mysql
+                  pod-template-hash=795bf95547
+Annotations:      <none>
+Status:           Pending
+IP:               
+IPs:              <none>
+Controlled By:    ReplicaSet/mysql-795bf95547
+Containers:
+  mysql:
+    Image:      mysql:5.6
+    Port:       3306/TCP
+    Host Port:  0/TCP
+    Environment:
+      MYSQL_ROOT_PASSWORD:  password
+    Mounts:
+      /var/lib/mysql from mysql-persistent-storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-fk7jf (ro)
+Conditions:
+  Type           Status
+  PodScheduled   False 
+Volumes:
+  mysql-persistent-storage:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  mysql-pv-claim
+    ReadOnly:   false
+  kube-api-access-fk7jf:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason            Age   From               Message
+  ----     ------            ----  ----               -------
+  Warning  FailedScheduling  2m2s  default-scheduler  0/1 nodes are available: 1 node(s) didn't find available persistent volumes to bind. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+  Warning  FailedScheduling  65s   default-scheduler  0/1 nodes are available: 1 node(s) didn't find available persistent volumes to bind. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+ubuntu@primary:~$ kubectl describe pvc mysql-pv-claim 
+Name:          mysql-pv-claim
+Namespace:     default
+StorageClass:  fast-disks
+Status:        Pending
+Volume:        
+Labels:        <none>
+Annotations:   <none>
+Finalizers:    [kubernetes.io/pvc-protection]
+Capacity:      
+Access Modes:  
+VolumeMode:    Filesystem
+Used By:       mysql-795bf95547-gzrvb
+Events:
+  Type    Reason               Age                    From                         Message
+  ----    ------               ----                   ----                         -------
+  Normal  WaitForPodScheduled  2m28s (x4 over 3m12s)  persistentvolume-controller  waiting for pod mysql-795bf95547-jsz65 to be scheduled
+  Normal  WaitForPodScheduled  13s (x10 over 2m13s)   persistentvolume-controller  waiting for pod mysql-795bf95547-gzrvb to be scheduled
+ubuntu@primary:~$ cat << EOF | kubectl apply -f -
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: test-local-pv
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: fast-disks
+  local:
+    path: /mnt/fast-disks/pv1
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - primary      
+EOF
+persistentvolume/test-local-pv created
+ubuntu@primary:~$ kubectl get pv
+NAME            CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM                    STORAGECLASS   VOLUMEATTRIBUTESCLASS   REASON   AGE
+test-local-pv   10Gi       RWO            Retain           Bound    default/mysql-pv-claim   fast-disks     <unset>                          12s
+ubuntu@primary:~$ kubectl get pvc
+NAME             STATUS   VOLUME          CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE
+mysql-pv-claim   Bound    test-local-pv   10Gi       RWO            fast-disks     <unset>                 10m
+ubuntu@primary:~$ kubectl describe pod mysql-795bf95547-gzrvb 
+Name:             mysql-795bf95547-gzrvb
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             primary/192.168.129.3
+Start Time:       Sat, 11 May 2024 16:01:56 +0700
+Labels:           app=mysql
+                  pod-template-hash=795bf95547
+Annotations:      <none>
+Status:           Pending
+IP:               
+IPs:              <none>
+Controlled By:    ReplicaSet/mysql-795bf95547
+Containers:
+  mysql:
+    Container ID:   
+    Image:          mysql:5.6
+    Image ID:       
+    Port:           3306/TCP
+    Host Port:      0/TCP
+    State:          Waiting
+      Reason:       ContainerCreating
+    Ready:          False
+    Restart Count:  0
+    Environment:
+      MYSQL_ROOT_PASSWORD:  password
+    Mounts:
+      /var/lib/mysql from mysql-persistent-storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-fk7jf (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  mysql-persistent-storage:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  mysql-pv-claim
+    ReadOnly:   false
+  kube-api-access-fk7jf:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason            Age                  From               Message
+  ----     ------            ----                 ----               -------
+  Warning  FailedScheduling  9m40s                default-scheduler  0/1 nodes are available: 1 node(s) didn't find available persistent volumes to bind. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+  Warning  FailedScheduling  35s (x2 over 8m44s)  default-scheduler  0/1 nodes are available: 1 node(s) didn't find available persistent volumes to bind. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+  Normal   Scheduled         30s                  default-scheduler  Successfully assigned default/mysql-795bf95547-gzrvb to primary
+  Warning  FailedMount       14s (x6 over 30s)    kubelet            MountVolume.NewMounter initialization failed for volume "test-local-pv" : path "/mnt/fast-disks/pv1" does not exist
+ubuntu@primary:~$ kubectl get pods
+NAME                                READY   STATUS              RESTARTS      AGE
+mysql-795bf95547-gzrvb              0/1     ContainerCreating   0             9m50s
+nginx-deployment-8678f5b4f6-5n8kr   1/1     Running             1 (21d ago)   21d
+nginx-deployment-8678f5b4f6-gbwm7   1/1     Running             1 (21d ago)   21d
+ubuntu@primary:~$ sudo mkdir /mnt/fast-disks/pv1
+mkdir: cannot create directory Б─≤/mnt/fast-disks/pv1Б─≥: No such file or directory
+ubuntu@primary:~$ sudo mkdir /mnt/fast-disks/pv1
+mkdir: cannot create directory Б─≤/mnt/fast-disks/pv1Б─≥: No such file or directory
+ubuntu@primary:~$ sudo mkdir /mnt/fast-disks/pv1
+mkdir: cannot create directory Б─≤/mnt/fast-disks/pv1Б─≥: No such file or directory
+ubuntu@primary:~$ sudo mkdir /mnt/fast-disks
+ubuntu@primary:~$ sudo mkdir /mnt/fast-disks/pv1
+ubuntu@primary:~$ sudo mkdir /mnt/fast-disks/pv1
+mkdir: cannot create directory Б─≤/mnt/fast-disks/pv1Б─≥: File exists
+ubuntu@primary:~$ kubectl describe pod mysql-795bf95547-gzrvb 
+Name:             mysql-795bf95547-gzrvb
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             primary/192.168.129.3
+Start Time:       Sat, 11 May 2024 16:01:56 +0700
+Labels:           app=mysql
+                  pod-template-hash=795bf95547
+Annotations:      <none>
+Status:           Pending
+IP:               
+IPs:              <none>
+Controlled By:    ReplicaSet/mysql-795bf95547
+Containers:
+  mysql:
+    Container ID:   
+    Image:          mysql:5.6
+    Image ID:       
+    Port:           3306/TCP
+    Host Port:      0/TCP
+    State:          Waiting
+      Reason:       ContainerCreating
+    Ready:          False
+    Restart Count:  0
+    Environment:
+      MYSQL_ROOT_PASSWORD:  password
+    Mounts:
+      /var/lib/mysql from mysql-persistent-storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-fk7jf (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  mysql-persistent-storage:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  mysql-pv-claim
+    ReadOnly:   false
+  kube-api-access-fk7jf:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason            Age                  From               Message
+  ----     ------            ----                 ----               -------
+  Warning  FailedScheduling  11m                  default-scheduler  0/1 nodes are available: 1 node(s) didn't find available persistent volumes to bind. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+  Warning  FailedScheduling  2m31s (x2 over 10m)  default-scheduler  0/1 nodes are available: 1 node(s) didn't find available persistent volumes to bind. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+  Normal   Scheduled         2m25s                default-scheduler  Successfully assigned default/mysql-795bf95547-gzrvb to primary
+  Warning  FailedMount       18s (x9 over 2m26s)  kubelet            MountVolume.NewMounter initialization failed for volume "test-local-pv" : path "/mnt/fast-disks/pv1" does not exist
+ubuntu@primary:~$ kubectl delete pod mysql-795bf95547-gzrvb 
+pod "mysql-795bf95547-gzrvb" deleted
+ubuntu@primary:~$ kubectl get pods
+NAME                                READY   STATUS              RESTARTS      AGE
+mysql-795bf95547-gpsbq              0/1     ContainerCreating   0             9s
+nginx-deployment-8678f5b4f6-5n8kr   1/1     Running             1 (21d ago)   21d
+nginx-deployment-8678f5b4f6-gbwm7   1/1     Running             1 (21d ago)   21d
+ubuntu@primary:~$ kubectl delete pod mysql-795bf95547-gpsbq 
+pod "mysql-795bf95547-gpsbq" deleted
+ubuntu@primary:~$ kubectl get pods
+NAME                                READY   STATUS              RESTARTS      AGE
+mysql-795bf95547-22tlp              0/1     ContainerCreating   0             4s
+nginx-deployment-8678f5b4f6-5n8kr   1/1     Running             1 (21d ago)   21d
+nginx-deployment-8678f5b4f6-gbwm7   1/1     Running             1 (21d ago)   21d
+ubuntu@primary:~$ kubectl describe pod mysql-795bf95547-22tlp 
+Name:             mysql-795bf95547-22tlp
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             primary/192.168.129.3
+Start Time:       Sat, 11 May 2024 16:05:09 +0700
+Labels:           app=mysql
+                  pod-template-hash=795bf95547
+Annotations:      <none>
+Status:           Pending
+IP:               
+IPs:              <none>
+Controlled By:    ReplicaSet/mysql-795bf95547
+Containers:
+  mysql:
+    Container ID:   
+    Image:          mysql:5.6
+    Image ID:       
+    Port:           3306/TCP
+    Host Port:      0/TCP
+    State:          Waiting
+      Reason:       ContainerCreating
+    Ready:          False
+    Restart Count:  0
+    Environment:
+      MYSQL_ROOT_PASSWORD:  password
+    Mounts:
+      /var/lib/mysql from mysql-persistent-storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-htwn2 (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  mysql-persistent-storage:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  mysql-pv-claim
+    ReadOnly:   false
+  kube-api-access-htwn2:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  11s   default-scheduler  Successfully assigned default/mysql-795bf95547-22tlp to primary
+ubuntu@primary:~$ kubectl describe pod mysql-795bf95547-22tlp 
+Name:             mysql-795bf95547-22tlp
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             primary/192.168.129.3
+Start Time:       Sat, 11 May 2024 16:05:09 +0700
+Labels:           app=mysql
+                  pod-template-hash=795bf95547
+Annotations:      <none>
+Status:           Pending
+IP:               
+IPs:              <none>
+Controlled By:    ReplicaSet/mysql-795bf95547
+Containers:
+  mysql:
+    Container ID:   
+    Image:          mysql:5.6
+    Image ID:       
+    Port:           3306/TCP
+    Host Port:      0/TCP
+    State:          Waiting
+      Reason:       ContainerCreating
+    Ready:          False
+    Restart Count:  0
+    Environment:
+      MYSQL_ROOT_PASSWORD:  password
+    Mounts:
+      /var/lib/mysql from mysql-persistent-storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-htwn2 (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  mysql-persistent-storage:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  mysql-pv-claim
+    ReadOnly:   false
+  kube-api-access-htwn2:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  28s   default-scheduler  Successfully assigned default/mysql-795bf95547-22tlp to primary
+ubuntu@primary:~$ kubectl describe pod mysql-795bf95547-22tlp 
+Name:             mysql-795bf95547-22tlp
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             primary/192.168.129.3
+Start Time:       Sat, 11 May 2024 16:05:09 +0700
+Labels:           app=mysql
+                  pod-template-hash=795bf95547
+Annotations:      <none>
+Status:           Pending
+IP:               
+IPs:              <none>
+Controlled By:    ReplicaSet/mysql-795bf95547
+Containers:
+  mysql:
+    Container ID:   
+    Image:          mysql:5.6
+    Image ID:       
+    Port:           3306/TCP
+    Host Port:      0/TCP
+    State:          Waiting
+      Reason:       ContainerCreating
+    Ready:          False
+    Restart Count:  0
+    Environment:
+      MYSQL_ROOT_PASSWORD:  password
+    Mounts:
+      /var/lib/mysql from mysql-persistent-storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-htwn2 (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  mysql-persistent-storage:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  mysql-pv-claim
+    ReadOnly:   false
+  kube-api-access-htwn2:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  40s   default-scheduler  Successfully assigned default/mysql-795bf95547-22tlp to primary
+ubuntu@primary:~$ kubectl get pods
+NAME                                READY   STATUS              RESTARTS      AGE
+mysql-795bf95547-22tlp              0/1     ContainerCreating   0             46s
+nginx-deployment-8678f5b4f6-5n8kr   1/1     Running             1 (21d ago)   21d
+nginx-deployment-8678f5b4f6-gbwm7   1/1     Running             1 (21d ago)   21d
+ubuntu@primary:~$ kubectl describe pod mysql-795bf95547-22tlp 
+Name:             mysql-795bf95547-22tlp
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             primary/192.168.129.3
+Start Time:       Sat, 11 May 2024 16:05:09 +0700
+Labels:           app=mysql
+                  pod-template-hash=795bf95547
+Annotations:      <none>
+Status:           Pending
+IP:               
+IPs:              <none>
+Controlled By:    ReplicaSet/mysql-795bf95547
+Containers:
+  mysql:
+    Container ID:   
+    Image:          mysql:5.6
+    Image ID:       
+    Port:           3306/TCP
+    Host Port:      0/TCP
+    State:          Waiting
+      Reason:       ContainerCreating
+    Ready:          False
+    Restart Count:  0
+    Environment:
+      MYSQL_ROOT_PASSWORD:  password
+    Mounts:
+      /var/lib/mysql from mysql-persistent-storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-htwn2 (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  mysql-persistent-storage:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  mysql-pv-claim
+    ReadOnly:   false
+  kube-api-access-htwn2:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason                  Age   From               Message
+  ----     ------                  ----  ----               -------
+  Normal   Scheduled               65s   default-scheduler  Successfully assigned default/mysql-795bf95547-22tlp to primary
+  Warning  FailedCreatePodSandBox  7s    kubelet            Failed to create pod sandbox: rpc error: code = Unknown desc = failed to setup network for sandbox "28fdb047eed1c45216be49497415fdf13395442afddab2fa2b4dfdf207fa547c": plugin type="calico" failed (add): error getting ClusterInformation: connection is unauthorized: Unauthorized
+  Normal   SandboxChanged          6s    kubelet            Pod sandbox changed, it will be killed and re-created.
+ubuntu@primary:~$ kubectl describe pod mysql-795bf95547-22tlp 
+Name:             mysql-795bf95547-22tlp
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             primary/192.168.129.3
+Start Time:       Sat, 11 May 2024 16:05:09 +0700
+Labels:           app=mysql
+                  pod-template-hash=795bf95547
+Annotations:      <none>
+Status:           Pending
+IP:               
+IPs:              <none>
+Controlled By:    ReplicaSet/mysql-795bf95547
+Containers:
+  mysql:
+    Container ID:   
+    Image:          mysql:5.6
+    Image ID:       
+    Port:           3306/TCP
+    Host Port:      0/TCP
+    State:          Waiting
+      Reason:       ContainerCreating
+    Ready:          False
+    Restart Count:  0
+    Environment:
+      MYSQL_ROOT_PASSWORD:  password
+    Mounts:
+      /var/lib/mysql from mysql-persistent-storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-htwn2 (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  mysql-persistent-storage:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  mysql-pv-claim
+    ReadOnly:   false
+  kube-api-access-htwn2:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason                  Age                From               Message
+  ----     ------                  ----               ----               -------
+  Normal   Scheduled               81s                default-scheduler  Successfully assigned default/mysql-795bf95547-22tlp to primary
+  Warning  FailedCreatePodSandBox  23s                kubelet            Failed to create pod sandbox: rpc error: code = Unknown desc = failed to setup network for sandbox "28fdb047eed1c45216be49497415fdf13395442afddab2fa2b4dfdf207fa547c": plugin type="calico" failed (add): error getting ClusterInformation: connection is unauthorized: Unauthorized
+  Normal   SandboxChanged          10s (x2 over 22s)  kubelet            Pod sandbox changed, it will be killed and re-created.
+ubuntu@primary:~$ kubectl describe pod mysql-795bf95547-22tlp 
+Name:             mysql-795bf95547-22tlp
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             primary/192.168.129.3
+Start Time:       Sat, 11 May 2024 16:05:09 +0700
+Labels:           app=mysql
+                  pod-template-hash=795bf95547
+Annotations:      <none>
+Status:           Pending
+IP:               
+IPs:              <none>
+Controlled By:    ReplicaSet/mysql-795bf95547
+Containers:
+  mysql:
+    Container ID:   
+    Image:          mysql:5.6
+    Image ID:       
+    Port:           3306/TCP
+    Host Port:      0/TCP
+    State:          Waiting
+      Reason:       ContainerCreating
+    Ready:          False
+    Restart Count:  0
+    Environment:
+      MYSQL_ROOT_PASSWORD:  password
+    Mounts:
+      /var/lib/mysql from mysql-persistent-storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-htwn2 (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  mysql-persistent-storage:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  mysql-pv-claim
+    ReadOnly:   false
+  kube-api-access-htwn2:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason                  Age               From               Message
+  ----     ------                  ----              ----               -------
+  Normal   Scheduled               100s              default-scheduler  Successfully assigned default/mysql-795bf95547-22tlp to primary
+  Warning  FailedCreatePodSandBox  42s               kubelet            Failed to create pod sandbox: rpc error: code = Unknown desc = failed to setup network for sandbox "28fdb047eed1c45216be49497415fdf13395442afddab2fa2b4dfdf207fa547c": plugin type="calico" failed (add): error getting ClusterInformation: connection is unauthorized: Unauthorized
+  Normal   SandboxChanged          7s (x4 over 41s)  kubelet            Pod sandbox changed, it will be killed and re-created.
+ubuntu@primary:~$ kubectl get pods
+NAME                                READY   STATUS              RESTARTS      AGE
+mysql-795bf95547-22tlp              0/1     ContainerCreating   0             103s
+nginx-deployment-8678f5b4f6-5n8kr   1/1     Running             1 (21d ago)   21d
+nginx-deployment-8678f5b4f6-gbwm7   1/1     Running             1 (21d ago)   21d
+ubuntu@primary:~$ kubectl get pods
+NAME                                READY   STATUS              RESTARTS      AGE
+mysql-795bf95547-22tlp              0/1     ContainerCreating   0             2m26s
+nginx-deployment-8678f5b4f6-5n8kr   1/1     Running             1 (21d ago)   21d
+nginx-deployment-8678f5b4f6-gbwm7   1/1     Running             1 (21d ago)   21d
+ubuntu@primary:~$ kubectl describe pod mysql-795bf95547-22tlp 
+Name:             mysql-795bf95547-22tlp
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             primary/192.168.129.3
+Start Time:       Sat, 11 May 2024 16:05:09 +0700
+Labels:           app=mysql
+                  pod-template-hash=795bf95547
+Annotations:      <none>
+Status:           Pending
+IP:               
+IPs:              <none>
+Controlled By:    ReplicaSet/mysql-795bf95547
+Containers:
+  mysql:
+    Container ID:   
+    Image:          mysql:5.6
+    Image ID:       
+    Port:           3306/TCP
+    Host Port:      0/TCP
+    State:          Waiting
+      Reason:       ContainerCreating
+    Ready:          False
+    Restart Count:  0
+    Environment:
+      MYSQL_ROOT_PASSWORD:  password
+    Mounts:
+      /var/lib/mysql from mysql-persistent-storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-htwn2 (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  mysql-persistent-storage:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  mysql-pv-claim
+    ReadOnly:   false
+  kube-api-access-htwn2:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason                  Age               From               Message
+  ----     ------                  ----              ----               -------
+  Normal   Scheduled               2m28s             default-scheduler  Successfully assigned default/mysql-795bf95547-22tlp to primary
+  Warning  FailedCreatePodSandBox  90s               kubelet            Failed to create pod sandbox: rpc error: code = Unknown desc = failed to setup network for sandbox "28fdb047eed1c45216be49497415fdf13395442afddab2fa2b4dfdf207fa547c": plugin type="calico" failed (add): error getting ClusterInformation: connection is unauthorized: Unauthorized
+  Normal   SandboxChanged          5s (x8 over 89s)  kubelet            Pod sandbox changed, it will be killed and re-created.
+ubuntu@primary:~$ kubectl get pv
+NAME            CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM                    STORAGECLASS   VOLUMEATTRIBUTESCLASS   REASON   AGE
+test-local-pv   10Gi       RWO            Retain           Bound    default/mysql-pv-claim   fast-disks     <unset>                          6m32s
+ubuntu@primary:~$ kubectl get pvc
+NAME             STATUS   VOLUME          CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE
+mysql-pv-claim   Bound    test-local-pv   10Gi       RWO            fast-disks     <unset>                 16m
+ubuntu@primary:~$ kubectl describe pod mysql-795bf95547-22tlp 
+Name:             mysql-795bf95547-22tlp
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             primary/192.168.129.3
+Start Time:       Sat, 11 May 2024 16:05:09 +0700
+Labels:           app=mysql
+                  pod-template-hash=795bf95547
+Annotations:      <none>
+Status:           Pending
+IP:               
+IPs:              <none>
+Controlled By:    ReplicaSet/mysql-795bf95547
+Containers:
+  mysql:
+    Container ID:   
+    Image:          mysql:5.6
+    Image ID:       
+    Port:           3306/TCP
+    Host Port:      0/TCP
+    State:          Waiting
+      Reason:       ContainerCreating
+    Ready:          False
+    Restart Count:  0
+    Environment:
+      MYSQL_ROOT_PASSWORD:  password
+    Mounts:
+      /var/lib/mysql from mysql-persistent-storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-htwn2 (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  mysql-persistent-storage:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  mysql-pv-claim
+    ReadOnly:   false
+  kube-api-access-htwn2:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason                  Age                  From               Message
+  ----     ------                  ----                 ----               -------
+  Normal   Scheduled               3m46s                default-scheduler  Successfully assigned default/mysql-795bf95547-22tlp to primary
+  Warning  FailedCreatePodSandBox  2m48s                kubelet            Failed to create pod sandbox: rpc error: code = Unknown desc = failed to setup network for sandbox "28fdb047eed1c45216be49497415fdf13395442afddab2fa2b4dfdf207fa547c": plugin type="calico" failed (add): error getting ClusterInformation: connection is unauthorized: Unauthorized
+  Normal   SandboxChanged          6s (x14 over 2m47s)  kubelet            Pod sandbox changed, it will be killed and re-created.
+ubuntu@primary:~$ kubectl get pods --all-namespaces
+NAMESPACE              NAME                                         READY   STATUS              RESTARTS      AGE
+default                mysql-795bf95547-22tlp                       0/1     ContainerCreating   0             4m53s
+default                nginx-deployment-8678f5b4f6-5n8kr            1/1     Running             1 (21d ago)   21d
+default                nginx-deployment-8678f5b4f6-gbwm7            1/1     Running             1 (21d ago)   21d
+kube-system            calico-kube-controllers-5fc7d6cf67-np58b     1/1     Running             1 (21d ago)   21d
+kube-system            canal-xgvcn                                  2/2     Running             2 (21d ago)   21d
+kube-system            coredns-76f75df574-j5rg9                     1/1     Running             1 (21d ago)   21d
+kube-system            coredns-76f75df574-p55sd                     1/1     Running             1 (21d ago)   21d
+kube-system            etcd-primary                                 1/1     Running             3 (21d ago)   21d
+kube-system            kube-apiserver-primary                       1/1     Running             4 (21d ago)   21d
+kube-system            kube-controller-manager-primary              1/1     Running             5 (21d ago)   21d
+kube-system            kube-proxy-v94d6                             1/1     Running             6 (21d ago)   21d
+kube-system            kube-scheduler-primary                       1/1     Running             6 (21d ago)   21d
+kubernetes-dashboard   dashboard-metrics-scraper-5657497c4c-tpsbs   1/1     Running             1 (21d ago)   21d
+kubernetes-dashboard   kubernetes-dashboard-78f87ddfc-sthr2         1/1     Running             1 (21d ago)   21d
+ubuntu@primary:~$ kubectl describe pod mysql-795bf95547-22tlp 
+Name:             mysql-795bf95547-22tlp
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             primary/192.168.129.3
+Start Time:       Sat, 11 May 2024 16:05:09 +0700
+Labels:           app=mysql
+                  pod-template-hash=795bf95547
+Annotations:      <none>
+Status:           Pending
+IP:               
+IPs:              <none>
+Controlled By:    ReplicaSet/mysql-795bf95547
+Containers:
+  mysql:
+    Container ID:   
+    Image:          mysql:5.6
+    Image ID:       
+    Port:           3306/TCP
+    Host Port:      0/TCP
+    State:          Waiting
+      Reason:       ContainerCreating
+    Ready:          False
+    Restart Count:  0
+    Environment:
+      MYSQL_ROOT_PASSWORD:  password
+    Mounts:
+      /var/lib/mysql from mysql-persistent-storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-htwn2 (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  mysql-persistent-storage:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  mysql-pv-claim
+    ReadOnly:   false
+  kube-api-access-htwn2:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason                  Age                   From               Message
+  ----     ------                  ----                  ----               -------
+  Normal   Scheduled               8m4s                  default-scheduler  Successfully assigned default/mysql-795bf95547-22tlp to primary
+  Warning  FailedCreatePodSandBox  7m6s                  kubelet            Failed to create pod sandbox: rpc error: code = Unknown desc = failed to setup network for sandbox "28fdb047eed1c45216be49497415fdf13395442afddab2fa2b4dfdf207fa547c": plugin type="calico" failed (add): error getting ClusterInformation: connection is unauthorized: Unauthorized
+  Normal   SandboxChanged          2m5s (x25 over 7m5s)  kubelet            Pod sandbox changed, it will be killed and re-created.
+ubuntu@primary:~$ kubectl get pods --all-namespaces
+NAMESPACE              NAME                                         READY   STATUS              RESTARTS      AGE
+default                mysql-795bf95547-22tlp                       0/1     ContainerCreating   0             12m
+default                nginx-deployment-8678f5b4f6-5n8kr            1/1     Running             1 (21d ago)   21d
+default                nginx-deployment-8678f5b4f6-gbwm7            1/1     Running             1 (21d ago)   21d
+kube-system            calico-kube-controllers-5fc7d6cf67-np58b     1/1     Running             1 (21d ago)   21d
+kube-system            canal-xgvcn                                  2/2     Running             2 (21d ago)   21d
+kube-system            coredns-76f75df574-j5rg9                     1/1     Running             1 (21d ago)   21d
+kube-system            coredns-76f75df574-p55sd                     1/1     Running             1 (21d ago)   21d
+kube-system            etcd-primary                                 1/1     Running             3 (21d ago)   21d
+kube-system            kube-apiserver-primary                       1/1     Running             4 (21d ago)   21d
+kube-system            kube-controller-manager-primary              1/1     Running             5 (21d ago)   21d
+kube-system            kube-proxy-v94d6                             1/1     Running             6 (21d ago)   21d
+kube-system            kube-scheduler-primary                       1/1     Running             6 (21d ago)   21d
+kubernetes-dashboard   dashboard-metrics-scraper-5657497c4c-tpsbs   1/1     Running             1 (21d ago)   21d
+kubernetes-dashboard   kubernetes-dashboard-78f87ddfc-sthr2         1/1     Running             1 (21d ago)   21d
+ubuntu@primary:~$ kubectl delete pod -n kube-system canal-xgvcn 
+pod "canal-xgvcn" deleted
+ubuntu@primary:~$ kubectl get pods --all-namespaces
+NAMESPACE              NAME                                         READY   STATUS              RESTARTS      AGE
+default                mysql-795bf95547-22tlp                       0/1     ContainerCreating   0             12m
+default                nginx-deployment-8678f5b4f6-5n8kr            1/1     Running             1 (21d ago)   21d
+default                nginx-deployment-8678f5b4f6-gbwm7            1/1     Running             1 (21d ago)   21d
+kube-system            calico-kube-controllers-5fc7d6cf67-np58b     1/1     Running             1 (21d ago)   21d
+kube-system            canal-t6bb2                                  0/2     Init:0/2            0             3s
+kube-system            coredns-76f75df574-j5rg9                     1/1     Running             1 (21d ago)   21d
+kube-system            coredns-76f75df574-p55sd                     1/1     Running             1 (21d ago)   21d
+kube-system            etcd-primary                                 1/1     Running             3 (21d ago)   21d
+kube-system            kube-apiserver-primary                       1/1     Running             4 (21d ago)   21d
+kube-system            kube-controller-manager-primary              1/1     Running             5 (21d ago)   21d
+kube-system            kube-proxy-v94d6                             1/1     Running             6 (21d ago)   21d
+kube-system            kube-scheduler-primary                       1/1     Running             6 (21d ago)   21d
+kubernetes-dashboard   dashboard-metrics-scraper-5657497c4c-tpsbs   1/1     Running             1 (21d ago)   21d
+kubernetes-dashboard   kubernetes-dashboard-78f87ddfc-sthr2         1/1     Running             1 (21d ago)   21d
+ubuntu@primary:~$ kubectl get pods --all-namespaces
+NAMESPACE              NAME                                         READY   STATUS              RESTARTS      AGE
+default                mysql-795bf95547-22tlp                       0/1     ContainerCreating   0             13m
+default                nginx-deployment-8678f5b4f6-5n8kr            1/1     Running             1 (21d ago)   21d
+default                nginx-deployment-8678f5b4f6-gbwm7            1/1     Running             1 (21d ago)   21d
+kube-system            calico-kube-controllers-5fc7d6cf67-np58b     1/1     Running             1 (21d ago)   21d
+kube-system            canal-t6bb2                                  2/2     Running             0             10s
+kube-system            coredns-76f75df574-j5rg9                     1/1     Running             1 (21d ago)   21d
+kube-system            coredns-76f75df574-p55sd                     1/1     Running             1 (21d ago)   21d
+kube-system            etcd-primary                                 1/1     Running             3 (21d ago)   21d
+kube-system            kube-apiserver-primary                       1/1     Running             4 (21d ago)   21d
+kube-system            kube-controller-manager-primary              1/1     Running             5 (21d ago)   21d
+kube-system            kube-proxy-v94d6                             1/1     Running             6 (21d ago)   21d
+kube-system            kube-scheduler-primary                       1/1     Running             6 (21d ago)   21d
+kubernetes-dashboard   dashboard-metrics-scraper-5657497c4c-tpsbs   1/1     Running             1 (21d ago)   21d
+kubernetes-dashboard   kubernetes-dashboard-78f87ddfc-sthr2         1/1     Running             1 (21d ago)   21d
+ubuntu@primary:~$ kubectl describe pod mysql-795bf95547-22tlp 
+Name:             mysql-795bf95547-22tlp
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             primary/192.168.129.3
+Start Time:       Sat, 11 May 2024 16:05:09 +0700
+Labels:           app=mysql
+                  pod-template-hash=795bf95547
+Annotations:      cni.projectcalico.org/containerID: 7bf148cabd0587a2551b9ab14ce3ced2dc2f3aedfc493cffe22d03e4a2f0a229
+                  cni.projectcalico.org/podIP: 192.168.0.22/32
+                  cni.projectcalico.org/podIPs: 192.168.0.22/32
+Status:           Pending
+IP:               192.168.0.22
+IPs:
+  IP:           192.168.0.22
+Controlled By:  ReplicaSet/mysql-795bf95547
+Containers:
+  mysql:
+    Container ID:   
+    Image:          mysql:5.6
+    Image ID:       
+    Port:           3306/TCP
+    Host Port:      0/TCP
+    State:          Waiting
+      Reason:       ErrImagePull
+    Ready:          False
+    Restart Count:  0
+    Environment:
+      MYSQL_ROOT_PASSWORD:  password
+    Mounts:
+      /var/lib/mysql from mysql-persistent-storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-htwn2 (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  mysql-persistent-storage:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  mysql-pv-claim
+    ReadOnly:   false
+  kube-api-access-htwn2:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason                  Age                  From               Message
+  ----     ------                  ----                 ----               -------
+  Normal   Scheduled               13m                  default-scheduler  Successfully assigned default/mysql-795bf95547-22tlp to primary
+  Warning  FailedCreatePodSandBox  12m                  kubelet            Failed to create pod sandbox: rpc error: code = Unknown desc = failed to setup network for sandbox "28fdb047eed1c45216be49497415fdf13395442afddab2fa2b4dfdf207fa547c": plugin type="calico" failed (add): error getting ClusterInformation: connection is unauthorized: Unauthorized
+  Normal   SandboxChanged          2m3s (x48 over 12m)  kubelet            Pod sandbox changed, it will be killed and re-created.
+ubuntu@primary:~$ kubectl delete pod mysql-795bf95547-22tlp 
+pod "mysql-795bf95547-22tlp" deleted
+ubuntu@primary:~$ kubectl get pods --all-namespaces
+NAMESPACE              NAME                                         READY   STATUS              RESTARTS      AGE
+default                mysql-795bf95547-2ljdp                       0/1     ContainerCreating   0             4s
+default                nginx-deployment-8678f5b4f6-5n8kr            1/1     Running             1 (21d ago)   21d
+default                nginx-deployment-8678f5b4f6-gbwm7            1/1     Running             1 (21d ago)   21d
+kube-system            calico-kube-controllers-5fc7d6cf67-np58b     1/1     Running             1 (21d ago)   21d
+kube-system            canal-t6bb2                                  2/2     Running             0             41s
+kube-system            coredns-76f75df574-j5rg9                     1/1     Running             1 (21d ago)   21d
+kube-system            coredns-76f75df574-p55sd                     1/1     Running             1 (21d ago)   21d
+kube-system            etcd-primary                                 1/1     Running             3 (21d ago)   21d
+kube-system            kube-apiserver-primary                       1/1     Running             4 (21d ago)   21d
+kube-system            kube-controller-manager-primary              1/1     Running             5 (21d ago)   21d
+kube-system            kube-proxy-v94d6                             1/1     Running             6 (21d ago)   21d
+kube-system            kube-scheduler-primary                       1/1     Running             6 (21d ago)   21d
+kubernetes-dashboard   dashboard-metrics-scraper-5657497c4c-tpsbs   1/1     Running             1 (21d ago)   21d
+kubernetes-dashboard   kubernetes-dashboard-78f87ddfc-sthr2         1/1     Running             1 (21d ago)   21d
+ubuntu@primary:~$ kubectl describe pod mysql-795bf95547-2ljdp 
+Name:             mysql-795bf95547-2ljdp
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             primary/192.168.129.3
+Start Time:       Sat, 11 May 2024 16:18:37 +0700
+Labels:           app=mysql
+                  pod-template-hash=795bf95547
+Annotations:      cni.projectcalico.org/containerID: d2babaf858ee1302755d7de97437043bf1692ed941c6ff34ed0c49f0dee6ecca
+                  cni.projectcalico.org/podIP: 192.168.0.23/32
+                  cni.projectcalico.org/podIPs: 192.168.0.23/32
+Status:           Pending
+IP:               192.168.0.23
+IPs:
+  IP:           192.168.0.23
+Controlled By:  ReplicaSet/mysql-795bf95547
+Containers:
+  mysql:
+    Container ID:   
+    Image:          mysql:5.6
+    Image ID:       
+    Port:           3306/TCP
+    Host Port:      0/TCP
+    State:          Waiting
+      Reason:       ErrImagePull
+    Ready:          False
+    Restart Count:  0
+    Environment:
+      MYSQL_ROOT_PASSWORD:  password
+    Mounts:
+      /var/lib/mysql from mysql-persistent-storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-b7dfm (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  mysql-persistent-storage:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  mysql-pv-claim
+    ReadOnly:   false
+  kube-api-access-b7dfm:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason     Age   From               Message
+  ----     ------     ----  ----               -------
+  Normal   Scheduled  12s   default-scheduler  Successfully assigned default/mysql-795bf95547-2ljdp to primary
+  Normal   Pulling    12s   kubelet            Pulling image "mysql:5.6"
+  Warning  Failed     9s    kubelet            Failed to pull image "mysql:5.6": rpc error: code = NotFound desc = failed to pull and unpack image "docker.io/library/mysql:5.6": no match for platform in manifest: not found
+  Warning  Failed     9s    kubelet            Error: ErrImagePull
+  Normal   BackOff    8s    kubelet            Back-off pulling image "mysql:5.6"
+  Warning  Failed     8s    kubelet            Error: ImagePullBackOff
+ubuntu@primary:~$ kubectl describe pod mysql-795bf95547-2ljdp 
+Name:             mysql-795bf95547-2ljdp
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             primary/192.168.129.3
+Start Time:       Sat, 11 May 2024 16:18:37 +0700
+Labels:           app=mysql
+                  pod-template-hash=795bf95547
+Annotations:      cni.projectcalico.org/containerID: d2babaf858ee1302755d7de97437043bf1692ed941c6ff34ed0c49f0dee6ecca
+                  cni.projectcalico.org/podIP: 192.168.0.23/32
+                  cni.projectcalico.org/podIPs: 192.168.0.23/32
+Status:           Pending
+IP:               192.168.0.23
+IPs:
+  IP:           192.168.0.23
+Controlled By:  ReplicaSet/mysql-795bf95547
+Containers:
+  mysql:
+    Container ID:   
+    Image:          mysql:5.6
+    Image ID:       
+    Port:           3306/TCP
+    Host Port:      0/TCP
+    State:          Waiting
+      Reason:       ImagePullBackOff
+    Ready:          False
+    Restart Count:  0
+    Environment:
+      MYSQL_ROOT_PASSWORD:  password
+    Mounts:
+      /var/lib/mysql from mysql-persistent-storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-b7dfm (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  mysql-persistent-storage:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  mysql-pv-claim
+    ReadOnly:   false
+  kube-api-access-b7dfm:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason     Age               From               Message
+  ----     ------     ----              ----               -------
+  Normal   Scheduled  20s               default-scheduler  Successfully assigned default/mysql-795bf95547-2ljdp to primary
+  Warning  Failed     17s               kubelet            Failed to pull image "mysql:5.6": rpc error: code = NotFound desc = failed to pull and unpack image "docker.io/library/mysql:5.6": no match for platform in manifest: not found
+  Warning  Failed     17s               kubelet            Error: ErrImagePull
+  Normal   BackOff    16s               kubelet            Back-off pulling image "mysql:5.6"
+  Warning  Failed     16s               kubelet            Error: ImagePullBackOff
+  Normal   Pulling    1s (x2 over 20s)  kubelet            Pulling image "mysql:5.6"
+ubuntu@primary:~$ kubectl describe pod mysql-795bf95547-2ljdp 
+Name:             mysql-795bf95547-2ljdp
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             primary/192.168.129.3
+Start Time:       Sat, 11 May 2024 16:18:37 +0700
+Labels:           app=mysql
+                  pod-template-hash=795bf95547
+Annotations:      cni.projectcalico.org/containerID: d2babaf858ee1302755d7de97437043bf1692ed941c6ff34ed0c49f0dee6ecca
+                  cni.projectcalico.org/podIP: 192.168.0.23/32
+                  cni.projectcalico.org/podIPs: 192.168.0.23/32
+Status:           Pending
+IP:               192.168.0.23
+IPs:
+  IP:           192.168.0.23
+Controlled By:  ReplicaSet/mysql-795bf95547
+Containers:
+  mysql:
+    Container ID:   
+    Image:          mysql:5.6
+    Image ID:       
+    Port:           3306/TCP
+    Host Port:      0/TCP
+    State:          Waiting
+      Reason:       ImagePullBackOff
+    Ready:          False
+    Restart Count:  0
+    Environment:
+      MYSQL_ROOT_PASSWORD:  password
+    Mounts:
+      /var/lib/mysql from mysql-persistent-storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-b7dfm (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  mysql-persistent-storage:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  mysql-pv-claim
+    ReadOnly:   false
+  kube-api-access-b7dfm:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason     Age               From               Message
+  ----     ------     ----              ----               -------
+  Normal   Scheduled  24s               default-scheduler  Successfully assigned default/mysql-795bf95547-2ljdp to primary
+  Normal   BackOff    20s               kubelet            Back-off pulling image "mysql:5.6"
+  Warning  Failed     20s               kubelet            Error: ImagePullBackOff
+  Normal   Pulling    5s (x2 over 24s)  kubelet            Pulling image "mysql:5.6"
+  Warning  Failed     2s (x2 over 21s)  kubelet            Failed to pull image "mysql:5.6": rpc error: code = NotFound desc = failed to pull and unpack image "docker.io/library/mysql:5.6": no match for platform in manifest: not found
+  Warning  Failed     2s (x2 over 21s)  kubelet            Error: ErrImagePull
+ubuntu@primary:~$ kubectl get pods
+NAME                                READY   STATUS             RESTARTS      AGE
+mysql-795bf95547-2ljdp              0/1     ImagePullBackOff   0             8m50s
+nginx-deployment-8678f5b4f6-5n8kr   1/1     Running            1 (21d ago)   21d
+nginx-deployment-8678f5b4f6-gbwm7   1/1     Running            1 (21d ago)   21d
+ubuntu@primary:~$ telnet
+telnet> ^C
+ubuntu@primary:~$ kubectl edit deployment mysql
+deployment.apps/mysql edited
+ubuntu@primary:~$ kubectl get pods
+NAME                                READY   STATUS              RESTARTS      AGE
+mysql-d6f56dd44-28s47               0/1     ContainerCreating   0             1s
+nginx-deployment-8678f5b4f6-5n8kr   1/1     Running             1 (21d ago)   21d
+nginx-deployment-8678f5b4f6-gbwm7   1/1     Running             1 (21d ago)   21d
+ubuntu@primary:~$ kubectl get pods
+NAME                                READY   STATUS              RESTARTS      AGE
+mysql-d6f56dd44-28s47               0/1     ContainerCreating   0             6s
+nginx-deployment-8678f5b4f6-5n8kr   1/1     Running             1 (21d ago)   21d
+nginx-deployment-8678f5b4f6-gbwm7   1/1     Running             1 (21d ago)   21d
+ubuntu@primary:~$ kubectl get pods
+NAME                                READY   STATUS    RESTARTS      AGE
+mysql-d6f56dd44-28s47               1/1     Running   0             2m20s
+nginx-deployment-8678f5b4f6-5n8kr   1/1     Running   1 (21d ago)   21d
+nginx-deployment-8678f5b4f6-gbwm7   1/1     Running   1 (21d ago)   21d
+ubuntu@primary:~$ kubectl get pods -o wide
+NAME                                READY   STATUS    RESTARTS      AGE     IP             NODE      NOMINATED NODE   READINESS GATES
+mysql-d6f56dd44-28s47               1/1     Running   0             2m28s   192.168.0.24   primary   <none>           <none>
+nginx-deployment-8678f5b4f6-5n8kr   1/1     Running   1 (21d ago)   21d     192.168.0.21   primary   <none>           <none>
+nginx-deployment-8678f5b4f6-gbwm7   1/1     Running   1 (21d ago)   21d     192.168.0.15   primary   <none>           <none>
+ubuntu@primary:~$ telnet 192.168.0.24 3306
+Trying 192.168.0.24...
+Connected to 192.168.0.24.
+Escape character is '^]'.
+J
+8Ъ1"BV#"*C).caching_sha2_password
+^CConnection closed by foreign host.
+ubuntu@primary:~$ 
+logout

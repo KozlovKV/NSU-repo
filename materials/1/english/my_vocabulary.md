@@ -3204,4 +3204,9 @@ In this PV particle can place either before or after verb:
 - pretend - привтряться
 - tend - тяготеть
 - outskirt - окраина
-- 
+- astonishing - удивительный
+- bizarre - очень странный
+- stunning - очень притягательные
+- superb - невероятно качественный
+- astonishing - очень неожиданный
+- remarkable - очень примечательный
