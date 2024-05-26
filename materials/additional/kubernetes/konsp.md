@@ -43,6 +43,7 @@
   - [`helm`](#helm)
     - [Накатываем `wordpress` через `helm`](#накатываем-wordpress-через-helm)
     - [`helm upgrade`](#helm-upgrade)
+- [24.05.25](#240525)
 
 
 # 24.02.17 
@@ -841,4 +842,8 @@ spec:
 ### Накатываем `wordpress` через `helm`
 *Добавить алгоритм накатывания `wordpress`*
 
+Получить пароль: `echo Password: $(kubectl get secret --namespace default my-wordpress -o jsonpath="{.data.wordpress-password}" | base64 -d)`
+
 ### `helm upgrade`
+
+# 24.05.25
