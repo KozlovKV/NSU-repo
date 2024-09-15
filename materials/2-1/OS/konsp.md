@@ -221,12 +221,13 @@
 
 Семинарист - Куталев Андрей Витальевич ([bitgrandmaster@yandex.ru](mailto:bitgrandmaster@yandex.ru))
 
+ВСЕ ИДУЩИЕ ДАЛЕЕ ССЫЛКИ (да как и конспекты в целом) АКТУАЛЬНЫ НА 23-Й УЧЕБНЫЙ ГОД
+
 [Более-менее актуальные лекции](http://parallels.nsu.ru/~fat/unixsvr4-new/trunk/)
 
 [Как сдавать задачи](https://classroom.google.com/u/3/c/NTg5NDgxNTc4ODA4/m/NjIwNjE0NDU3ODY4/details)
 - [Задачи](https://docs.google.com/document/d/1242C_65gJ_8HscvJ4RolW09KGS-jieYWwomrRTK_bn0/edit#heading=h.v7414bii3pa)
 
-АКТУАЛЬНЫ НА 23-Й УЧЕБНЫЙ ГОД:
 - [Расписанные криты](./categorical_questions.md)
 - [Расписанные билеты](./for_exam.pdf)
 - [Материалы от 13-й группы](https://github.com/dead-seeds/Course2/tree/main/Semester1/OperatingSystems)
