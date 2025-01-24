@@ -39,6 +39,18 @@
 
 ---
 
+## [3 курс, 1 семестр](./materials/3-1/)
+*По факту, что-то осмысленное только в первых двух конспектах (ну может ещё в третьем) ди и там слабовато. Не забывайте, что кроме `konsp.md` в папках есть другие штуки:*
+- [Дед. Финал](./materials/3-1/calc_math/konsp.md)
+- [Глупый ИИ](./materials/3-1/ML/konsp.md)
+- [Я у мамы инженер. Программный](./materials/3-1/SD/konsp.md)
+- [Храни, обрабатывай, страдай](./materials/3-1/HOI/konsp.md)
+- [Чем опасен киберпанк?](./materials/3-1/cyber_sec/konsp.md)
+- [Есть 2 стула... (какие предлагали проекты по ПАКу)](./materials/3-1/PAK/konsp.md)
+- [ВР~~ОТ~~МП](./materials/3-1/VRMP/konsp.md)
+
+---
+
 ## [Факультативы и прочие допы](./materials/additional/)
 - [Курс "Как быть HACKERMAN и не сесть"](./materials/additional/infobez/konsp.md)
 - [Wake the fuck up, samurai, we have KUBERNETES' cluster to burn](./materials/additional/kubernetes/konsp.md)
